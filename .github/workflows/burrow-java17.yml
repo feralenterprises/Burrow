@@ -1,0 +1,122 @@
+name: BUR-0008 Java 17 RuneLite build verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout public Burrow repository
+        uses: actions/checkout@v6
+
+      - name: Install actual Temurin JDK 17
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install genuine Gradle 8.14.6
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.14.6'
+
+      - name: Verify sealed source and checked-out Java files
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'e3950dea037e846ad23cc6121e2328c17ef0933ebe2681b65ccf2d88b91e82ae  ci/BUR-0008-JAVA17-OFFLINE-FIX-SOURCE-R06.zip' | sha256sum -c -
+          python3 - <<'PYIN'
+          from pathlib import Path
+          from zipfile import ZipFile
+          zpath = Path('ci/BUR-0008-JAVA17-OFFLINE-FIX-SOURCE-R06.zip')
+          with ZipFile(zpath) as z:
+              if z.testzip() is not None:
+                  raise SystemExit('Sealed source archive CRC failed')
+              names = set()
+              for member in z.infolist():
+                  name = member.filename
+                  if name.startswith(('/', chr(92))) or '..' in name.replace(chr(92), '/').split('/') or ((member.external_attr >> 16) & 0o170000) == 0o120000:
+                      raise SystemExit('Unsafe archive member: ' + name)
+                  normalized = name.casefold()
+                  if normalized in names:
+                      raise SystemExit('Duplicate case-insensitive member: ' + name)
+                  names.add(normalized)
+                  if member.is_dir():
+                      continue
+                  checked_out = Path(name)
+                  if not checked_out.is_file() or checked_out.read_bytes() != z.read(member):
+                      raise SystemExit('Source checkout does not match sealed archive: ' + name)
+          assert Path('Project-Burrow/build.gradle').is_file()
+          print('SOURCE MATCH: 27 sealed files identical to browsable Java source tree')
+          PYIN
+
+      - name: Verify Java 17 runtime/compiler and Gradle JVM
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-evidence
+          java -version 2>&1 | tee build-evidence/java.log
+          javac -version 2>&1 | tee build-evidence/javac.log
+          gradle --version 2>&1 | tee build-evidence/gradle.log
+          (cd Project-Burrow && bash scripts/require-java17.sh) 2>&1 | tee build-evidence/java17-gate.log
+
+      - name: Independent Java 17 offline baseline and P1 regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-evidence
+          (
+            cd Project-Burrow
+            mkdir -p build/ci-main build/ci-test
+            find src/main/java -name '*.java' ! -path '*/runelite/*' | sort > build/ci-main-sources.txt
+            javac --release 17 -encoding UTF-8 -d build/ci-main @build/ci-main-sources.txt
+            javac --release 17 -encoding UTF-8 -cp build/ci-main -d build/ci-test \
+              src/test/java/gg/feral/burrow/core/BurrowCoreTest.java \
+              src/test/java/gg/feral/burrow/core/BurrowP1RegressionTest.java \
+              src/test/java/gg/feral/burrow/ui/BurrowHitboxTest.java
+            java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.core.BurrowCoreTest
+            java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.core.BurrowP1RegressionTest
+            java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.ui.BurrowHitboxTest
+          ) 2>&1 | tee build-evidence/offline-java17.log
+
+      - name: Resolve real RuneLite dependencies and run Gradle JUnit
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd Project-Burrow && gradle --no-daemon --stacktrace --info clean test jar) 2>&1 | tee build-evidence/real-runelite-gradle.log
+
+      - name: Log real RuneLite dependency resolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd Project-Burrow && gradle --no-daemon dependencyInsight --dependency net.runelite:client --configuration compileClasspath) 2>&1 | tee build-evidence/runelite-dependency.log
+
+      - name: Collect build logs and any JAR (not a release)
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-evidence
+          if [ -d Project-Burrow/build/test-results/test ]; then
+            cp -r Project-Burrow/build/test-results/test build-evidence/junit-xml
+          fi
+          if [ -d Project-Burrow/build/libs ]; then
+            mkdir -p build-evidence/jars
+            find Project-Burrow/build/libs -type f -name '*.jar' -exec cp -t build-evidence/jars '{}' +
+            (cd build-evidence/jars && sha256sum ./*.jar > ../jar-sha256s.txt) || true
+          fi
+          date -u +'%Y-%m-%dT%H:%M:%SZ' > build-evidence/collected-utc.txt
+
+      - name: Save CI evidence (no release)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bur-0008-java17-compile-evidence
+          path: build-evidence/
+          retention-days: 14
+          if-no-files-found: warn

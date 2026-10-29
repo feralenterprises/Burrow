@@ -6,7 +6,7 @@ if (JavaVersion.current() != JavaVersion.VERSION_17) {
 group = 'gg.feral.burrow'
 version = '0.1.0-experimental'
 repositories {
-    maven { url = 'https://repo.runelite.net'; content { includeGroupByRegex('net\.runelite.*') } }
+    maven { url = 'https://repo.runelite.net'; content { includeGroupByRegex('net[.]runelite.*') } }
     mavenCentral()
 }
 def runeLiteVersion = providers.gradleProperty('runeLiteVersion').getOrElse('1.13.4')

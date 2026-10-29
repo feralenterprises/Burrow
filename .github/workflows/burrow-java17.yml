@@ -29,11 +29,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo 'e3950dea037e846ad23cc6121e2328c17ef0933ebe2681b65ccf2d88b91e82ae  ci/BUR-0008-JAVA17-OFFLINE-FIX-SOURCE-R06.zip' | sha256sum -c -
+          echo '11431cb6b0250b93cb5fdd0c585add25a93eb565c2a8d8bbd0accec123aa2270D  ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip' | sha256sum -c -
           python3 - <<'PYIN'
           from pathlib import Path
           from zipfile import ZipFile
-          zpath = Path('ci/BUR-0008-JAVA17-OFFLINE-FIX-SOURCE-R06.zip')
+          zpath = Path('ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip')
           with ZipFile(zpath) as z:
               if z.testzip() is not None:
                   raise SystemExit('Sealed source archive CRC failed')

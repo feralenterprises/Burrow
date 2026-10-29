@@ -25,13 +25,18 @@ public final class BurrowModel {
     public void show(View next) { view = Objects.requireNonNull(next); }
     public Scope scope() { return scope; }
     public Snapshot bank() { return bank; }
+    /** Null when the selected boss has no reviewed sample template; never reuse another boss's plan. */
     public Plan plan() { return plan; }
+    /** Both the Outfitter heading and recommendation projection derive from the same selected boss. */
+    public String outfitterSubtitle() {
+        return plan == null ? boss + " • no vetted loadout" : plan.template().boss() + " • sample melee loadout";
+    }
     public int demoKills() { return demoKills; }
     public List<String> journal() { return List.copyOf(journal); }
     public String boss() { return boss; }
     public void chooseBoss(String value) {
         if (!Set.of("Scurrius","Vorkath","Barrows").contains(value)) throw new IllegalArgumentException("boss");
-        boss = value;
+        if (!boss.equals(value)) { boss = value; refresh(); }
     }
     public void setMode(String next) {
         if (!Set.of("Recommended","Best in Bank").contains(next)) throw new IllegalArgumentException("mode");
@@ -76,7 +81,13 @@ public final class BurrowModel {
         if (journal.size() > 6) journal.remove(journal.size()-1);
     }
     public void resetDemo() { demoKills = 0; journal.clear(); }
-    private void refresh() { plan = Outfitter.resolve(nextPlanId++, scope, Outfitter.scurriusSample(), mode, bank); }
+    private void refresh() {
+        // Scurrius is the only available *demo* template. Unsupported bosses have
+        // no equipment claims, even when a demo bank fixture or mode is selected.
+        plan = "Scurrius".equals(boss)
+            ? Outfitter.resolve(nextPlanId++, scope, Outfitter.scurriusSample(), mode, bank)
+            : null;
+    }
     public static double cumulativeChance(double probability, int independentKills) {
         if (probability < 0 || probability > 1 || independentKills < 0) throw new IllegalArgumentException("odds");
         return 1 - Math.pow(1-probability, independentKills);

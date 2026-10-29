@@ -142,11 +142,26 @@ public final class BurrowPanel extends JPanel {
     }
     private void outfitter(Graphics2D g) {
         Plan plan=model.plan();
-        title(g,"OUTFITTER","Scurrius • sample melee loadout");
+        title(g,"OUTFITTER",model.outfitterSubtitle());
         card(g,178,84);small(g,"RECOMMENDATION MODE",20,193,GOLD);
         button(g,"Recommended  [reference]",199,model.mode().equals("Recommended"));
         button(g,"Best in Bank  [demo]",230,model.mode().equals("Best in Bank"));
         card(g,273,290);
+        if (plan == null) {
+            // No Vorkath/Barrows template exists. Never paint Scurrius cells or checklist.
+            small(g,"NO VETTED LOADOUT",20,303,GOLD);
+            label(g,model.boss(),20,340,15,TEXT,true);
+            small(g,"No verified boss template.",20,369,MUTED);
+            small(g,"Gear and supplies hidden.",20,392,MUTED);
+            small(g,"Choose Scurrius in PATH",20,437,TEXT);
+            small(g,"to see its demo sample.",20,457,TEXT);
+            small(g,"NO EQUIPMENT CLAIMS",20,519,BAD);
+            button(g,"LOAD DEMO BANK (manual)",576,false);
+            button(g,"CLEAR BANK SNAPSHOT",611,false);
+            small(g,"No resolved plan for " + model.boss(),15,655,MUTED);
+            small(g,"No highlights / bank actions",15,675,MUTED);
+            return;
+        }
         small(g,"NATIVE GRID  /  8 x 7",20,292,GOLD);
         small(g,"11 gear   •   28 inventory   •   17 spare",20,311,MUTED);
         int ox=24,oy=326,dx=22,dy=24;

@@ -1,4 +1,4 @@
-name: BUR-0008 Java 17 RuneLite build verification
+name: BUR-0009 C01 boss plan regression build
 
 on:
   workflow_dispatch:
@@ -29,11 +29,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo '11431cb6b0250b93cb5fdd0c585add25a93eb565c2a8d8bbd0accec123aa2270  ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip' | sha256sum -c -
+          echo 'd9a1a75b60eebc741d67ee05cb3f2e554e0d5a1d77f287c774118310f631a6aa  ci/BUR-0009-C01-JAVA17-SOURCE.zip' | sha256sum -c -
           python3 - <<'PYIN'
           from pathlib import Path
           from zipfile import ZipFile
-          zpath = Path('ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip')
+          zpath = Path('ci/BUR-0009-C01-JAVA17-SOURCE.zip')
           with ZipFile(zpath) as z:
               if z.testzip() is not None:
                   raise SystemExit('Sealed source archive CRC failed')
@@ -52,7 +52,7 @@ jobs:
                   if not checked_out.is_file() or checked_out.read_bytes() != z.read(member):
                       raise SystemExit('Source checkout does not match sealed archive: ' + name)
           assert Path('Project-Burrow/build.gradle').is_file()
-          print('SOURCE MATCH: 27 sealed files identical to browsable Java source tree')
+          print('SOURCE MATCH: 29 sealed files identical to browsable Java source tree')
           PYIN
 
       - name: Verify Java 17 runtime/compiler and Gradle JVM
@@ -78,10 +78,12 @@ jobs:
             javac --release 17 -encoding UTF-8 -cp build/ci-main -d build/ci-test \
               src/test/java/gg/feral/burrow/core/BurrowCoreTest.java \
               src/test/java/gg/feral/burrow/core/BurrowP1RegressionTest.java \
-              src/test/java/gg/feral/burrow/ui/BurrowHitboxTest.java
+              src/test/java/gg/feral/burrow/ui/BurrowHitboxTest.java \
+              src/test/java/gg/feral/burrow/core/BurrowBossPlanTest.java
             java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.core.BurrowCoreTest
             java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.core.BurrowP1RegressionTest
             java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.ui.BurrowHitboxTest
+            java -ea -Djava.awt.headless=true -cp build/ci-main:build/ci-test gg.feral.burrow.core.BurrowBossPlanTest
           ) 2>&1 | tee build-evidence/offline-java17.log
 
       - name: Resolve real RuneLite dependencies and run Gradle JUnit
@@ -116,7 +118,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bur-0008-java17-compile-evidence
+          name: bur-0009-c01-java17-evidence
           path: build-evidence/
           retention-days: 14
           if-no-files-found: warn

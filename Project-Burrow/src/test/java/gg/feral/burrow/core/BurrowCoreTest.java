@@ -41,7 +41,8 @@ public final class BurrowCoreTest {
         m.observeBank(new Snapshot(m.scope(),3,Map.of(2434,2)));
         try {m.observeBank(new Snapshot(m.scope(),3,Map.of(2434,1)));throw new AssertionError("old revision accepted");}
         catch(IllegalArgumentException expected){checks++;}
-        m.chooseBoss("Vorkath");yes(m.boss().equals("Vorkath"),"target selection");
+        m.chooseBoss("Vorkath");yes(m.boss().equals("Vorkath") && m.plan()==null,"unsupported target has no borrowed plan");
+        m.chooseBoss("Scurrius");yes(m.plan()!=null && "Scurrius".equals(m.plan().template().boss()),"sample plan restored");
         yes(Math.abs(BurrowModel.cumulativeChance(0.02,20)-0.3323920282449)<1e-6,"drop odds");
         var panel=new BurrowPanel(m);
         panel.clickAt(117,83);yes(m.view()==BurrowModel.View.OUTFITTER,"third top tab");

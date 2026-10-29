@@ -31,7 +31,9 @@ public final class BurrowHitboxTest {
         p.clickAt(50, 267);
         yes(m.boss().equals("Scurrius"), "gap between Pathfinder selectors");
         p.clickAt(30, 278);
-        yes(m.boss().equals("Barrows"), "Barrows selector interior");
+        yes(m.boss().equals("Barrows") && m.plan() == null, "Barrows selector must not borrow Scurrius plan");
+        p.clickAt(30, 249); // Restore the only implemented demo template before bank-geometry checks.
+        yes(m.boss().equals("Scurrius") && m.plan() != null, "Scurrius demo plan restored");
 
         p.clickAt(114, 83);
         yes(m.view() == BurrowModel.View.OUTFITTER, "GEAR tab interior");

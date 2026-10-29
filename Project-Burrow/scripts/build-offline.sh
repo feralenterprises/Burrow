@@ -11,6 +11,7 @@ TEST_SOURCES=(
   src/test/java/gg/feral/burrow/core/BurrowCoreTest.java
   src/test/java/gg/feral/burrow/core/BurrowP1RegressionTest.java
   src/test/java/gg/feral/burrow/ui/BurrowHitboxTest.java
+  src/test/java/gg/feral/burrow/core/BurrowBossPlanTest.java
 )
 for src in "${TEST_SOURCES[@]}"; do
   if [[ ! -f "$src" ]]; then
@@ -25,7 +26,8 @@ printf '%s\n' "${TEST_SOURCES[@]}" > build/TEST-SOURCES.txt
 for test_class in \
   gg.feral.burrow.core.BurrowCoreTest \
   gg.feral.burrow.core.BurrowP1RegressionTest \
-  gg.feral.burrow.ui.BurrowHitboxTest; do
+  gg.feral.burrow.ui.BurrowHitboxTest \
+  gg.feral.burrow.core.BurrowBossPlanTest; do
   "$JAVA_BIN" -ea -Djava.awt.headless=true -cp build/offline-main:build/offline-test "$test_class" | tee -a build/offline-test-results.txt
 done
 "$JAVA_BIN" -Djava.awt.headless=true -cp build/offline-main gg.feral.burrow.preview.RenderPreview build/previews

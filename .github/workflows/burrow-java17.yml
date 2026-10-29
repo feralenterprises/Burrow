@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo '11431cb6b0250b93cb5fdd0c585add25a93eb565c2a8d8bbd0accec123aa2270D  ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip' | sha256sum -c -
+          echo '11431cb6b0250b93cb5fdd0c585add25a93eb565c2a8d8bbd0accec123aa2270  ci/BUR-0008-JAVA17-GRADLE-DSL-FIX-SOURCE-R07.zip' | sha256sum -c -
           python3 - <<'PYIN'
           from pathlib import Path
           from zipfile import ZipFile

@@ -19,6 +19,8 @@ import net.runelite.api.Item;
 import net.runelite.api.ItemContainer;
 import net.runelite.api.ItemComposition;
 import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.ChatMessage;
+import java.util.concurrent.CopyOnWriteArrayList;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.events.MenuEntryAdded;
@@ -75,6 +77,44 @@ public final class BurrowPlugin extends Plugin {
     private static final boolean SESSION_XP_ENABLED = false;
     private final RuneLiteXpObservationAdapter xpObserver = new RuneLiteXpObservationAdapter();
     private volatile SessionScope sessionScope;
+    private final CopyOnWriteArrayList<BurrowPanel.SessionBossKcGain> kcPresentation = new CopyOnWriteArrayList<>();
+    private RuneLiteBossKcAdapter kcAdapter;
+    private boolean kcLoggedIn;
+    private volatile long kcGeneration;
+    private RuneLiteBossKcAdapter newKcAdapter() {
+        final long generation = ++kcGeneration;
+        return new RuneLiteBossKcAdapter(new RuneLiteBossKcAdapter.SessionsSink() {
+            public void onCurrentLoginReset() { if (generation == kcGeneration) { finishVerifiedSession(); kcPresentation.clear(); } }
+            public void onBossKcGain(String boss, long delta, long total) {
+                SessionScope scope = sessionScope;
+                if (generation != kcGeneration || !running.get() || scope == null || sessionPaused || delta <= 0) return;
+                BurrowPanel.SessionBossKcGain gain = new BurrowPanel.SessionBossKcGain(scope,
+                    nextSessionEventId(), SessionOrigin.VERIFIED_BRIDGE, boss, delta,
+                    "Observed RuneLite game-message KC delta");
+                kcPresentation.add(gain);
+                emitSessionEvent(gain);
+            }
+        });
+    }
+    private void reconcileKcLogin() {
+        if (!running.get() || client.getGameState() != GameState.LOGGED_IN) return;
+        if (kcAdapter == null) kcAdapter = newKcAdapter();
+        if (!kcLoggedIn) {
+            GameStateChanged observed = new GameStateChanged();
+            observed.setGameState(client.getGameState());
+            if (observed.getGameState() != GameState.LOGGED_IN) return;
+            kcAdapter.onGameStateChanged(observed);
+            kcLoggedIn = true;
+        }
+        long hash = authenticatedAccountHash();
+        kcAdapter.onAuthenticatedLogin(hash);
+        ensureVerifiedSession(hash);
+    }
+    @Subscribe public void onChatMessage(ChatMessage event) {
+        if (!running.get() || client.getGameState() != GameState.LOGGED_IN) return;
+        reconcileKcLogin();
+        if (kcAdapter != null && sessionScope != null && !sessionPaused) kcAdapter.onChatMessage(event);
+    }
     private long sessionAccountHash = -1L; // ephemeral authenticated hash, never logged or exported
     private long sessionFence;
     private long sessionEventSequence;
@@ -155,6 +195,12 @@ public final class BurrowPlugin extends Plugin {
         // stop is genuine: revoke scope and erase Session state, including old EDT work.
         SessionScope ending = sessionScope;
         sessionScope = null;
+        ++kcGeneration;
+        RuneLiteBossKcAdapter endingKc = kcAdapter;
+        kcAdapter = null;
+        kcLoggedIn = false;
+        kcPresentation.clear();
+        if (endingKc != null) clientThread.invoke(endingKc::stop);
         xpObserver.pluginStop();
         sessionAccountHash = -1L;
         requireFreshLoginStat = false;
@@ -185,7 +231,7 @@ public final class BurrowPlugin extends Plugin {
         if (client.getGameState() != GameState.LOGGED_IN) return;
         // Client-thread tick after RuneLite's stat callbacks; login sync must be
         // independently evidenced before a baseline may be initialized.
-        ensureVerifiedSession();
+        reconcileKcLogin();
         trySynchronizeXp();
         if (--questTickCountdown <= 0) {
             questTickCountdown = 5;
@@ -208,13 +254,16 @@ public final class BurrowPlugin extends Plugin {
 
     @Subscribe public void onGameStateChanged(GameStateChanged event) {
         if (!running.get()) return;
+        if (kcAdapter == null) kcAdapter = newKcAdapter();
+        kcAdapter.onGameStateChanged(event);
+        kcLoggedIn = event.getGameState() == GameState.LOGGED_IN;
         observeXpLoginTransition(event.getGameState());
         // Any non-LOGGED_IN state (hopping, loading, reconnect, logout, etc.)
         // retires the previous epoch immediately without storing player identity.
         if (event.getGameState() == GameState.LOGGED_IN) {
             // Returning from HOPPING/LOADING with the same authenticated account
             // reuses the same immutable session. A real account change opens new.
-            ensureVerifiedSession();
+            reconcileKcLogin();
             long epoch = weaponGate.enterLoggedIn();
             showLive(epoch, LiveWeapon.waiting());
             showCombat(epoch, LiveCombat.waiting());
@@ -397,9 +446,12 @@ public final class BurrowPlugin extends Plugin {
     }
 
     private void ensureVerifiedSession() {
+        ensureVerifiedSession(authenticatedAccountHash());
+    }
+
+    private void ensureVerifiedSession(long hash) {
         if (!running.get()) return;
-        long hash = authenticatedAccountHash();
-        if (hash == -1L) return; // unproven login: fail closed
+        if (hash == -1L) { finishVerifiedSession(); kcPresentation.clear(); return; } // fail closed
         if (sessionScope != null && sessionAccountHash != hash) finishVerifiedSession();
         if (sessionScope == null) {
             // Account identity is checked privately; exported tokens are random and opaque.
@@ -468,6 +520,8 @@ public final class BurrowPlugin extends Plugin {
                     scope, statusId, SessionOrigin.VERIFIED_BRIDGE,
                     SessionFeed.XP, SESSION_XP_ENABLED && xpSynchronized
                         ? FeedStatus.AVAILABLE : FeedStatus.UNAVAILABLE));
+            for (BurrowPanel.SessionBossKcGain gain : kcPresentation)
+                if (gain.scope() == scope) destination.ingestSessionEvent(gain);
         });
     }
 

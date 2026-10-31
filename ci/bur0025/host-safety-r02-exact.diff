@@ -1,0 +1,381 @@
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
+@@ -109,10 +109,42 @@
+         long hash = authenticatedAccountHash();
+         kcAdapter.onAuthenticatedLogin(hash);
+         ensureVerifiedSession(hash);
+     }
++    /**
++     * Safety fallback for a live client state that changes before its corresponding
++     * GameStateChanged callback reaches this plugin. Shared with the normal event
++     * path so a late state callback is idempotent, not a second session reset.
++     * Called only from RuneLite's client thread.
++     */
++    private void reconcileKcUnavailableState(GameState state) {
++        if (state == GameState.LOGGED_IN) return;
++        if (kcAdapter != null && kcLoggedIn) {
++            GameStateChanged observed = new GameStateChanged();
++            observed.setGameState(state);
++            kcAdapter.onGameStateChanged(observed);
++        }
++        kcLoggedIn = false;
++        if (state == GameState.LOGIN_SCREEN ||
++            state == GameState.LOGIN_SCREEN_AUTHENTICATOR ||
++            state == GameState.STARTING) {
++            finishVerifiedSession();
++            kcPresentation.clear();
++        } else {
++            // HOPPING, LOADING, CONNECTION_LOST and any other nonterminal state
++            // suspend, never retire, a same-login scope. A fresh KC baseline is
++            // required when the authenticated account resumes LOGGED_IN.
++            pauseVerifiedSession();
++        }
++    }
++
+     @Subscribe public void onChatMessage(ChatMessage event) {
+-        if (!running.get() || client.getGameState() != GameState.LOGGED_IN) return;
++        if (!running.get()) return;
++        GameState state = client.getGameState();
++        if (state != GameState.LOGGED_IN) {
++            reconcileKcUnavailableState(state);
++            return;
++        }
+         reconcileKcLogin();
+         if (kcAdapter != null && sessionScope != null && !sessionPaused) kcAdapter.onChatMessage(event);
+     }
+     private long sessionAccountHash = -1L; // ephemeral authenticated hash, never logged or exported
+@@ -227,9 +259,13 @@
+         if (!running.get()) return;
+         OutfitterBank current = outfitterBank;
+         if (current != null) current.refresh();
+         // State reads run on RuneLite's client thread and only in the current login epoch.
+-        if (client.getGameState() != GameState.LOGGED_IN) return;
++        GameState liveState = client.getGameState();
++        if (liveState != GameState.LOGGED_IN) {
++            reconcileKcUnavailableState(liveState);
++            return;
++        }
+         // Client-thread tick after RuneLite's stat callbacks; login sync must be
+         // independently evidenced before a baseline may be initialized.
+         reconcileKcLogin();
+         trySynchronizeXp();
+@@ -253,12 +289,17 @@
+     }
+ 
+     @Subscribe public void onGameStateChanged(GameStateChanged event) {
+         if (!running.get()) return;
+-        if (kcAdapter == null) kcAdapter = newKcAdapter();
+-        kcAdapter.onGameStateChanged(event);
+-        kcLoggedIn = event.getGameState() == GameState.LOGGED_IN;
+-        observeXpLoginTransition(event.getGameState());
++        GameState observedState = event.getGameState();
++        if (observedState == GameState.LOGGED_IN) {
++            if (kcAdapter == null) kcAdapter = newKcAdapter();
++            kcAdapter.onGameStateChanged(event);
++            kcLoggedIn = true;
++        } else {
++            reconcileKcUnavailableState(observedState);
++        }
++        observeXpLoginTransition(observedState);
+         // Any non-LOGGED_IN state (hopping, loading, reconnect, logout, etc.)
+         // retires the previous epoch immediately without storing player identity.
+         if (event.getGameState() == GameState.LOGGED_IN) {
+             // Returning from HOPPING/LOADING with the same authenticated account
+@@ -271,18 +312,10 @@
+             // Give quest varps a few client ticks to settle after the login transition.
+             questTickCountdown = 3;
+             clientThread.invoke(() -> { pollWeapon(epoch); pollCombat(epoch); });
+         } else {
+-            // LOGIN_SCREEN is a confirmed end of this login. Other transitions
+-            // are suspended, never converted into false logout/reset events.
+-            if (event.getGameState() == GameState.LOGIN_SCREEN ||
+-                event.getGameState() == GameState.LOGIN_SCREEN_AUTHENTICATOR) {
+-                finishVerifiedSession();
+-            } else if (event.getGameState() != GameState.LOADING) {
+-                // Ordinary scene-loading (teleport/region) must NOT discard a
+-                // synchronized skill baseline. Hops/disconnects do rebaseline.
+-                pauseVerifiedSession();
+-            }
++            // The same KC state reconciliation runs for both observed state
++            // events and fallback chat/tick reads. No second retirement here.
+             OutfitterBank current = outfitterBank;
+             if (current != null) current.clear();
+             long epoch = weaponGate.leaveLoggedIn();
+             questTickCountdown = 0;
+--- /dev/null
++++ b/Project-Burrow/src/test/java/gg/feral/burrow/runelite/BurrowKcHostSafetyRegressionTest.java
+@@ -0,0 +1,274 @@
++package gg.feral.burrow.runelite;
++
++import gg.feral.burrow.core.BurrowModel;
++import gg.feral.burrow.ui.BurrowPanel;
++import net.runelite.api.Client;
++import net.runelite.api.ChatMessageType;
++import net.runelite.api.GameState;
++import net.runelite.api.events.ChatMessage;
++import net.runelite.api.events.GameStateChanged;
++import net.runelite.api.events.GameTick;
++import org.junit.jupiter.api.Test;
++
++import javax.swing.SwingUtilities;
++import java.lang.reflect.Field;
++import java.lang.reflect.Method;
++import java.lang.reflect.Proxy;
++import java.util.concurrent.CountDownLatch;
++import java.util.concurrent.TimeUnit;
++import java.util.concurrent.atomic.AtomicBoolean;
++import static org.junit.jupiter.api.Assertions.*;
++
++/** Tests intentionally synthesize RuneLite callbacks. They do not attest real server kills. */
++final class BurrowKcHostSafetyRegressionTest {
++    static final class World {
++        volatile GameState state = GameState.LOGGED_IN;
++        volatile long hash = 101L;
++        volatile boolean throwHash;
++        final Client client = (Client) Proxy.newProxyInstance(Client.class.getClassLoader(),
++                new Class<?>[]{Client.class}, (proxy, method, args) -> {
++                    switch (method.getName()) {
++                        case "getGameState": return state;
++                        case "getAccountHash":
++                            if (throwHash) throw new IllegalStateException("identity unavailable");
++                            return hash;
++                        default: throw new AssertionError("Unexpected client read: " + method.getName());
++                    }
++                });
++    }
++
++    private static Field field(String name) throws Exception {
++        Field result = BurrowPlugin.class.getDeclaredField(name);
++        result.setAccessible(true);
++        return result;
++    }
++    private static void flush() throws Exception { SwingUtilities.invokeAndWait(() -> {}); }
++    private static BurrowPlugin host(World w, BurrowPanel p) throws Exception {
++        BurrowPlugin result = new BurrowPlugin();
++        field("client").set(result, w.client);
++        field("panel").set(result, p);
++        ((AtomicBoolean)field("running").get(result)).set(true);
++        return result;
++    }
++    private static void chat(BurrowPlugin host, ChatMessageType type, int absoluteCount) {
++        ChatMessage event = new ChatMessage();
++        event.setType(type);
++        event.setMessage("Your Vorkath kill count is: " + absoluteCount + ".");
++        host.onChatMessage(event);
++    }
++    private static void tick(BurrowPlugin host) { host.onGameTick(new GameTick()); }
++    private static void stateEvent(BurrowPlugin host, GameState state) {
++        GameStateChanged event = new GameStateChanged();
++        event.setGameState(state);
++        host.onGameStateChanged(event);
++    }
++    private static void gain(BurrowPlugin host, BurrowPanel panel) throws Exception {
++        chat(host, ChatMessageType.GAMEMESSAGE, 100); // per-account/epoch baseline only
++        chat(host, ChatMessageType.GAMEMESSAGE, 101); // accepted +1
++        flush();
++        assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        assertEquals(0L, panel.sessionReadout().totalXp());
++        assertEquals(BurrowPanel.FeedStatus.UNAVAILABLE,
++                panel.sessionReadout().feeds().get(BurrowPanel.SessionFeed.XP));
++    }
++    private static void assertRetired(BurrowPlugin host, BurrowPanel panel) throws Exception {
++        flush();
++        assertNull(field("sessionScope").get(host));
++        assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        assertEquals(0L, panel.sessionReadout().totalXp());
++        assertTrue(((java.util.List<?>)field("kcPresentation").get(host)).isEmpty());
++    }
++
++    @Test void terminalStatesWithoutStateEventMustRetireFromTick() throws Exception {
++        for (GameState terminal : new GameState[]{GameState.LOGIN_SCREEN,
++                GameState.LOGIN_SCREEN_AUTHENTICATOR, GameState.STARTING}) {
++            World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++            BurrowPlugin host = host(world, panel); gain(host, panel);
++            world.state = terminal; // deliberately OMIT GameStateChanged
++            tick(host);
++            assertRetired(host, panel);
++            world.state = GameState.LOGGED_IN;
++            chat(host, ChatMessageType.GAMEMESSAGE, 105); // no old +4 leak
++            flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++            chat(host, ChatMessageType.GAMEMESSAGE, 106);
++            flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        }
++    }
++
++    @Test void terminalStatesWithoutStateEventMustRetireFromChat() throws Exception {
++        for (GameState terminal : new GameState[]{GameState.LOGIN_SCREEN,
++                GameState.LOGIN_SCREEN_AUTHENTICATOR, GameState.STARTING}) {
++            World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++            BurrowPlugin host = host(world, panel); gain(host, panel);
++            world.state = terminal; // deliberately OMIT GameStateChanged
++            chat(host, ChatMessageType.GAMEMESSAGE, 500);
++            assertRetired(host, panel);
++            chat(host, ChatMessageType.GAMEMESSAGE, 501);
++            assertRetired(host, panel); // idempotent
++        }
++    }
++
++    @Test void transientStatesPreserveSessionAndRebaselineOnTickAndChat() throws Exception {
++        for (GameState transientState : new GameState[]{GameState.HOPPING,
++                GameState.LOADING, GameState.CONNECTION_LOST}) {
++            World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++            BurrowPlugin host = host(world, panel); gain(host, panel);
++            Object originalScope = field("sessionScope").get(host);
++            world.state = transientState;
++            chat(host, ChatMessageType.GAMEMESSAGE, 900); tick(host);
++            flush();
++            assertSame(originalScope, field("sessionScope").get(host));
++            assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++            world.state = GameState.LOGGED_IN;
++            tick(host); // same-account return opens new *baseline*, not gain
++            chat(host, ChatMessageType.GAMEMESSAGE, 300);
++            flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++            chat(host, ChatMessageType.GAMEMESSAGE, 301);
++            flush(); assertEquals(2L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        }
++    }
++
++    @Test void stateCallbackTerminalAndTransientUseTheSameDisposition() throws Exception {
++        for (GameState transientState : new GameState[]{GameState.HOPPING,
++                GameState.LOADING, GameState.CONNECTION_LOST}) {
++            World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++            BurrowPlugin host = host(world, panel); gain(host, panel);
++            Object scope = field("sessionScope").get(host);
++            world.state = transientState;
++            stateEvent(host, transientState);
++            flush(); assertSame(scope, field("sessionScope").get(host));
++            assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath",0L));
++            world.state = GameState.LOGGED_IN;
++            tick(host);
++            chat(host, ChatMessageType.GAMEMESSAGE, 500); // fresh observation baseline
++            flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath",0L));
++        }
++        for (GameState terminal : new GameState[]{GameState.LOGIN_SCREEN,
++                GameState.LOGIN_SCREEN_AUTHENTICATOR, GameState.STARTING}) {
++            World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++            BurrowPlugin host = host(world, panel); gain(host, panel);
++            world.state = terminal;
++            stateEvent(host, terminal);
++            assertRetired(host, panel);
++            stateEvent(host, terminal); // idempotent duplicate state callback
++            assertRetired(host, panel);
++        }
++    }
++
++    @Test void unknownAndThrowingIdentityAtTickOrChatRetiresAndRebaselines() throws Exception {
++        for (boolean fromTick : new boolean[]{false,true}) {
++            for (boolean thrown : new boolean[]{false,true}) {
++                World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++                BurrowPlugin host = host(world, panel); gain(host, panel);
++                world.hash = -1L; world.throwHash = thrown;
++                if (fromTick) tick(host); else chat(host, ChatMessageType.GAMEMESSAGE, 102);
++                assertRetired(host, panel);
++                world.hash = 101L; world.throwHash = false;
++                chat(host, ChatMessageType.GAMEMESSAGE, 103); // fresh baseline
++                flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++                chat(host, ChatMessageType.GAMEMESSAGE, 104);
++                flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++            }
++        }
++    }
++
++    @Test void accountAtoBtoAAndDuplicateSamplesCannotCarryTotals() throws Exception {
++        World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, panel); gain(host, panel);
++        world.hash = 202L; chat(host, ChatMessageType.GAMEMESSAGE, 30);
++        flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        chat(host, ChatMessageType.GAMEMESSAGE, 30);
++        chat(host, ChatMessageType.PUBLICCHAT, 31);
++        flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        chat(host, ChatMessageType.GAMEMESSAGE, 31);
++        flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath",0L));
++        world.hash = 101L; chat(host, ChatMessageType.GAMEMESSAGE, 105);
++        flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        chat(host, ChatMessageType.GAMEMESSAGE, 106);
++        flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath",0L));
++    }
++
++    @Test void pendingOldEdtGainDoesNotLeakIntoDifferentAccount() throws Exception {
++        World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, panel);
++        CountDownLatch blockerEntered = new CountDownLatch(1), unblock = new CountDownLatch(1);
++        SwingUtilities.invokeLater(() -> {
++            blockerEntered.countDown();
++            try { unblock.await(4, TimeUnit.SECONDS); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
++        });
++        try {
++            assertTrue(blockerEntered.await(2, TimeUnit.SECONDS));
++            chat(host, ChatMessageType.GAMEMESSAGE, 1);
++            chat(host, ChatMessageType.GAMEMESSAGE, 2); // queued under A
++            world.hash = 202L;
++            chat(host, ChatMessageType.GAMEMESSAGE, 40); // retires A before EDT accepts it
++        } finally { unblock.countDown(); }
++        flush();
++        assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        chat(host, ChatMessageType.GAMEMESSAGE, 41); flush();
++        assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++    }
++
++    @Test void panelReplacementReplaysOnlyCurrentScopeOnce() throws Exception {
++        World world = new World(); BurrowPanel first = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, first); gain(host, first);
++        BurrowPanel second = new BurrowPanel(new BurrowModel());
++        field("panel").set(host, second);
++        Method replay = BurrowPlugin.class.getDeclaredMethod("publishSessionToPanel",
++                BurrowPanel.SessionScope.class, BurrowPanel.class);
++        replay.setAccessible(true);
++        replay.invoke(host, field("sessionScope").get(host), second);
++        flush(); assertEquals(1L, second.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        replay.invoke(host, field("sessionScope").get(host), second);
++        flush(); assertEquals(1L, second.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        world.state = GameState.LOGIN_SCREEN;
++        tick(host); assertRetired(host, second);
++    }
++
++    @Test void firstTickWhileAlreadyLoggedInBootstrapsOnlyABaseline() throws Exception {
++        World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, panel);
++        tick(host); flush(); assertNotNull(field("sessionScope").get(host));
++        chat(host, ChatMessageType.GAMEMESSAGE, 600);
++        flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++        chat(host, ChatMessageType.GAMEMESSAGE, 601);
++        flush(); assertEquals(1L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath",0L));
++        assertEquals(0L, panel.sessionReadout().totalXp());
++    }
++
++    @Test void queuedEdtGainIsFencedByStopGenerationAndScope() throws Exception {
++        World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, panel);
++        CountDownLatch blockerEntered = new CountDownLatch(1), unblock = new CountDownLatch(1);
++        SwingUtilities.invokeLater(() -> {
++            blockerEntered.countDown();
++            try { unblock.await(4, TimeUnit.SECONDS); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
++        });
++        try {
++            assertTrue(blockerEntered.await(2, TimeUnit.SECONDS));
++            chat(host, ChatMessageType.GAMEMESSAGE, 1);
++            chat(host, ChatMessageType.GAMEMESSAGE, 2);
++            // Simulates the shutdown's *early invalidation envelope*. Full
++            // shutDown() requires RuneLite-managed injected dependencies.
++            ((AtomicBoolean)field("running").get(host)).set(false);
++            field("sessionScope").set(host, null);
++            Field generation = field("kcGeneration");
++            generation.setLong(host, generation.getLong(host) + 1);
++        } finally { unblock.countDown(); }
++        flush(); assertTrue(panel.sessionReadout().kcByBoss().isEmpty());
++    }
++
++    @Test void staleOriginTextCannotBeAuthenticatedByMessageOnly() throws Exception {
++        World world = new World(); BurrowPanel panel = new BurrowPanel(new BurrowModel());
++        BurrowPlugin host = host(world, panel);
++        chat(host, ChatMessageType.GAMEMESSAGE, 5); // account A baseline
++        world.hash = 202L;
++        chat(host, ChatMessageType.GAMEMESSAGE, 10); // account B baseline
++        // Labeled A-origin by this fixture, but RuneLite ChatMessage carries no
++        // authenticated origin. Current observer CANNOT verify our assertion.
++        chat(host, ChatMessageType.GAMEMESSAGE, 200);
++        flush();
++        assertEquals(190L, panel.sessionReadout().kcByBoss().getOrDefault("Vorkath", 0L));
++        // This is a documented limitation, NOT an assertion that 190 real kills occurred.
++    }
++}

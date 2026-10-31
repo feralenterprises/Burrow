@@ -1,0 +1,127 @@
+name: BUR-0049 R12 isolated Java 17 verification (release HOLD)
+
+on:
+  push:
+    branches:
+      - ci/bur-0049-r12-java17-hold
+    paths:
+      - ci/r12/SPOONS-BUR0049-R12-XP-DISABLED-RECONCILED-CHILD-R01.zip
+
+permissions:
+  contents: read
+
+jobs:
+  verify-r12:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout isolated CI branch
+        uses: actions/checkout@v4
+
+      - name: Install genuine Temurin JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install genuine Gradle 8.14.6
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.6'
+
+      - name: Verify sealed R12 and extract to clean working directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-evidence
+          python3 - <<'PY'
+          import hashlib, json, pathlib, shutil, stat, zipfile
+          archive = pathlib.Path('ci/r12/SPOONS-BUR0049-R12-XP-DISABLED-RECONCILED-CHILD-R01.zip')
+          expected_zip_sha = '1bf12c78f058894708155c9e72a3f345dbabc65ae9250eec10bdbd33ebba53a6'
+          if not archive.is_file():
+              raise SystemExit('R12_SOURCE_MISSING: upload exact source to ci/r12; no build attempted')
+          actual = hashlib.sha256(archive.read_bytes()).hexdigest()
+          if actual != expected_zip_sha:
+              raise SystemExit('R12_ARCHIVE_HASH_MISMATCH: ' + actual)
+          with zipfile.ZipFile(archive) as z:
+              if z.testzip() is not None:
+                  raise SystemExit('R12_ARCHIVE_CRC_FAIL')
+              all_files = {}
+              seen = set()
+              for info in z.infolist():
+                  path = pathlib.PurePosixPath(info.filename)
+                  if info.filename.startswith(('/', '\\')) or '..' in path.parts or '\\' in info.filename:
+                      raise SystemExit('R12_UNSAFE_PATH: ' + info.filename)
+                  if stat.S_IFMT(info.external_attr >> 16) == stat.S_IFLNK:
+                      raise SystemExit('R12_SYMLINK_REJECTED: ' + info.filename)
+                  normalized = info.filename.lower()
+                  if normalized in seen:
+                      raise SystemExit('R12_DUPLICATE_PATH: ' + info.filename)
+                  seen.add(normalized)
+                  if not info.is_dir():
+                      all_files[info.filename] = z.read(info.filename)
+              manifest = json.loads(all_files['R12-VERIFICATION-MANIFEST.json'])
+              hashes = manifest['project_file_sha256']
+              if len(hashes) != 274 or set(hashes) != {p for p in all_files if p.startswith('Project-Burrow/')}:
+                  raise SystemExit('R12_PROJECT_MANIFEST_MEMBERS_MISMATCH')
+              for name, expected in hashes.items():
+                  if hashlib.sha256(all_files[name]).hexdigest() != expected:
+                      raise SystemExit('R12_PROJECT_HASH_MISMATCH: ' + name)
+              source = all_files['Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java'].decode('utf-8')
+              if 'private static final boolean SESSION_XP_ENABLED = false;' not in source:
+                  raise SystemExit('R12_XP_DISABLE_NOT_PRESENT')
+              out = pathlib.Path('r12-source')
+              out.mkdir()
+              for name, data in all_files.items():
+                  dest = out / name
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(data)
+          pathlib.Path('build-evidence/source-integrity.txt').write_text(
+              'R12 ZIP SHA-256: '+actual+'\n274 of 274 project files match manifest\nXP gate OFF\nRELEASE HOLD\n')
+          print('R12_SOURCE_INTEGRITY_PASS: ' + actual + ' (274 project files)')
+          PY
+
+      - name: Record genuine JDK and Gradle versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          java -version 2>&1 | tee build-evidence/java-version.log
+          javac -version 2>&1 | tee build-evidence/javac-version.log
+          gradle --version 2>&1 | tee build-evidence/gradle-version.log
+          (cd r12-source/Project-Burrow && bash scripts/require-java17.sh) 2>&1 | tee build-evidence/java17-gate.log
+
+      - name: Run real RuneLite 1.13.4 JUnit tests and JAR build
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd r12-source/Project-Burrow && gradle --no-daemon --stacktrace --info -PruneLiteVersion=1.13.4 clean test jar) 2>&1 | tee build-evidence/clean-test-jar.log
+
+      - name: Record exact RuneLite dependency resolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd r12-source/Project-Burrow && gradle --no-daemon dependencyInsight --dependency net.runelite:client --configuration testRuntimeClasspath) 2>&1 | tee build-evidence/runelite-dependency.log
+
+      - name: Collect JUnit XML and JAR hashes regardless of outcome
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p build-evidence
+          if [ -d r12-source/Project-Burrow/build/test-results/test ]; then
+            cp -r r12-source/Project-Burrow/build/test-results/test build-evidence/junit-xml
+          fi
+          if [ -d r12-source/Project-Burrow/build/libs ]; then
+            mkdir -p build-evidence/jars
+            find r12-source/Project-Burrow/build/libs -type f -name '*.jar' -exec cp -t build-evidence/jars '{}' +
+            (cd build-evidence/jars && sha256sum ./*.jar > ../jar-sha256s.txt) || true
+          fi
+          printf '%s\n' 'BUR-0049 RELEASE HOLD: test result is not a native gameplay or safety approval' > build-evidence/RELEASE-HOLD.txt
+
+      - name: Upload CI evidence only, never a release
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bur-0049-r12-java17-hold-evidence
+          path: build-evidence/
+          retention-days: 14
+          if-no-files-found: warn

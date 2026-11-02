@@ -1,0 +1,40 @@
+plugins { id 'java' }
+// BUR-0006: forbid building on newer JDKs with only --release 17.
+if (JavaVersion.current() != JavaVersion.VERSION_17) {
+    throw new GradleException('BURROW-JAVA17-BLOCKED: Gradle itself must run on JDK 17; current JVM is ' + JavaVersion.current())
+}
+group = 'gg.feral.burrow'
+version = '0.20.1'
+repositories {
+    maven { url = 'https://repo.runelite.net'; content { includeGroupByRegex('net[.]runelite.*') } }
+    mavenCentral()
+}
+def runeLiteVersion = providers.gradleProperty('runeLiteVersion').getOrElse('1.13.4')
+dependencies {
+    compileOnly "net.runelite:client:${runeLiteVersion}"
+    testImplementation "net.runelite:client:${runeLiteVersion}"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.11.4'
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(17) } }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release.set(17) }
+test {
+    useJUnitPlatform()
+    // BQA-IMPL-R05: plugin-host tests must never write completed-session history into the real ~/.runelite folder.
+    systemProperty 'trashpanda.historyDir', layout.buildDirectory.dir('test-session-history').get().asFile.absolutePath
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(17) }
+}
+tasks.withType(JavaExec).configureEach { javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(17) } }
+jar { manifest { attributes 'Main-Class': 'gg.feral.burrow.preview.BurrowStandalone' } }
+
+// BUR-0008-B01-L01: development launch, analogous to the proven Iron Ledger run task.
+// Loads Burrow through RuneLite's own public local-plugin API, no credential handling.
+tasks.register('run', JavaExec) {
+    group = 'application'
+    description = 'Launch Project Burrow in a local RuneLite developer client'
+    dependsOn 'testClasses'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'gg.feral.burrow.runelite.BurrowPluginTest'
+    jvmArgs '-ea'
+    args '--developer-mode'
+}

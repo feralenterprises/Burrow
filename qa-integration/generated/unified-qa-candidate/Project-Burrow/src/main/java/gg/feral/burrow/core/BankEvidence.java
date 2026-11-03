@@ -27,7 +27,13 @@ public record BankEvidence(Map<Integer,Integer> bank, Map<Integer,Integer> inven
         /** Two identical consecutive tick reads; tab-count witness unavailable. */
         STABLE_READ,
         /** A single read (offline fixtures). */
-        SINGLE_READ
+        SINGLE_READ,
+        /**
+         * Durable historical Bank Memory from ConfigManager (last accepted full scan).
+         * Usable for read-only Best in Bank loadout planning when the bank is closed.
+         * NEVER authorizes withdrawable stock, O tags, or freeze-gate withdrawals.
+         */
+        HISTORICAL_ARCHIVE
     }
     public BankEvidence {
         bank=Map.copyOf(bank); inventory=Map.copyOf(inventory); equipment=Map.copyOf(equipment);
@@ -39,6 +45,25 @@ public record BankEvidence(Map<Integer,Integer> bank, Map<Integer,Integer> inven
     public static BankEvidence fixture(Map<Integer,Integer> combined) {
         return new BankEvidence(combined,Map.of(),Map.of(),Population.SINGLE_READ,0L,true,false);
     }
+    /**
+     * Hydrate closed-bank planning evidence from durable Bank Memory.
+     * Always {@code bankStillOpen=false}. Marks {@code stale} when the 7-day reminder is due.
+     * Never proves currently withdrawable stock.
+     */
+    public static BankEvidence fromHistoricalBankMemory(PathfinderAccountArchive.BankMemory memory, long nowMillis) {
+        Objects.requireNonNull(memory, "memory");
+        if (nowMillis <= 0 || memory.observedAtMillis() <= 0)
+            throw new IllegalArgumentException("historical bank memory requires positive timestamps");
+        boolean aged = memory.reminderDue(nowMillis);
+        return new BankEvidence(
+            memory.bankItems(), Map.of(), Map.of(),
+            Population.HISTORICAL_ARCHIVE,
+            memory.observedAtMillis(),
+            false,
+            aged,
+            0L);
+    }
+    public boolean historicalArchive() { return population == Population.HISTORICAL_ARCHIVE; }
     public Map<Integer,Integer> combined() {
         Map<Integer,Integer> r=new HashMap<>(bank);
         inventory.forEach((k,v)->r.merge(k,v,Math::addExact));
@@ -46,8 +71,11 @@ public record BankEvidence(Map<Integer,Integer> bank, Map<Integer,Integer> inven
         return Map.copyOf(r);
     }
     /** BQA-901 BF-04: usable as planning input. A stable live read (even of an empty bank) is; an
-     *  unattested single-read fixture with no bank entries is not. */
-    public boolean planningInput() { return !(bank.isEmpty() && population==Population.SINGLE_READ); }
+     *  unattested single-read fixture with no bank entries is not. Historical archive bank maps plan. */
+    public boolean planningInput() {
+        if (population == Population.HISTORICAL_ARCHIVE) return true;
+        return !(bank.isEmpty() && population == Population.SINGLE_READ);
+    }
     public boolean isEmpty() { return bank.isEmpty() && inventory.isEmpty() && equipment.isEmpty(); }
     public BankEvidence closed() { return new BankEvidence(bank,inventory,equipment,population,observedAtMillis,false,stale,carriedAtMillis); }
     public BankEvidence markStale() { return new BankEvidence(bank,inventory,equipment,population,observedAtMillis,bankStillOpen,true,carriedAtMillis); }
@@ -62,10 +90,18 @@ public record BankEvidence(Map<Integer,Integer> bank, Map<Integer,Integer> inven
     }
     public boolean carriedLive() { return carriedAtMillis > 0L && !bankStillOpen; }
     public String trustLine() {
+        if (historicalArchive()) {
+            String age = stale ? "STALE (7+ days) · " : "UNDER 7 DAYS · ";
+            String bankPart = bank.isEmpty() ? "bank empty (as observed), " : bank.size() + " bank types, ";
+            return "HISTORICAL BANK MEMORY · " + age + bankPart
+                + "as-of " + observedAtMillis
+                + " · read-only planning only · NOT currently withdrawable";
+        }
         String p=switch(population){
             case STABLE_TAB_COUNTS_CONSISTENT -> "stable read, tab counts consistent";
             case STABLE_READ -> "stable read";
             case SINGLE_READ -> "single read";
+            case HISTORICAL_ARCHIVE -> "historical archive"; // unreachable: handled above
         };
         // BQA-901 BF-04: a source-qualified empty bank is stated as such, never as "unknown".
         String bankPart=bank.isEmpty()&&population!=Population.SINGLE_READ?"bank empty (confirmed), ":bank.size()+" bank types, ";

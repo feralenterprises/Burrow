@@ -71,7 +71,24 @@ public final class PathfinderGuidedCapture {
         public boolean provesCompleteLog() { return false; }
     }
     public record ChecklistStep(Section section, Status status, int witnessedPages,
-                                int playerReviewedPages, String instruction) {}
+                                int playerReviewedPages, String instruction,
+                                long lastSeenAtMillis, int witnessedEvidenceRows,
+                                boolean provesComplete) {
+        public ChecklistStep(Section section, Status status, int witnessedPages,
+                             int playerReviewedPages, String instruction) {
+            this(section, status, witnessedPages, playerReviewedPages, instruction, 0L, 0, false);
+        }
+        public ChecklistStep(Section section, Status status, int witnessedPages,
+                             int playerReviewedPages, String instruction, long lastSeenAtMillis) {
+            this(section, status, witnessedPages, playerReviewedPages, instruction, lastSeenAtMillis, 0, false);
+        }
+        /** Seven-day stale reminder for a previously witnessed/reviewed section. */
+        public boolean staleReminderDue(long nowMillis) {
+            return lastSeenAtMillis > 0
+                && (nowMillis < lastSeenAtMillis
+                    || nowMillis - lastSeenAtMillis >= PathfinderAccountArchive.REMINDER_AFTER_MS);
+        }
+    }
     private static final String VERSION="PQA7";
     private static final String PREFIX="pathfinder_capture_";
     private static final int MAX_PAGES=60;
@@ -182,7 +199,10 @@ public final class PathfinderGuidedCapture {
             var v=read(hash,s);
             Status status=v.map(SectionSnapshot::status).orElse(Status.UNOBSERVED);
             items.add(new ChecklistStep(s,status,v.map(SectionSnapshot::nativePages).orElse(0),
-                v.map(SectionSnapshot::playerReviewPages).orElse(0),s.guidance()));
+                v.map(SectionSnapshot::playerReviewPages).orElse(0),s.guidance(),
+                v.map(SectionSnapshot::lastSeenAtMillis).orElse(0L),
+                v.map(SectionSnapshot::witnessedRows).orElse(0),
+                v.map(SectionSnapshot::provesCompleteLog).orElse(false)));
         }
         return List.copyOf(items);
     }

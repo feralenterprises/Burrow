@@ -138,32 +138,98 @@ public final class BurrowPlugin extends Plugin {
         gg.feral.burrow.ui.BankMemoryViewModel.Display memory;
         java.util.List<gg.feral.burrow.core.PathfinderGuidedCapture.ChecklistStep> steps=java.util.List.of();
         boolean initial=false,latest=false;
+        gg.feral.burrow.core.AccountIntelligenceReport.Snapshot intel;
         try {
             var archive=pathfinderArchive();
+            java.util.Optional<gg.feral.burrow.core.PathfinderAccountArchive.Baseline> initialOpt=java.util.Optional.empty();
+            java.util.Optional<gg.feral.burrow.core.PathfinderAccountArchive.Baseline> latestOpt=java.util.Optional.empty();
+            java.util.Optional<gg.feral.burrow.core.PathfinderAccountArchive.BankMemory> bankOpt=java.util.Optional.empty();
             if(stamped!=-1L && archive!=null) {
+                bankOpt=archive.readBank(stamped);
+                // Resolve reviewed item names when ItemManager is available; never invent names.
                 memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
-                    stamped,stamped,archive.readBank(stamped),now,id->null);
-                initial=archive.readInitial(stamped).isPresent();
-                latest=archive.readLatest(stamped).isPresent();
+                    stamped,stamped,bankOpt,now,this::reviewedBankItemName);
+                initialOpt=archive.readInitial(stamped);
+                latestOpt=archive.readLatest(stamped);
+                initial=initialOpt.isPresent();
+                latest=latestOpt.isPresent();
                 var journal=pathfinderGuidedCapture();
                 if(journal!=null)steps=journal.checklist(stamped);
             } else {
                 memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
                     -1L,-1L,java.util.Optional.empty(),now,id->null);
             }
+            intel=gg.feral.burrow.core.AccountIntelligenceReport.build(
+                stamped,now,initialOpt,latestOpt,bankOpt,steps);
         } catch(RuntimeException unavailable) {
             memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
                 -1L,-1L,java.util.Optional.empty(),now,id->null);
             steps=java.util.List.of();initial=false;latest=false;
+            intel=gg.feral.burrow.core.AccountIntelligenceReport.build(
+                -1L,now,java.util.Optional.empty(),java.util.Optional.empty(),
+                java.util.Optional.empty(),java.util.List.of());
         }
+        // Closed-bank Best in Bank planning may use durable historical memory (never O/withdraw).
+        if(stamped!=-1L) hydrateHistoricalBankPlanningIfNeeded();
         final var result=memory;
         final var checklist=java.util.List.copyOf(steps);
         final boolean first=initial,recent=latest;
+        final var intelligence=intel;
         SwingUtilities.invokeLater(()-> {
             if(hostPanel==current && accountMemoryPublicationRevision==revision &&
                (stamped==-1L || (sessionScope==scope && sessionAccountHash==stamped &&
-                    !sessionPaused)))current.publish(stamped,result,checklist,first,recent);
+                    !sessionPaused)))current.publish(stamped,result,checklist,first,recent,intelligence);
         });
+    }
+    /** Exact item composition names only; blank/missing stays ID-only in Bank Memory. */
+    private String reviewedBankItemName(int itemId) {
+        if(itemId<=0 || itemManager==null) return null;
+        try {
+            var composition=itemManager.getItemComposition(itemId);
+            if(composition==null) return null;
+            String name=composition.getName();
+            return name==null || name.isBlank() || "null".equalsIgnoreCase(name) ? null : name;
+        } catch(RuntimeException unavailable) {
+            return null;
+        }
+    }
+    /**
+     * When the bank is closed and no live/as-of-close evidence is loaded, hydrate Best in Bank
+     * with durable historical Bank Memory for read-only loadout planning.
+     * Never authorizes O tags / freeze-gate withdrawals ({@code bankStillOpen=false}).
+     */
+    private void hydrateHistoricalBankPlanningIfNeeded() {
+        if(bankPreloader==null || bankPreloader.isClosed()) return;
+        long hash=authenticatedAccountHash();
+        SessionScope scope=sessionScope;
+        if(!mayCaptureFor(hash) || scope==null) return;
+        // Live open-bank or same-session as-of-close evidence always wins over archive hydrate.
+        var current=bankPreloader.evidence();
+        if(current!=null && !current.historicalArchive()) return;
+        if(bankWasOpen) return; // live bank session in progress — never overlay historical
+        try {
+            var archive=pathfinderArchive();
+            if(archive==null) return;
+            var memory=archive.readBank(hash);
+            if(memory.isEmpty()) return;
+            if(current!=null && current.historicalArchive()
+                && current.observedAtMillis()>=memory.get().observedAtMillis()) return;
+            long now=System.currentTimeMillis();
+            var historical=gg.feral.burrow.core.BankEvidence.fromHistoricalBankMemory(memory.get(),now);
+            java.util.Map<Integer,String> names=new java.util.HashMap<>();
+            for(int id:memory.get().bankItems().keySet()) {
+                String n=reviewedBankItemName(id);
+                if(n!=null) names.put(id,n);
+            }
+            bankSnapshotAccount=hash;
+            bankSnapshotScope=scope;
+            bankSnapshotGeneration=bankPreloader.observe(
+                historical,currentAccountContext(hash,scope),hostItemFacts(),names,catalogEquipmentStats());
+            publishRecipeEvidence();
+            refreshBankPlanOnPanel();
+        } catch(RuntimeException unavailable) {
+            // Archive hydrate failure must not break live play or invent ownership.
+        }
     }
     private boolean mayCaptureFor(long expected) {
         return running.get() && sessionScope!=null && !sessionPaused &&

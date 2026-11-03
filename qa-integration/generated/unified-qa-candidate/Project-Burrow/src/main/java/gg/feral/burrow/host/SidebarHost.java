@@ -1,5 +1,6 @@
 package gg.feral.burrow.host;
 
+import gg.feral.burrow.core.AccountIntelligenceReport;
 import gg.feral.burrow.core.PathfinderGuidedCapture;
 import gg.feral.burrow.ui.BankMemoryPanel;
 import gg.feral.burrow.ui.BankMemoryViewModel;
@@ -92,6 +93,13 @@ public final class SidebarHost extends PluginPanel {
     public void publish(long hash,BankMemoryViewModel.Display history,
                         List<PathfinderGuidedCapture.ChecklistStep> steps,
                         boolean initial,boolean latest) {
+        publish(hash, history, steps, initial, latest, null);
+    }
+
+    public void publish(long hash,BankMemoryViewModel.Display history,
+                        List<PathfinderGuidedCapture.ChecklistStep> steps,
+                        boolean initial,boolean latest,
+                        AccountIntelligenceReport.Snapshot intel) {
         if(!SwingUtilities.isEventDispatchThread())throw new IllegalStateException("Sidebar publication requires EDT");
         if(hash!=displayedAccount){
             active="main";
@@ -99,13 +107,44 @@ public final class SidebarHost extends PluginPanel {
         }
         displayedAccount=hash;
         bank.setSnapshot(Objects.requireNonNull(history));
-        capture.setState(hash,steps,initial,latest);
-        reminder.setText(hash==-1L?"Sign in for account memory":
-            history.freshness()==BankMemoryViewModel.Freshness.SEVEN_DAYS_OR_OLDER?
-            "<html><center>Bank scan 7+ days old. Open bank to refresh.</center></html>":
-            history.freshness()==BankMemoryViewModel.Freshness.NOT_SCANNED?
-            "<html><center>Bank not yet witnessed. Open bank to capture.</center></html>":" ");
+        capture.setState(hash,steps,initial,latest,intel);
+        reminder.setText(buildReminder(hash, history, intel));
         updateButtons();
+    }
+
+    private static String buildReminder(long hash, BankMemoryViewModel.Display history,
+                                        AccountIntelligenceReport.Snapshot intel) {
+        if(hash==-1L) return "Sign in for account memory";
+        StringBuilder sb=new StringBuilder("<html><center>");
+        boolean any=false;
+        if(history.freshness()==BankMemoryViewModel.Freshness.SEVEN_DAYS_OR_OLDER) {
+            sb.append("Bank scan 7+ days old. Open bank to refresh.");
+            any=true;
+        } else if(history.freshness()==BankMemoryViewModel.Freshness.NOT_SCANNED) {
+            sb.append("Bank not yet witnessed. Open bank to capture.");
+            any=true;
+        }
+        if(intel!=null) {
+            if(intel.skillsQuestsStaleReminderDue()) {
+                if(any) sb.append(' ');
+                sb.append("Skills/quests 7+ days old — refresh quest survey.");
+                any=true;
+            }
+            if(intel.anyCaptureStaleReminderDue()) {
+                if(any) sb.append(' ');
+                sb.append("Capture section(s) 7+ days old — reopen those screens.");
+                any=true;
+            }
+            if(intel.nextUnobserved().isPresent()
+                && intel.overall()==AccountIntelligenceReport.Overall.FIRST_RUN_INCOMPLETE) {
+                if(any) sb.append(' ');
+                sb.append("First-run open: ").append(intel.nextUnobserved().get().name().replace('_',' ')).append('.');
+                any=true;
+            }
+        }
+        if(!any) return " ";
+        sb.append("</center></html>");
+        return sb.toString();
     }
     public void showBankRefreshInstruction(long account) {
         if(!SwingUtilities.isEventDispatchThread() || account!=displayedAccount)return;

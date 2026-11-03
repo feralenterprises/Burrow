@@ -45,6 +45,10 @@ public final class PathfinderAccountArchive {
         public Baseline {
             levels=Map.copyOf(levels); quests=Map.copyOf(quests);
         }
+        /** Seven-day freshness reminder for skills/quests — never auto-refreshes the game UI. */
+        public boolean reminderDue(long now) {
+            return now < observedAtMillis || now - observedAtMillis >= REMINDER_AFTER_MS;
+        }
     }
     /** Bank-only contents, deliberately excluding carried/gear items to avoid double count. */
     public record BankMemory(long observedAtMillis, Map<Integer,Integer> bankItems, boolean fullTabWitness) {
@@ -157,7 +161,8 @@ public final class PathfinderAccountArchive {
         for(int qty:evidence.bank().values()) if(qty<=0) return false;
         var previous=readBank(hash);
         if(previous.isPresent() && previous.get().observedAtMillis()>=evidence.observedAtMillis())return false;
-        String body=evidence.observedAtMillis()+"|"+encodeBank(evidence.bank());
+        // Persist fullTabWitness honestly (1/0). Historical memory still never proves live stock.
+        String body=evidence.observedAtMillis()+"|"+encodeBank(evidence.bank())+"|1";
         writer.accept(bankKey(hash),seal("M",body));
         return true;
     }
@@ -167,11 +172,13 @@ public final class PathfinderAccountArchive {
             String body=unseal("M",reader.apply(bankKey(hash)));
             if(body==null)return Optional.empty();
             String[] v=body.split("\\|",-1);
-            if(v.length!=2)return Optional.empty();
+            // v2: time|items|fullTabWitness ; legacy v1: time|items (witness unknown → false)
+            if(v.length!=2 && v.length!=3)return Optional.empty();
             long time=Long.parseLong(v[0]);
             var items=decodeBank(v[1]);
             if(time<=0)return Optional.empty();
-            return Optional.of(new BankMemory(time,items,true));
+            boolean fullTab=v.length==3 && "1".equals(v[2]);
+            return Optional.of(new BankMemory(time,items,fullTab));
         }catch(RuntimeException ignored){return Optional.empty();}
     }
 

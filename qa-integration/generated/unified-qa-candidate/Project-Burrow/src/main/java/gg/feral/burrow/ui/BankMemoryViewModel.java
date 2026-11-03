@@ -45,8 +45,21 @@ public final class BankMemoryViewModel {
             String label=reviewed==null || reviewed.isBlank()?"Item ID "+e.getKey():reviewed;
             rows.add(new Row(e.getKey(),e.getValue(),label,"State not independently verified"));
         });
-        String notice=observation.bankItems().isEmpty()?"Bank was witnessed empty at scan time; current bank is unknown.":
-            "Historical bank snapshot only. Quantities are not proof of currently owned items.";
+        String notice;
+        if(observation.bankItems().isEmpty()) {
+            notice="Bank was witnessed empty at scan time; current bank is unknown. "
+                +"Best in Bank never treats this historical memory as withdrawable stock.";
+        } else {
+            notice="Historical bank snapshot only (as-of scan). Exact item IDs and quantities "
+                +"are preserved as observed, not as live ownership. Best in Bank / green O "
+                +"requires a fresh live open-bank validation before claiming withdrawable stock. "
+                +(observation.fullTabWitness()
+                    ? "Full-tab witness was recorded at scan."
+                    : "Full-tab witness was NOT recorded for this memory.");
+        }
+        if(freshness==Freshness.SEVEN_DAYS_OR_OLDER) {
+            notice+=" Reminder: this scan is 7+ days old — open the bank to refresh.";
+        }
         String asOf;
         try { asOf=DATE.format(Instant.ofEpochMilli(observation.observedAtMillis())); }
         catch(RuntimeException badClock) {
@@ -54,6 +67,7 @@ public final class BankMemoryViewModel {
             asOf="Unusable scan timestamp";
             notice="Historical scan timestamp cannot be verified. Never treat as live stock.";
         }
+        // currentStockProven is always false — Display forbids promoting memory into live BiB claims.
         return new Display(freshness,asOf,false,rows,notice,freshness!=Freshness.UNDER_SEVEN_DAYS);
     }
 }

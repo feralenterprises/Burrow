@@ -1,4 +1,4 @@
-name: TrashPanda QA source staging (release hold)
+name: TrashPanda unified QA offline tests (release hold)
 
 on:
   workflow_dispatch:
@@ -15,8 +15,8 @@ permissions:
   contents: read
 
 jobs:
-  isolated-w09-offline-tests:
-    name: Verify SHA-pinned inputs and test isolated W09 under JDK17
+  unified-candidate-offline-tests:
+    name: Verify archives and test imported unified source on JDK17
     runs-on: windows-latest
     timeout-minutes: 35
     steps:
@@ -29,25 +29,26 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Restore and verify source ZIPs
+      - name: Verify preserved historical archives
         shell: pwsh
         run: |
           & .\qa-integration\00-PREPARE-QA-SOURCES.ps1
-      - name: Run exact isolated W09 source unit tests
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Run actual unified QA candidate unit tests
         shell: pwsh
         run: |
-          Set-Location .\qa-integration\generated\pathfinder-w09\Project-Burrow
-          & .\gradlew.bat --no-daemon test
+          Set-Location .\qa-integration\generated\unified-qa-candidate\Project-Burrow
+          & .\gradlew.bat --no-daemon clean test
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Preserve bounded offline test evidence
+      - name: Preserve unified candidate test evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: tpt-qa-w09-offline-evidence
+          name: tpt-unified-qa-offline-evidence
           path: |
-            qa-integration/generated/pathfinder-w09/Project-Burrow/build/reports/tests/
-            qa-integration/generated/pathfinder-w09/Project-Burrow/build/test-results/
+            qa-integration/generated/unified-qa-candidate/Project-Burrow/build/reports/tests/
+            qa-integration/generated/unified-qa-candidate/Project-Burrow/build/test-results/
           if-no-files-found: ignore
           retention-days: 14
 
-# NO RuneLite live gameplay, owner acceptance, Plugin Hub release or automatic main merge.
+# Unit tests are not live RuneLite QA, owner acceptance, or release authorization.

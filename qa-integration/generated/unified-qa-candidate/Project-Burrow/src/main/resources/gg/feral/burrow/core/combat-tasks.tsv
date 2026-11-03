@@ -1,0 +1,291 @@
+# boss	tier	type	name	requirement	tip	source
+Barrows	Easy	Restriction	Defence? What Defence?	Kill any Barrows brother with magical damage only.		
+Barrows	Medium	Mechanical	Can't Touch Me	Kill Dharok, Verac, Torag and Guthan without letting them attack you with melee.	Freeze the melee brothers with Entangle or ice spells, damage them, then hide behind the coffin before the freeze ends.	https://oldschool.runescape.wiki/w/Can't_Touch_Me
+Barrows	Medium	Perfection	Pray for Success	Kill all six brothers and loot the chest without taking damage from any brother.	Use the matching protection prayer: Magic for Ahrim, missiles for Karil, and melee for the rest.	https://oldschool.runescape.wiki/w/Pray_for_Success
+Barrows	Hard	Restriction	Faithless Crypt Run	Kill all six brothers and loot the chest without ever having prayer points above 0.	Freeze the melee brothers so only Karil and Ahrim can damage you.	https://oldschool.runescape.wiki/w/Faithless_Crypt_Run
+Barrows	Hard	Restriction	Just Like That	Kill Karil using only special attack damage.	Turn off auto-retaliate and click manually after each rune thrownaxe throw to avoid accidental normal attacks.	https://oldschool.runescape.wiki/w/Just_Like_That
+Bryophyta	Easy	Restriction	A Slow Death	Kill Bryophyta with poison or venom as the final damage.	A serpentine helm with a toxic blowpipe or swamp trident guarantees venom, which can then finish her.	https://oldschool.runescape.wiki/w/A_Slow_Death
+Bryophyta	Easy	Restriction	Fighting as Intended II	Kill Bryophyta on a free-to-play world.		
+Bryophyta	Easy	Perfection	Preparation Is Key	Kill Bryophyta without suffering poison damage.		
+Bryophyta	Easy	Mechanical	Protection from Moss	Kill Bryophyta with Protect from Magic active.		
+Bryophyta	Medium	Mechanical	Quick Cutter	Kill all 3 growthlings within 3 seconds of the first dying.	Line up all three growthlings next to you, then strike each quickly with magic secateurs or an axe.	https://oldschool.runescape.wiki/w/Quick_Cutter
+Obor	Easy	Mechanical	Sleeping Giant	Kill Obor while he is immobilized.		
+Obor	Easy	Restriction	Fighting as Intended	Kill Obor on a free-to-play world.		
+Obor	Medium	Mechanical	Back to the Wall	Kill Obor without being pushed back more than one square.		
+Obor	Medium	Perfection	Squashing the Giant	Kill Obor without taking any damage off prayer.		
+Royal Titans	Easy	Restriction	One by one	Kill one Titan at a time without attacking the other.		
+Royal Titans	Easy	Restriction	Elemental Company	Kill the Titans without attacking any elementals.		
+Royal Titans	Easy	Restriction	Let them fight	Have the Titans kill a total of 10 elementals during the kill.		
+Royal Titans	Medium	Mechanical	It takes too long	Kill both Titans during the same area-attack charge.		
+Royal Titans	Hard	Stamina	Titan Killer	Kill the Titans 15 times in a row in one instance; a joining player resets it and a leaving player fails it.		
+Royal Titans	Hard	Restriction	I need room	Extinguish all fires and melt all icicles before they fade naturally.		
+Royal Titans	Hard	Perfection	Perfect Royal Titans	Kill the Titans without taking avoidable damage, including melee, explosions, spawns and pulses.	In duos, bring both Titans low, then finish quickly so enraged damage does not bypass prayer.	https://oldschool.runescape.wiki/w/Perfect_Royal_Titans
+Royal Titans	Hard	Speed	Royal Titan Speed-Runner	Kill the Titans in under 1:30.		
+Royal Titans	Elite	Restriction	No time to pray	Kill the Titans without losing any prayer points.		
+Scurrius	Easy	Restriction	Sit Rat	Finish Scurrius with a ratbane weapon in a private instance.		
+Scurrius	Medium	Perfection	Perfect Scurrius	Private instance: no Tail Swipe or Falling Bricks damage, and pray correctly against Flying Fur and Bolts of Electricity.	Use ranged or magic so you can stand further away, lowering the chance of an unprayed melee hit.	https://oldschool.runescape.wiki/w/Perfect_Scurrius
+Scurrius	Medium	Mechanical	Efficient Pest Control	Kill 6 Giant Rats in the lair within 3 seconds.		
+Shellbane gryphon	Easy	Mechanical	Dry Cleaning	Kill it after clearing its corrosive spit from your armour.		
+Shellbane gryphon	Medium	Speed	Shellbane Speedrunner	Kill it 10 times within 12:30 of entering the cave.		
+Shellbane gryphon	Medium	Perfection	Perfect Shellbane	Kill it without taking damage.		
+Shellbane gryphon	Hard	Stamina	Shellbane Survivor	Kill it 25 times without leaving the cave.		
+Shellbane gryphon	Hard	Restriction	Featherweight Fighter	Kill it 5 times without leaving, wearing gear under 40kg.		
+Amoxliatl	Medium	Restriction	Temotli Triumph	Kill Amoxliatl using only glacial temotli.		
+Amoxliatl	Hard	Perfection	Nagua Negation	Kill Amoxliatl without taking any damage.	Block the opening ice spikes with Protect from Magic, and retreat two tiles to drag her off icy pools.	https://oldschool.runescape.wiki/w/Nagua_Negation
+Amoxliatl	Hard	Mechanical	Totally Shattered	Kill Amoxliatl without any unstable ice shattering.	Melee shatters unstable ice instantly with no cooldown, so you can clear every block in the 9-second window.	https://oldschool.runescape.wiki/w/Totally_Shattered
+Amoxliatl	Hard	Stamina	Kemo Makti	Kill Amoxliatl 10 times without leaving her chamber.		
+Amoxliatl	Hard	Speed	Amoxliatl Speed-Trialist	Kill Amoxliatl in under 1 minute.		
+Amoxliatl	Elite	Restriction	Without Ralos' Light	Kill Amoxliatl without losing prayer points.	Lazy-flick Protect from Magic one tick before her attacks, which repeat every 8 ticks. Drop it before dodging spikes.	https://oldschool.runescape.wiki/w/Without_Ralos'_Light
+Amoxliatl	Elite	Speed	Amoxliatl Speed-Chaser	Kill Amoxliatl in under 30 seconds.		
+Brutus	Medium	Perfection	Beef vs Beef	Kill Brutus without equipping or consuming anything.	Drink combat potions before Brutus spawns, since those do not fail it. Use Protect from Melee and dodge his specials.	https://oldschool.runescape.wiki/w/Beef_vs_Beef
+Brutus	Hard	Mechanical	Smarter than a Cow	Kill Brutus without being attacked.	Safespot him with ranged, magic or a halberd, and step away when his overhead text signals a charge.	https://oldschool.runescape.wiki/w/Smarter_than_a_Cow
+Brutus	Elite	Speed	Brutus Speed-Trialist	Defeat Brutus in under 2 seconds.	Hit him the moment he spawns after a prior kill, using instant attacks like halberd specials.	https://oldschool.runescape.wiki/w/Brutus_Speed-Trialist
+Chaos Fanatic	Medium	Perfection	Sorry, What Was That?	Kill him without anyone being hit by his explosion attack.		
+Chaos Fanatic	Hard	Restriction	Praying to the Gods	Kill him 10 times without a prayer-restoring potion or leaving the Wilderness.		
+Crazy archaeologist	Medium	Mechanical	Mage of the Ruins	Kill him with magical attacks only.		
+Crazy archaeologist	Medium	Perfection	I'd Rather Not Learn	Kill him without anyone hit by Rain of Knowledge.		
+Deranged archaeologist	Medium	Mechanical	Mage of the Swamp	Kill him with magical attacks only.		
+Deranged archaeologist	Medium	Perfection	I'd Rather Be Illiterate	Kill him without anyone hit by Learn to Read.		
+Dagannoth Kings	Medium	Mechanical	A Frozen King	Kill Dagannoth Rex while he is immobilized.		
+Dagannoth Kings	Elite	Mechanical	From One King to Another	Kill Prime with a Rune thrownaxe special bounced off Rex.	Make the axe special your last hit, as Prime's death animation ends. Do not freeze, poison or venom Rex.	https://oldschool.runescape.wiki/w/From_One_King_to_Another
+Dagannoth Kings	Elite	Mechanical	Death to the Seer King	Kill Prime while Supreme and Rex are both attacking.		
+Dagannoth Kings	Elite	Mechanical	Toppling the Diarchy	Kill Rex and another King at the same moment.	Team up with another player and hit Rex and another King on the same tick.	https://oldschool.runescape.wiki/w/Toppling_the_Diarchy
+Dagannoth Kings	Elite	Mechanical	Death to the Warrior King	Kill Rex while Supreme and Prime are both attacking.		
+Dagannoth Kings	Elite	Mechanical	Rapid Succession	Kill all three Kings within 9 seconds of the first.	Lower two Kings to about 20 HP, kill the third, then finish the rest with Voidwaker specials.	https://oldschool.runescape.wiki/w/Rapid_Succession
+Dagannoth Kings	Elite	Mechanical	Death to the Archer King	Kill Supreme while Prime and Rex are both attacking.		
+Giant Mole	Medium	Perfection	Avoiding Those Little Arms	Kill the Mole without her damaging anyone.	Protect from Melee blocks her only attack type. Ranged or magic users can safespot at Mole Hole wall corners.	https://oldschool.runescape.wiki/w/Avoiding_Those_Little_Arms
+Giant Mole	Hard	Mechanical	Whack-a-Mole	Kill the Mole within 10 seconds of her resurfacing.	A multi-hit weapon with separate-tick hits lands as she resurfaces. The Twinflame staff works best.	https://oldschool.runescape.wiki/w/Whack-a-Mole
+Giant Mole	Hard	Mechanical	Why Are You Running?	Kill the Mole with no more than 2 burrows.	Superpoison can finish her without a burrow, or use Dharok's gear at low health.	https://oldschool.runescape.wiki/w/Why_Are_You_Running%3F
+Giant Mole	Elite	Mechanical	Hard Hitter	Kill the Mole with 4 or fewer instances of damage.	Low-HP Dharok's gear hits hardest, and poison splats do not count toward the four-hit limit.	https://oldschool.runescape.wiki/w/Hard_Hitter
+King Black Dragon	Medium	Restriction	Antifire Protection	Kill with an antifire potion active and an anti-dragon shield equipped.		
+King Black Dragon	Medium	Mechanical	Claw Clipper	Kill with Protect from Melee active.		
+King Black Dragon	Medium	Restriction	Hide Penetration	Kill with a stab weapon.		
+King Black Dragon	Hard	Stamina	Who Is the King Now?	Kill 10 times in a private instance without leaving.		
+Mad Angel	Medium	Mechanical	Dancing Queen	Get 6 consecutive enhanced attacks by dodging sweeps during enrage.		
+Mad Angel	Medium	Mechanical	Juggling Act	Attack her between each bounce of the blast attack during enrage.		
+Mad Angel	Medium	Mechanical	Smite Fight	Get 3 consecutive enhanced attacks by praying against smites during enrage.		
+Mad Angel	Hard	Perfection	Perfect Mad Angel	Kill her without avoidable damage.		
+Mad Angel	Hard	Speed	Mad Angel Speed-Runner	Kill her 5 times within 10 minutes of entering.		
+Mad Angel	Elite	Stamina	This Is Madness	Kill her 15 times without leaving her arena.		
+Mad Angel	Elite	Restriction	The Pen Is Mightier	Kill her without equipping any weapon.		
+Blood Moon	Medium	Speed	Moons of Peril Speed-Trialist	Defeat all three Moons in one run in under 8 minutes.		
+Blood Moon	Medium	Restriction	Back to Our Roots	Defeat all three Moons in one run with a Dragon scimitar only.		
+Blood Moon	Hard	Restriction	Fortified	Defeat a Moon without consuming supplies.	Blue Moon takes extra damage from multi-hit specials like the dragon dagger. Start with a potion at full HP.	https://oldschool.runescape.wiki/w/Fortified
+Blood Moon	Hard	Speed	Moons of Peril Speed-Chaser	Defeat all three Moons in one run in under 6 minutes.		
+Blood Moon	Hard	Restriction	Betrayal	Defeat a Moon using its own weapon drop.		
+Blood Moon	Hard	Stamina	Fat of the Land	Defeat 30 Moons without leaving the dungeon.		
+Blood Moon	Hard	Perfection	Perilous Dancer	Defeat all Moons in one run taking damage only from regular attacks.	Stand so the next glyph is only two tiles away, since a tick off-glyph causes damage.	https://oldschool.runescape.wiki/w/Perilous_Dancer
+Blood Moon	Elite	Mechanical	High Hitter	Defeat a Moon before its second special attack.		
+Eclipse Moon	Hard	Mechanical	The Clone Zone	Defeat the Eclipse Moon by attacking only its clones.	A slow, high-hitting weapon maximizes damage per clone phase. Recoil effects are safe between phases.	https://oldschool.runescape.wiki/w/The_Clone_Zone
+Sarachnis	Medium	Restriction	Newspaper Enthusiast	Kill with a crush weapon.		
+Sarachnis	Hard	Perfection	Inspect Repellent	Kill without her damaging anyone.	Aranea boots bypass her sticky web, so you can stay in melee range with Protect from Melee and run on.	https://oldschool.runescape.wiki/w/Inspect_Repellent
+Sarachnis	Hard	Mechanical	Ready to Pounce	Kill without her using her ranged attack twice in a row.		
+Skotizo	Medium	Restriction	Demonbane Weaponry	Kill with a demonbane weapon equipped.		
+Skotizo	Medium	Mechanical	Demonic Weakening	Kill with no altars active.		
+Skotizo	Elite	Perfection	Demon Evasion	Kill without taking any damage.	Bind the front demon spawn in a line, since the others cannot pass through and will all stop.	https://oldschool.runescape.wiki/w/Demon_Evasion
+Skotizo	Elite	Restriction	Up for the Challenge	Kill without equipping a demonbane weapon.		
+Skotizo	Master	Restriction	Precise Positioning	Make a chinchompa explosion the final damage.		
+Hueycoatl	Medium	Restriction	You're a wizard	Kill using only earth spells.		
+Hueycoatl	Hard	Restriction	I'm your son	Kill wearing two pieces of Hueycoatl armour.		
+Hueycoatl	Hard	Mechanical	Pillar Lover	Kill while it is vulnerable.		
+Hueycoatl	Elite	Speed	Hueycoatl Speed-Trialist	Kill in 2:30.		
+Hueycoatl	Elite	Perfection	Perfect Hueycoatl	Kill perfectly five times in one visit.	Crowded worlds such as 340 or 517 make tail slams less risky. Safespot away from the tail spawn.	https://oldschool.runescape.wiki/w/Perfect_Hueycoatl
+Hueycoatl	Master	Speed	Hueycoatl Speed-Chaser	Kill in 2:30 with five or fewer players.		
+Hueycoatl	Master	Restriction	Is it a bird?	Kill using only dragonbane weapons.		
+Hueycoatl	Grandmaster	Speed	Hueycoatl Speed-Runner	Kill in 2:30 with three or fewer players.		
+Abyssal Sire	Hard	Perfection	Don't Stop Moving	Kill without miasma pool damage.		
+Abyssal Sire	Hard	Mechanical	Don't Whip Me	Kill without being hit by external tentacles.	Disorient the Sire with Shadow Barrage, then hit only vents. Stay in the centre three rows after it roots.	https://oldschool.runescape.wiki/w/Don't_Whip_Me
+Abyssal Sire	Hard	Mechanical	They Grow Up Too Fast	Kill without any Scion maturing.	During phase 2 stay in melee range, since spawns are far more likely to launch when you are further away.	https://oldschool.runescape.wiki/w/They_Grow_Up_Too_Fast
+Abyssal Sire	Elite	Mechanical	Demonic Rebound	Reflect the Sire's explosion back with Vengeance.		
+Abyssal Sire	Elite	Perfection	Perfect Sire	Take no tentacle, miasma, explosion or unprayed damage.		
+Abyssal Sire	Elite	Mechanical	Respiratory Runner	Kill after stunning him only once.	Wake the Sire without stunning it, safespot two vents from range, then stun it and destroy the rest fast.	https://oldschool.runescape.wiki/w/Respiratory_Runner
+Chaos Elemental	Hard	Perfection	The Flincher	Kill without taking damage from its attacks.		
+Chaos Elemental	Hard	Mechanical	Hoarder	Kill without it unequipping your items.		
+Commander Zilyana	Hard	Mechanical	Commander Showdown	Finish her while all bodyguards are dead.		
+Commander Zilyana	Elite	Restriction	Reminisce	Kill in a private instance using only melee.		
+Commander Zilyana	Master	Restriction	Moving Collateral	Private instance: kill her without attacking her directly.	Use chinchompas on Starlight or other minions, since the splash damage hits Zilyana past her high defence.	https://oldschool.runescape.wiki/w/Moving_Collateral
+Commander Zilyana	Grandmaster	Perfection	Animal Whisperer	Private instance: take no damage from her or her bodyguards.	Kite her so Starlight never hits you, and keep Growler and Bree attacking on different ticks to pray against each.	https://oldschool.runescape.wiki/w/Animal_Whisperer
+Commander Zilyana	Grandmaster	Stamina	Peach Conjurer	Kill 50 times in a private instance without leaving.		
+General Graardor	Hard	Mechanical	Ourg Freezer	Kill him while he is immobilized.		
+General Graardor	Hard	Mechanical	General Showdown	Finish him while all bodyguards are dead.		
+General Graardor	Elite	Mechanical	Ourg Freezer II	Kill him without him attacking any players.		
+General Graardor	Grandmaster	Perfection	Defence Matters	Kill twice in a row in a private instance with no bodyguard damage.		
+General Graardor	Grandmaster	Stamina	Ourg Killer	Kill 15 times in a private instance without leaving.		
+General Graardor	Grandmaster	Perfection	Keep Away	Private instance: take no damage from him or his bodyguards.	Leave the minions alive at low health after killing Graardor, then freeze Grimspike so only the ranged minion needs prayer.	https://oldschool.runescape.wiki/w/Keep_Away
+Grotesque Guardians	Hard	Mechanical	Prison Break	No damage from Dusk's prison attack.		
+Grotesque Guardians	Hard	Mechanical	Don't Look at the Eclipse	No damage from Dusk's blinding attack.		
+Grotesque Guardians	Hard	Mechanical	Static Awareness	Not hit by any lightning attacks.		
+Grotesque Guardians	Hard	Mechanical	Granite Footwork	No damage from Dawn's rockfall attack.		
+Grotesque Guardians	Hard	Mechanical	Heal No More	Dawn receives no healing from her orbs.		
+Grotesque Guardians	Elite	Stamina	From Dusk...	Kill 10 times without leaving the instance.		
+Grotesque Guardians	Elite	Speed	Grotesque Guardians Speed-Trialist	Kill in under 2 minutes.		
+Grotesque Guardians	Elite	Perfection	Perfect Grotesque Guardians	Complete six named Guardian tasks in one fight.		
+Grotesque Guardians	Elite	Mechanical	Done before Dusk	Kill before Dusk's second prison attack.		
+Grotesque Guardians	Master	Perfection	Perfect Grotesque Guardians II	Kill perfectly five times in a row without leaving.		
+Grotesque Guardians	Master	Speed	Grotesque Guardians Speed-Chaser	Kill in under 1:40.		
+Grotesque Guardians	Master	Stamina	... 'til Dawn	Kill 20 times without leaving the instance.		
+Grotesque Guardians	Grandmaster	Speed	Grotesque Guardians Speed-Runner	Kill in under 1:20.		
+Hespori	Hard	Mechanical	Weed Whacker	Kill all flowers within 5 seconds.	Rapid-set throwing knives or darts work, since every hit kills a flower. Re-enter the room to retry.	https://oldschool.runescape.wiki/w/Weed_Whacker
+Hespori	Hard	Mechanical	Hesporisn't	Finish Hespori with a special attack.		
+Hespori	Elite	Restriction	Plant-Based Diet	Kill without losing prayer points.		
+Hespori	Elite	Speed	Hespori Speed-Trialist	Kill in under 48 seconds.		
+Hespori	Master	Speed	Hespori Speed-Chaser	Kill in under 36 seconds.		
+K'ril Tsutsaroth	Hard	Mechanical	Demonic Showdown	Finish him while all bodyguards are dead.		
+K'ril Tsutsaroth	Hard	Restriction	Demonbane Weaponry II	Finish him with a demonbane weapon.		
+K'ril Tsutsaroth	Hard	Mechanical	Yarr No More	Get kill credit without him using his special attack.	The Scorching bow's special can hold K'ril in place, or pray Protect from Magic, since his special targets Protect from Melee users.	https://oldschool.runescape.wiki/w/Yarr_No_More
+K'ril Tsutsaroth	Elite	Perfection	Demonic Defence	Private instance: take no melee hits.		
+K'ril Tsutsaroth	Elite	Mechanical	The Bane of Demons	Private instance: use only demonbane spells.		
+K'ril Tsutsaroth	Grandmaster	Stamina	Ash Collector	Kill 20 times in a private instance without leaving.		
+K'ril Tsutsaroth	Grandmaster	Perfection	Demon Whisperer	Private instance: never hit by his bodyguards.	Use a 5:0 setup with a strong weapon, swapping some damage gear for tank gear against the unprayed minion.	https://oldschool.runescape.wiki/w/Demon_Whisperer
+Kalphite Queen	Hard	Mechanical	Chitin Penetrator	Kill while her Defence was last lowered by you.	Open with a bone dagger or bone crossbow special, which is guaranteed to hit when used first.	https://oldschool.runescape.wiki/w/Chitin_Penetrator
+Kalphite Queen	Elite	Mechanical	Insect Deflection	Finish her with Vengeance.		
+Kalphite Queen	Elite	Restriction	Prayer Smasher	Kill using only Verac's flail.		
+Kraken	Hard	Mechanical	Unnecessary Optimisation	Kill the Kraken after killing all four tentacles.	The Enormous Tentacles can be killed before you wake the Kraken.	https://oldschool.runescape.wiki/w/Unnecessary_Optimisation
+Kraken	Hard	Stamina	Krakan't Hurt Me	Kill 25 times in a private instance without leaving.	A private instance costs 25,000 coins and lasts until you leave or log out.	https://oldschool.runescape.wiki/w/Krakan't_Hurt_Me
+Kraken	Elite	Stamina	Ten-tacles	Kill 50 times in a private instance without leaving.		
+Kraken	Master	Stamina	One Hundred Tentacles	Kill 100 times in a private instance without leaving.	Sanguinesti staff or blood barrage healing reduces reliance on food drops during long trips.	https://oldschool.runescape.wiki/w/One_Hundred_Tentacles
+Kree'arra	Hard	Mechanical	Airborne Showdown	Finish him while all bodyguards are dead.		
+Kree'arra	Master	Perfection	Swoop No More	Private instance: no melee damage from him or bodyguards.	Stay out of his melee range with Protect from Missiles, and bind Flight Kilisa, who has no magic defence.	https://oldschool.runescape.wiki/w/Swoop_No_More
+Kree'arra	Master	Mechanical	Collateral Damage	Private instance: kill him without attacking him directly.	Chinchompas are the easy choice. Vengeance recoil with Dharok's gear also works. Never target him directly.	https://oldschool.runescape.wiki/w/Collateral_Damage
+Kree'arra	Grandmaster	Stamina	Feather Hunter	Kill 30 times in a private instance without leaving.		
+Kree'arra	Grandmaster	Restriction	The Worst Ranged Weapon	Deal all damage with a salamander.		
+Scorpia	Hard	Perfection	I Can't Reach That	Kill without taking damage from her.		
+Scorpia	Hard	Restriction	Guardians No More	Kill without killing her guardians.		
+Maggot King	Elite	Restriction	Trying to fit in	Kill using only weapons obtainable in Vampyrium.		
+Maggot King	Master	Mechanical	King-sized clobbering	Kill without missing a melee punish.		
+Maggot King	Master	Perfection	Perfect Maggot King	No avoidable damage and never let it heal.		
+Maggot King	Master	Restriction	Cordoned Off	Kill without moving beyond the back row of tiles.		
+Maggot King	Master	Restriction	Digging in	Kill without moving more than 40 tiles.		
+Maggot King	Master	Stamina	Camping the King	Kill 12 times without leaving the arena.		
+Maggot King	Grandmaster	Speed	Maggot King Speed Chaser	Complete the first 5 kills within 9 minutes of entering.		
+Alchemical Hydra	Master	Stamina	Working Overtime	Kill 15 times without leaving the room.		
+Alchemical Hydra	Master	Mechanical	The Flame Skipper	Kill without it spawning a flame wall attack.	Cast Vengeance outside the red phase so its cooldown expires, allowing a recast right after it triggers in red.	https://oldschool.runescape.wiki/w/The_Flame_Skipper
+Alchemical Hydra	Master	Mechanical	Mixing Correctly	Kill without empowering it.	Only one vent is safe each phase: red spray in green, green in blue, blue in red. In grey, avoid all vents.	https://oldschool.runescape.wiki/w/Mixing_Correctly
+Alchemical Hydra	Master	Speed	Alchemical Speed-Chaser	Kill in under 1:45.		
+Alchemical Hydra	Master	Perfection	Alcleanical Hydra	Kill while taking zero damage.	Pray against its attack style. If its opening attack uses the other style, leave and restart.	https://oldschool.runescape.wiki/w/Alcleanical_Hydra
+Alchemical Hydra	Master	Mechanical	Don't Flame Me	Kill without being hit by the flame wall.		
+Alchemical Hydra	Master	Mechanical	Unrequired Antipoisons	Kill without being hit by the acid pool.		
+Alchemical Hydra	Master	Mechanical	Lightning Lure	Kill without being hit by lightning.	Run away from the lightning when it spawns, or skip that phase with a lightning skip.	https://oldschool.runescape.wiki/w/Lightning_Lure
+Alchemical Hydra	Grandmaster	Speed	Alchemical Speed-Runner	Kill in under 1:20.		
+Alchemical Hydra	Grandmaster	Restriction	No Pressure	Kill with only Dharok's greataxe, at 10 Hitpoints or lower throughout.		
+Araxxor	Elite	Speed	Araxxor Speed-Trialist	Kill four times within 10 minutes.		
+Araxxor	Elite	Restriction	Relaxxor	Kill after destroying six eggs.		
+Araxxor	Master	Restriction	Let it seep in	Kill with no venom or poison immunity at any point.		
+Araxxor	Master	Perfection	Perfect Araxxor	Avoid ranged, magic, melee, minion and acid pool damage.	Destroy green eggs early, or kill acidic araxytes on spawn, so you can keep Protect from Melee active.	https://oldschool.runescape.wiki/w/Perfect_Araxxor
+Araxxor	Master	Mechanical	Araxyte Betrayal	Get an Araxyte to kill three other Araxytes.	Group two Acidic Araxytes with another araxyte, keep them low, and let a Ruptura Araxyte's explosion finish them.	https://oldschool.runescape.wiki/w/Araxyte_Betrayal
+Araxxor	Master	Speed	Araxxor Speed-Chaser	Kill five times within 10 minutes.		
+Araxxor	Master	Stamina	Arachnid Lover	Kill 10 times without leaving.		
+Araxxor	Grandmaster	Speed	Araxxor Speed-Runner	Kill six times within 10:00.		
+Araxxor	Grandmaster	Restriction	Swimming in Venom	Kill without the boss ever moving.		
+Araxxor	Grandmaster	Perfection	Perfect Araxxor 2	Kill perfectly without hitting it during enrage.		
+Cerberus	Elite	Perfection	Unrequired Antifire	Kill without lava pool damage.	Use Ranged: distant lava markers appear with a delay, giving you time to step away.	https://oldschool.runescape.wiki/w/Unrequired_Antifire
+Cerberus	Elite	Perfection	Anti-Bite Mechanics	Kill without taking melee damage.		
+Cerberus	Elite	Mechanical	Ghost Buster	Negate six or more Summoned Soul attacks.	Each Summoned Soul is tracked separately, so blocking two groups of three is enough.	https://oldschool.runescape.wiki/w/Ghost_Buster
+Cerberus	Master	Mechanical	Arooo No More	Kill with no Summoned Souls spawning.	Souls only spawn below 400 HP, so flinch to finish fast, or delay dropping her under 400 until attack 14.	https://oldschool.runescape.wiki/w/Arooo_No_More
+Corporeal Beast	Elite	Perfection	Hot on Your Feet	Nobody kills or is hurt by the dark core.	Step two tiles away each time the dark core leaps toward you.	https://oldschool.runescape.wiki/w/Hot_on_Your_Feet
+Corporeal Beast	Elite	Restriction	Chicken Killer	Kill while playing solo.		
+Corporeal Beast	Elite	Restriction	Finding the Weak Spot	Finish the Beast with a halberd special attack.		
+Demonic Gorillas	Elite	Restriction	Hitting Them Where It Hurts	Finish a Demonic Gorilla with a demonbane weapon.		
+Doom of Mokhaiotl	Elite	Mechanical	Exposed Doom	Defeat it during its melee charge phase.		
+Doom of Mokhaiotl	Elite	Speed	Doom Crawler	Defeat level 1 in under 30 seconds.		
+Doom of Mokhaiotl	Master	Mechanical	Mokhaiotl Drift	Defeat level 8+ before the first burrow phase ends.		
+Doom of Mokhaiotl	Master	Restriction	Mine's Better	Defeat levels 1-8 while always wearing a shield.		
+Doom of Mokhaiotl	Master	Mechanical	Grub Patrol	Defeat levels 1-8 without any grub absorbed.	Kill larvae right after they spawn, since crowding near the boss can make you hit Doom by mistake.	https://oldschool.runescape.wiki/w/Grub_Patrol
+Doom of Mokhaiotl	Master	Speed	Doom Chaser	Defeat levels 1-8 in under 10 minutes.		
+Doom of Mokhaiotl	Grandmaster	Restriction	Duel of Mokhaiotl	Levels 1-8 damaging only with one-handed melee.		
+Doom of Mokhaiotl	Grandmaster	Restriction	The Praying Mantis	Levels 1-8 without restoring prayer.		
+Doom of Mokhaiotl	Grandmaster	Stamina	It's Dark Down Here	Defeat it at delve level 16.		
+Doom of Mokhaiotl	Grandmaster	Restriction	Darkness Is Your Ally?	Levels 1-8 without equipping a demonbane weapon.		
+Doom of Mokhaiotl	Grandmaster	Perfection	Perfect Doom	Levels 1-8: no boss damage, no grub absorbed, no acid blood.		
+Doom of Mokhaiotl	Grandmaster	Speed	Doom Racer	Levels 1-8 in under 7:15.		
+Doom of Mokhaiotl	Grandmaster	Mechanical	Mopping up	Clear at least 8 acid splats in one Volatile Earth.		
+Duke Sucellus	Elite	Speed	Duke Sucellus Speed-Trialist	Kill in under 1 minute, no Slayer task.		
+Duke Sucellus	Master	Restriction	Cold Feet	Avoid all avoidable damage and never run.	Gas flares target the vent closest to you, so move away from it, not toward it.	https://oldschool.runescape.wiki/w/Cold_Feet
+Duke Sucellus	Master	Speed	Duke Sucellus Speed-Chaser	Kill in under 50 seconds, no Slayer task.		
+Duke Sucellus	Master	Perfection	Perfect Duke Sucellus	Five kills in a row without leaving or avoidable damage.	Failed attempts do not reset progress, so keep retrying in the same instance while supplies last.	https://oldschool.runescape.wiki/w/Perfect_Duke_Sucellus
+Duke Sucellus	Grandmaster	Speed	Duke Sucellus Speed-Runner	Kill in under 40 seconds, no Slayer task.		
+Duke Sucellus	Grandmaster	Restriction	Mirror Image	Attack only on the same tick Duke attacks you.	Attack on the same tick he attacks: use a five-tick weapon before enrage, then a four-tick weapon during enrage.	https://oldschool.runescape.wiki/w/Mirror_Image
+The Leviathan	Elite	Speed	Leviathan Speed-Trialist	Kill in under 1:50, no Slayer task.		
+The Leviathan	Master	Speed	Leviathan Speed-Chaser	Kill in under 1:25, no Slayer task.		
+The Leviathan	Master	Perfection	Perfect Leviathan	Kill perfectly five times without leaving.	During enrage stay inside the abyssal pathfinder's area. Prayer-piercing damage outside it ruins the kill.	https://oldschool.runescape.wiki/w/Perfect_Leviathan
+The Leviathan	Master	Mechanical	Serpentine Solo	Kill without stunning it more than once.		
+The Leviathan	Grandmaster	Restriction	Unconventional	Only Mithril ammunition, at 25 Hitpoints or lower throughout.		
+The Leviathan	Grandmaster	Speed	Leviathan Speed-Runner	Kill in under 1:10, no Slayer task.		
+Nex	Elite	Restriction	Nex Survivors	Kill Nex without anyone dying.		
+Nex	Master	Mechanical	A siphon will solve this	She never heals from Blood Siphon.	Stop attacking after her siphon shout, since damage heals her. Kill Blood Reavers before the next siphon.	https://oldschool.runescape.wiki/w/A_siphon_will_solve_this
+Nex	Master	Mechanical	There is no escape!	Nobody hit by Smoke Dash.	Stand on the outer edge before the dash. In melee, watch her facing and sidestep the lane.	https://oldschool.runescape.wiki/w/There_is_no_escape!
+Nex	Master	Mechanical	Contain this!	Nobody damaged by Ice special attacks.	Stay out of melee range during Containment, and quickly free any teammate in Ice Prison.	https://oldschool.runescape.wiki/w/Contain_this!
+Nex	Master	Restriction	Nex Trio	Three or fewer players at the start.		
+Nex	Master	Mechanical	Shadows Move...	Nobody hit by Shadow Smash.	Step out of each shadow within about 1.8 seconds of it forming, before it detonates.	https://oldschool.runescape.wiki/w/Shadows_Move...
+Nex	Grandmaster	Restriction	I should see a doctor	Kill Nex while a player is coughing.		
+Nex	Grandmaster	Perfection	Perfect Nex	Complete the four Nex mechanic tasks in one kill.		
+Nex	Grandmaster	Restriction	Nex Duo	Two or fewer players at the start.		
+Phantom Muspah	Elite	Mechanical	Versatile Drainer	Drain its prayer with three different sources in one kill.		
+Phantom Muspah	Elite	Speed	Phantom Muspah Speed-Trialist	Kill in under 3 minutes, no Slayer task.		
+Phantom Muspah	Elite	Restriction	Can't Escape	Kill without running away.		
+Phantom Muspah	Master	Stamina	Essence Farmer	Kill 10 times in one trip.		
+Phantom Muspah	Master	Restriction	More than just a ranged weapon	Deal damage only with a salamander.		
+Phantom Muspah	Master	Perfection	Walk Straight Pray True	Kill without avoidable damage.	Activate the magic prayer before the magic attack fires. Reacting late fails it.	https://oldschool.runescape.wiki/w/Walk_Straight_Pray_True
+Phantom Muspah	Master	Speed	Phantom Muspah Speed-Chaser	Kill in under 2 minutes, no Slayer task.		
+Phantom Muspah	Master	Mechanical	Space is Tight	Kill while it is surrounded by spikes.		
+Phantom Muspah	Grandmaster	Perfection	Phantom Muspah Manipulator	Complete Walk Straight Pray True, Space is Tight and Can't Escape together.		
+Phantom Muspah	Grandmaster	Speed	Phantom Muspah Speed-Runner	Kill in under 1:30, no Slayer task.		
+Phosani's Nightmare	Master	Mechanical	Dreamland Express	No sleepwalker reaches her during desperation.	High-damage specials like the crimson kisten can bring her down before the first sleepwalker arrives, about 15 ticks in.	https://oldschool.runescape.wiki/w/Dreamland_Express
+Phosani's Nightmare	Master	Mechanical	I Would Simply React	Never have your prayer disabled.		
+Phosani's Nightmare	Master	Mechanical	Crush Hour	Kill every parasite and husk in one hit.		
+Phosani's Nightmare	Master	Speed	Phosani's Speedchaser	Kill within 7:30.		
+Phosani's Nightmare	Grandmaster	Speed	Phosani's Speedrunner	Kill within 6 minutes.		
+Phosani's Nightmare	Grandmaster	Perfection	Perfect Phosani's Nightmare	Only husk, power blast and weakened parasite damage; no spore slows; no sleepwalker reaches her.		
+Phosani's Nightmare	Grandmaster	Stamina	Can't Wake Up	Kill 5 times in a row without leaving the dream.		
+The Nightmare	Elite	Speed	Nightmare (5-Scale) Speed-Trialist	Defeat 5-scale in under 5 minutes.		
+The Nightmare	Elite	Mechanical	Explosion!	Kill two Husks at the same time.		
+The Nightmare	Elite	Speed	Nightmare (Solo) Speed-Trialist	Defeat solo in under 23 minutes.		
+The Nightmare	Elite	Restriction	Sleep Tight	Kill while playing solo.		
+The Nightmare	Master	Perfection	Perfect Nightmare	No damage from listed attacks, prayer drain or spore slows.		
+The Nightmare	Master	Speed	Nightmare (Solo) Speed-Chaser	Defeat solo in under 19 minutes.		
+The Nightmare	Master	Speed	Nightmare (5-Scale) Speed-Chaser	Defeat 5-scale in under 4 minutes.		
+The Nightmare	Grandmaster	Speed	Nightmare (5-Scale) Speed-Runner	Defeat 5-scale in under 3:30.		
+The Nightmare	Grandmaster	Mechanical	Terrible Parent	Solo: parasites heal her for no more than 100.		
+The Nightmare	Grandmaster	Speed	Nightmare (Solo) Speed-Runner	Defeat solo in under 16 minutes.		
+The Nightmare	Grandmaster	Restriction	A Long Trip	Kill without any player losing prayer points.		
+Thermonuclear smoke devil	Elite	Restriction	Spec'd Out	Kill using only special attacks.		
+Thermonuclear smoke devil	Elite	Perfection	Hazard Prevention	Kill without it hitting anyone.	Freeze the boss with Ice Barrage, hit it from 9 tiles with a powered staff, then re-enter and repeat.	https://oldschool.runescape.wiki/w/Hazard_Prevention
+Tormented Demons	Elite	Mechanical	Rapid Reload	Hit three Tormented Demons within 3 seconds with a ballista or crossbow.		
+Tormented Demons	Elite	Restriction	Through Fire and Flames	Kill a Tormented Demon while its shield is inactive.		
+Tormented Demons	Elite	Restriction	Two Times the Torment	Kill two Tormented Demons within 2 seconds of each other.	For melee, keep the demons close together once they are low, since they drift after their projectile attack.	https://oldschool.runescape.wiki/w/Two_Times_the_Torment
+Tormented Demons	Master	Restriction	Three Times the Thrashing	Kill three Tormented Demons within 3 seconds.		
+Vardorvis	Elite	Speed	Vardorvis Speed-Trialist	Kill in under 1:15, no Slayer task.		
+Vardorvis	Master	Speed	Vardorvis Speed-Chaser	Kill in under 1:05, no Slayer task.		
+Vardorvis	Master	Restriction	Budget Cutter	Kill with gear worth 2m or less.		
+Vardorvis	Master	Perfection	Perfect Vardorvis	Kill perfectly five times without leaving.	Failed attempts do not reset progress, so stay in the same instance and keep retrying.	https://oldschool.runescape.wiki/w/Perfect_Vardorvis
+Vardorvis	Grandmaster	Speed	Vardorvis Speed-Runner	Kill in under 0:55, no Slayer task.		
+Vardorvis	Grandmaster	Mechanical	Axe Enthusiast	Survive 3 minutes of max speed and never leave the centre 25 tiles.	Stay near the arena edges so fewer axes hit you at once. Use a timer, since the game gives no alert.	https://oldschool.runescape.wiki/w/Axe_Enthusiast
+Vorkath	Elite	Restriction	Stick 'em With the Pointy End	Kill using only melee weapons.	A dragon hunter lance is the most effective melee weapon here. Stay in melee range.	https://oldschool.runescape.wiki/w/Stick_'em_With_the_Pointy_End
+Vorkath	Elite	Restriction	Zombie Destroyer	Kill the zombified spawn without Crumble Undead.	Kill the spawn before it reaches you, since it explodes for damage based on its remaining hitpoints.	https://oldschool.runescape.wiki/w/Zombie_Destroyer
+Vorkath	Master	Mechanical	The Walk	Hit it 12 times during acid, with no rapid fire or acid pool hits.	Retry within the same acid phase if you fail. Use a two-tick ranged weapon from max distance and Woox-walk.	https://oldschool.runescape.wiki/w/The_Walk
+Vorkath	Master	Perfection	Dodging the Dragon	Kill five times avoiding special damage without leaving.		
+Vorkath	Master	Stamina	Extended Encounter	Kill 10 times without leaving.		
+Vorkath	Master	Speed	Vorkath Speed-Chaser	Kill in under 1:15.		
+Vorkath	Grandmaster	Restriction	Faithless Encounter	Kill without losing prayer points.		
+Vorkath	Grandmaster	Speed	Vorkath Speed-Runner	Kill in under 54 seconds.		
+Vorkath	Grandmaster	Restriction	The Fremennik Way	Kill with only your fists.		
+The Whisperer	Elite	Restriction	Tentacular	Use only the Arceuus spellbook.		
+The Whisperer	Elite	Speed	Whisperer Speed-Trialist	Kill in under 3 minutes, no Slayer task.		
+The Whisperer	Master	Speed	Whisperer Speed-Chaser	Kill in under 2:25, no Slayer task.		
+The Whisperer	Master	Perfection	Perfect Whisperer	Kill five times without avoidable damage or leaving.	Failed attempts do not force you out, so keep retrying in the same instance while supplies last.	https://oldschool.runescape.wiki/w/Perfect_Whisperer
+The Whisperer	Grandmaster	Speed	Whisperer Speed-Runner	Kill in under 2:05, no Slayer task.		
+The Whisperer	Grandmaster	Restriction	Dark Memories	Spend under 6 seconds in the pre-enrage shadow realm.	Learn the Leeches seed pattern after one mistake, ignore Soul Siphon, and leave quickly during Screech.	https://oldschool.runescape.wiki/w/Dark_Memories
+Yama	Elite	Speed	Yama Speed-Trialist	Average under 3:38 across your last four kills.		
+Yama	Elite	Mechanical	Back so soon?	No wrong-style hits on the judge or multiple damage instances per exile.	In a duo the Judge's health is shared, and your partner failing will not fail you.	https://oldschool.runescape.wiki/w/Back_so_soon%3F
+Yama	Master	Restriction	No toppings, no drinks, thanks	Heal only with plain pizza and never drink potions.		
+Yama	Master	Speed	Yama Speed-Chaser	Average under 3:00 across your last four kills.		
+Yama	Master	Mechanical	Fire fighter	No fire hits, and kill void flares only with specials.	Soften a void flare with Dark Demonbane under Mark of Darkness, then finish it with a purging staff special.	https://oldschool.runescape.wiki/w/Fire_fighter
+Yama	Master	Mechanical	Shadow dancer	No shadow hits, staying within one tile of his crash.		
+Yama	Grandmaster	Speed	Yama Speed-Runner	Average under 2:34 across your last four kills.		
+Yama	Grandmaster	Perfection	Contract Choreographer	Complete Shadow dancer, Fire fighter and Back so soon? with no other avoidable damage.		
+Zulrah	Elite	Mechanical	Snake Rebound	Finish Zulrah with Vengeance.	Stand away from pillars during magma form so the tail whip connects, ensuring damage for a Vengeance finisher.	https://oldschool.runescape.wiki/w/Snake_Rebound
+Zulrah	Elite	Mechanical	Snake. Snake!? Snaaaaaake!	Kill three Snakelings at the same time.	Lure melee snakelings toward the magic ones, then hit the group with chinchompas or a burst or barrage spell.	https://oldschool.runescape.wiki/w/Snake._Snake!%3F_Snaaaaaake!
+Zulrah	Elite	Speed	Zulrah Speed-Trialist	Kill in under 1:20, no Slayer task.		
+Zulrah	Master	Perfection	Perfect Zulrah	No damage from snakelings, venom clouds or certain phases.	Kill snakelings quickly from range with a blowpipe, praying Protect from Magic and keeping your distance.	https://oldschool.runescape.wiki/w/Perfect_Zulrah
+Zulrah	Master	Speed	Zulrah Speed-Chaser	Kill in under 1 minute, no Slayer task.		
+Zulrah	Grandmaster	Speed	Zulrah Speed-Runner	Kill in under 54 seconds, no Slayer task.		

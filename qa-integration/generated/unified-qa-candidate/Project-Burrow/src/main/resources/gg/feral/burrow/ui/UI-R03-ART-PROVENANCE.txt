@@ -1,0 +1,8 @@
+Project Burrow UI-R03 (2026-11-02)
+Six raster crops from the owner's three supplied Feral Modern UI reference screenshots:
+- crew-spoons.png, crew-bandit.png, crew-noodles.png from image(20261102-163728).png
+- chronicle-scurrius.png, chronicle-sarachnis.png, chronicle-bryophyta.png from image(20261102-163716).png
+These are user-provided mockup crops, NOT fetched live RuneLite NPC sprites or proof of game data.
+Other bosses use an intentionally generic geometric placeholder rather than invented artwork.
+Activity symbols are original in-code geometric illustrations; they are not OSRS item icons and are not linked to item IDs.
+Previously bundled sprites remain unchanged. Do not substitute portraits for other bosses without approved art and provenance.

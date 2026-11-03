@@ -1,0 +1,42 @@
+{
+  "name": "W0751-RUNELITE-135-ONE-CLICK-FIX",
+  "parent_archive": "TPT-INTELLIGENCE-W0751-TEST-REPAIR-CLEAN-DUAL-DEV-OWNER-VERIFY.zip",
+  "parent_sha256": "b8452b18237930023dc51c75c5df94121687ad649adb71c79de9371e8128e615",
+  "new_version": "1.13.5",
+  "previous_default_version": "1.13.4",
+  "gameplay_and_hoverlite_source_preserved": true,
+  "original_source_count": 409,
+  "changes": [
+    [
+      "00-BUILD-AND-TEST-BOTH.cmd",
+      "UPDATED"
+    ],
+    [
+      "00-START-BOTH-NO-REPEAT-QA.cmd",
+      "UPDATED"
+    ],
+    [
+      "01-BUILD-AND-LAUNCH-BOTH.cmd",
+      "UPDATED"
+    ],
+    [
+      "Project-Burrow/build.gradle",
+      "UPDATED"
+    ],
+    [
+      "READ-FIRST-LAUNCH-FIX.md",
+      "ADDED"
+    ],
+    [
+      "SHA256-FILE-MANIFEST.csv",
+      "UPDATED"
+    ],
+    [
+      "START-HERE-TPT-AND-HOVERLITE.cmd",
+      "ADDED"
+    ]
+  ],
+  "archive_crc": "PASS",
+  "windows_jdk17_gradle": "NOT_RUN",
+  "windows_runelite_launch": "NOT_RUN"
+}

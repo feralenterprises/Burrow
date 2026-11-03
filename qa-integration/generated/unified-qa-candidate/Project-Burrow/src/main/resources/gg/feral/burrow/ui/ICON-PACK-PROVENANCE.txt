@@ -1,0 +1,5 @@
+C07 owner icon sheets recovered from earlier Library uploads, NOT generatively redrawn.
+1) Iron Ledger Feral UI Icon Sheet.png (1774x887): semantic Home portal crop (505,70,743,299), Pathfinder compass (762,70,1013,299), Outfitter equipment pack (1016,70,1254,299), Sessions journal (390,686,523,814); centered to square and LANCZOS downsampled to 52x52 nav-*.png.
+2) Iron Ledger Feral Raccoon UI Kit.png (1536x1024): raccoon chest brand crop (826,63,922,159) -> 64x64; terrain mountains crop (360,562,556,629) -> 225x77; sword crop (524,929,562,975) and shield crop (713,929,753,978) -> 32x32 signal icons.
+3) O-bank four-state chest imagery remains C06's isolated overlay, no bank logic altered in C07.
+The full original source sheets are bundled under design/source-icon-sheets for audit. No Iron Ledger code or source files were modified.

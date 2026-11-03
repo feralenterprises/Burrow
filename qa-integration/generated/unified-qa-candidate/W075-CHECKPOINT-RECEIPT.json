@@ -1,0 +1,33 @@
+{
+  "wave": "W07.5",
+  "input_zip_sha256": "4eab0904924dd26fd3986b08a0e7b05faed28f63f3e5da02eb87f01684d60203",
+  "original_file_count": 430,
+  "modified_original_files": [
+    "00-START-BOTH-NO-REPEAT-QA.cmd",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/ResearchCombatLoadouts.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/ResearchCombatMethods.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/core/Wave7BossStyleSelectionTest.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/ui/OutfitterStyleInteractionTest.java",
+    "W07-BOSS-COMBAT-STYLE-COVERAGE.csv"
+  ],
+  "removed_original_files": [],
+  "new_java_gear_profiles": 3,
+  "new_java_source_files": 0,
+  "coverage": {
+    "CATALOG_GEAR": 75,
+    "RESEARCH_GEAR": 12,
+    "STRATEGY_ONLY": 4
+  },
+  "checks": [
+    "Wave075ResearchGearTest PASS",
+    "Wave7BossStyleSelectionTest PASS",
+    "Wave7OutfitterRegressionTest PASS",
+    "OutfitterStyleInteractionTest PASS: 237 assertions"
+  ],
+  "limitations": [
+    "No actual Windows JDK17 Gradle build",
+    "No RuneLite client or gameplay QA",
+    "All new research loadouts are provisional and blocked from Bank O"
+  ],
+  "build": "OWNER QA HOLD"
+}

@@ -1,0 +1,1 @@
+Approved artwork pixels originate from the two owner-supplied reference boards (files 01 and 02); four bank states are cropped from original 07. Images were previously extracted in the rejected R04 inspection kit; asset pixels are reused, but no R04 UI layout or code is used.

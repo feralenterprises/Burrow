@@ -1,0 +1,1488 @@
+{
+  "ticket": "BUR-0021",
+  "candidate": "R02",
+  "release": "HOLD",
+  "production_autoload": false,
+  "native_verified": false,
+  "qa_state": "NOODLES_OFFLINE_REVIEW_ONLY",
+  "base_source_zip_sha256": "c14706d4914b8e24ae1a692b5e6f6108bfe42e2861aff6ed361d4c071561136f",
+  "base_final06_dataset_sha256": "165f0781ab4e0e738235833e51dee04c21f30825cc8b3ab421c051e48e6dbe98",
+  "reference_r01_zip_sha256": "490a3fda62bd17587e46e257e932e212f3475b35dda06e237c98e84c48a76070",
+  "preservation": {
+    "profiles": 51,
+    "bosses": 15,
+    "methods": 17,
+    "equipment_slots_each": 11,
+    "inventory_slots_each": 28,
+    "all_gear_unchanged": true,
+    "all_spellbooks_unchanged": true,
+    "all_rune_pouch_contents_unchanged": true
+  },
+  "patches": [
+    {
+      "profile_id": "sarachnis-entry",
+      "decision": "PATCH_READY_CONDITIONAL_NOT_INTEGRATED",
+      "mechanic": "MECHANICAL_SLASH_DUPLICATE",
+      "source": "https://oldschool.runescape.wiki/w/Sarachnis",
+      "reason": "Remove loose Knife only because the inventory already contains Wilderness sword 1, which provides the required slash tool for Forthos webs. If sword is missing, the player needs a slash substitute or a knife.",
+      "before_inventory": [
+        {
+          "name": "Super attack(4)",
+          "item_id": 2436,
+          "quantity": 1
+        },
+        {
+          "name": "Super strength(4)",
+          "item_id": 2440,
+          "quantity": 1
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Wilderness sword 1",
+          "item_id": 13108,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.WILDERNESS_SWORD_1",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Knife",
+          "item_id": 946,
+          "quantity": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "after_inventory": [
+        {
+          "name": "Super attack(4)",
+          "item_id": 2436,
+          "quantity": 1
+        },
+        {
+          "name": "Super strength(4)",
+          "item_id": 2440,
+          "quantity": 1
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Wilderness sword 1",
+          "item_id": 13108,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.WILDERNESS_SWORD_1",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile_id": "sarachnis-recommended",
+      "decision": "PATCH_READY_CONDITIONAL_NOT_INTEGRATED",
+      "mechanic": "MECHANICAL_BOOT_ACCESS",
+      "source": "https://oldschool.runescape.wiki/w/Aranea_boots",
+      "reason": "Remove loose Knife only because equipped Aranea boots bypass the access webs. If boots are substituted, require a slash tool or knife.",
+      "before_inventory": [
+        {
+          "name": "Super attack(4)",
+          "item_id": 2436,
+          "quantity": 1
+        },
+        {
+          "name": "Super strength(4)",
+          "item_id": 2440,
+          "quantity": 1
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Knife",
+          "item_id": 946,
+          "quantity": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "after_inventory": [
+        {
+          "name": "Super attack(4)",
+          "item_id": 2436,
+          "quantity": 1
+        },
+        {
+          "name": "Super strength(4)",
+          "item_id": 2440,
+          "quantity": 1
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile_id": "sarachnis-optimal",
+      "decision": "PATCH_READY_CONDITIONAL_NOT_INTEGRATED",
+      "mechanic": "MECHANICAL_BOOT_ACCESS",
+      "source": "https://oldschool.runescape.wiki/w/Aranea_boots",
+      "reason": "Remove loose Knife only because equipped Aranea boots bypass the access webs. If boots are substituted, require a slash tool or knife.",
+      "before_inventory": [
+        {
+          "name": "Divine super combat potion(4)",
+          "item_id": 23685,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.DIVINE_SUPER_COMBAT_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Dragon claws",
+          "item_id": 13652,
+          "quantity": 1
+        },
+        {
+          "name": "Knife",
+          "item_id": 946,
+          "quantity": 1
+        },
+        {
+          "name": "Book of the Dead",
+          "item_id": 25818,
+          "quantity": 1
+        },
+        {
+          "name": "Rune pouch",
+          "item_id": 12791,
+          "quantity": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "after_inventory": [
+        {
+          "name": "Divine super combat potion(4)",
+          "item_id": 23685,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.DIVINE_SUPER_COMBAT_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Dragon claws",
+          "item_id": 13652,
+          "quantity": 1
+        },
+        null,
+        {
+          "name": "Book of the Dead",
+          "item_id": 25818,
+          "quantity": 1
+        },
+        {
+          "name": "Rune pouch",
+          "item_id": 12791,
+          "quantity": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile_id": "kbd-entry",
+      "decision": "PATCH_READY_CONDITIONAL_NOT_INTEGRATED",
+      "mechanic": "COND_SECURITY_6MIN",
+      "source": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+      "reason": "Regular Antifire potion(4) (item ID 2452) is an obtainable 6-minute-per-dose alternative to extended antifire only while an anti-dragon shield is equipped. KBD special breaths can still chip up to 10 and poison; preserve Antidote++(4). Wilderness entrance remains dangerous.",
+      "before_inventory": [
+        {
+          "name": "Antidote++(4)",
+          "item_id": 5952,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.ANTIDOTE4_5952",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Extended antifire(4)",
+          "item_id": 11951,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.EXTENDED_ANTIFIRE4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Ranging potion(4)",
+          "item_id": 2444,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RANGING_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Burning amulet(5)",
+          "item_id": 21166,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.BURNING_AMULET5",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "after_inventory": [
+        {
+          "name": "Antidote++(4)",
+          "item_id": 5952,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.ANTIDOTE4_5952",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Antifire potion(4)",
+          "item_id": 2452,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.ANTIFIRE_POTION4",
+          "role": "BUR-0021-CANDIDATE_CONDITIONAL_6_MINUTES_WITH_SHIELD"
+        },
+        {
+          "name": "Ranging potion(4)",
+          "item_id": 2444,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RANGING_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Burning amulet(5)",
+          "item_id": 21166,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.BURNING_AMULET5",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile_id": "vork-entry",
+      "decision": "PATCH_READY_CONDITIONAL_NOT_INTEGRATED",
+      "mechanic": "COND_SECURITY_6MIN",
+      "source": "https://oldschool.runescape.wiki/w/Vorkath/Strategies",
+      "reason": "Regular Antifire potion(4) (item ID 2452) is a 6-minute-per-dose alternative only with the equipped anti-dragon shield; Vorkath special mechanics and remaining chip persist. Keep three Antipoison(4) for repeated venom curing; this does not confer anti-venom immunity.",
+      "before_inventory": [
+        {
+          "name": "Diamond bolts (e)",
+          "item_id": 9243,
+          "quantity": 150,
+          "id_evidence": "RuneLite 1.13.4 ItemID.DIAMOND_BOLTS_E",
+          "role": "TPT_CURATED_WIKI_INFORMED"
+        },
+        {
+          "name": "Extended antifire(4)",
+          "item_id": 11951,
+          "quantity": 1
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Ranging potion(4)",
+          "item_id": 2444,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RANGING_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Rune pouch",
+          "item_id": 12791,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RUNE_POUCH",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "after_inventory": [
+        {
+          "name": "Diamond bolts (e)",
+          "item_id": 9243,
+          "quantity": 150,
+          "id_evidence": "RuneLite 1.13.4 ItemID.DIAMOND_BOLTS_E",
+          "role": "TPT_CURATED_WIKI_INFORMED"
+        },
+        {
+          "name": "Antifire potion(4)",
+          "item_id": 2452,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.ANTIFIRE_POTION4",
+          "role": "BUR-0021-CANDIDATE_CONDITIONAL_6_MINUTES_WITH_SHIELD"
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Antipoison(4)",
+          "item_id": 2446,
+          "quantity": 1
+        },
+        {
+          "name": "Ranging potion(4)",
+          "item_id": 2444,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RANGING_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Prayer potion(4)",
+          "item_id": 2434,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.PRAYER_POTION4",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Shark",
+          "item_id": 385,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.SHARK",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Cooked karambwan",
+          "item_id": 3144,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.COOKED_KARAMBWAN",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Rune pouch",
+          "item_id": 12791,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.RUNE_POUCH",
+          "role": "TPT_CURATED"
+        },
+        {
+          "name": "Teleport to house (tablet)",
+          "item_id": 8013,
+          "quantity": 1,
+          "id_evidence": "RuneLite 1.13.4 ItemID.TELEPORT_TO_HOUSE",
+          "role": "TPT_CURATED"
+        },
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "explicit_rejections": [
+    {
+      "profile_id": "muspah-optimal",
+      "reason": "Ward of Arceuus has 2 Nature runes per cast. The divine rune pouch is full with fire/blood/cosmic/soul; preserve 20 loose Nature runes for 10 casts. Do not remove even though High Alchemy is unavailable on Arceuus.",
+      "reference": "https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies"
+    }
+  ],
+  "other_profiles": "unchanged until individual player preference and observed supply usage can be supported"
+}

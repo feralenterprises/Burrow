@@ -1,0 +1,1101 @@
+# Build 20.1 R03: OSRS Wiki "/Strategies" equipment tables transcribed slot by slot, read 2026-11-01.
+# Format: one BOSS block; per SETUP each slot lists the Wiki table columns left-to-right, best first,
+# separated by " > ". Alternatives inside one column are separated by " / ". "N/A" = the Wiki cell is empty.
+# Tiers are taken by column: OPTIMAL = first column, RECOMMENDED = middle column, ENTRY = last column.
+# A weapon cell that is N/A falls back to the nearest better column (a weapon is never left empty).
+# "[task]" = Slayer-task-only item: skipped for the next column. "[generic]" = the Wiki names no item: left empty.
+# Two-handed weapons empty the shield slot. "[any] X" = the Wiki says any of a family (e.g. any god cape); X is shown and noted.
+# INV lines: "Item xN" (N = stated count or the lower bound of a stated range; "xNs" = one stack of N); "FILL Item" fills every
+# remaining slot (Wiki "rest food"). Items the Wiki names only generically are left out and noted.
+
+BOSS Kalphite Queen
+URL https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies
+SETUP Melee
+Head: Slayer helmet (i) [task] > Inquisitor's great helm / Torva full helm > Neitiznot faceguard / Serpentine helm > Blood Moon helm / Helm of Neitiznot
+Cape: Infernal cape > Mythical cape > Fire cape > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of fury / Amulet of blood fury > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A
+Weapon: Keris partisan of breaching > Inquisitor's mace > Scythe of Vitur / Soulreaper axe > Keris partisan
+Body: Inquisitor's hauberk / Torva platebody > Bandos chestplate > Fighter torso / Blood Moon chestplate > [generic] Magic / Ranged top
+Shield: Avernic defender > Dragon defender > N/A > N/A
+Legs: Inquisitor's plateskirt / Torva platelegs > Bandos tassets > Blood Moon tassets > [generic] Magic / Ranged legs
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Echo boots > Dragon boots
+Ring: Ring of suffering (ri) / Lightbearer > Ultor ring / Berserker ring (i) > N/A > N/A
+Spec: Voidwaker > Crimson kisten > Elder maul > Dragon warhammer
+INV: Super combat potion(4) x2; Super restore(4) x4; Rune pouch x1; Teleport to house (tablet) x1; FILL Anglerfish
+NOTE: Kalphite Queen has two forms; the ranged attack drains 1 prayer even when protected. Melee on the first form, keep Protect from Magic/Missiles as she changes.
+NOTE: Wiki inventory section was not readable in full: supplies here are the Wiki's general supplies (combat potions, restores, food); adjust.
+REQ: Hitpoints 80, Attack 75, Strength 75, Defence 70, Prayer 70
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Masori mask (f) / Masori mask > Crystal helm > N/A
+Cape: Dizana's quiver > Ava's assembler > Ava's accumulator > Ranging cape
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > N/A
+Ammo: Rada's blessing 4 / God blessing > Dragon arrow > Amethyst arrow > Diamond dragon bolts (e) / Diamond bolts (e)
+Weapon: Toxic blowpipe > Twisted bow > Bow of Faerdhinen > Dragon crossbow / Rune crossbow
+Body: Masori body (f) > Masori body > Crystal body > Hueycoatl hide body / Blessed body
+Shield: N/A > N/A > N/A > N/A
+Legs: Masori chaps (f) > Masori chaps > Crystal legs > Hueycoatl hide chaps / Blessed chaps
+Hands: Zaryte vambraces > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) > Pegasian boots / Echo boots > N/A > N/A
+Ring: Ring of suffering (ri) / Lightbearer > N/A > N/A > N/A
+INV: Divine ranging potion(4) x2; Super restore(4) x4; Teleport to house (tablet) x1; FILL Anglerfish
+NOTE: Toxic blowpipe (Optimal) needs amethyst darts or better and scales; darts are not shown as an item.
+REQ: Ranged 75, Prayer 74
+
+BOSS Corporeal Beast
+URL https://oldschool.runescape.wiki/w/Corporeal_Beast/Strategies
+SETUP Melee (solo/duo, stat draining)
+Head: Torva full helm > Inquisitor's great helm / Neitiznot faceguard > Serpentine helm > Void melee helm > Helm of Neitiznot
+Cape: Infernal cape > Fire cape > Mythical cape
+Neck: Amulet of rancour > Amulet of torture > Amulet of fury
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3
+Weapon: Noxious halberd > Zamorakian spear > Osmumten's fang
+Body: Masori body (f) > Blood Moon chestplate > Karil's leathertop > Void knight top > Blessed body
+Shield: N/A
+Legs: Masori chaps (f) > Blood Moon tassets > Karil's leatherskirt > Void knight robe > Blessed chaps
+Hands: Ferocious gloves > Barrows gloves / Void knight gloves
+Feet: Avernic treads (max) > Primordial boots > Dragon boots > Echo boots
+Ring: N/A
+Spec: Crystal halberd > Bandos godsword > Emberlight > Arclight
+INV: Elder maul x1; Bandos godsword x1; Emberlight x1; Rune pouch x1; Super restore(4) x6; Cooked karambwan x4; FILL Manta ray
+NOTE: Pray Protect from Magic at all times. Stat-drain order (solo): 3 Elder maul specs, then Emberlight specs, then Bandos godsword. Stab weapons only (Corpbane rule).
+NOTE: Wiki inventory shows images without counts: counts here are a draft; the grid also shows Death, Earth and Astral runes in the pouch.
+REQ: Hitpoints 85, Attack 94, Strength 94, Defence 94, Prayer 70
+
+BOSS General Graardor
+URL https://oldschool.runescape.wiki/w/General_Graardor/Strategies
+SETUP Melee (solo)
+Head: Torva full helm > Justiciar faceguard > Serpentine helm > Neitiznot faceguard > Guthan's helm / Verac's helm / Helm of Neitiznot
+Cape: Infernal cape > Fire cape > Max cape > Defence cape > Obsidian cape
+Neck: Amulet of blood fury > Amulet of rancour > Amulet of torture > Amulet of fury > Amulet of glory
+Ammo: Unholy blessing / Rada's blessing 4 > War blessing > N/A > N/A > N/A
+Weapon: Osmumten's fang > Inquisitor's mace / Ghrazi rapier / Blade of Saeldor > Abyssal tentacle > Zamorakian hasta > Abyssal whip / Zombie axe
+Body: Torva platebody > Justiciar chestguard > Bandos chestplate > Karil's leathertop > [generic] Barrows tank top
+Shield: Elysian spirit shield > Dragonfire shield > Avernic defender > Spectral spirit shield > Toktz-ket-xil / Crystal shield
+Legs: Torva platelegs > Justiciar legguards > Bandos tassets > N/A > N/A
+Hands: Barrows gloves > Ferocious gloves > Regen bracelet > N/A > N/A
+Feet: Avernic treads (max) > Echo boots / Guardian boots > Primordial boots > Dragon boots > N/A
+Ring: Lightbearer > Ring of suffering (ri) > Berserker ring (i) > Ring of the gods (i) > Ring of life
+Spec: Voidwaker > Saradomin godsword > Dragon claws > Elder maul / Dragon warhammer > Bandos godsword
+INV: Super combat potion(4) x2; Super restore(4) x5; Saradomin brew(4) x8; Bones to peaches (tablet) x1; Teleport to house (tablet) x1; FILL Anglerfish
+NOTE: Protect from Melee is mandatory solo; Graardor's punch hits up to 60. Solo melee needs prayer flicking skill; the Wiki recommends groups otherwise.
+NOTE: Bodyguards tend to target whoever last damaged Graardor. 70 Strength (unboostable) to enter; hammer if no maul/warhammer.
+REQ: Strength 70, Prayer 43; Quest: Death Plateau; Troll Stronghold (up to Dad) or Ghommal's hilt
+
+BOSS Kree'arra
+URL https://oldschool.runescape.wiki/w/Kree%27arra/Strategies
+SETUP Magic (Tumeken's shadow)
+Head: Slayer helmet (i) [task] > Ancestral hat > Virtus mask
+Cape: Imbued zamorak cape > N/A > N/A
+Neck: Occult necklace > N/A > N/A
+Ammo: Rada's blessing 4 > Honourable blessing / Rada's blessing 3 / Rada's blessing 2 > N/A
+Weapon: Tumeken's shadow > N/A > N/A
+Body: Ancestral robe top > Virtus robe top > N/A
+Legs: Ancestral robe bottom > Virtus robe bottom > N/A
+Hands: Confliction gauntlets > Tormented bracelet > N/A
+Feet: Avernic treads (max) > Eternal boots > N/A
+Ring: Magus ring / Lightbearer > Ring of suffering (ri) > Seers ring (i)
+Spec: Eldritch nightmare staff > Zorya's tome > N/A
+INV: Eldritch nightmare staff [keep] x1; Elidinis' ward (f) x1; Saradomin brew(4) x4; Anglerfish x10; Super restore(4) x6; Mith grapple x1; Imbued heart x1; Ecumenical key x1; Teleport to house (tablet) x1; Divine rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; the Wiki text gives ranges.
+NOTE: God items must be worn while crossing the God Wars Dungeon followers' areas; they can be swapped off in the boss room. Kree'arra's magic attack rolls against your RANGED defence (Mod Ash).
+REQ: Ranged 70 (mith grapple + any crossbow to enter); Agility/Strength access as for Armadyl's Eyrie; Quest: Death Plateau
+NOTE: Tumeken's shadow is the only magic weapon competitive with black chinchompas here (about 3x the next magic option). Eldritch nightmare staff autocasts Ancient Magicks (with the Elidinis' ward (f) switch) and its spec restores prayer; use it on a minion. Lightbearer only with a spec weapon.
+NOTE: The Wiki grid also holds "any crossbow" for the grapple; that slot is left empty because no specific crossbow is named. Rune pouch: Blood Barrage to heal off the minions and ice spells to freeze Flight Kilisa (runes not modelled). Imbued heart or its saturated version.
+
+SETUP Ranged (chinchompas)
+Head: Slayer helmet (i) [task] > Justiciar faceguard > Verac's helm > Armadyl helmet > N/A
+Cape: Dizana's quiver > Max cape > Ranging cape(t) > Ava's assembler > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > Dragonbone necklace / Bonecrusher necklace > N/A
+Ammo: Seeking dragon arrow / Diamond dragon bolts (e) > Diamond bolts (e) > Mith grapple > N/A > N/A
+Weapon: Black chinchompa > Red chinchompa > N/A > N/A > N/A
+Body: Masori body (f) > Armadyl chestplate > Karil's leathertop > Armadyl d'hide body / Zamorak d'hide body > N/A
+Shield: Elysian spirit shield > Dragonfire ward > Twisted buckler > Dragonfire shield > Crystal shield
+Legs: Masori chaps (f) > Armadyl chainskirt > Karil's leatherskirt > Armadyl chaps / Zamorak chaps > N/A
+Hands: Zaryte vambraces > Barrows gloves > Armadyl bracers / Zamorak bracers > N/A > N/A
+Feet: Avernic treads (max) > Armadyl d'hide boots > Pegasian boots > Echo boots > N/A
+Ring: Ring of suffering (ri) / Lightbearer > Venator ring > N/A > N/A > N/A
+INV: Bow of Faerdhinen x1; Toxic blowpipe x1; Bastion potion(4) x2; Blood ancient sceptre x1; Ecumenical key x1; Saradomin brew(4) x6; Super restore(4) x11; Mith grapple x1; Bones to peaches (tablet) x1; Teleport to house (tablet) x1; Rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; the Wiki text gives ranges.
+NOTE: God items must be worn while crossing the God Wars Dungeon followers' areas; they can be swapped off in the boss room. Kree'arra's magic attack rolls against your RANGED defence (Mod Ash).
+REQ: Ranged 70 (mith grapple + any crossbow to enter); Agility/Strength access as for Armadyl's Eyrie; Quest: Death Plateau
+NOTE: Stand in the south-west corner, wait for Kree'arra and Flight Kilisa to stack, then throw chinchompas at Flight Kilisa; the AoE hits Kree'arra. Fast but expensive. Arrows/bolts are for twisted bow or crossbow switches if Kilisa dies first. Chinchompa stack size is not stated (shown as 1).
+NOTE: Bow of Faerdhinen hits Kree'arra when they are not stacked; toxic blowpipe for minions and specs; blood spells via the sceptre (or Kodai wand / ancient staff). The grid's "any crossbow" slot is left empty (no specific crossbow named). Rune pouch in the grid: 1,500 death, 1,500 blood, 375 soul runes (Blood Barrage; not modelled).
+
+SETUP Ranged (tank)
+Head: Slayer helmet (i) [task] > Justiciar faceguard > Verac's helm > Masori mask (f) > Armadyl helmet
+Cape: Dizana's quiver > Ava's assembler > Max cape > Ranging cape(t) > N/A
+Neck: Amulet of fury > Necklace of rupture > Necklace of anguish > Dragonbone necklace / Bonecrusher necklace > Amulet of glory
+Ammo: Diamond dragon bolts (e) > Diamond bolts (e) > Ruby bolts (e) > N/A > N/A
+Weapon: Zaryte crossbow > Armadyl crossbow > Dragon hunter crossbow > Dragon crossbow > Twisted bow
+Body: Masori body (f) > Armadyl chestplate > Karil's leathertop > Armadyl d'hide body / Zamorak d'hide body > N/A
+Shield: Elysian spirit shield > Dragonfire ward > Twisted buckler > Crystal shield > Odium ward
+Legs: Masori chaps (f) > Armadyl chainskirt > Karil's leatherskirt > Verac's plateskirt > Armadyl chaps / Zamorak chaps
+Hands: Zaryte vambraces > Barrows gloves > Armadyl bracers / Zamorak bracers > N/A > N/A
+Feet: Avernic treads (max) > Armadyl d'hide boots > Pegasian boots > Echo boots > N/A
+Ring: Ring of suffering (ri) > Venator ring > N/A > N/A > N/A
+Spec: Zaryte crossbow > Armadyl crossbow > N/A > N/A > N/A
+INV: Teleport to house (tablet) x1; Ranging potion(4) x3; Saradomin brew(4) x13; Super restore(4) x9; Mith grapple x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; the Wiki text gives ranges.
+NOTE: God items must be worn while crossing the God Wars Dungeon followers' areas; they can be swapped off in the boss room. Kree'arra's magic attack rolls against your RANGED defence (Mod Ash).
+REQ: Ranged 70 (mith grapple + any crossbow to enter); Agility/Strength access as for Armadyl's Eyrie; Quest: Death Plateau
+NOTE: Wiki ranges: 12-16 brews, 6-8 super restores, 2-3 ranging potions, ecumenical key optional, one-click teleport (ectophial or tabs). The grid's red god book is not modelled (one slot left empty). Ruby bolts (e) only if your max hit is about 20 or less: use them at the start to take 10% of Kree'arra's health (up to 25), then a primary bolt.
+NOTE: Trollheim teleport: drop two Saradomin brews on arrival, then use an amulet of glory or ring of dueling teleport to grab two more brews and another Trollheim teleport.
+
+SETUP Ranged (Twisted bow / Bow of Faerdhinen)
+Head: Slayer helmet (i) [task] > Masori mask (f) > Crystal helm > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Max cape > Ranging cape(t) > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury / Amulet of glory > N/A > N/A
+Ammo: Seeking dragon arrow / Rada's blessing 4 / Mith grapple > Unholy blessing / Honourable blessing > N/A > N/A > N/A
+Weapon: Twisted bow > Bow of Faerdhinen > N/A > N/A > N/A
+Body: Masori body (f) > Armadyl chestplate / Crystal body > Karil's leathertop > Armadyl d'hide body / Zamorak d'hide body > N/A
+Legs: Masori chaps (f) > Armadyl chainskirt / Crystal legs > Karil's leatherskirt > Verac's plateskirt > Armadyl chaps / Zamorak chaps
+Hands: Zaryte vambraces > Barrows gloves > Armadyl bracers / Zamorak bracers > N/A > N/A
+Feet: Avernic treads (max) > Pegasian boots > Armadyl d'hide boots / Ranger boots > Echo boots > N/A
+Ring: Ring of suffering (ri) > Venator ring / Lightbearer > Ring of the gods (i) > N/A > N/A
+Spec: Zaryte crossbow > Eldritch nightmare staff > Toxic blowpipe > N/A > N/A
+INV: Blood ancient sceptre x1; Bastion potion(4) x2; Toxic blowpipe [keep] x1; Super restore(4) x9; Saradomin brew(4) x8; Bracelet of slaughter x1; Trollheim teleport x1; Bones to peaches (tablet) x1; Ecumenical key x1; Divine rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; the Wiki text gives ranges.
+NOTE: God items must be worn while crossing the God Wars Dungeon followers' areas; they can be swapped off in the boss room. Kree'arra's magic attack rolls against your RANGED defence (Mod Ash).
+REQ: Ranged 70 (mith grapple + any crossbow to enter); Agility/Strength access as for Armadyl's Eyrie; Quest: Death Plateau
+NOTE: Twisted bow beats Bow of Faerdhinen if you have at least two of: Masori body (f), Masori chaps (f), dragon arrows; otherwise Bow of Faerdhinen with full crystal armour (crystal helm can be swapped for a Slayer helmet (i)). Crystal helm/body/legs, Lightbearer and blessings only when using Bow of Faerdhinen; Lightbearer only with a spec weapon; Zaryte crossbow spec with ruby dragon bolts (e).
+NOTE: Stand under Kree'arra after each hit. The grid's "any crossbow" and a dark god-item top are not modelled (two slots left empty). Mith grapple can be held in Dizana's quiver. Wiki ranges: 6-10 brews, 8-10 restores, 2 Trollheim teleports.
+
+SETUP Melee (soulflame horn)
+Head: Slayer helmet (i) [task] > Torva full helm > Oathplate helm / Neitiznot faceguard
+Cape: Infernal cape > Fire cape > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury
+Ammo: Rada's blessing 4 > Unholy blessing / Honourable blessing > N/A
+Weapon: Noxious halberd > N/A > N/A
+Body: Torva platebody > Oathplate chest / Bandos chestplate > Blood moon chestplate
+Legs: Torva platelegs > Oathplate legs / Bandos tassets > Blood moon tassets
+Hands: Ferocious gloves > Barrows gloves > N/A
+Feet: Avernic treads (max) > Primordial boots > Aranea boots / Dragon boots
+Ring: Lightbearer > Ultor ring / Berserker ring (i) > Ring of suffering (ri)
+Spec: Soulflame horn > N/A > N/A
+INV: Blood ancient sceptre x1; Super combat potion(4) x2; Soulflame horn x1; Manta ray x8; Super restore(4) x8; Mith grapple x1; Trollheim teleport x1; Bones to peaches (tablet) x1; Ecumenical key x1; Divine rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; the Wiki text gives ranges.
+NOTE: God items must be worn while crossing the God Wars Dungeon followers' areas; they can be swapped off in the boss room. Kree'arra's magic attack rolls against your RANGED defence (Mod Ash).
+REQ: Ranged 70 (mith grapple + any crossbow to enter); Agility/Strength access as for Armadyl's Eyrie; Quest: Death Plateau
+NOTE: Group method: everyone stands under Kree'arra after every attack and uses the soulflame horn's special while he is under him; each player should bring a horn. Pray Protect from Missiles, then Protect from Magic after Kree'arra dies to kill the magic minion. Lightbearer: another ring can be worn during kills and Lightbearer switched to after.
+NOTE: The grid also holds a magic switch (a dark robe top and gloves) and "any crossbow"; those three slots are left empty because the items are not named. Rune pouch: Blood Barrage and Ice Barrage (Ancient) or Death Charge (Arceuus) (not modelled).
+
+BOSS Commander Zilyana
+URL https://oldschool.runescape.wiki/w/Commander_Zilyana/Strategies
+SETUP Magic
+Head: Ancestral hat > Virtus mask
+Cape: Imbued saradomin cape > Max cape
+Neck: Occult necklace
+Ammo: Unholy blessing
+Weapon: Tumeken's shadow > Eye of Ayak
+Body: Ancestral robe top > Virtus robe top
+Shield: Elidinis' ward (f) > Arcane spirit shield / Elidinis' ward > Ancient wyvern shield / Mage's book / Malediction ward
+Legs: Ancestral robe bottom > Virtus robe bottom
+Hands: Confliction gauntlets > Tormented bracelet
+Feet: Avernic treads (max) > Eternal boots > Infinity boots / Aranea boots
+Ring: Magus ring > Lightbearer
+Spec: Zorya's tome / Eldritch nightmare staff > Accursed sceptre
+INV: Eldritch nightmare staff x1; Elidinis' ward (f) x1; Ecumenical key x1; Saradomin brew(4) x4; Super restore(4) x16; Explorer's ring 4 x1; Saturated heart x1; Divine rune pouch x1; FILL Anglerfish
+NOTE: Wiki: magic is generally impractical except with Tumeken's shadow and near-max mage gear. Pray Protect from Melee/Magic as you trade.
+NOTE: Needs 70 Agility (unboostable) and ropes for Saradomin's Encampment.
+REQ: Agility 70, Prayer 37; Quest: Death Plateau
+
+SETUP Ranged
+Head: Masori mask (f) / Slayer helmet (i) [task] > Crystal helm > Justiciar faceguard > Karil's coif / Saradomin coif > Helm of Neitiznot
+Cape: Dizana's quiver > Ava's assembler > Max cape / Ranging cape(t) > N/A > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > N/A > N/A
+Ammo: Seeking dragon arrow / Diamond ascension bolts (e) / Diamond dragon bolts (e) / Moonlight antler bolts / God blessing > Seeking amethyst arrow / Diamond bolts (e) / Sunlight antler bolts > N/A > N/A > N/A
+Weapon: Twisted bow > Ascension crossbows / Bow of Faerdhinen > Zaryte crossbow > Hunters' sunlight crossbow > Armadyl crossbow / Dragon hunter crossbow / Dragon crossbow / Rune crossbow
+Body: Masori body (f) > Crystal body > Saradomin d'hide body / Zamorak d'hide body > Karil's leathertop > Black d'hide body
+Shield: Twisted buckler > Dragonfire ward > Odium ward > Crystal shield > N/A
+Legs: Masori chaps (f) > Crystal legs > Saradomin chaps / Zamorak chaps > Karil's leatherskirt > Black d'hide chaps
+Hands: Zaryte vambraces > Barrows gloves > Saradomin bracers / Zamorak bracers > N/A > N/A
+Feet: Avernic treads (max) > Pegasian boots / Saradomin d'hide boots / Zamorak d'hide boots > N/A > N/A > N/A
+Ring: Ring of suffering (ri) / Ring of endurance > Venator ring > Ring of the gods (i) > Explorer's ring 4 > N/A
+Spec: Toxic blowpipe > Zaryte crossbow > Armadyl crossbow / Tonalztics of ralos > N/A > N/A
+INV: Toxic blowpipe [keep] x1; Divine bastion potion(4) x3; Extended stamina potion(4) x2; Prayer potion(4) x6; Saradomin brew(4) x3; Super restore(4) x1; Manta ray x6; Explorer's ring 4 x1; Bones to peaches (tablet) x1; Serpentine helm x1; Ecumenical key x1; Divine rune pouch x1; Book of the dead x1
+NOTE: Owner-supplied Wiki table + inventory grid (screenshot and paste, 2026-11-01). Toxic blowpipe is carried to kill minions; use its spec as soon as she spawns.
+NOTE: Wiki footnotes: Bow of Faerdhinen only with crystal armour; Hunters' sunlight crossbow's faster attack speed can be impractical if you are not confident kiting; Ring of endurance reduces stamina use; Venator ring only if it raises your max hit.
+NOTE: Wiki inventory ranges: 8-16 brews or sharks with super restores in a 3:1 ratio, 6-12 restores or prayer potions, 1-4 divine bastion/ranging, 1-4 (extended) stamina. The 28 shown is the Wiki's example grid.
+NOTE: Divine rune pouch in the Wiki grid: 16,000 fire, blood and cosmic runes for Book of the Dead resurrection spells (rune contents are not modelled as inventory items). Bring one Saradomin and one Zamorak item for protection.
+
+BOSS K'ril Tsutsaroth
+URL https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Masori mask (f) > Armadyl helmet > Crystal helm > Void ranger helm
+Cape: Dizana's quiver > Ava's assembler > Max cape > Ava's accumulator > Ranging cape
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > Amulet of glory > N/A
+Ammo: Seeking dragon arrow > Seeking amethyst arrow > Dragon arrow > Amethyst arrow > Unholy blessing
+Weapon: Scorching bow > Twisted bow > Bow of Faerdhinen > N/A > N/A
+Body: Masori body (f) > Armadyl chestplate > Crystal body > Karil's leathertop / Hueycoatl hide body > Eclipse moon chestplate / Elite void top
+Shield: N/A
+Legs: Masori chaps (f) > Armadyl chainskirt > Crystal legs > Karil's leatherskirt / Hueycoatl hide chaps > Eclipse moon tassets / Elite void robe
+Hands: Zaryte vambraces > Barrows gloves > Zamorak bracers / Black spiky vambraces > Void knight gloves > N/A
+Feet: Avernic treads (max) > Pegasian boots > Echo boots > Ranger boots > Blessed boots
+Ring: Lightbearer > Venator ring > Archers ring (i) > Ring of suffering (ri) > N/A
+INV: Blood ancient sceptre x1; Elidinis' ward (f) x1; Virtus robe top x1; Confliction gauntlets x1; Armadyl brew(4) x2; Super restore(4) x12; Saturated heart x1; Extended stamina potion(4) x1; Extended anti-venom+(4) x1; Divine rune pouch x1; Ghommal's hilt 1 x1; Teleport to house (tablet) x1; FILL Marlin
+NOTE: Scorching bow's special binds K'ril, avoiding most of his damage. K'ril can smash prayer while you use Protect from Melee.
+NOTE: The Wiki weapon row is empty (N/A) in the two lowest columns, so those tiers keep Bow of Faerdhinen (Unholy blessing ammo with crystal).
+REQ: Hitpoints 70; Quest: Death Plateau
+
+BOSS Cerberus
+URL https://oldschool.runescape.wiki/w/Cerberus/Strategies
+SETUP Melee
+Head: Slayer helmet (i) > Black mask (i) > N/A > N/A > N/A
+Cape: Infernal cape > Fire cape > N/A > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury > Amulet of fury > Amulet of glory
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Obligator > Scythe of Vitur > Emberlight > Soulreaper axe / Inquisitor's mace > Arclight / Osmumten's fang / Abyssal bludgeon > Ghrazi rapier
+Body: Inquisitor's hauberk > Torva platebody > Oathplate chest / Bandos chestplate / Blood Moon chestplate > Justiciar chestguard / Fighter torso > [generic] Barrows body
+Shield: Avernic defender / Rondache / Spectral spirit shield > Dragon defender > Dragonfire shield > N/A > N/A
+Legs: Inquisitor's plateskirt > Torva platelegs > Oathplate legs / Bandos tassets / Blood Moon tassets > Justiciar legguards > [generic] Barrows legs
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Echo boots > Guardian boots > Dragon boots
+Ring: Ultor ring > Berserker ring (i) > Lightbearer > Ring of suffering (i) / Ring of the gods (i) > N/A
+Spec: Crimson kisten > Dragon claws > Burning claws / Voidwaker > Bandos godsword > Dragon dagger / Elder maul
+INV: Crimson kisten x1; Divine super combat potion(4) x1; Prayer potion(4) x2; Spectral spirit shield x1; Emberlight x1
+NOTE: Summoned souls (below 400 HP, every 7th attack) deal 30 unprotected or drain 30 prayer when protected; lava pools below 200 HP.
+NOTE: Wiki inventory counts are not stated and the grid was only partly readable: only the listed items are placed, other cells left empty (quantities not invented).
+REQ: Slayer 91 (Cerberus/hellhound task); Attack 85, Strength 85, Defence 85, Prayer 70
+
+BOSS Alchemical Hydra
+URL https://oldschool.runescape.wiki/w/Alchemical_Hydra/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) > Black mask (i) > N/A > N/A > N/A
+Neck: Necklace of rupture / Bonecrusher necklace / Dragonbone necklace > Necklace of anguish > Necklace of fangs > Amulet of fury > Amulet of glory
+Cape: Dizana's quiver > Ava's assembler > Max cape / Ranging cape(t) > Ava's accumulator / Ranging cape > N/A
+Ammo: Seeking dragon arrow / Diamond ascension bolts (e) / Ruby dragon bolts (e) / Rada's blessing 4 > Dragon arrow / Ruby bolts (e) > Seeking amethyst arrow > Amethyst arrow > Atlatl dart
+Weapon: Twisted bow > Ascension crossbows > Toxic blowpipe / Dragon hunter crossbow > Bow of Faerdhinen > Eclipse atlatl
+Body: Masori body (f) > Crystal body / Eclipse moon chestplate > Hueycoatl hide body > Blessed body > N/A
+Shield: Twisted buckler > Dragonfire ward > Odium ward > Antler guard > Aquanite hopper
+Legs: Masori chaps (f) > Crystal legs / Eclipse moon tassets > Hueycoatl hide chaps > Blessed chaps > N/A
+Hands: Zaryte vambraces > Barrows gloves > Blessed bracers / Hueycoatl hide vambraces > Black d'hide vambraces > N/A
+Feet: Avernic treads (max) > Pegasian boots > Devout boots > Blessed boots / Aranea boots > Boots of brimstone
+Ring: Lightbearer > Venator ring > Ring of the gods (i) > Ring of suffering (i) > Archers ring (i)
+Spec: Zaryte crossbow > Tonalztics of ralos > Toxic blowpipe > Dragon warhammer > N/A
+INV: Zaryte crossbow x1; Ruby bolts (e) x1; Divine ranging potion(4) x1; Prayer potion(4) x1; Divine rune pouch x1; FILL Cooked moonlight antelope
+NOTE: Lure the Hydra onto the matching vent each phase (red poison, green lightning, blue flame); it takes 75% less damage until sprayed.
+NOTE: Rune pouch holds Nature 1000, Lava 5000, Law 1000, Dust 1000 per the Wiki inventory. Other counts not stated on the Wiki; food fills the rest.
+REQ: Slayer 95 (Hydra task); boots of stone/brimstone or granite to enter, unless the Kourend elite diary
+
+BOSS Kraken
+URL https://oldschool.runescape.wiki/w/Kraken/Strategies
+SETUP Magic
+Head: Slayer helmet (i) > Black mask (i) > N/A > N/A > N/A
+Cape: [any] Imbued saradomin cape > [any] Saradomin cape > Infernal cape > Fire cape > Hitpoints cape(t) > Ardougne cloak 4
+Neck: Occult necklace / Elemental amulet (a) > Amulet of fury > Amulet of glory > Amulet of power > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Eye of ayak / Tumeken's shadow > Zorya's tome / Harmonised nightmare staff / Sanguinesti staff > Trident of the swamp / Staff of the dead > Twinflame staff / Trident of the seas > Warped sceptre / Slayer's staff
+Body: Ancestral robe top > Virtus robe top > Masori body (f) > Hueycoatl hide body / Karil's leathertop / Blessed body / Elite void top > Ahrim's robetop > Blue moon chestplate
+Shield: Elidinis' ward (f) / Tome of earth > Elidinis' ward / Arcane spirit shield > Ancient wyvern shield / Mage's book / Malediction ward > Elysian spirit shield / Spectral spirit shield > Dragonfire ward
+Legs: Ancestral robe bottom > Virtus robe bottom > Masori chaps (f) > Hueycoatl hide chaps / Karil's leatherskirt / Elite void robe / Blessed chaps > Blue moon tassets > Ahrim's robeskirt
+Hands: Confliction gauntlets / Bracelet of slaughter > Tormented bracelet > Regen bracelet > Barrows gloves > N/A
+Feet: Avernic treads (max) > Eternal boots > Infinity boots / Aranea boots > Boots of brimstone > Bloodbark boots
+Ring: Magus ring > Ring of suffering (i) > Seers ring (i) / Lightbearer > Brimstone ring > Ring of shadows
+Spec: Zorya's tome > Volatile nightmare staff > Eldritch nightmare staff > Toxic blowpipe > Eye of ayak > N/A
+INV: Fishing explosive x200s; Saturated heart x1; Bracelet of slaughter x1; Volatile nightmare staff x1; Elidinis' ward (f) x1; Prayer potion(4) x8; Divine rune pouch x1; FILL Cooked karambwan
+NOTE: Kraken and tentacles use typeless magical ranged attacks, so protection prayers do nothing. A fishing explosive on the large whirlpool starts the fight.
+NOTE: Prayer potions: the Wiki says 8-10 (lower bound used).
+REQ: Slayer 87 (cave kraken task); Magic 50
+
+BOSS Thermonuclear smoke devil
+URL https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil/Strategies
+SETUP Magic
+Head: Slayer helmet (i) > Facemask > N/A > N/A > N/A
+Cape: [any] Imbued saradomin cape > [any] Saradomin cape > Ardougne cloak 4 > Ardougne cloak 3 > Ardougne cloak 2
+Neck: Occult necklace > Elemental amulet > Amulet of fury / Amulet of glory > Amulet of magic > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Tumeken's shadow > Eye of ayak > Harmonised nightmare staff > Sanguinesti staff > Trident of the swamp > Kodai wand / Nightmare staff
+Body: Virtus robe top > Ancestral robe top > Ahrim's robetop > Dagon'hai robe top > Infinity top
+Shield: Elidinis' ward (f) > Arcane spirit shield / Elidinis' ward > Ancient wyvern shield > Malediction ward / Mage's book > Book of darkness
+Legs: Virtus robe bottom > Ancestral robe bottom > Ahrim's robeskirt > Dagon'hai robe bottom > Infinity bottoms
+Hands: Confliction gauntlets > Tormented bracelet > Barrows gloves > Infinity gloves > Rune gloves
+Feet: Avernic treads (max) > Eternal boots > Infinity boots / Aranea boots > Wizard boots / Bloodbark boots > Boots of brimstone
+Ring: Magus ring > Ring of suffering (ri) > Brimstone ring > Seers ring (i) > Ring of shadows
+Spec: Zorya's tome > N/A > N/A > N/A > N/A
+INV: Ice ancient sceptre x1; Saturated heart x1; Teleport to house (tablet) x1; Rune pouch x1; Super restore(4) x1
+NOTE: Typeless magic attack (max 8): protection prayers do nothing; a facemask, gas mask or Slayer helmet is required. Walk-under or safespot (boss reaches 8 tiles, magic reaches 9).
+NOTE: Wiki gives no counts ("super restores as needed"): only one of each listed item is placed; other cells left empty.
+REQ: Slayer 93 (smoke devil task)
+
+BOSS Abyssal Sire
+URL https://oldschool.runescape.wiki/w/Abyssal_Sire/Strategies
+SETUP Melee (phase 1, demonbane bow for vents)
+Head: Slayer helmet (i) > Black mask (i) > N/A > N/A
+Cape: Infernal cape > Fire cape > Max cape / Hitpoints cape > Mixed hide cape
+Neck: Amulet of rancour > Amulet of torture > Amulet of fury > Amulet of glory
+Ammo: Amethyst arrow > [generic] Arrows > N/A > N/A
+Weapon: Scorching bow > N/A > N/A > N/A
+Body: Torva platebody > Bandos chestplate > Blood moon chestplate > Fighter torso
+Shield: N/A
+Legs: Torva platelegs > Bandos tassets > Blood moon tassets > Obsidian platelegs
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Dragon boots > Rune boots
+Ring: Lightbearer > Ultor ring > Berserker ring (i) > N/A
+NOTE: Demonbane weapons destroy respiratory systems in one hit. Stun the Sire (75 ranged/magic damage or a shadow spell) to expose them; keep Protect from Missiles on.
+NOTE: Wiki inventory section not readable: no inventory placed (not invented).
+REQ: Slayer 85 (abyssal demon task); fairy rings or partial Enter the Abyss
+
+BOSS Araxxor
+URL https://oldschool.runescape.wiki/w/Araxxor/Strategies
+SETUP Melee
+Head: Slayer helmet (i) > N/A > N/A > N/A > N/A
+Cape: Infernal cape > Fire cape > Mythical cape > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury > Amulet of fury > N/A
+Ammo: Rada's blessing 4 > Rada's blessing 3 / Rada's blessing 2 / God blessing > [generic] Ammo for killing araxyte spawns > N/A > N/A
+Weapon: Obligator > Scythe of Vitur > Inquisitor's mace / Soulreaper axe > Abyssal bludgeon / Ursine chainmace (u) / Zamorakian hasta > Sarachnis cudgel / Dual macuahuitl / Zombie axe
+Body: Inquisitor's hauberk > Torva platebody > Bandos chestplate > Sunfire fanatic cuirass > N/A
+Shield: Rondache / Avernic defender > Dragon defender > N/A > N/A > N/A
+Legs: Inquisitor's plateskirt > Torva platelegs > Bandos tassets > [generic] Barrows legs > N/A
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Dragon boots / Aranea boots > N/A > N/A
+Ring: Ultor ring > Berserker ring (i) > N/A > N/A > N/A
+Spec: Elder maul / Crimson kisten > Dragon warhammer / Burning claws > Dragon claws / Bandos godsword > Voidwaker > N/A
+INV: Elder maul [keep] x1; Divine super combat potion(4) x1; Prayer potion(4) x4; Dragon claws [keep] x1; Extended anti-venom+(4) x1; Noxious halberd x1; Manta ray x13; Teleport to house (tablet) x1; Book of the dead x1; Divine rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; two items in the grid (a parchment and a pale potion) are not identified and are left out. Divine rune pouch: Vengeance (Lunar), thralls and Death Charge (Arceuus) or Spellbook Swap (not modelled).
+NOTE: A scythe is fastest but each swing costs about 750 coins; Soulreaper axe or Inquisitor's mace are cheaper crush options with slightly slower kills. Noxious halberd (recommended even with a mace) kills araxytes safely; the mace can still one-hit acidics.
+NOTE: Wiki footnotes: Mythical cape beats the fire cape if the fire cape does not guarantee a max hit (high crush bonus); Obligator with Inquisitor's hauberk and platelegs; Scythe on slash with Oathplate, crush otherwise; mace, Soulreaper axe, hasta and zombie axe on crush; only one successful defence reduction per kill (Elder maul / Dragon warhammer); Burning claws on slash. Combo food (karambwans or halibut) optional.
+REQ: Slayer 92 (spider/araxyte task); Quest: Sins of the Father; Attack 85, Strength 85, Defence 70, Prayer 70
+
+SETUP Ranged
+Head: Slayer helmet (i) > N/A > N/A > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Max cape / Ranging cape(t) > N/A > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > N/A > N/A
+Ammo: Seeking dragon arrow > Dragon arrow > Amethyst arrow > N/A > N/A
+Weapon: Twisted bow > N/A > N/A > N/A > N/A
+Body: Masori body (f) > N/A > N/A > N/A > N/A
+Legs: Masori chaps (f) > N/A > N/A > N/A > N/A
+Hands: Zaryte vambraces > Barrows gloves > [any] Saradomin bracers > N/A > N/A
+Feet: Avernic treads (max) > Pegasian boots > Aranea boots > Ranger boots / Devout boots > [any] Saradomin d'hide boots
+Ring: Lightbearer > Ring of the gods (i) / Archers ring (i) > N/A > N/A > N/A
+Spec: Elder maul > Dragon warhammer > Zaryte crossbow > N/A > N/A
+INV: Elder maul [keep] x1; Heavy ballista x1; Dragon javelin x1s; Divine ranging potion(4) x1; Extended anti-venom+(4) x1; Prayer potion(4) x3; Manta ray x15; Book of the dead x1; Divine rune pouch x1; Teleport to house (tablet) x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid; two items in the grid (a parchment and a pale potion) are not identified and are left out. Divine rune pouch: Vengeance (Lunar), thralls and Death Charge (Arceuus) or Spellbook Swap (not modelled).
+NOTE: The twisted bow with Masori out-damages the abyssal bludgeon and lower melee weapons but is far behind the Scythe of Vitur. Heavy ballista kills mirrorback araxytes in one shot (javelin count not stated; shown as 1). Aranea boots: slightly less damage than Pegasian but avoid damage when every other attack taken is ranged. Elder maul / warhammer specs are accurate even without gear switches; Zaryte crossbow with ruby bolts (e) for damage.
+NOTE: The Wiki lists only Twisted bow and Masori (f) for this style; lower tiers keep them (no lower option is listed).
+REQ: Slayer 92 (spider/araxyte task); Quest: Sins of the Father; Attack 85, Strength 85, Defence 70, Prayer 70
+
+BOSS Vardorvis
+URL https://oldschool.runescape.wiki/w/Vardorvis/Strategies
+SETUP Melee (slash)
+Head: Oathplate helm > Torva full helm > Neitiznot faceguard / Serpentine helm / Justiciar faceguard > N/A
+Neck: Amulet of rancour / Amulet of blood fury > Amulet of torture > Amulet of fury > N/A
+Cape: Infernal cape > Fire cape > Mythical cape > Mixed hide cape
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A
+Weapon: Soulreaper axe / Scythe of Vitur > Blade of Saeldor / Noxious halberd > Abyssal tentacle > Abyssal whip / Zombie axe
+Body: Oathplate chest > Torva platebody > Bandos chestplate / Fighter torso / Blood moon chestplate / Justiciar chestguard > [generic] Barrows body
+Shield: Rondache / Avernic defender > Dragon defender > N/A > N/A
+Legs: Oathplate legs > Torva platelegs > Bandos tassets / Blood moon tassets / Justiciar legguards > [generic] Barrows legs
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) / Echo boots > Primordial boots > Dragon boots / Guardian boots > N/A
+Ring: Bellator ring / Ultor ring > Berserker ring (i) > Ring of suffering (ri) > Lightbearer
+Spec: Dragon claws / Voidwaker > Crimson kisten / Burning claws > Ancient godsword / Arkan blade > Saradomin godsword / Dragon dagger
+INV: Divine super combat potion(4) x1; Super restore(4) x2; Book of the dead x1; Rune pouch x1; Ring of shadows x1; Teleport to house (tablet) x1; FILL Anglerfish
+NOTE: Weak to slash; he heals 50% of the damage he deals. His Strength rises and Defence falls as his health drops, so Defence drains do nothing.
+NOTE: Wiki: 1 divine super combat, 2-4 super restores or prayer potions (lower bound used), anglerfish for the rest; the Optimal head slot skips the task-only Slayer helmet (i).
+REQ: Quest: Desert Treasure II - The Fallen Empire; Attack 80, Strength 85, Defence 80, Hitpoints 85
+
+BOSS Duke Sucellus
+URL https://oldschool.runescape.wiki/w/Duke_Sucellus/Strategies
+SETUP Melee (slash)
+Head: Slayer helmet (i) [task] / Oathplate helm > Serpentine helm > Torva full helm / Neitiznot faceguard > Void melee helm > Blood moon helm > Helm of neitiznot
+Cape: Infernal cape > Fire cape > Mythical cape > Mixed hide cape > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury > Amulet of fury > Amulet of glory / Amulet of strength
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Scythe of Vitur > Emberlight / Soulreaper axe > Noxious halberd / Blade of Saeldor > Arclight / Zombie axe / Abyssal whip > N/A
+Body: Oathplate chest > Torva platebody > Bandos chestplate / Fighter torso / Blood moon chestplate > Elite void top / Void knight top > N/A
+Shield: Avernic defender > Dragon defender / Rondache > N/A > N/A > N/A
+Legs: Oathplate legs > Torva platelegs > Bandos tassets / Blood moon tassets > Elite void robe / Void knight robe > Obsidian platelegs
+Hands: Ferocious gloves > Barrows gloves / Void knight gloves > N/A > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Echo boots > Dragon boots > N/A
+Ring: Bellator ring / Lightbearer > Ultor ring > Berserker ring (i) > Ring of suffering (ri) > Ring of shadows
+Spec: Burning claws > Dragon claws / Voidwaker > Bandos godsword > Bone dagger > Arkan blade
+INV: Bandos godsword x1; Divine super combat potion(4) x1; Super restore(4) x4; Prayer regeneration potion(4) x1; Saradomin brew(4) x1; Stamina potion(4) x1; Book of the dead x1; Ring of shadows x1; Crystal pickaxe x1; Divine rune pouch x1; Teleport to house (tablet) x1; FILL Anglerfish
+NOTE: Weak to slash. Never get caught by Freezing Gaze: stand directly behind a pillar (it can kill in one hit). Prep the potions with the mushrooms/pickaxe before the fight.
+NOTE: Wiki: "4-7 prayer potions or super restores" (lower bound used); other counts not stated (one each).
+REQ: Quest: Desert Treasure II - The Fallen Empire; Attack 75, Strength 75, Defence 70, Hitpoints 80
+
+BOSS The Leviathan
+URL https://oldschool.runescape.wiki/w/The_Leviathan/Strategies
+SETUP Ranged
+Head: Masori mask (f) / Masori mask > Crystal helm > Void ranger helm > Hueycoatl hide coif > Karil's coif / Blessed coif > N/A
+Cape: Dizana's quiver > Ava's assembler > Ava's accumulator / Ranging cape(t) > N/A > N/A
+Neck: Necklace of rupture > Necklace of anguish > Dragonbone necklace / Bonecrusher necklace > Amulet of fury / Amulet of glory > N/A
+Ammo: Diamond ascension bolts (e) / Ruby dragon bolts (e) > Ruby bolts (e) > Seeking dragon arrow > N/A > N/A
+Weapon: Ascension crossbows > Zaryte crossbow > Armadyl crossbow / Dragon crossbow > Twisted bow > Bow of Faerdhinen > Rune crossbow
+Body: Masori body (f) / Masori body > Crystal body > Elite void top > Karil's leathertop / Hueycoatl hide body / Blessed body > Black d'hide body
+Shield: Twisted buckler > Dragonfire ward > Odium ward > Antler guard > N/A
+Legs: Masori chaps (f) / Masori chaps > Crystal legs > Elite void robe > Karil's leatherskirt / Hueycoatl hide chaps / Blessed chaps > Black d'hide chaps
+Hands: Zaryte vambraces > Barrows gloves > Void knight gloves > Hueycoatl hide vambraces / Blessed bracers > N/A
+Feet: Avernic treads (max) > Devout boots / Pegasian boots > Ranger boots > Blessed boots / Aranea boots > N/A
+Ring: Lightbearer > Ring of the gods (i) / Venator ring > Ring of suffering (i) > Archers ring (i) > Ring of shadows
+Spec: Zaryte crossbow > Webweaver bow > Armadyl crossbow / Toxic blowpipe > Tonalztics of ralos / Dragon knife > N/A
+INV: Webweaver bow x1; Toxic blowpipe x1; Ring of shadows x1; Teleport to house (tablet) x1; Prayer potion(4) x1; Divine ranging potion(4) x1; Divine rune pouch x1; FILL Anglerfish
+NOTE: Zaryte crossbow is best until the Leviathan reaches 450 HP (380 without a venator ring), then the toxic blowpipe with dragon darts.
+NOTE: Wiki inventory counts are not stated (one each placed; anglerfish fill the rest; the Wiki grid also shows dark crabs). The Optimal head skips the task-only Slayer helmet (i).
+REQ: Quest: Desert Treasure II - The Fallen Empire
+
+BOSS The Whisperer
+URL https://oldschool.runescape.wiki/w/The_Whisperer/Strategies
+SETUP Magic
+Head: Slayer helmet (i) [task] / Ancestral hat > Virtus mask > Ahrim's hood / Blue moon helm > Bloodbark helm > Void mage helm > N/A
+Cape: [any] Imbued saradomin cape > N/A > N/A > N/A > N/A
+Neck: Occult necklace > Elemental amulet > N/A > N/A > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Tumeken's shadow > Harmonised nightmare staff > Eye of ayak > Zorya's tome > Sanguinesti staff > Twinflame staff / Mystic smoke staff > Trident of the swamp
+Body: Ancestral robe top > Virtus robe top > Ahrim's robetop / Blue moon chestplate > Bloodbark body > Elite void top > N/A
+Shield: Tome of earth / Elidinis' ward (f) > Arcane spirit shield > Elidinis' ward > Ancient wyvern shield / Malediction ward / Mage's book > Book of darkness > N/A
+Legs: Ancestral robe bottom > Virtus robe bottom > Ahrim's robeskirt / Blue moon tassets > Bloodbark legs > Elite void robe > N/A
+Hands: Confliction gauntlets > Tormented bracelet > Void knight gloves > Barrows gloves > N/A
+Feet: Avernic treads (max) > Eternal boots > Infinity boots / Aranea boots > N/A > N/A
+Ring: Magus ring > Lightbearer > Ring of the gods (i) > Ring of suffering (i) > Seers ring (i)
+Spec: Zorya's tome > Eldritch nightmare staff > Accursed sceptre > Eye of ayak > Toxic blowpipe / Seercull
+INV: Blackstone fragment x1; Venator bow x1; Eldritch nightmare staff x1; Prayer potion(4) x1; Super restore(4) x1; Saturated heart x1; Divine rune pouch x1; Book of the dead x1; Ring of shadows x1; Explorer's ring 4 x1; FILL Anglerfish
+NOTE: Venator bow (or blisterwood stake / blowpipe) for the lost souls. Slayer helmet (i) bonuses do not apply in the awakened fight.
+NOTE: Wiki inventory counts not stated (one each placed; the grid also shows manta rays). Void is better than other mage gear without a tormented bracelet or Slayer helmet.
+REQ: Quest: Desert Treasure II - The Fallen Empire
+
+BOSS Phosani's Nightmare
+URL https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare/Strategies
+SETUP Melee (crush)
+Head: Inquisitor's great helm > Torva full helm > Neitiznot faceguard / Zombie helmet > Blood moon helm
+Cape: Infernal cape > Fire cape / Mythical cape > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury > Amulet of fury
+Ammo: Rada's blessing 4 > Rada's blessing 3 / God blessing > N/A > N/A
+Weapon: Obligator > Scythe of Vitur > Inquisitor's mace > Soulreaper axe > Abyssal bludgeon > Dual macuahuitl
+Body: Inquisitor's hauberk > Torva platebody > Bandos chestplate / Blood moon chestplate / Fighter torso > N/A
+Shield: Avernic defender > Dragon defender > N/A > N/A
+Legs: Inquisitor's plateskirt > Torva platelegs > Bandos tassets / Blood moon tassets > N/A
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Dragon boots > N/A
+Ring: Ultor ring > Lightbearer > Berserker ring (i) > Brimstone ring > Berserker ring > N/A
+Spec: Crimson kisten > Voidwaker > Granite maul > Dragon claws
+INV: Hallowfell x1
+NOTE: Husk phase: the Wiki husk table lists Hallowfell / Inquisitor's mace, then Zombie axe, then Saradomin godsword.
+NOTE: Wiki inventory section was not readable: only the husk weapon is placed (nothing else invented).
+REQ: Quest: Priest in Peril; advised Attack 95, Strength 95, Defence 85, Magic 95, Hitpoints 95, Prayer 70
+
+BOSS The Nightmare
+URL https://oldschool.runescape.wiki/w/The_Nightmare/Strategies
+SETUP Melee (crush, group)
+Head: Inquisitor's great helm > Torva full helm > Neitiznot faceguard > Serpentine helm / Blood moon helm > Helm of neitiznot / Zombie helmet
+Cape: Infernal cape > Fire cape > Mythical cape > Obsidian cape > N/A
+Neck: Amulet of rancour > Amulet of blood fury > Amulet of torture > Amulet of fury > Amulet of glory
+Ammo: Rada's blessing 4 > Rada's blessing 3 > God blessing > N/A > N/A
+Weapon: Obligator > Scythe of Vitur / Inquisitor's mace > Soulreaper axe / Abyssal bludgeon > Dual macuahuitl / Ursine chainmace (u) / Zamorakian hasta > Zombie axe / Sarachnis cudgel / Osmumten's fang
+Body: Inquisitor's hauberk > Torva platebody > Bandos chestplate > Blood moon chestplate > Fighter torso
+Shield: Avernic defender > Dragon defender > N/A > N/A > N/A
+Legs: Inquisitor's plateskirt > Torva platelegs > Bandos tassets > Blood moon tassets > Obsidian platelegs
+Hands: Ferocious gloves > Barrows gloves > Granite gloves > Combat bracelet > N/A
+Feet: Avernic treads (max) > Primordial boots > Dragon boots > Echo boots > Guardian boots
+Ring: Ultor ring > Berserker ring (i) > N/A > N/A > N/A
+Spec: Elder maul / Saradomin godsword / Crimson kisten > Dragon warhammer / Voidwaker > Bandos godsword > Dragon claws > N/A
+Switch Head: Ancestral hat > Virtus mask > Ahrim's hood > N/A > N/A
+Switch Neck: Occult necklace > N/A > N/A > N/A > N/A
+Switch Cape: [any] Imbued saradomin cape > N/A > N/A > N/A > N/A
+Switch Body: Ancestral robe top > Virtus robe top > Ahrim's robetop > N/A > N/A
+Switch Legs: Ancestral robe bottom > Virtus robe bottom > Ahrim's robeskirt > N/A > N/A
+Switch Weapon: Tumeken's shadow / Eye of Ayak / Harmonised nightmare staff > Sanguinesti staff > Twinflame staff > Trident of the swamp > Trident of the seas
+Switch Shield: Tome of fire > Elidinis' ward (f) > Tome of fire > Arcane spirit shield / Elidinis' ward > Mage's book / Ancient wyvern shield / Malediction ward
+Switch Hands: Confliction gauntlets > Tormented bracelet > N/A > N/A > N/A
+INV: Divine super combat potion(4) x3; Super restore(4) x8; Anglerfish x6
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): Melee table, Totems (mage) table and the melee inventory grid. Magic here is a switch for the totems, not a separate trip.
+NOTE: Wiki footnotes: Scythe, Soulreaper axe, Zamorakian hasta and Zombie axe on crush; Dual macuahuitl with full Blood Moon armour; Amulet of blood fury counters chip damage but is expensive; one special attack against The Nightmare per phase; Saradomin godsword spec on the Sleepwalkers (always max hits); Crimson kisten spec after her defence is reduced.
+NOTE: Totems have no stats: only magic damage bonus matters. Tome of fire only when casting fire surge/wave (no thralls then). Bring a Saturated heart with a powered staff.
+NOTE: Four items in the Wiki grid (bottom right) are not identified yet and are left empty rather than guessed. Divine rune pouch runes shown: fire, wrath-style and blood (not modelled). Solo: same gear progression, swap Ancestral for extra Saradomin brews; Amulet of blood fury recommended while learning.
+NOTE: The Nightmare is not undead: no Salve amulet.
+REQ: Quest: Priest in Peril; recommended Attack, Strength, Defence, Magic, Hitpoints 85, Prayer 70
+
+BOSS Nex
+URL https://oldschool.runescape.wiki/w/Nex/Strategies
+SETUP Ranged (group)
+Head: Masori mask (f) > Armadyl helmet > Karil's coif > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > N/A
+Cape: Blessed dizana's quiver > Ava's assembler > Max cape > Ranging cape(t) > N/A
+Body: Masori body (f) > Armadyl chestplate > Karil's leathertop / Ancient d'hide body > Eclipse moon chestplate
+Legs: Masori chaps (f) > Armadyl chainskirt > Karil's leatherskirt / Ancient chaps > Eclipse moon tassets
+Weapon: Zaryte crossbow > Twisted bow > Armadyl crossbow > Dragon hunter crossbow / Dragon crossbow
+Shield: Twisted buckler > Dragonfire ward > Odium ward > N/A
+Ammo: Ruby dragon bolts (e) > Seeking dragon arrow > Ruby bolts (e) > N/A
+Hands: Zaryte vambraces > Barrows gloves > Ancient bracers > N/A
+Feet: Avernic treads (max) > Pegasian boots > Ancient d'hide boots > N/A
+Ring: Lightbearer > Venator ring > Archers ring (i) > Ring of shadows
+Spec: Zaryte crossbow > Armadyl crossbow / Voidwaker > Toxic blowpipe > N/A
+INV: Belle's folly x1; Book of the dead x1; Divine rune pouch x1; Venator ring x1; Menaphite remedy(4) x1; Surge potion(4) x1; Ranging potion(4) x1; Super restore(4) x1; Sanfew serum(4) x1; Saradomin brew(4) x1
+NOTE: Group boss. Ascension crossbows are listed for the mages and blood reavers; Belle's folly breaks ice prisons. Twin crossbow cells on the Wiki ("Zaryte crossbow + Ascension crossbows") are shown as the first crossbow here.
+NOTE: Wiki inventory counts not stated (one each placed; nothing invented).
+REQ: Miniquest: The Frozen Door; Ranged 70, Agility 70, Strength 70, Hitpoints 70
+
+BOSS Yama
+URL https://oldschool.runescape.wiki/w/Yama/Strategies
+SETUP Melee
+Head: Torva full helm > Oathplate helm > Neitiznot faceguard / Serpentine helm > Blood moon helm > Helm of neitiznot / Blue moon helm
+Neck: Amulet of rancour > Amulet of torture > Amulet of blood fury > Amulet of strength > Amulet of fury
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A
+Weapon: Emberlight > Arclight > Scythe of Vitur > N/A
+Body: Torva platebody / Oathplate chest > Bandos chestplate > Blood moon chestplate / Fighter torso > Blue moon chestplate
+Shield: Avernic defender > Dragon defender > N/A > N/A
+Legs: Torva platelegs / Oathplate legs > Bandos tassets > Blood moon tassets > Blue moon tassets
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Dragon boots / Echo boots / Aranea boots > N/A
+Ring: Ultor ring > Bellator ring / Berserker ring (i) > Lightbearer > N/A
+Cape: Infernal cape > Fire cape > N/A > N/A
+Spec: Elder maul > Dragon warhammer > Emberlight / Bandos godsword > Dragon claws / Burning claws > Voidwaker > Saradomin godsword
+NOTE: Solo: use Emberlight instead of the Elder maul + Soulflame horn pairing. The Wiki footnotes Scythe of Vitur as significantly worse than Arclight/Emberlight here.
+NOTE: Saradomin godsword is the Wiki's choice against the Judge of Yama (guaranteed max hit). Wiki inventory section not readable: no inventory placed.
+REQ: Quest: A Kingdom Divided; recommended Magic 82, Attack 80, Strength 80, Defence 75, Prayer 70
+
+BOSS Doom of Mokhaiotl
+URL https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl/Strategies
+SETUP Ranged
+Head: Masori mask (f) > Masori mask > N/A
+Cape: Dizana's quiver > Ava's assembler > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury
+Ammo: Seeking dragon arrow > Diamond ascension bolts (e) > Amethyst arrow
+Weapon: Twisted bow > Scorching bow > Ascension crossbows
+Body: Masori body (f) > Masori body > N/A
+Shield: N/A
+Legs: Masori chaps (f) > Masori chaps > N/A
+Hands: Zaryte vambraces > Barrows gloves > N/A
+Feet: Avernic treads (max) > Pegasian boots / Aranea boots > Blessed boots / Mixed hide boots
+Ring: Lightbearer > Venator ring > Ring of suffering (i)
+Spec: Zaryte crossbow > Dragon knife / Rosewood blowpipe > Dragon thrownaxe > Toxic blowpipe
+NOTE: Ruby bolts (e) are carried with a Zaryte crossbow spec. Delve deeper for better uniques; loadout is for standard delves.
+NOTE: Wiki inventory section not readable: no inventory placed.
+REQ: Quest: The Final Dawn; recommended While Guthix Sleeps (scorching bow), Ranged 90
+
+BOSS Hespori
+URL https://oldschool.runescape.wiki/w/Hespori/Strategies
+SETUP Melee (entry level)
+Head: Helm of neitiznot > Berserker helm > N/A
+Cape: Fire cape > Mixed hide cape > Ardougne cloak 3
+Neck: Amulet of fury > Amulet of strength > Amulet of glory
+Ammo: Rada's blessing 4 > [generic] Any other blessing > N/A
+Weapon: Zombie axe > Dragon scimitar > N/A
+Body: Blood moon chestplate / Fighter torso / Bandos chestplate > [generic] Barrows top > Black d'hide body
+Shield: Dragon defender > Rune defender > N/A
+Legs: Blood moon tassets / Bandos tassets > [generic] Barrows legs > Black d'hide chaps
+Hands: Barrows gloves > Combat bracelet > N/A
+Feet: Dragon boots > Mixed hide boots > Climbing boots
+Ring: Berserker ring (i) > Warrior ring (i) > Explorer's ring 3
+Spec: Arkan blade > Dragon dagger > Crystal halberd
+INV: Dragon dagger x1; Hespori seed x1; Spade x1; Seed dibber x1; Super combat potion(4) x1; Rune pouch x1; Book of the dead x1; Prayer potion(4) x1; Antipoison(4) x1
+NOTE: The Wiki table itself is an entry-level table, so its middle and last columns are lower-gear options. One Hespori seed per kill; Hespori is immune to the ring of recoil.
+NOTE: Wiki also lists knives or darts for the flowers and "cooked food" without counts: not placed.
+REQ: Farming 65
+
+BOSS Mad Angel
+URL https://oldschool.runescape.wiki/w/Mad_Angel/Strategies
+SETUP Melee (golembane)
+Head: Inquisitor's great helm > Torva full helm / Oathplate helm > Neitiznot faceguard > Serpentine helm / Blood moon helm > Helm of neitiznot / Zombie helmet
+Cape: Infernal cape > Fire cape / Mythical cape > N/A > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of strength > Amulet of fury > N/A
+Ammo: Rada's blessing 4 > God blessing > N/A > N/A > N/A
+Weapon: Obligator > Granite hammer > Inquisitor's mace / Scythe of Vitur / Soulreaper axe > Osmumten's fang / Noxious halberd / Abyssal bludgeon > Dual macuahuitl / Zamorakian hasta > Glacial temotli / Zombie axe
+Body: Inquisitor's hauberk > Torva platebody / Oathplate chest > Bandos chestplate / Blood moon chestplate / Fighter torso > N/A > N/A
+Shield: Avernic defender / Rondache > Dragon defender > N/A > N/A > N/A
+Legs: Inquisitor's plateskirt > Torva platelegs / Oathplate legs > Bandos tassets / Blood moon tassets > N/A > N/A
+Hands: Ferocious gloves > Barrows gloves > Dragon gloves > Rune gloves > Adamant gloves
+Feet: Avernic treads (max) > Primordial boots > Dragon boots / Spiked manacles > Mixed hide boots / Climbing boots > N/A
+Ring: Ultor ring > Berserker ring (i) / Lightbearer > Brimstone ring > Ring of shadows > Ring of the gods (i) / Ring of suffering (ri) / Steel ring
+Spec: Voidwaker / Crimson kisten > Arkan blade / Dragon mace > Elder maul / Ancient godsword > Bandos godsword > Dragon warhammer > N/A
+INV: Divine super combat potion(4) x1; Divine rune pouch x1; Book of the dead x1; Teleport to house (tablet) x1
+NOTE: Weak to golembane (granite hammer). Disable auto-retaliate or the blast attack can drag you. Countered mechanics guarantee accuracy, so lower-tier weapons still work.
+NOTE: Wiki lists food, prayer potions/super restores, crystal dust and Ardeaglais teleports without counts: not placed.
+REQ: Quest: Fallen From Grace; recommended Attack 60, Strength 60, Prayer 43
+
+BOSS Skotizo
+URL https://oldschool.runescape.wiki/w/Skotizo/Strategies
+SETUP Melee (demonbane)
+Head: Slayer helmet (i) [task] / Oathplate helm > Torva full helm > Neitiznot faceguard > Serpentine helm > Blood moon helm > Helm of neitiznot > Zombie helmet > Dwarven helmet
+Cape: Infernal cape > Fire cape > Mythical cape > Ardougne cloak 4 > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of fury > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Emberlight > Arclight > N/A > N/A > N/A
+Body: Oathplate chest / Masori body (f) > Torva platebody / Karil's leathertop > Bandos chestplate / Fighter torso / Blood moon chestplate > Obsidian platebody / Blessed body > Elite void top / Void knight top > Black d'hide body
+Shield: Avernic defender > Dragon defender > Dragonfire shield > Rune defender > N/A
+Legs: Oathplate legs > Torva platelegs > Bandos tassets / Blood moon tassets > Obsidian platelegs > Elite void robe / Void knight robe > Karil's leatherskirt / Blessed chaps / Black d'hide chaps
+Hands: Ferocious gloves > Barrows gloves > Rune gloves > Regen bracelet > Combat bracelet
+Feet: Avernic treads (max) > Primordial boots > Dragon boots / Spiked manacles > Guardian boots > Mixed hide boots / Rune boots / Climbing boots
+Ring: Ultor ring > Bellator ring > Berserker ring (i) > Brimstone ring > Ring of shadows
+Spec: Dragon claws / Burning claws > Voidwaker > Elder maul > Bandos godsword > Emberlight / Dragon warhammer > Arclight
+INV: Divine super combat potion(4) x1; Prayer potion(4) x2; Dark totem x1; Teleport to house (tablet) x1; Book of the dead x1; FILL Shark
+NOTE: Open with two Arclight specials (or a dragon warhammer). Arclight/Emberlight disable an awakened altar in one hit. Pray Protect from Melee; minions can be ignored.
+NOTE: Wiki: prayer potions 2-3 (lower bound), "sharks or better" for the rest.
+REQ: Catacombs of Kourend access; one dark totem per kill
+
+BOSS Shellbane gryphon
+URL https://oldschool.runescape.wiki/w/Shellbane_gryphon/Strategies
+SETUP Melee
+Head: Black mask > Slayer helmet (i) > Gold helmet > Granite helm / Obsidian helmet > Adamant full helm
+Cape: Tortugan shield > N/A > N/A > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of strength > N/A > N/A
+Ammo: Rada's blessing 4 > God blessing > N/A > N/A > N/A
+Weapon: Scythe of Vitur > Soulreaper axe / Ghrazi rapier > Noxious halberd / Osmumten's fang / Blade of Saeldor / Abyssal tentacle > Zamorakian hasta > Abyssal whip / Abyssal dagger > Zombie axe / Belle's folly / Dragon sword > Arkan blade / Colossal blade > Dragon scimitar
+Body: Torva platebody / Oathplate chest > Bandos chestplate > Granite body > Obsidian platebody > Adamant platebody > N/A
+Shield: Avernic defender / Dragonfire shield > Dragon defender > Rune defender / Toktz-ket-xil > Granite shield > Adamant kiteshield > Green d'hide shield
+Legs: Torva platelegs / Oathplate legs > Bandos tassets > Granite legs / Obsidian platelegs > Adamant platelegs > N/A
+Hands: Ferocious gloves / Bracelet of slaughter > Barrows gloves > Granite gloves > Combat bracelet > Elven gloves / Rock-shell gloves
+Feet: Avernic treads (max) > Echo boots > Guardian boots > Primordial boots > Spiked manacles > Dragon boots > Boots of brimstone / Granite boots > Mixed hide boots > Rune boots > Climbing boots
+Ring: Ultor ring > Berserker ring (i) > Granite ring (i) > Steel ring > Explorer's ring 4
+Spec: Dragon claws > Crimson kisten > Burning claws > Voidwaker / Dragon dagger / Arkan blade > Bone dagger > N/A
+INV: Dragon dagger x1; Knife x1; Prayer potion(4) x1; Super attack(4) x1; Super strength(4) x1; Explorer's ring 4 x1; Book of the dead x1; Teleport to house (tablet) x1; Rune pouch x1; FILL Giant krill
+NOTE: The Tortugan shield (cape slot) with Protect from Melee fully negates melee damage. 40 kg equipped weight counters the knockback special; a black mask weighs 7.7 kg more than a Slayer helmet.
+NOTE: Wiki inventory counts not stated (one each placed; giant krill fill the rest).
+REQ: Quest: Troubled Tortugans; Slayer 51 (gryphon task) or the clue encounter
+
+BOSS Deranged archaeologist
+URL https://oldschool.runescape.wiki/w/Deranged_archaeologist/Strategies
+SETUP Magic
+Head: Ancestral hat > Virtus mask > Mitre > Helm of neitiznot > Farseer helm
+Cape: [any] Imbued saradomin cape > Soul cape > Ardougne cloak 4 / Ardougne cloak 3 > Ardougne cloak 2 / [generic] Cape of Accomplishment (t) > Ardougne cloak 1
+Neck: Occult necklace > Dragonbone necklace / Bonecrusher necklace > Amulet of fury > Amulet of glory > Holy symbol
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Tumeken's shadow / Eye of ayak > Harmonised nightmare staff > Sanguinesti staff / Trident of the swamp / Trident of the seas > Warped sceptre > Iban's staff
+Body: Ancestral robe top > Virtus robe top > Zealot's robe top > Vestment robe top > Monk's robe top
+Shield: Tome of fire / Elidinis' ward (f) > Arcane spirit shield > Elidinis' ward > Malediction ward > Book of darkness
+Legs: Ancestral robe bottom > Virtus robe bottom > Zealot's robe bottom > Vestment robe legs > Monk's robe
+Hands: Confliction gauntlets > Tormented bracelet > Holy wraps > Barrows gloves > Dragon gloves / Rune gloves
+Feet: Avernic treads (max) > Devout boots > Holy sandals > Eternal boots > Aranea boots
+Ring: Magus ring > Ring of the gods (i) > Ring of suffering (i) > Brimstone ring / Ring of shadows > Explorer's ring 4
+INV: Prayer potion(4) x3; Antipoison(4) x1; Rune axe x1; Digsite pendant (5) x1; Ring of dueling(8) x1; Holy wrench x1; Rune pouch x1; Rake x1
+NOTE: Owner-supplied Wiki screenshot (2026-11-01): the Wiki has only a Magic setup for the Fossil Island Deranged archaeologist. Grid shows 3 prayer potions; a purple potion and six white spiky items in the grid are not identified and are left out. Rune pouch for High Level Alchemy runes (not modelled).
+NOTE: Prioritise Prayer bonus over Magic attack; pray Protect from Missiles and move away from the thrown books. Tome of fire works only with Fire Surge.
+NOTE: Wiki: prayer potions 2-3 (lower bound); food and alchemy runes listed without counts (not placed). "Axe" is generic: a rune axe is shown.
+REQ: Fossil Island access; Magic 75 for Fire Wave or powered staves, Prayer 40
+
+BOSS The Mimic
+URL https://oldschool.runescape.wiki/w/The_Mimic/Strategies
+SETUP Magic
+Head: Ancestral hat > Virtus mask > Void mage helm > Ahrim's hood > Infinity hat
+Cape: [any] Imbued saradomin cape > [any] Saradomin cape > Ardougne cloak 4 > Ardougne cloak 3 > Ardougne cloak 2
+Neck: Occult necklace > Amulet of fury > Amulet of glory > Amulet of magic > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Tumeken's shadow > Eye of ayak > Sanguinesti staff > Trident of the swamp > Trident of the seas
+Body: Ancestral robe top > Virtus robe top > Elite void top / Void knight top > Ahrim's robetop > Infinity top
+Shield: Elidinis' ward (f) > Elidinis' ward > Arcane spirit shield > Ancient wyvern shield / Mage's book > Malediction ward
+Legs: Ancestral robe bottom > Virtus robe bottom > Elite void robe / Void knight robe > Ahrim's robeskirt > Infinity bottoms
+Hands: Confliction gauntlets > Tormented bracelet > Void knight gloves > Barrows gloves > Dragon gloves
+Feet: Avernic treads (max) > Eternal boots > Infinity boots / Aranea boots > Bloodbark boots / Wizard boots > Mystic boots
+Ring: Magus ring > Seers ring (i) > Brimstone ring > Ring of suffering (ri) > Lunar ring / Beacon ring / Ring of the gods (i)
+Spec: Voidwaker > Dragon claws / Burning claws > Dragon dagger(p++) > N/A > N/A
+INV: Divine super combat potion(4) x1; Super restore(4) x1; Anglerfish x4; Saturated heart x1; Watson teleport x1
+NOTE: Pray Protect from Melee before entering; move when the Mimic throws sweets and ignore the Third Age minions. Needs an elite or master Mimic casket; finite attempts.
+NOTE: Wiki: 1 divine super combat (with a melee switch), 1 restore, 4-6 anglerfish (lower bound); the special-attack weapon, melee switch and rune choices are not named and are not placed.
+REQ: Magic 80, Defence 70, Prayer 45
+
+BOSS Callisto
+URL https://oldschool.runescape.wiki/w/Callisto/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Crystal helm > Karil's coif > Archer helm > N/A
+Cape: Ava's assembler > Ava's accumulator > Ranging cape > Ava's attractor > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > Ruby dragon bolts (e) / Ruby bolts (e) > Amethyst arrow / Rune arrow > Broad bolts / Adamant bolts
+Weapon: Webweaver bow / Craw's bow > Bow of Faerdhinen > Zaryte crossbow / Armadyl crossbow / Dragon crossbow > Rune crossbow > Magic shortbow (i)
+Body: Masori body (f) > Crystal body > Masori body > Black d'hide body > N/A
+Shield: N/A > Twisted buckler > Dragonfire ward / Odium ward > Book of law / Unholy book > N/A
+Legs: Black d'hide chaps > Crystal legs > Red d'hide chaps > N/A > N/A
+Hands: Barrows gloves > Black d'hide vambraces > Red d'hide vambraces > N/A > N/A
+Feet: Blessed boots > Mixed hide boots > Shayzien boots (5) > Snakeskin boots > N/A
+Ring: Ring of shadows > Explorer's ring 4 > Ring of wealth (i) > N/A > N/A
+Spec: Zaryte crossbow > N/A > N/A > N/A > N/A
+INV: Royal seed pod x1; Blighted super restore(4) x1; Divine ranging potion(4) x1; Antidote++(4) x1; Blighted ancient ice sack x1; Stamina potion(4) x1; Looting bag x1; Saradomin brew(4) x1; Phoenix necklace x1; Wilderness sword 4 x1; FILL Blighted manta ray
+NOTE: WILDERNESS: other players can attack you; bring only what you can afford to lose. Crystal and Masori take priority over other valuables on death.
+NOTE: Wiki shield cell for the first column is "none if using a two-handed weapon". Inventory counts not stated (one each; blighted manta rays fill the rest; the grid also shows blighted karambwans).
+REQ: Medium Wilderness Diary
+
+BOSS Artio
+URL https://oldschool.runescape.wiki/w/Artio/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Crystal helm > Karil's coif > Archer helm > Bloodbark helm / Farseer helm / Mitre
+Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > Amulet of glory > Amulet of power
+Cape: Ava's assembler > Ava's accumulator > Ava's attractor > [any] Imbued saradomin cape > Ardougne cloak 4 > [any] Saradomin cape
+Body: Masori body (f) > Masori body > Crystal body > Black d'hide body > Mixed hide top
+Legs: Black d'hide chaps > Crystal legs > Red d'hide chaps > N/A > N/A
+Weapon: Webweaver bow > Craw's bow > Bow of Faerdhinen > Eclipse atlatl / Dragon crossbow > Hunters' sunlight crossbow > Magic shortbow (i)
+Shield: Twisted buckler > Dragonfire ward / Odium ward > Book of law > Unholy book > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > Atlatl dart / Ruby dragon bolts (e) > Moonlight antler bolts > Amethyst arrow / Rune arrow
+Hands: Barrows gloves > Rune gloves > Black d'hide vambraces > Red d'hide vambraces > N/A
+Feet: Blessed boots > Mixed hide boots > Bloodbark boots > Mystic boots > Snakeskin boots
+Ring: Ring of shadows > Beacon ring / Lunar ring > Explorer's ring 4 > Ring of wealth (i) > N/A
+Spec: Zaryte crossbow > N/A > N/A > N/A > N/A
+INV: Royal seed pod x1; Divine ranging potion(4) x1; Blighted super restore(4) x1; Blighted ancient ice sack x1; Looting bag x1; Stamina potion(4) x1; Saradomin brew(4) x1; Anti-venom+(4) x1; Phoenix necklace x1; FILL Blighted manta ray
+NOTE: WILDERNESS: singles-plus mid-level Wilderness; you can be attacked at any time. Protect items and bring only what you can lose.
+NOTE: Inventory counts not stated (one each; blighted manta rays fill the rest; the grid also shows blighted karambwans).
+REQ: Hard Wilderness Diary; Defence 70, Ranged 75, Magic 92 (94 for Ice Barrage)
+
+BOSS Venenatis
+URL https://oldschool.runescape.wiki/w/Venenatis/Strategies
+SETUP Melee
+Head: Slayer helmet (i) [task] > Helm of neitiznot / Zombie helmet / Dwarven helmet > Proselyte sallet > N/A > N/A
+Cape: Infernal cape > Fire cape / Mythical cape > Mixed hide cape > Ardougne cloak 4 > Cape of legends
+Neck: Amulet of rancour > Amulet of strength > Amulet of glory > Amulet of power > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Ursine chainmace / Viggora's chainmace > Inquisitor's mace / Elder maul > Soulreaper axe / Abyssal bludgeon > Zombie axe / Zamorakian hasta > Sarachnis cudgel
+Body: Fighter torso > Mixed hide top / Black d'hide body > Proselyte hauberk > Monk's robe top > N/A
+Shield: Avernic defender > Dragon defender > Dragonfire shield > Rune defender / Toktz-ket-xil > Book of war / Falador shield 4
+Legs: Black d'hide chaps > Proselyte cuisse / Proselyte tasset > Monk's robe > N/A > N/A
+Hands: Barrows gloves > Rune gloves > Adamant gloves / Combat bracelet > N/A > N/A
+Feet: Dragon boots > Mixed hide boots > Rune boots > Climbing boots > Fremennik sea boots 4 / Adamant boots
+Ring: Ultor ring > Berserker ring (i) > Ring of shadows > Tyrannical ring (i) > Ring of wealth (i)
+Spec: Dinh's bulwark > Elder maul / Dragon warhammer > Ursine chainmace > Dragon mace > Dragon 2h sword
+INV: Divine bastion potion(4) x2; Blighted anglerfish x4; Anti-venom+(4) x1; Stamina potion(4) x1; Teleport to house (tablet) x1; Saradomin brew(4) x7; Blighted super restore(4) x8; Dinh's bulwark x1; Royal seed pod x1; Looting bag x1; Sanfew serum(4) x1
+NOTE: WILDERNESS (multi-way): unprotected items can be lost; a dragon defender breaks if unprotected. Kill spiderlings as they spawn (5 HP).
+NOTE: Counts tallied from the Wiki inventory grid. The Ursine chainmace is the strongest weapon here (charged with revenant ether; charges lost on death).
+REQ: Medium Wilderness Diary (or a Venenatis Slayer task); Attack 75, Strength 80, Hitpoints 70, Defence 70
+
+BOSS Spindel
+URL https://oldschool.runescape.wiki/w/Spindel/Strategies
+SETUP Melee
+Head: Slayer helmet (i) [task] > Helm of neitiznot / Zombie helmet / Dwarven helmet > Proselyte sallet > N/A > N/A
+Cape: Infernal cape > Fire cape / Mythical cape > Mixed hide cape > Ardougne cloak 4 > Cape of legends
+Neck: Amulet of rancour > Amulet of strength > Amulet of glory > Amulet of power > N/A
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Ursine chainmace / Viggora's chainmace > Inquisitor's mace > Soulreaper axe / Abyssal bludgeon > Zombie axe / Zamorakian hasta > Sarachnis cudgel / Dragon mace
+Body: Fighter torso > Mixed hide top / Black d'hide body > Proselyte hauberk > Monk's robe top > N/A
+Shield: Avernic defender / Rondache > Dragon defender > Dragonfire shield > Rune defender / Toktz-ket-xil > Book of war / Falador shield 4
+Legs: Black d'hide chaps > Proselyte cuisse / Proselyte tasset > Monk's robe > N/A > N/A
+Hands: Barrows gloves > Rune gloves > Adamant gloves / Combat bracelet > N/A > N/A
+Feet: Dragon boots / Aranea boots > Mixed hide boots > Rune boots > Climbing boots > Fremennik sea boots 4 / Adamant boots
+Ring: Ultor ring > Berserker ring (i) > Ring of shadows > Tyrannical ring (i) > Ring of wealth (i)
+Spec: Ursine chainmace > Elder maul > Dragon warhammer > Dragon mace > N/A
+INV: Stamina potion(4) x1; Divine super combat potion(4) x1; Sanfew serum(4) x1; Blighted super restore(4) x1; Blighted karambwan x1; Looting bag x1; Blisterwood stake x1; Games necklace(8) x1; Royal seed pod x1; FILL Blighted manta ray
+NOTE: WILDERNESS (level 29): other players can attack you any time; bring only what you can lose. Trouver-parchment items are lost above level 20 on a PvP death unless locked at Perdu.
+NOTE: Inventory counts not stated (one each; blighted manta rays fill the rest).
+REQ: Hard Wilderness Diary; Attack 70, Strength 70, Hitpoints 70, Defence 70
+
+BOSS Vet'ion
+URL https://oldschool.runescape.wiki/w/Vet%27ion/Strategies
+SETUP Melee
+Head: Helm of neitiznot > Berserker helm > Dwarven helmet > N/A > N/A > N/A
+Cape: Infernal cape > Mythical cape / Fire cape > Mixed hide cape > [any] Ardougne cloak 4 > N/A
+Neck: Salve amulet(e) > Salve amulet > Amulet of strength > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > Rada's blessing 3 / God blessing > N/A > N/A > N/A
+Weapon: Ursine chainmace / Viggora's chainmace > Soulreaper axe > Inquisitor's mace > Abyssal bludgeon / Zamorakian hasta / Zombie axe > Sarachnis cudgel / Elder maul / Dual macuahuitl > Leaf-bladed battleaxe / Dragon mace
+Body: Fighter torso > Black d'hide body / Mixed hide top > Proselyte hauberk > Monk's robe top > N/A
+Shield: Avernic defender > Dragon defender > Dragonfire shield > Rune defender / Toktz-ket-xil > Book of war / Falador shield 4
+Legs: Black d'hide chaps > Proselyte cuisse / Proselyte tasset > Monk's robe > N/A > N/A
+Hands: Barrows gloves > Rune gloves > Combat bracelet > N/A > N/A
+Feet: Dragon boots > Mixed hide boots / Rune boots > Climbing boots > Fremennik sea boots 4 > N/A
+Ring: Ultor ring > Berserker ring (i) > Ring of shadows > Ring of wealth (i) > N/A
+Spec: Elder maul > Abyssal bludgeon > Dragon mace > N/A > N/A
+INV: Royal seed pod x1; Divine super combat potion(4) x1; Blighted super restore(4) x4; Sanfew serum(4) x1; Saradomin brew(4) x1; Looting bag x1
+NOTE: WILDERNESS (multi-way, deep): death is very likely if attacked; bring only what you can lose. Salve amulet (e) does not stack with a Slayer helmet and is kept on death below level 20.
+NOTE: Wiki: 4+ super restores, 1+ sanfew (lower bounds). Saradomin brews uncounted (one placed); no food is named, so other cells stay empty.
+REQ: Medium Wilderness Diary; Attack 70, Strength 70, Defence 70, Hitpoints 75, Prayer 70
+
+BOSS Calvar'ion
+URL https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies
+SETUP Melee
+Head: Helm of neitiznot / Zombie helmet > Berserker helm > Dwarven helmet > Bearhead > N/A
+Cape: Infernal cape > Fire cape > Mythical cape > Mixed hide cape > [any] Ardougne cloak 4
+Neck: Salve amulet(e) > Salve amulet > Amulet of strength > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > Rada's blessing 3 / God blessing > N/A > N/A > N/A
+Weapon: Ursine chainmace > Viggora's chainmace > Soulreaper axe > Inquisitor's mace > Abyssal bludgeon / Zombie axe / Zamorakian hasta > Sarachnis cudgel / Elder maul / Dual macuahuitl > Leaf-bladed battleaxe / Dragon mace
+Body: Fighter torso > Black d'hide body / Mixed hide top > Elite black platebody > Proselyte hauberk > Monk's robe top > N/A
+Legs: Black d'hide chaps > Elite black platelegs > Proselyte cuisse / Proselyte tasset > Monk's robe > N/A
+Shield: Avernic defender / Rondache > Dragon defender > Dragonfire shield > Rune defender / Toktz-ket-xil > Book of war / Falador shield 4
+Hands: Barrows gloves > Rune gloves > Combat bracelet > Spiky vambraces > N/A
+Feet: Dragon boots > Rune boots > Mixed hide boots > Climbing boots > Fremennik sea boots 4 / Adamant boots
+Ring: Ultor ring > Berserker ring (i) > Ring of shadows > Ring of wealth (i) > Explorer's ring 4
+Spec: Ursine chainmace > Abyssal bludgeon > Elder maul > Dragon mace > N/A
+INV: Looting bag x1; Royal seed pod x1; Super combat potion(4) x1; Stamina potion(4) x1; Blighted super restore(4) x1; Saradomin brew(4) x1; Blighted karambwan x8; FILL Blighted manta ray
+NOTE: WILDERNESS (level 21): infernal cape and fighter torso are lost on death above level 20 unless a Trouver parchment is applied; bring only what you can lose.
+NOTE: Wiki: at least 8 karambwans; other counts not stated (one each; blighted manta rays fill the rest).
+REQ: Hard Wilderness Diary; Attack 70, Strength 70, Defence 70, Hitpoints 75, Prayer 70
+
+BOSS Scorpia
+URL https://oldschool.runescape.wiki/w/Scorpia/Strategies
+SETUP Magic
+Head: Slayer helmet (i) [task] > Bloodbark helm > Mitre > Farseer helm > Mystic hat
+Cape: [any] Imbued saradomin cape > [any] Ardougne cloak 4 > [any] Saradomin cape > Vestment cloak > N/A
+Neck: Occult necklace > [generic] God stole > Amulet of glory > Amulet of power > Unholy symbol
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Accursed sceptre / Thammaron's sceptre > Eye of ayak > Sanguinesti staff / Trident of the swamp > Trident of the seas > Warped sceptre
+Body: Bloodbark body > Monk's robe top > Zamorak monk top > Mystic robe top > Xerician top
+Shield: Elidinis' ward (f) > Elidinis' ward / Malediction ward / Ancient wyvern shield > Book of darkness > [generic] God book > Broodoo shield
+Legs: Bloodbark legs > Monk's robe > Zamorak monk bottom > Mystic robe bottom > Xerician robe
+Hands: Confliction gauntlets > Tormented bracelet > Barrows gloves / Dragon gloves > Rune gloves / Adamant gloves > Combat bracelet
+Feet: Bloodbark boots / Mystic boots > Ghostly boots > Splitbark boots > Moonclan boots > Fremennik sea boots 4
+Ring: Ring of shadows > Explorer's ring 4 > Beacon ring / Lunar ring > Ring of recoil > Ring of wealth (i)
+INV: Araxyte venom sac x12s; Blighted ancient ice sack x300s; Saradomin brew(4) x1; Blighted super restore(4) x1; Black d'hide body x1; Black d'hide chaps x1; Stamina potion(4) x1; Looting bag x1; Saturated heart x1; Lockpick x1; Wilderness sword 4 x1; FILL Blighted manta ray
+NOTE: WILDERNESS: prioritise magic damage and prayer bonus over accuracy. Scorpia is not immune to poison or venom, so the Trident of the swamp adds damage.
+NOTE: Inventory counts not stated except venom sacs (12) and ice sacks (300); others one each, blighted manta rays fill the rest (the grid also shows anglerfish and karambwans).
+REQ: Magic 70 (Accursed sceptre), Prayer 40
+
+BOSS Chaos Elemental
+URL https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Blessed coif > Karil's coif > Archer helm > Snakeskin bandana
+Neck: Necklace of rupture > Necklace of anguish > Amulet of glory > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Ava's accumulator / Ardougne cloak 4 > Ranging cape(t) > Vestment cloak
+Ammo: Rada's blessing 4 > Rada's blessing 3 > Dragon arrow / Amethyst arrow > Diamond bolts (e) > Broad bolts
+Weapon: Webweaver bow / Craw's bow > Twisted bow > Bow of Faerdhinen > Toxic blowpipe > Armadyl crossbow
+Body: Masori body (f) > Crystal body > Blessed body > Black d'hide body > Red d'hide body
+Shield: N/A > Book of law > Unholy book > Black d'hide shield > Book of balance
+Legs: Blessed chaps > Crystal legs > Black d'hide chaps > N/A > N/A
+Hands: Barrows gloves > Blessed bracers > Black d'hide vambraces > N/A > N/A
+Feet: Mixed hide boots > Snakeskin boots > Fremennik sea boots 4 > N/A > N/A
+Ring: Ring of suffering (i) > Ring of shadows > Ring of wealth (i) / Explorer's ring 4 > N/A > N/A
+INV: Divine ranging potion(4) x1; Blighted super restore(4) x3; Looting bag x1; Anti-venom+(4) x1; FILL Summer pie
+NOTE: WILDERNESS: check Items Kept on Death; bring only 3-4 valuable items unless you can escape. The Elemental can unequip your gear: inventory-blocking food helps.
+NOTE: Wiki: 3-5 restores (lower bound); summer pies or curry for food.
+REQ: Ranged 75, Defence 70, Prayer 37
+
+BOSS Chaos Fanatic
+URL https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies
+SETUP Ranged
+Head: Slayer helmet (i) [task] > Blessed coif > Archer helm > Karil's coif > Snakeskin bandana
+Cape: Ava's accumulator / Dizana's quiver / Ava's assembler > Mixed hide cape / Ardougne cloak 4 > Ranging cape(t) / Max cape > N/A > N/A
+Neck: Necklace of rupture > Necklace of anguish > Amulet of glory / Dragonbone necklace > Necklace of fangs > Amulet of power
+Ammo: Rada's blessing 4 > God blessing > Dragon arrow / Amethyst arrow / Rune arrow > N/A > N/A
+Weapon: Webweaver bow / Craw's bow > Twisted bow > Bow of Faerdhinen > Scorching bow > Magic shortbow (i) / Crystal bow
+Body: Masori body (f) > Crystal body > Blessed body > Black d'hide body > N/A
+Shield: N/A
+Legs: Black d'hide chaps > Crystal legs > N/A > N/A > N/A
+Hands: Barrows gloves > Blessed bracers > Black d'hide vambraces > Rune gloves / Adamant gloves > N/A
+Feet: Mixed hide boots > Shayzien boots (5) > Snakeskin boots > Bloodbark boots > N/A
+Ring: Ring of shadows > Explorer's ring 4 > N/A > N/A > N/A
+INV: Divine ranging potion(4) x2; Blighted super restore(4) x4; Looting bag x1; Ghorrock teleport x2; FILL Summer pie
+NOTE: WILDERNESS: pray Protect from Magic; use inventory-blocking food so he cannot unequip your weapon; turn off vial smashing.
+NOTE: Wiki: 4-6 restores (lower bound), at least 2 Ghorrock teleports (Magic 96 optional), summer or wild pies for food.
+REQ: Ranged 75, Defence 70, Prayer 37
+
+BOSS Crazy archaeologist
+URL https://oldschool.runescape.wiki/w/Crazy_archaeologist/Strategies
+SETUP Magic
+Head: Slayer helmet (i) [task] > Bloodbark helm > Mitre > Mystic hat > Xerician hat / Fremennik hat
+Cape: [any] Imbued saradomin cape > [any] Saradomin cape > Ardougne cloak 4 > Ardougne cloak 3 > Ardougne cloak 2
+Neck: Occult necklace > Amulet of fury > Amulet of glory > Amulet of magic > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Accursed sceptre / Thammaron's sceptre > Eye of ayak > Sanguinesti staff > Trident of the swamp > Trident of the seas > Warped sceptre / Iban's staff (u)
+Body: Bloodbark body > Mystic robe top > Xerician top > Zamorak monk top > Monk's robe top
+Shield: Elidinis' ward (f) / Elidinis' ward > Book of darkness > Unholy book > Tome of fire > Broodoo shield
+Legs: Bloodbark legs > Mystic robe bottom > Xerician robe > Zamorak monk bottom > Monk's robe
+Hands: Confliction gauntlets > Tormented bracelet > Barrows gloves > Dragon gloves > Rune gloves
+Feet: Mystic boots > Ghostly boots > Splitbark boots > Moonclan boots > N/A
+Ring: Ring of shadows > Explorer's ring 4 > Beacon ring / Lunar ring > Ring of wealth (i) > N/A
+INV: Blighted super restore(4) x3; Stamina potion(4) x1; Looting bag x1; Royal seed pod x1; FILL Lobster
+NOTE: WILDERNESS: take only 3-4 expensive items. Avoid the 3x3 "Rain of knowledge!" book attack.
+NOTE: Wiki: 3-4 restores (lower bound), "lobsters or better" for food, a level-30 teleport such as a royal seed pod.
+REQ: Magic 75, Prayer 40
+
+BOSS Royal Titans
+URL https://oldschool.runescape.wiki/w/Royal_Titans/Strategies
+SETUP Melee + ranged switch (low level / sustain)
+Head: Slayer helmet (i) [task] > Blood moon helm > Helm of neitiznot / Eclipse moon helm > N/A
+Cape: Fire cape > Mythical cape > N/A > N/A
+Neck: Amulet of fury / Amulet of strength > Amulet of glory > N/A > N/A
+Weapon: Dual macuahuitl > Abyssal tentacle / Abyssal whip / Saradomin's blessed sword > Zombie axe / Sarachnis cudgel > Dragon scimitar
+Body: Blood moon chestplate > Fighter torso > Eclipse moon chestplate / Blue moon chestplate > N/A
+Shield: Dragon defender / Antler guard > N/A > N/A > N/A
+Legs: Blood moon tassets > Eclipse moon tassets / Blue moon tassets > N/A > N/A
+Hands: Barrows gloves > Combat bracelet > N/A > N/A
+Feet: Aranea boots > Dragon boots > Climbing boots > N/A
+Ring: Berserker ring (i) > Lightbearer > N/A > N/A
+Spec: Dragon dagger / Crystal halberd / Arkan blade > N/A > N/A > N/A
+Switch Head: Slayer helmet (i) [task] > Eclipse moon helm > N/A > N/A
+Switch Neck: Amulet of fury > Necklace of fangs > Amulet of glory > N/A
+Switch Cape: Ava's assembler > Ava's accumulator > N/A > N/A
+Switch Body: Eclipse moon chestplate > Hueycoatl hide body / [any] Saradomin d'hide body > Karil's leathertop > Black d'hide body
+Switch Legs: Eclipse moon tassets > Hueycoatl hide chaps / [any] Saradomin chaps > Karil's leatherskirt > Black d'hide chaps
+Switch Weapon: Eclipse atlatl / Toxic blowpipe > Dragon crossbow / Rune crossbow > Hunters' sunlight crossbow > Karil's crossbow / Magic shortbow (i)
+Switch Shield: Antler guard > N/A > N/A > N/A
+Switch Ammo: Atlatl dart / [generic] Blessing > Ruby dragon bolts (e) / Ruby bolts (e) > Moonlight antler bolts / Sunlight antler bolts > Bolt rack / Amethyst arrow / Rune arrow
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): "Low Level / Sustain" Melee and Ranged tables. Solo or duo with low-end gear: bring fewer switches and more supplies; use the standard spellbook for the elementals and barriers.
+NOTE: Wiki footnotes: Slayer helmet (i) only on a Fire or Ice giant task, and only against that Titan; Dual macuahuitl is best with full Blood Moon armour; Zombie axe on crush; Eclipse atlatl is best with full Eclipse Moon armour; crossbows with ruby bolts (e).
+NOTE: Inventory supplies are not transcribed yet: the Wiki shows four example inventories (Budget, Mid, Late, Best-in-slot) rather than one ranked list. Budget: prayer potions, super strength/attack and ranging potions, rune pouch for Water Wave and Fire Wave, Dramen staff (fairy ring), emergency teleport. A magic switch reaching +70 magic attack destroys walls and one-shots minions.
+REQ: Attack 70, Strength 70, Defence 70, Magic 75, Prayer 43
+
+SETUP Melee + ranged switch (high level)
+Head: Slayer helmet (i) [task] > Torva full helm / Oathplate helm > Inquisitor's great helm > Neitiznot faceguard / Serpentine helm > Blood moon helm
+Cape: Infernal cape > Fire cape > N/A > N/A > N/A
+Neck: Amulet of rancour > Amulet of torture > Amulet of fury > N/A > N/A
+Ammo: Rada's blessing 4 > Rada's blessing 3 > N/A > N/A > N/A
+Weapon: Obligator / Scythe of Vitur > Inquisitor's mace / Soulreaper axe > Blade of Saeldor / Ghrazi rapier > Noxious halberd / Dual macuahuitl / Osmumten's fang > Abyssal tentacle
+Body: Torva platebody / Oathplate chest > Inquisitor's hauberk > Bandos chestplate / Blood moon chestplate / Fighter torso > N/A > N/A
+Shield: Avernic defender > Dragon defender > N/A > N/A > N/A
+Legs: Torva platelegs / Oathplate legs > Inquisitor's plateskirt > Bandos tassets / Blood moon tassets > N/A > N/A
+Hands: Ferocious gloves > Barrows gloves > N/A > N/A > N/A
+Feet: Avernic treads (max) > Primordial boots > Aranea boots > Dragon boots > N/A
+Ring: Ultor ring > Berserker ring (i) > Lightbearer > N/A > N/A
+Spec: Zaryte crossbow > Dragon claws / Crimson kisten > Burning claws > Dragon dagger / Voidwaker > Crystal halberd
+Switch Head: Slayer helmet (i) [task] > Masori mask (f) > Crystal helm > Eclipse moon helm
+Switch Neck: Necklace of rupture > Necklace of anguish > Amulet of fury > N/A
+Switch Cape: Dizana's quiver > Ava's assembler > N/A > N/A
+Switch Body: Masori body (f) > Masori body > Crystal body > Eclipse moon chestplate
+Switch Legs: Masori chaps (f) > Masori chaps > Crystal legs > Eclipse moon tassets
+Switch Weapon: Toxic blowpipe > Bow of Faerdhinen > Eclipse atlatl / Zaryte crossbow > Armadyl crossbow
+Switch Shield: Twisted buckler > Dragonfire ward > Odium ward / Aquanite hopper > N/A
+Switch Ammo: Rada's blessing 4 / Ruby dragon bolts (e) > [generic] Blessing > Atlatl dart > N/A
+Switch Hands: Zaryte vambraces > Barrows gloves > N/A > N/A
+Switch Feet: Avernic treads (max) > Aranea boots > Primordial boots / Dragon boots > N/A
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): Melee (High level) and Ranged (High Level) tables. Most Titan fights start with 1-2 melee hits, then a ranged phase; melee is used again near the end.
+NOTE: Wiki footnotes: Oathplate with a slash weapon; Inquisitor's pieces with full Inquisitor's and the mace; Blood Moon helm with full Blood Moon armour and the Dual macuahuitl; Noxious halberd can attack twice at the start and reach a Titan during the elemental blast; Crystal halberd as a last hit on melee phases. Ranged: Toxic blowpipe if on task or with 8+ ranged strength from other gear; Bow of Faerdhinen with crystal armour; Eclipse items with Eclipse armour and atlatl; shields only with a one-handed ranged weapon; Zaryte crossbow spec with ruby dragon bolts (e).
+NOTE: Inventory supplies are not transcribed yet (four example inventories on the Wiki: Budget, Mid, Late, Best-in-slot). Late game: divine super combat and divine ranging potions, prayer potions, divine rune pouch for Water Wave and Fire Wave (Twinflame staff provides fire and water runes), Giantsoul amulet, emergency/bank teleport; optional mage switch for 70+ magic accuracy.
+REQ: Attack 70, Strength 70, Defence 70, Magic 75, Prayer 43
+
+BOSS Lizardman Shamans
+URL https://oldschool.runescape.wiki/w/Lizardman_shaman/Strategies
+SETUP Ranged (cannon, Lizardman Canyon)
+Head: Slayer helmet (i) [task] > Shayzien helm (5) > N/A > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Soul cape / Ardougne cloak 4 > Ranging cape(t) > Ava's accumulator
+Neck: Necklace of rupture > Necklace of anguish > Bonecrusher necklace > Dragonbone necklace > Necklace of fangs / Amulet of fury
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > Bolt rack > Rune arrow / Sunlight antler bolts > Broad bolts
+Weapon: Toxic blowpipe > Rosewood blowpipe / Bow of Faerdhinen > Twisted bow > Karil's crossbow / Hunters' sunlight crossbow / Scorching bow > Rune crossbow / Magic shortbow (i) / Crystal bow
+Body: Shayzien body (5) > N/A > N/A > N/A > N/A
+Shield: N/A > Antler guard > Book of law > Unholy book > Book of balance / Black d'hide shield
+Legs: Shayzien greaves (5) > N/A > N/A > N/A > N/A
+Hands: Shayzien gloves (5) > N/A > N/A > N/A > N/A
+Feet: Shayzien boots (5) > N/A > N/A > N/A > N/A
+Ring: Venator ring > Ring of the gods (i) > Ring of suffering (i) / Lightbearer > Archers ring (i) / Ring of shadows > Brimstone ring / Explorer's ring 4
+INV: Steel cannonball x1s; Divine rune pouch x1; Divine ranging potion(4) x2; Stamina potion(4) x2; Antidote++(4) x1; Manta ray x7; Cannon base x1; Cannon stand x1; Cannon furnace x1; Cannon barrels x1; Prayer potion(4) x6; Herb sack x1; Holy wrench x1; Xeric's talisman x1; Teleport to house (tablet) x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Full tier-5 Shayzien armour nullifies the shamans' acid. Bonecrusher necklace is for longer trips with a Bonecrusher.
+NOTE: Wiki: toxic blowpipe with adamant darts or better (amethyst ideal); darts are loaded in the blowpipe, not modelled as ammo. Shield slot is empty with two-handed weapons.
+NOTE: Divine rune pouch: nature, fire, earth and water runes for High Level Alchemy and Bones to Peaches (rune contents are not modelled as inventory items).
+NOTE: Canyon: the Wiki does not state a cannonball count; the stack shown is a placeholder of 1, bring what you need. Cannon NW by the obstruction or in the open area SW.
+REQ: Shayzien favour/armour (5) for acid immunity; Dwarf multicannon (Dwarf Cannon quest)
+
+SETUP Ranged (Lizardman Settlement)
+Head: Slayer helmet (i) [task] > Shayzien helm (5) > N/A > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Soul cape / Ardougne cloak 4 > Ranging cape(t) > Ava's accumulator
+Neck: Necklace of rupture > Necklace of anguish > Bonecrusher necklace > Dragonbone necklace > Necklace of fangs / Amulet of fury
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > Bolt rack > Rune arrow / Sunlight antler bolts > Broad bolts
+Weapon: Toxic blowpipe > Rosewood blowpipe / Bow of Faerdhinen > Twisted bow > Karil's crossbow / Hunters' sunlight crossbow / Scorching bow > Rune crossbow / Magic shortbow (i) / Crystal bow
+Body: Shayzien body (5) > N/A > N/A > N/A > N/A
+Shield: N/A > Antler guard > Book of law > Unholy book > Book of balance / Black d'hide shield
+Legs: Shayzien greaves (5) > N/A > N/A > N/A > N/A
+Hands: Shayzien gloves (5) > N/A > N/A > N/A > N/A
+Feet: Shayzien boots (5) > N/A > N/A > N/A > N/A
+Ring: Venator ring > Ring of the gods (i) > Ring of suffering (i) / Lightbearer > Archers ring (i) / Ring of shadows > Brimstone ring / Explorer's ring 4
+INV: Divine ranging potion(4) x2; Antidote++(4) x1; Divine rune pouch x1; Prayer potion(4) x7; Stamina potion(4) x1; Manta ray x12; Teleport to house (tablet) x1; Herb sack x1; Holy wrench x1; Xeric's talisman x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Full tier-5 Shayzien armour nullifies the shamans' acid. Bonecrusher necklace is for longer trips with a Bonecrusher.
+NOTE: Wiki: toxic blowpipe with adamant darts or better (amethyst ideal); darts are loaded in the blowpipe, not modelled as ammo. Shield slot is empty with two-handed weapons.
+NOTE: Divine rune pouch: nature, fire, earth and water runes for High Level Alchemy and Bones to Peaches (rune contents are not modelled as inventory items).
+NOTE: Settlement: Wiki ranges are 6-8 prayer potions and 1 optional stamina; the counts above are the Wiki's example grid.
+
+SETUP Ranged (Lizardman Temple)
+Head: Slayer helmet (i) [task] > Shayzien helm (5) > N/A > N/A > N/A
+Cape: Dizana's quiver > Ava's assembler > Soul cape / Ardougne cloak 4 > Ranging cape(t) > Ava's accumulator
+Neck: Necklace of rupture > Necklace of anguish > Bonecrusher necklace > Dragonbone necklace > Necklace of fangs / Amulet of fury
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 > Bolt rack > Rune arrow / Sunlight antler bolts > Broad bolts
+Weapon: Toxic blowpipe > Rosewood blowpipe / Bow of Faerdhinen > Twisted bow > Karil's crossbow / Hunters' sunlight crossbow / Scorching bow > Rune crossbow / Magic shortbow (i) / Crystal bow
+Body: Shayzien body (5) > N/A > N/A > N/A > N/A
+Shield: N/A > Antler guard > Book of law > Unholy book > Book of balance / Black d'hide shield
+Legs: Shayzien greaves (5) > N/A > N/A > N/A > N/A
+Hands: Shayzien gloves (5) > N/A > N/A > N/A > N/A
+Feet: Shayzien boots (5) > N/A > N/A > N/A > N/A
+Ring: Venator ring > Ring of the gods (i) > Ring of suffering (i) / Lightbearer > Archers ring (i) / Ring of shadows > Brimstone ring / Explorer's ring 4
+INV: Divine ranging potion(4) x4; Antidote++(4) x2; Prayer potion(4) x18; Herb sack x1; Teleport to house (tablet) x1; Holy wrench x1; Divine rune pouch x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Full tier-5 Shayzien armour nullifies the shamans' acid. Bonecrusher necklace is for longer trips with a Bonecrusher.
+NOTE: Wiki: toxic blowpipe with adamant darts or better (amethyst ideal); darts are loaded in the blowpipe, not modelled as ammo. Shield slot is empty with two-handed weapons.
+NOTE: Divine rune pouch: nature, fire, earth and water runes for High Level Alchemy and Bones to Peaches (rune contents are not modelled as inventory items).
+NOTE: Temple: Wiki says 3-4 divine ranging, rest prayer potions, 1-2 optional emergency food; the counts above are the Wiki's example grid (no food shown).
+
+BOSS Brutus
+URL https://oldschool.runescape.wiki/w/Brutus/Strategies
+SETUP Melee (free-to-play)
+Head: Rune full helm > Adamant full helm > Mithril full helm > Steel full helm
+Cape: Red cape > N/A > N/A > N/A
+Neck: Amulet of strength > Amulet of power > Amulet of accuracy > N/A
+Weapon: Rune scimitar / Barronite mace > Adamant scimitar > Mithril scimitar > Steel scimitar
+Body: Rune chainbody > Adamant chainbody > Mithril chainbody > Steel chainbody
+Shield: Mooleta / Rune kiteshield > Adamant kiteshield > Mithril kiteshield > Steel kiteshield
+Legs: Rune plateskirt > Adamant plateskirt > Mithril plateskirt > Steel plateskirt
+Hands: Gilded d'hide vambraces > Leather gloves > Leather vambraces > N/A
+Feet: [noid] Decorative boots (gold) > [noid] Decorative boots (white) > [noid] Decorative boots (red) > Fancy boots / Fighting boots / Fancier boots
+INV: Strength potion(4) x2; Trout x18; Tinderbox x1; Cowbell amulet x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid (6 slots left free). Strength potion or cooked t-bone steak to boost Strength; tinderbox is optional (light logs to cook raw t-bone steaks mid-trip, 15 Firemaking for oak logs).
+NOTE: Cowbell amulet must be charged with air runes. Plateskirts weigh 1 kg less than platelegs with the same bonuses; chainbodies have better crush defence than platebodies.
+
+SETUP Ranged (free-to-play)
+Head: Coif > Leather cowl > N/A > N/A
+Cape: Red cape > N/A > N/A > N/A
+Neck: Amulet of power > Amulet of accuracy > N/A > N/A
+Ammo: Adamant arrow > Mithril arrow > Steel arrow > N/A
+Weapon: Maple shortbow > Willow shortbow > Oak shortbow > N/A
+Body: Green d'hide body > Studded body > Hardleather body > Leather body
+Legs: Green d'hide chaps > Studded chaps > Leather chaps > N/A
+Hands: Green d'hide vambraces > Leather vambraces > N/A > N/A
+Feet: Leather boots > N/A > N/A > N/A
+INV: Trout x20; Tinderbox x1; Cowbell amulet x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Inventory counts are from the Wiki's example grid (5 slots left free). Ranged can use the temporary safespots; gilded armour only adds defence.
+
+SETUP Magic (free-to-play)
+Head: Blue wizard hat / Wizard hat > N/A > N/A
+Cape: Red cape > N/A > N/A
+Neck: Amulet of magic > Amulet of power > Amulet of accuracy
+Weapon: Staff of earth / Staff of air > N/A > N/A
+Body: Blue wizard robe / Black robe > Zamorak monk top > N/A
+Legs: Zamorak monk bottom > N/A > N/A
+Hands: Leather gloves / Leather vambraces > N/A > N/A
+Feet: Leather boots > N/A > N/A
+INV: Trout x20; Air rune x1s; Chaos rune x1s; Tinderbox x1; Cowbell amulet x1
+NOTE: Owner-supplied Wiki screenshots (2026-11-01). Brutus has a 25% elemental weakness to earth spells. Rune stacks are placeholders of 1: the Wiki grid does not state amounts; bring enough for the earth spells you cast.
+
+BOSS Eclipse Moon
+URL https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies
+SETUP Melee (stab)
+Head: Torva full helm / Oathplate helm > Justiciar faceguard / Serpentine helm > Neitiznot faceguard > [generic] Barrows helm > Blood moon helm / Helm of neitiznot / Berserker helm
+Cape: Infernal cape > Fire cape > Mythical cape > [generic] Cape of Accomplishment (t) > Obsidian cape
+Neck: Amulet of rancour > Amulet of torture / Amulet of fury > Amulet of strength > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 / Rada's blessing 2 > N/A > N/A > N/A
+Body: Torva platebody / Oathplate chest > Justiciar chestguard > Bandos chestplate > Dharok's platebody / Guthan's platebody / Torag's platebody > Fighter torso / Verac's brassard / Dragon chainbody
+Shield: Rondache / Avernic defender / Dragonfire shield > Dragon defender > Toktz-ket-xil > Rune defender / Blessed spirit shield / Dragon sq shield / Crystal shield > Rune kiteshield
+Legs: Torva platelegs / Oathplate legs > Justiciar legguards > Bandos tassets > [generic] Barrows legs > Dragon platelegs
+Hands: Ferocious gloves > Barrows gloves > Dragon gloves > Rune gloves > Regen bracelet / Granite gloves
+Feet: Avernic treads (pr) > Primordial boots / Echo boots > Dragon boots > Guardian boots > Granite boots
+Ring: Ultor ring > Berserker ring (i) > Ring of suffering (ri) / Steel ring > Lightbearer > Brimstone ring / Warrior ring (i)
+Weapon: Soulreaper axe > Ghrazi rapier / Scythe of Vitur > Blade of Saeldor / Noxious halberd > Voidwaker / Osmumten's fang / Belle's folly / Zamorakian hasta / Abyssal dagger > Zombie axe / Dragon sword / Arkan blade / Dragon hasta / Abyssal whip
+Spec: Crimson kisten / Crystal halberd > Voidwaker > Dragon claws / Dragon dagger > Burning claws > N/A
+Switch Weapon: Dharok's greataxe > Soulreaper axe > Elder maul / Colossal blade / Noxious halberd > Crystal halberd > Zombie axe / Belle's folly / Barrelchest anchor > [generic] Standard attack weapon
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): shared Moons of Peril armour table plus this Moon's weapon table. A fully charged Dragonfire shield can outperform a defender if it saves eating outside special-attack phases.
+NOTE: The Moons of Peril are immune to burn damage. Crystal halberd special: use as the last hit before the boss changes phase.
+NOTE: No food or potions are brought: supplies (food and moonlight potions) are gathered and made inside the Moons of Peril dungeon (owner, 2026-11-01). Bring combat gear, the spec weapon and an emergency teleport. Loot comes from the Lunar Chest after the run.
+REQ: Quest: Perilous Moons
+NOTE: Eclipse is weak to stab: set Ghrazi rapier, Blade of Saeldor, Noxious halberd, Voidwaker, Osmumten's fang, Zamorakian hasta, Zombie axe, Dragon sword, Arkan blade and Dragon hasta to stab; Soulreaper axe and Scythe to slash.
+NOTE: Clone phase: a slow, hard-hitting weapon is carried as a switch (Wiki "Eclipse Clone phase" table). Dharok's greataxe only outperforms the Soulreaper axe at low HP with the full Dharok's set; the Wiki also lists any godsword. Lower-damage players do most of their Eclipse damage in the clone phase.
+
+BOSS Blue Moon
+URL https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies
+SETUP Melee (crush)
+Head: Torva full helm / Oathplate helm > Justiciar faceguard / Serpentine helm > Neitiznot faceguard > [generic] Barrows helm > Blood moon helm / Helm of neitiznot / Berserker helm
+Cape: Infernal cape > Fire cape > Mythical cape > [generic] Cape of Accomplishment (t) > Obsidian cape
+Neck: Amulet of rancour > Amulet of torture / Amulet of fury > Amulet of strength > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 / Rada's blessing 2 > N/A > N/A > N/A
+Body: Torva platebody / Oathplate chest > Justiciar chestguard > Bandos chestplate > Dharok's platebody / Guthan's platebody / Torag's platebody > Fighter torso / Verac's brassard / Dragon chainbody
+Shield: Rondache / Avernic defender / Dragonfire shield > Dragon defender > Toktz-ket-xil > Rune defender / Blessed spirit shield / Dragon sq shield / Crystal shield > Rune kiteshield
+Legs: Torva platelegs / Oathplate legs > Justiciar legguards > Bandos tassets > [generic] Barrows legs > Dragon platelegs
+Hands: Ferocious gloves > Barrows gloves > Dragon gloves > Rune gloves > Regen bracelet / Granite gloves
+Feet: Avernic treads (pr) > Primordial boots / Echo boots > Dragon boots > Guardian boots > Granite boots
+Ring: Ultor ring > Berserker ring (i) > Ring of suffering (ri) / Steel ring > Lightbearer > Brimstone ring / Warrior ring (i)
+Weapon: Scythe of Vitur > Dual macuahuitl / Glacial temotli > Inquisitor's mace / Soulreaper axe > Ursine chainmace (u) / Saradomin's blessed sword / Zamorakian hasta / Abyssal bludgeon > Sarachnis cudgel / Zombie axe / Torag's hammers
+Spec: Dragon claws / Crystal halberd > Crimson kisten / Burning claws > Voidwaker / Dragon dagger > Dragon mace > N/A
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): shared Moons of Peril armour table plus this Moon's weapon table. A fully charged Dragonfire shield can outperform a defender if it saves eating outside special-attack phases.
+NOTE: The Moons of Peril are immune to burn damage. Crystal halberd special: use as the last hit before the boss changes phase.
+NOTE: No food or potions are brought: supplies (food and moonlight potions) are gathered and made inside the Moons of Peril dungeon (owner, 2026-11-01). Bring combat gear, the spec weapon and an emergency teleport. Loot comes from the Lunar Chest after the run.
+REQ: Quest: Perilous Moons
+NOTE: Blue Moon is weak to crush: set Scythe, Soulreaper axe, Zamorakian hasta and Zombie axe to crush. A bug in the icicle phase removes all Soulreaper axe soul stacks. Torag's hammers may out-DPS the cudgel or zombie axe depending on gear (check a DPS calculator).
+
+BOSS Blood Moon
+URL https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies
+SETUP Melee (slash)
+Head: Torva full helm / Oathplate helm > Justiciar faceguard / Serpentine helm > Neitiznot faceguard > [generic] Barrows helm > Blood moon helm / Helm of neitiznot / Berserker helm
+Cape: Infernal cape > Fire cape > Mythical cape > [generic] Cape of Accomplishment (t) > Obsidian cape
+Neck: Amulet of rancour > Amulet of torture / Amulet of fury > Amulet of strength > Amulet of glory > Amulet of power
+Ammo: Rada's blessing 4 > God blessing / Rada's blessing 3 / Rada's blessing 2 > N/A > N/A > N/A
+Body: Torva platebody / Oathplate chest > Justiciar chestguard > Bandos chestplate > Dharok's platebody / Guthan's platebody / Torag's platebody > Fighter torso / Verac's brassard / Dragon chainbody
+Shield: Rondache / Avernic defender / Dragonfire shield > Dragon defender > Toktz-ket-xil > Rune defender / Blessed spirit shield / Dragon sq shield / Crystal shield > Rune kiteshield
+Legs: Torva platelegs / Oathplate legs > Justiciar legguards > Bandos tassets > [generic] Barrows legs > Dragon platelegs
+Hands: Ferocious gloves > Barrows gloves > Dragon gloves > Rune gloves > Regen bracelet / Granite gloves
+Feet: Avernic treads (pr) > Primordial boots / Echo boots > Dragon boots > Guardian boots > Granite boots
+Ring: Ultor ring > Berserker ring (i) > Ring of suffering (ri) / Steel ring > Lightbearer > Brimstone ring / Warrior ring (i)
+Weapon: Scythe of Vitur > Soulreaper axe > Blade of Saeldor / Noxious halberd > Ghrazi rapier / Abyssal tentacle / Saradomin's blessed sword / Abyssal whip / Sulphur blades > Zombie axe / Zamorakian hasta / Dragon scimitar / Arkan blade
+Spec: Dragon claws / Crystal halberd > Crimson kisten / Dragon dagger > Burning claws / Voidwaker > Abyssal dagger > Dragon mace
+NOTE: Owner-supplied Wiki screenshots (2026-11-01): shared Moons of Peril armour table plus this Moon's weapon table. A fully charged Dragonfire shield can outperform a defender if it saves eating outside special-attack phases.
+NOTE: The Moons of Peril are immune to burn damage. Crystal halberd special: use as the last hit before the boss changes phase.
+NOTE: No food or potions are brought: supplies (food and moonlight potions) are gathered and made inside the Moons of Peril dungeon (owner, 2026-11-01). Bring combat gear, the spec weapon and an emergency teleport. Loot comes from the Lunar Chest after the run.
+REQ: Quest: Perilous Moons
+NOTE: Blood Moon is weak to slash: set Scythe, Soulreaper axe, Blade of Saeldor, Noxious halberd, Ghrazi rapier, Zombie axe and Zamorakian hasta to slash.
+

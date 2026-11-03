@@ -1,0 +1,14 @@
+{
+  "source_archive": "BQA-906_REWORK_STAGING_ARTIFACT.zip",
+  "source_sha256": "826d6a9bfce949c03bfd7bb7078b361a36ac753700db387ce8ef1aeb8622aac6",
+  "claimed_tasks": 655,
+  "rejected_placeholders": 652,
+  "named_nonplaceholder_rows": 3,
+  "status": "REJECTED_FOR_PROMOTION",
+  "reasons": [
+    "Placeholder identity and requirements",
+    "Claimed VERIFIED status with no individual source pin",
+    "Mechanics vs game award conditions conflated"
+  ],
+  "boundary": "None of the BQA-906 source tasks are present in W05 live resources. All remain rejected external intake."
+}

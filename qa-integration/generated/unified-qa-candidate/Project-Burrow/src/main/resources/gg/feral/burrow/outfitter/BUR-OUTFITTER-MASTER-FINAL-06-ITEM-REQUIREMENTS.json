@@ -1,0 +1,3951 @@
+[
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "F2P Strength potion; 4 doses. Training boost decays.",
+    "item_id": 113,
+    "name": "Strength potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Strength_potion%284%29",
+    "revision": 15359571,
+    "updated": "2026-10-01T12:34:42Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 333,
+    "name": "Trout",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Trout",
+    "revision": 15183465,
+    "updated": "2026-04-22T02:54:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 373,
+    "name": "Swordfish",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Swordfish",
+    "revision": 15183520,
+    "updated": "2026-04-22T02:54:58Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 385,
+    "name": "Shark",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Shark",
+    "revision": 15183388,
+    "updated": "2026-04-22T02:53:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 554,
+    "name": "Fire rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fire_rune",
+    "revision": 15352350,
+    "updated": "2026-09-20T22:39:54Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 556,
+    "name": "Air rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Air_rune",
+    "revision": 15372846,
+    "updated": "2026-10-15T04:32:54Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 557,
+    "name": "Earth rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Earth_rune",
+    "revision": 15352348,
+    "updated": "2026-09-20T22:28:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 560,
+    "name": "Death rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Death_rune",
+    "revision": 15327928,
+    "updated": "2026-09-02T01:02:02Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 561,
+    "name": "Nature rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Nature_rune",
+    "revision": 15315058,
+    "updated": "2026-08-21T03:51:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 562,
+    "name": "Chaos rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Chaos_rune",
+    "revision": 15327927,
+    "updated": "2026-09-02T01:01:50Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 564,
+    "name": "Cosmic rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cosmic_rune",
+    "revision": 15327926,
+    "updated": "2026-09-02T01:01:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 565,
+    "name": "Blood rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blood_Rune",
+    "revision": 15382206,
+    "updated": "2026-10-25T23:13:33Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 566,
+    "name": "Soul rune",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Soul_rune",
+    "revision": 15386326,
+    "updated": "2026-10-30T14:26:53Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Waterbirth door route; pet rock and special energy."
+    ],
+    "use_notes": "Rune thrownaxe special needs 40 Ranged and energy for Waterbirth route; carry pet rock too.",
+    "item_id": 805,
+    "name": "Rune thrownaxe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_thrownaxe",
+    "revision": 15365448,
+    "updated": "2026-10-05T16:06:14Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 864,
+    "name": "Bronze knife",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bronze_knife",
+    "revision": 15182801,
+    "updated": "2026-04-22T02:48:25Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Unpoisoned",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 892,
+    "name": "Rune arrow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_arrow",
+    "revision": 15182843,
+    "updated": "2026-04-22T02:48:48Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Unpoisoned",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Knife cuts Sarachnis approach webs; no Attack level to use knife on web.",
+    "item_id": 946,
+    "name": "Knife",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Knife",
+    "revision": 15350068,
+    "updated": "2026-09-18T00:30:46Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Spade required for Mole/Barrows entry; one nonstackable tool.",
+    "item_id": 952,
+    "name": "Spade",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Spade",
+    "revision": 15380566,
+    "updated": "2026-10-23T19:19:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1007,
+    "name": "Red cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Red_cape",
+    "revision": 15187093,
+    "updated": "2026-04-22T04:12:52Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1059,
+    "name": "Leather gloves",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Leather_gloves",
+    "revision": 15322396,
+    "updated": "2026-08-27T21:37:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1091,
+    "name": "Adamant plateskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_plateskirt",
+    "revision": 15320173,
+    "updated": "2026-08-25T22:40:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1093,
+    "name": "Rune plateskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_plateskirt",
+    "revision": 15320228,
+    "updated": "2026-08-25T22:53:16Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1099,
+    "name": "Green d'hide chaps",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Green_d%27hide_chaps",
+    "revision": 15322329,
+    "updated": "2026-08-27T21:13:34Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1111,
+    "name": "Adamant chainbody",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_chainbody",
+    "revision": 15182714,
+    "updated": "2026-04-22T02:47:35Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1113,
+    "name": "Rune chainbody",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_chainbody",
+    "revision": 15182848,
+    "updated": "2026-04-22T02:48:51Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [
+      "Dragon Slayer I"
+    ],
+    "acquisition_notes": [],
+    "item_id": 1127,
+    "name": "Rune platebody",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_platebody",
+    "revision": 15346837,
+    "updated": "2026-09-16T17:46:15Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 40,
+      "defence": 40
+    },
+    "unlocks": [
+      "Dragon Slayer I"
+    ],
+    "acquisition_notes": [],
+    "item_id": 1135,
+    "name": "Green d'hide body",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Green_d%27hide_body",
+    "revision": 15322330,
+    "updated": "2026-08-27T21:13:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1161,
+    "name": "Adamant full helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_full_helm",
+    "revision": 15320169,
+    "updated": "2026-08-25T22:39:39Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1163,
+    "name": "Rune full helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_full_helm",
+    "revision": 15346892,
+    "updated": "2026-09-16T18:12:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 20
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1169,
+    "name": "Coif",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Coif",
+    "revision": 15320280,
+    "updated": "2026-08-25T23:12:31Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1199,
+    "name": "Adamant kiteshield",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_kiteshield",
+    "revision": 15182727,
+    "updated": "2026-04-22T02:47:42Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1201,
+    "name": "Rune kiteshield",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_kiteshield",
+    "revision": 15320217,
+    "updated": "2026-08-25T22:51:03Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1331,
+    "name": "Adamant scimitar",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Adamant_scimitar",
+    "revision": 15242604,
+    "updated": "2026-06-30T06:58:35Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1333,
+    "name": "Rune scimitar",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_scimitar",
+    "revision": 15346885,
+    "updated": "2026-09-16T17:57:31Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Only inventory growthling use here; wield gate does not apply to that use."
+    ],
+    "use_notes": "Inventory growthling tool; no Woodcutting or wielding level needed when used on growthlings. Never substitute battleaxe or zombie axe.",
+    "item_id": 1359,
+    "name": "Rune axe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_axe",
+    "revision": 15345211,
+    "updated": "2026-09-16T10:04:49Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1387,
+    "name": "Staff of fire",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Staff_of_fire",
+    "revision": 15351469,
+    "updated": "2026-09-20T00:17:07Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 30,
+      "magic": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1397,
+    "name": "Air battlestaff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Air_battlestaff",
+    "revision": 15182754,
+    "updated": "2026-04-22T02:47:59Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 60
+    },
+    "unlocks": [
+      "Heroes’ Quest"
+    ],
+    "acquisition_notes": [],
+    "item_id": 1434,
+    "name": "Dragon mace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_mace",
+    "revision": 15272260,
+    "updated": "2026-07-22T15:24:10Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Dragon Slayer I started to obtain shield"
+    ],
+    "acquisition_notes": [],
+    "item_id": 1540,
+    "name": "Anti-dragon shield",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Anti-dragon_shield",
+    "revision": 15288317,
+    "updated": "2026-08-05T22:53:01Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [
+      "No wearing level gate. Self-crafting dragonstone amulet needs 80 Crafting, or an alternative acquisition route; charge access is separate. If not owned, use strength for melee or power for ranged/magic rather than forcing the grind before a first kill."
+    ],
+    "item_id": 1704,
+    "name": "Amulet of glory",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory",
+    "revision": 15371996,
+    "updated": "2026-10-13T16:24:29Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Uncharged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [
+      "No wearing level gate. Self-crafting dragonstone amulet needs 80 Crafting, or an alternative acquisition route; charge access is separate. If not owned, use strength for melee or power for ranged/magic rather than forcing the grind before a first kill."
+    ],
+    "item_id": 1706,
+    "name": "Amulet of glory",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory",
+    "revision": 15371996,
+    "updated": "2026-10-13T16:24:29Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "1",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1725,
+    "name": "Amulet of strength",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_strength",
+    "revision": 15320180,
+    "updated": "2026-08-25T22:41:19Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 1731,
+    "name": "Amulet of power",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_power",
+    "revision": 15320179,
+    "updated": "2026-08-25T22:41:10Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 60
+    },
+    "unlocks": [
+      "Mage Arena I; 60 Magic acquisition"
+    ],
+    "acquisition_notes": [],
+    "item_id": 2412,
+    "name": "Saradomin cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Saradomin_cape",
+    "revision": 15296672,
+    "updated": "2026-08-13T07:37:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; each restores floor(base Prayer/4)+7. 38 Herblore to make; GE use has no Herblore gate.",
+    "item_id": 2434,
+    "name": "Prayer potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Prayer_potion%284%29",
+    "revision": 15374387,
+    "updated": "2026-10-17T05:11:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; super attack is separate from super strength; 45 Herblore to make.",
+    "item_id": 2436,
+    "name": "Super attack(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Super_attack%284%29",
+    "revision": 15184104,
+    "updated": "2026-04-22T03:00:09Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 55 Herblore to make.",
+    "item_id": 2440,
+    "name": "Super strength(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Super_strength%284%29",
+    "revision": 15184084,
+    "updated": "2026-04-22T02:59:59Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 72 Herblore to make.",
+    "item_id": 2444,
+    "name": "Ranging potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ranging_potion%284%29",
+    "revision": 15293943,
+    "updated": "2026-08-12T18:10:48Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; F2P; 5 Herblore to make. One dose reduces venom to poison; two fully cure. Does not grant venom immunity.",
+    "item_id": 2446,
+    "name": "Antipoison(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Antipoison%284%29",
+    "revision": 15365013,
+    "updated": "2026-10-05T00:39:16Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2491,
+    "name": "Black d'hide vambraces",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_d%27hide_vambraces",
+    "revision": 15322402,
+    "updated": "2026-08-27T21:40:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2497,
+    "name": "Black d'hide chaps",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_d%27hide_chaps",
+    "revision": 15352979,
+    "updated": "2026-09-22T04:47:29Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2503,
+    "name": "Black d'hide body",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_d%27hide_body",
+    "revision": 15352980,
+    "updated": "2026-09-22T04:48:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2550,
+    "name": "Ring of recoil",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_recoil",
+    "revision": 15358794,
+    "updated": "2026-09-30T10:19:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2552,
+    "name": "Ring of dueling",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_dueling",
+    "revision": 15322346,
+    "updated": "2026-08-27T21:18:50Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "(8)",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 2570,
+    "name": "Ring of life",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_life",
+    "revision": 15365418,
+    "updated": "2026-10-05T15:56:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 3008,
+    "name": "Energy potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Energy_potion%284%29",
+    "revision": 15374696,
+    "updated": "2026-10-17T19:19:39Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Death Plateau"
+    ],
+    "acquisition_notes": [],
+    "item_id": 3105,
+    "name": "Climbing boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Climbing_boots",
+    "revision": 15359845,
+    "updated": "2026-10-01T18:47:57Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 3144,
+    "name": "Cooked karambwan",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cooked_karambwan",
+    "revision": 15364632,
+    "updated": "2026-10-04T18:16:52Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 3695,
+    "name": "Pet rock",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Pet_rock",
+    "revision": 15351497,
+    "updated": "2026-09-20T01:11:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 45
+    },
+    "unlocks": [
+      "The Fremennik Trials"
+    ],
+    "acquisition_notes": [
+      "Purchased from Rellekka helmet shop after completing The Fremennik Trials."
+    ],
+    "item_id": 3749,
+    "name": "Archer helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Archer_helm",
+    "revision": null,
+    "updated": null,
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "BUR0039_WIKI_ID_AND_GATES_REVIEWED"
+  },
+  {
+    "wear_levels": {
+      "magic": 40,
+      "defence": 20
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4089,
+    "name": "Mystic hat",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mystic_hat",
+    "revision": 15322508,
+    "updated": "2026-08-27T22:10:56Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 40,
+      "defence": 20
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4091,
+    "name": "Mystic robe top",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mystic_robe_top",
+    "revision": 15322464,
+    "updated": "2026-08-27T21:57:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 40,
+      "defence": 20
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4093,
+    "name": "Mystic robe bottom",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mystic_robe_bottom",
+    "revision": 15322454,
+    "updated": "2026-08-27T21:56:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 40,
+      "defence": 20
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4097,
+    "name": "Mystic boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mystic_boots",
+    "revision": 15186321,
+    "updated": "2026-04-22T04:07:04Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4131,
+    "name": "Rune boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_boots",
+    "revision": 15320209,
+    "updated": "2026-08-25T22:48:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Ironman: 85 Slayer abyssal demon or alternative unsired route; owned whip is not required for Entry."
+    ],
+    "item_id": 4151,
+    "name": "Abyssal whip",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Abyssal_whip",
+    "revision": 15326130,
+    "updated": "2026-08-31T11:37:28Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 4162,
+    "name": "Rock Hammer",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rock_Hammer",
+    "revision": 15183806,
+    "updated": "2026-04-22T02:57:26Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Lit protected light; 49 Firemaking to light. Permanent Mole fire can replace both this slot and its lighting gate.",
+    "item_id": 4550,
+    "name": "Bullseye lantern (lit)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bullseye_lantern_%28lit%29",
+    "revision": 15183768,
+    "updated": "2026-04-22T02:57:06Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 60
+    },
+    "unlocks": [
+      "Monkey Madness I"
+    ],
+    "acquisition_notes": [],
+    "item_id": 4587,
+    "name": "Dragon scimitar",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
+    "revision": 15346820,
+    "updated": "2026-09-16T17:40:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 70,
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4708,
+    "name": "Ahrim's hood",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim%27s_hood",
+    "revision": 15363201,
+    "updated": "2026-10-03T18:14:00Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 70,
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4712,
+    "name": "Ahrim's robetop",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim%27s_robetop",
+    "revision": 15184391,
+    "updated": "2026-04-22T03:02:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 70,
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4714,
+    "name": "Ahrim's robeskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ahrim%27s_robeskirt",
+    "revision": 15366325,
+    "updated": "2026-10-05T22:40:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4724,
+    "name": "Guthan's helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthan%27s_helm",
+    "revision": 15183064,
+    "updated": "2026-04-22T02:50:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop; four-piece set required to heal."
+    ],
+    "item_id": 4726,
+    "name": "Guthan's warspear",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthan%27s_warspear",
+    "revision": 15252857,
+    "updated": "2026-07-04T19:52:51Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4728,
+    "name": "Guthan's platebody",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthan%27s_platebody",
+    "revision": 15183065,
+    "updated": "2026-04-22T02:50:46Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4730,
+    "name": "Guthan's chainskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthan%27s_chainskirt",
+    "revision": 15363214,
+    "updated": "2026-10-03T18:17:52Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Barrows drop, fully repaired."
+    ],
+    "item_id": 4759,
+    "name": "Verac's plateskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Verac%27s_plateskirt",
+    "revision": 15364763,
+    "updated": "2026-10-04T21:56:57Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Undamaged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 12-minute poison immunity per dose. Cannot grant venom immunity.",
+    "item_id": 5952,
+    "name": "Antidote++(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Antidote%2B%2B%284%29",
+    "revision": 15185228,
+    "updated": "2026-04-22T03:10:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 6568,
+    "name": "Obsidian cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Obsidian_cape",
+    "revision": 15364327,
+    "updated": "2026-10-04T11:56:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Defeat TzTok-Jad / Fight Caves"
+    ],
+    "acquisition_notes": [],
+    "item_id": 6570,
+    "name": "Fire cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fire_cape",
+    "revision": 15363180,
+    "updated": "2026-10-03T18:07:36Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [
+      "Onyx amulet (u) (item 6579) requires 90 Crafting, a cut onyx, gold bar, amulet mould and furnace; string with ball of wool (or Lunar String Jewellery after Lunar Diplomacy), creating onyx amulet 6581; Lvl-6 Enchant requires 87 Magic plus 1 cosmic, 20 fire and 20 earth runes to produce fury 6585. Ironman must obtain/create these materials or use an owned alternative (glory, power or strength amulet). No 90 Crafting/87 Magic wearing gate is implied."
+    ],
+    "item_id": 6585,
+    "name": "Amulet of fury",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_fury",
+    "revision": 15366576,
+    "updated": "2026-10-06T05:24:15Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "FINAL06_CONFIRMED_CREATION_ROUTE_WEARNING_GATE_DISTINGUISHED",
+    "final06_source_refs": [
+      "F06-ONYX-CRAFT",
+      "F06-ONYX-STRING",
+      "F06-FURY-ENCHANT"
+    ]
+  },
+  {
+    "wear_levels": {
+      "magic": 50,
+      "defence": 25
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Mage Training Arena reward."
+    ],
+    "item_id": 6920,
+    "name": "Infinity boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Infinity_boots",
+    "revision": 15184027,
+    "updated": "2026-04-22T02:59:28Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Seven Recipe for Disaster subquests"
+    ],
+    "acquisition_notes": [],
+    "item_id": 7460,
+    "name": "Rune gloves",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_gloves",
+    "revision": 15213298,
+    "updated": "2026-05-20T05:33:28Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Complete Recipe for Disaster"
+    ],
+    "acquisition_notes": [
+      "Quest chain implies at least 35 Defence; no separate glove wear-level requirement."
+    ],
+    "item_id": 7462,
+    "name": "Barrows gloves",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Barrows_gloves",
+    "revision": 15322401,
+    "updated": "2026-08-27T21:40:07Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 7946,
+    "name": "Monkfish",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Monkfish",
+    "revision": 15183439,
+    "updated": "2026-04-22T02:54:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 8009,
+    "name": "Falador teleport (tablet)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Falador_teleport_%28tablet%29",
+    "revision": 15185079,
+    "updated": "2026-04-22T03:09:26Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "House tab: usable owned house/exit route; make/acquire tab before departure. Not a rune spellbook teleport.",
+    "item_id": 8013,
+    "name": "Teleport to house (tablet)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Teleport_to_house_%28tablet%29",
+    "revision": 15185086,
+    "updated": "2026-04-22T03:09:29Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 42,
+      "strength": 42,
+      "defence": 42,
+      "ranged": 42,
+      "magic": 42,
+      "prayer": 22
+    },
+    "unlocks": [
+      "Pest Control Void set; Western Provinces hard diary + combat level 100 for elite body/robe upgrade"
+    ],
+    "acquisition_notes": [
+      "Owned elite set; keep all four pieces for damage bonus."
+    ],
+    "item_id": 8842,
+    "name": "Void knight gloves",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_knight_gloves",
+    "revision": 15304461,
+    "updated": "2026-08-17T18:19:15Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 40,
+      "defence": 40
+    },
+    "unlocks": [
+      "Warriors Guild acquisition: Attack+Strength >=130 or either 99; sequential defenders"
+    ],
+    "acquisition_notes": [],
+    "item_id": 8850,
+    "name": "Rune defender",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_defender",
+    "revision": 15353917,
+    "updated": "2026-09-23T04:12:08Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Stronghold of Security fourth-level Cradle of Life; two-factor authentication enabled to obtain boots"
+    ],
+    "acquisition_notes": [
+      "Optional free boots; use owned F2P boots or an intentional empty slot when this unlock is unavailable. Do not change account authentication as part of this research."
+    ],
+    "item_id": 9005,
+    "name": "Fancy boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fancy_boots",
+    "revision": 15261968,
+    "updated": "2026-07-12T19:08:17Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 61
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 9185,
+    "name": "Rune crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_crossbow",
+    "revision": 15369406,
+    "updated": "2026-10-09T13:39:50Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 9240,
+    "name": "Sapphire bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sapphire_bolts_%28e%29",
+    "revision": 15374764,
+    "updated": "2026-10-17T20:59:10Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 9242,
+    "name": "Ruby bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ruby_bolts_%28e%29",
+    "revision": 15358865,
+    "updated": "2026-09-30T12:56:32Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 9243,
+    "name": "Diamond bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Diamond_bolts_%28e%29",
+    "revision": 15332123,
+    "updated": "2026-09-05T23:20:01Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30,
+      "prayer": 20
+    },
+    "unlocks": [
+      "The Slug Menace"
+    ],
+    "acquisition_notes": [],
+    "item_id": 9674,
+    "name": "Proselyte hauberk",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Proselyte_hauberk",
+    "revision": 15374380,
+    "updated": "2026-10-17T04:34:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 30,
+      "prayer": 20
+    },
+    "unlocks": [
+      "The Slug Menace"
+    ],
+    "acquisition_notes": [],
+    "item_id": 9676,
+    "name": "Proselyte cuisse",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Proselyte_cuisse",
+    "revision": 15314534,
+    "updated": "2026-08-20T22:55:40Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "prayer": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Medium clue reward; substitute any available cape if not owned."
+    ],
+    "item_id": 10448,
+    "name": "Guthix cloak",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Guthix_cloak",
+    "revision": 15324044,
+    "updated": "2026-08-28T22:43:22Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 50
+    },
+    "unlocks": [
+      "Animal Magnetism"
+    ],
+    "acquisition_notes": [],
+    "item_id": 10499,
+    "name": "Ava's accumulator",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
+    "revision": 15385386,
+    "updated": "2026-10-29T11:15:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "375 Barbarian Assault honour in each role + one Penance Queen kill."
+    ],
+    "item_id": 10551,
+    "name": "Fighter torso",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Fighter_torso",
+    "revision": 15366125,
+    "updated": "2026-10-05T21:16:35Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 55
+    },
+    "unlocks": [
+      "The Fremennik Isles"
+    ],
+    "acquisition_notes": [],
+    "item_id": 10828,
+    "name": "Helm of Neitiznot",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Helm_of_Neitiznot",
+    "revision": 15320122,
+    "updated": "2026-08-25T22:11:06Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 11118,
+    "name": "Combat bracelet",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Combat_bracelet",
+    "revision": 15320281,
+    "updated": "2026-08-25T23:13:02Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "(4)",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Internal blowpipe ammunition; 95 Fletching to make, or own/trade obtained darts."
+    ],
+    "item_id": 11230,
+    "name": "Dragon dart",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_dart",
+    "revision": 15372145,
+    "updated": "2026-10-13T20:55:41Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Unpoisoned",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 42,
+      "strength": 42,
+      "defence": 42,
+      "ranged": 42,
+      "magic": 42,
+      "prayer": 22
+    },
+    "unlocks": [
+      "Pest Control Void set; Western Provinces hard diary + combat level 100 for elite body/robe upgrade"
+    ],
+    "acquisition_notes": [
+      "Owned elite set; keep all four pieces for damage bonus."
+    ],
+    "item_id": 11664,
+    "name": "Void ranger helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Void_ranger_helm",
+    "revision": 15260468,
+    "updated": "2026-07-11T05:13:08Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 11771,
+    "name": "Archers ring (i)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Archers_ring_%28i%29",
+    "revision": 15345630,
+    "updated": "2026-09-16T14:15:47Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 11773,
+    "name": "Berserker ring (i)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Berserker_ring_%28i%29",
+    "revision": 15345632,
+    "updated": "2026-09-16T14:15:55Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Bandos/Graardor drop; sustain boot, not a first-kill necessity."
+    ],
+    "item_id": 11836,
+    "name": "Bandos boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bandos_boots",
+    "revision": 15322433,
+    "updated": "2026-08-27T21:52:55Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Ironman: 83 Slayer spiritual mages; climbing boots are lower-unlock substitute."
+    ],
+    "item_id": 11840,
+    "name": "Dragon boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_boots",
+    "revision": 15364734,
+    "updated": "2026-10-04T21:43:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 10
+    },
+    "unlocks": [
+      "Malevolent masquerade 400 Slayer points; 55 Crafting creation; imbue"
+    ],
+    "acquisition_notes": [
+      "Active gargoyle task + 75 Slayer for Guardians; imbue is necessary for ranged task bonus."
+    ],
+    "item_id": 11865,
+    "name": "Slayer helmet (i)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Slayer_helmet_%28i%29",
+    "revision": 15345654,
+    "updated": "2026-09-16T14:18:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 12-minute regular antifire per dose; Vorkath shield combination leaves up to 10 standard dragonfire.",
+    "item_id": 11951,
+    "name": "Extended antifire(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Extended_antifire%284%29",
+    "revision": 15359567,
+    "updated": "2026-10-01T12:32:41Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Ironman: 93 Slayer smoke devil acquisition; not a default midgame requirement."
+    ],
+    "item_id": 12002,
+    "name": "Occult necklace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Occult_necklace",
+    "revision": 15314514,
+    "updated": "2026-08-20T22:43:51Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Haunted Mine; Tarn’s Lair enchantment; ranged/magic imbue"
+    ],
+    "acquisition_notes": [
+      "Does not stack with Slayer helmet; cosmetic/plain Salve is not equivalent."
+    ],
+    "item_id": 12018,
+    "name": "Salve amulet(ei)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Salve_amulet%28ei%29",
+    "revision": 15365051,
+    "updated": "2026-10-05T00:53:58Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Hard clue reward; black dhide/coif alternative."
+    ],
+    "item_id": 12492,
+    "name": "Ancient d'hide body",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_body",
+    "revision": 15324767,
+    "updated": "2026-08-29T20:47:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Hard clue reward."
+    ],
+    "item_id": 12494,
+    "name": "Ancient chaps",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_chaps",
+    "revision": 15324768,
+    "updated": "2026-08-29T20:47:51Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Hard clue reward; black dhide/coif alternative."
+    ],
+    "item_id": 12496,
+    "name": "Ancient coif",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_coif",
+    "revision": 15324766,
+    "updated": "2026-08-29T20:47:34Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 12625,
+    "name": "Stamina potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Stamina_potion%284%29",
+    "revision": 15386103,
+    "updated": "2026-10-30T09:15:39Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 50,
+      "magic": 50
+    },
+    "unlocks": [
+      "Underground Pass; pay 200,000 coins to upgrade Iban staff"
+    ],
+    "acquisition_notes": [],
+    "item_id": 12658,
+    "name": "Iban's staff (u)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Iban%27s_staff_%28u%29",
+    "revision": 15364668,
+    "updated": "2026-10-04T19:49:14Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 90 Herblore to make; separate attack/strength pots are lower-unlock alternative.",
+    "item_id": 12695,
+    "name": "Super combat potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Super_combat_potion%284%29",
+    "revision": 15281186,
+    "updated": "2026-07-29T18:56:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Magic shortbow + imbue scroll."
+    ],
+    "item_id": 12788,
+    "name": "Magic shortbow (i)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Magic_shortbow_%28i%29",
+    "revision": 15200994,
+    "updated": "2026-04-28T23:05:00Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Three rune types, at most 16,000 each; physical pouch is one inventory item.",
+    "item_id": 12791,
+    "name": "Rune pouch",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rune_pouch",
+    "revision": 15384874,
+    "updated": "2026-10-28T19:23:42Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 78
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Trident of the seas (87 Slayer cave kraken) + magic fang from Zulrah; this is an owned upgrade, never a Zulrah first-kill prerequisite."
+    ],
+    "item_id": 12899,
+    "name": "Trident of the Swamp",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Trident_of_the_Swamp",
+    "revision": 15372008,
+    "updated": "2026-10-13T16:36:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 94 Herblore to make; venom immunity approx 3.6 minutes per dose.",
+    "item_id": 12913,
+    "name": "Anti-venom+(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Anti-venom%2B%284%29",
+    "revision": 15243456,
+    "updated": "2026-06-30T13:57:30Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Tanzanite fang from Zulrah; 53 Fletching to make; load darts and scales."
+    ],
+    "item_id": 12926,
+    "name": "Toxic blowpipe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Toxic_blowpipe",
+    "revision": 15376390,
+    "updated": "2026-10-19T22:17:44Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "One Zul-andra teleport is consumed for access; do not promise a reusable teleport.",
+    "item_id": 12938,
+    "name": "Zul-andra teleport",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zul-andra_teleport",
+    "revision": 15186555,
+    "updated": "2026-04-22T04:08:55Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 60
+    },
+    "unlocks": [
+      "Warriors Guild acquisition: Attack+Strength >=130 or either 99; rune defender shown to Lorelai"
+    ],
+    "acquisition_notes": [],
+    "item_id": 12954,
+    "name": "Dragon defender",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_defender",
+    "revision": 15363213,
+    "updated": "2026-10-03T18:17:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 42,
+      "strength": 42,
+      "defence": 42,
+      "ranged": 42,
+      "magic": 42,
+      "prayer": 22
+    },
+    "unlocks": [
+      "Pest Control Void set; Western Provinces hard diary + combat level 100 for elite body/robe upgrade"
+    ],
+    "acquisition_notes": [
+      "Owned elite set; keep all four pieces for damage bonus."
+    ],
+    "item_id": 13072,
+    "name": "Elite void top",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Elite_void_top",
+    "revision": 15260476,
+    "updated": "2026-07-11T05:14:52Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 42,
+      "strength": 42,
+      "defence": 42,
+      "ranged": 42,
+      "magic": 42,
+      "prayer": 22
+    },
+    "unlocks": [
+      "Pest Control Void set; Western Provinces hard diary + combat level 100 for elite body/robe upgrade"
+    ],
+    "acquisition_notes": [
+      "Owned elite set; keep all four pieces for damage bonus."
+    ],
+    "item_id": 13073,
+    "name": "Elite void robe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Elite_void_robe",
+    "revision": 15260481,
+    "updated": "2026-07-11T05:15:48Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Wilderness easy diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 13108,
+    "name": "Wilderness sword 1",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Wilderness_sword_1",
+    "revision": 15366265,
+    "updated": "2026-10-05T22:16:20Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Falador hard diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 13119,
+    "name": "Falador shield 3",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Falador_shield_3",
+    "revision": 15186679,
+    "updated": "2026-04-22T04:09:56Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Falador elite diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 13120,
+    "name": "Falador shield 4",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Falador_shield_4",
+    "revision": 15242228,
+    "updated": "2026-06-29T19:22:32Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Ardougne medium diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 13122,
+    "name": "Ardougne cloak 2",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ardougne_cloak_2",
+    "revision": 15363014,
+    "updated": "2026-10-03T16:53:34Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Lumbridge & Draynor hard diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 13127,
+    "name": "Explorer's ring 3",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Explorer%27s_ring_3",
+    "revision": 15361998,
+    "updated": "2026-10-03T12:38:28Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric rare; owned high-end special weapon only."
+    ],
+    "item_id": 13652,
+    "name": "Dragon claws",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_claws",
+    "revision": 15362682,
+    "updated": "2026-10-03T14:53:36Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "hitpoints": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Zenyte item; sufficient Crafting/Magic or GE; suffering imbued, recoils loaded and enabled."
+    ],
+    "item_id": 19547,
+    "name": "Necklace of anguish",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Necklace_of_anguish",
+    "revision": 15301384,
+    "updated": "2026-08-14T16:38:32Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Hard clue reward; black dhide/coif alternative."
+    ],
+    "item_id": 19921,
+    "name": "Ancient d'hide boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_boots",
+    "revision": 15324825,
+    "updated": "2026-08-29T20:59:30Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Blessed dragonhide boots acquired via Treasure Trails; Saradomin variant used as representative. Other blessed dragonhide variants have the same combat role."
+    ],
+    "item_id": 19933,
+    "name": "Saradomin d'hide boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_boots",
+    "revision": null,
+    "updated": null,
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "BUR0039_WIKI_ID_AND_GATES_REVIEWED"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 20226,
+    "name": "Peaceful blessing",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Peaceful_blessing",
+    "revision": 15252871,
+    "updated": "2026-07-04T20:09:48Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "hitpoints": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Zenyte item; sufficient Crafting/Magic or GE; suffering imbued, recoils loaded and enabled."
+    ],
+    "item_id": 20657,
+    "name": "Ring of suffering (i)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_suffering_%28i%29",
+    "revision": 15361260,
+    "updated": "2026-10-03T10:47:26Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Recoil",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Giant key: initial permanent unlock is not consumed; reward chest/counted KC still needs a key.",
+    "item_id": 20754,
+    "name": "Giant key",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Giant_key",
+    "revision": 15188024,
+    "updated": "2026-04-22T04:18:57Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 85
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric mega-rare; Optimal owned branch only."
+    ],
+    "item_id": 20997,
+    "name": "Twisted bow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Twisted_bow",
+    "revision": 15385385,
+    "updated": "2026-10-29T11:14:54Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric dragon hunter crossbow."
+    ],
+    "item_id": 21012,
+    "name": "Dragon hunter crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_hunter_crossbow",
+    "revision": 15188068,
+    "updated": "2026-04-22T04:19:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 75,
+      "defence": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric rare."
+    ],
+    "item_id": 21018,
+    "name": "Ancestral hat",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_hat",
+    "revision": 15364438,
+    "updated": "2026-10-04T12:40:26Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 75,
+      "defence": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric rare."
+    ],
+    "item_id": 21021,
+    "name": "Ancestral robe top",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_robe_top",
+    "revision": 15355065,
+    "updated": "2026-09-24T04:23:23Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 75,
+      "defence": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Chambers of Xeric rare."
+    ],
+    "item_id": 21024,
+    "name": "Ancestral robe bottom",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ancestral_robe_bottom",
+    "revision": 15363110,
+    "updated": "2026-10-03T17:44:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21166,
+    "name": "Burning amulet",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Burning_amulet",
+    "revision": 15188167,
+    "updated": "2026-04-22T04:19:58Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "(5)",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Complete Inferno"
+    ],
+    "acquisition_notes": [
+      "Only when owned; Fire cape is the practical substitute."
+    ],
+    "item_id": 21295,
+    "name": "Infernal cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Infernal_cape",
+    "revision": 15359317,
+    "updated": "2026-10-01T02:18:39Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21304,
+    "name": "Obsidian platelegs",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Obsidian_platelegs",
+    "revision": 15363215,
+    "updated": "2026-10-03T18:18:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 50,
+      "strength": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Own Guardian drop or trade; not a first-kill requirement."
+    ],
+    "item_id": 21742,
+    "name": "Granite hammer",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Granite_hammer",
+    "revision": 15383489,
+    "updated": "2026-10-27T02:37:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 75
+    },
+    "unlocks": [
+      "Mage Arena II"
+    ],
+    "acquisition_notes": [],
+    "item_id": 21791,
+    "name": "Imbued Saradomin cape",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Imbued_Saradomin_cape",
+    "revision": 15367755,
+    "updated": "2026-10-07T14:36:05Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 64
+    },
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21902,
+    "name": "Dragon crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_crossbow",
+    "revision": 15352978,
+    "updated": "2026-09-22T04:45:59Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21940,
+    "name": "Sapphire dragon bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sapphire_dragon_bolts_%28e%29",
+    "revision": 15365099,
+    "updated": "2026-10-05T02:41:03Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21944,
+    "name": "Ruby dragon bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ruby_dragon_bolts_%28e%29",
+    "revision": 15274049,
+    "updated": "2026-07-24T18:44:36Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 21946,
+    "name": "Diamond dragon bolts (e)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Diamond_dragon_bolts_%28e%29",
+    "revision": 15372254,
+    "updated": "2026-10-14T04:06:54Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 75
+    },
+    "unlocks": [
+      "Dragon Slayer I started"
+    ],
+    "acquisition_notes": [
+      "Skeletal visage + anti-dragon shield; 90 Smithing or pay Oziach; Check must show 50 charges."
+    ],
+    "item_id": 22002,
+    "name": "Dragonfire ward",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragonfire_ward",
+    "revision": 15365533,
+    "updated": "2026-10-05T16:26:46Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70
+    },
+    "unlocks": [
+      "Animal Magnetism; Vorkath head upgrade"
+    ],
+    "acquisition_notes": [
+      "Head guaranteed by 50 KC; accumulator remains first-kill default."
+    ],
+    "item_id": 22109,
+    "name": "Ava's assembler",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ava%27s_assembler",
+    "revision": 15357218,
+    "updated": "2026-09-28T01:00:42Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 6-minute super antifire per dose; shield combination fully protects ordinary Vorkath dragonfire, not acid/bombs/venom.",
+    "item_id": 22209,
+    "name": "Extended super antifire(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Extended_super_antifire%284%29",
+    "revision": 15188729,
+    "updated": "2026-04-22T04:23:50Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 70,
+      "defence": 40
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Crafting for Ironmen: 83 Crafting, 2 black dragon leather, redwood shield, 15 rune nails. Crafting skill is NOT an equip gate."
+    ],
+    "item_id": 22284,
+    "name": "Black d'hide shield",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Black_d%27hide_shield",
+    "revision": null,
+    "updated": null,
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "BUR0039_WIKI_ID_AND_GATES_REVIEWED"
+  },
+  {
+    "wear_levels": {
+      "attack": 70,
+      "defence": 70
+    },
+    "unlocks": [
+      "Dragon defender owned"
+    ],
+    "acquisition_notes": [
+      "Avernic hilt from Theatre of Blood."
+    ],
+    "item_id": 22322,
+    "name": "Avernic defender",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Avernic_defender",
+    "revision": 15379270,
+    "updated": "2026-10-22T11:51:27Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Normal",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 82
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Theatre of Blood rare; 2 blood per cast in captured current revision."
+    ],
+    "item_id": 22323,
+    "name": "Sanguinesti staff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sanguinesti_staff",
+    "revision": 15385390,
+    "updated": "2026-10-29T11:19:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 80,
+      "strength": 90
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Theatre of Blood rare; charged attack is selected."
+    ],
+    "item_id": 22325,
+    "name": "Scythe of Vitur",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Scythe_of_Vitur",
+    "revision": 15383921,
+    "updated": "2026-10-27T15:40:57Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Theatre of Blood rare; ranged defence/sustain purpose at Rex."
+    ],
+    "item_id": 22326,
+    "name": "Justiciar faceguard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Justiciar_faceguard",
+    "revision": 15365442,
+    "updated": "2026-10-05T16:04:05Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Theatre of Blood rare; ranged defence/sustain purpose at Rex."
+    ],
+    "item_id": 22327,
+    "name": "Justiciar chestguard",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Justiciar_chestguard",
+    "revision": 15188777,
+    "updated": "2026-04-22T04:24:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Theatre of Blood rare; ranged defence/sustain purpose at Rex."
+    ],
+    "item_id": 22328,
+    "name": "Justiciar legguards",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Justiciar_legguards",
+    "revision": 15188778,
+    "updated": "2026-04-22T04:24:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Mossy key: initial permanent unlock is not consumed; reward chest/counted KC still needs a key.",
+    "item_id": 22374,
+    "name": "Mossy key",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mossy_key",
+    "revision": 15275786,
+    "updated": "2026-07-26T07:58:36Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Kourend & Kebos medium diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 22943,
+    "name": "Rada's blessing 2",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rada%27s_blessing_2",
+    "revision": 15240313,
+    "updated": "2026-06-26T20:37:33Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Kourend & Kebos elite diary"
+    ],
+    "acquisition_notes": [],
+    "item_id": 22947,
+    "name": "Rada's blessing 4",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Rada%27s_blessing_4",
+    "revision": 15242366,
+    "updated": "2026-06-29T21:19:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 78
+    },
+    "unlocks": [
+      "Barbarian Training firemaking (not pyre), fishing and smithing sections"
+    ],
+    "acquisition_notes": [
+      "Hydra claw + Zamorakian hasta; Ironman 95 Slayer Hydra + Zamorak drop."
+    ],
+    "item_id": 22978,
+    "name": "Dragon hunter lance",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dragon_hunter_lance",
+    "revision": 15264894,
+    "updated": "2026-07-16T03:54:30Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 80,
+      "defence": 80
+    },
+    "unlocks": [
+      "Dragon Slayer II"
+    ],
+    "acquisition_notes": [
+      "Hydra leather; use Lithkren machinery."
+    ],
+    "item_id": 22981,
+    "name": "Ferocious gloves",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ferocious_gloves",
+    "revision": 15301367,
+    "updated": "2026-08-14T16:27:06Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Sarachnis cudgel drop/trade; not required for first kill."
+    ],
+    "item_id": 23528,
+    "name": "Sarachnis cudgel",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Sarachnis_cudgel",
+    "revision": 15197800,
+    "updated": "2026-04-25T09:02:22Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; divine boosts fixed for five minutes each; 10 self-damage on drinking; 97 Herblore to make.",
+    "item_id": 23685,
+    "name": "Divine super combat potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Divine_super_combat_potion%284%29",
+    "revision": 15331555,
+    "updated": "2026-09-05T16:34:50Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; five-minute divine ranging boost; 10 self-damage on drinking.",
+    "item_id": 23733,
+    "name": "Divine ranging potion(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Divine_ranging_potion%284%29",
+    "revision": 15331553,
+    "updated": "2026-09-05T16:34:24Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70,
+      "agility": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Crystal armour seeds + crystal shards; active charges; Song of the Elves acquisition."
+    ],
+    "item_id": 23971,
+    "name": "Crystal helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_helm",
+    "revision": 15374599,
+    "updated": "2026-10-17T15:44:22Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Active",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70,
+      "agility": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Crystal armour seeds + crystal shards; active charges; Song of the Elves acquisition."
+    ],
+    "item_id": 23975,
+    "name": "Crystal body",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_body",
+    "revision": 15369568,
+    "updated": "2026-10-09T17:04:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Active",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70,
+      "agility": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Crystal armour seeds + crystal shards; active charges; Song of the Elves acquisition."
+    ],
+    "item_id": 23979,
+    "name": "Crystal legs",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_legs",
+    "revision": 15369571,
+    "updated": "2026-10-09T17:04:24Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Active",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 70,
+      "agility": 50
+    },
+    "unlocks": [
+      "Roving Elves"
+    ],
+    "acquisition_notes": [
+      "Active crystal shield; charge budget is independent of ID."
+    ],
+    "item_id": 23991,
+    "name": "Crystal shield",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Crystal_shield",
+    "revision": 15374520,
+    "updated": "2026-10-17T11:41:58Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Active",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 70,
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nightmare/Phosani rare; no midgame default."
+    ],
+    "item_id": 24419,
+    "name": "Inquisitor's great helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Inquisitor%27s_great_helm",
+    "revision": 15352822,
+    "updated": "2026-09-21T22:58:34Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 70,
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nightmare/Phosani rare; no midgame default."
+    ],
+    "item_id": 24420,
+    "name": "Inquisitor's hauberk",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Inquisitor%27s_hauberk",
+    "revision": 15352823,
+    "updated": "2026-09-21T22:58:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 70,
+      "defence": 30
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nightmare/Phosani rare; no midgame default."
+    ],
+    "item_id": 24421,
+    "name": "Inquisitor's plateskirt",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Inquisitor%27s_plateskirt",
+    "revision": 15352824,
+    "updated": "2026-09-21T22:58:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "A Kingdom Divided"
+    ],
+    "acquisition_notes": [],
+    "item_id": 25818,
+    "name": "Book of the Dead",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Book_of_the_Dead",
+    "revision": 15317141,
+    "updated": "2026-08-23T07:57:35Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80,
+      "agility": 70
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Song of the Elves acquisition; enhanced crystal seed and crystal shards; corruption removes weapon charge use, not armour charge use."
+    ],
+    "item_id": 25867,
+    "name": "Bow of Faerdhinen (c)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen_%28c%29",
+    "revision": 15369557,
+    "updated": "2026-10-09T16:59:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Medium Combat Achievements rewards claimed"
+    ],
+    "acquisition_notes": [],
+    "use_notes": "Medium Combat Achievements reward; equipped removes Barrows area prayer drain, unequipped does not.",
+    "item_id": 25928,
+    "name": "Ghommal's hilt 2",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ghommal%27s_hilt_2",
+    "revision": 15190352,
+    "updated": "2026-04-22T04:37:00Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 25975,
+    "name": "Lightbearer",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Lightbearer",
+    "revision": 15299656,
+    "updated": "2026-08-14T03:40:22Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 82
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Tombs of Amascut rare; not a generic Recommended upgrade."
+    ],
+    "item_id": 26219,
+    "name": "Osmumten's fang",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Osmumten%27s_fang",
+    "revision": 15236139,
+    "updated": "2026-06-19T19:59:01Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80,
+      "defence": 45
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nex drop."
+    ],
+    "item_id": 26235,
+    "name": "Zaryte vambraces",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zaryte_vambraces",
+    "revision": 15190607,
+    "updated": "2026-04-22T04:38:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nex drop; sufficient special energy for sapphire/ruby utility."
+    ],
+    "item_id": 26374,
+    "name": "Zaryte crossbow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zaryte_crossbow",
+    "revision": 15382611,
+    "updated": "2026-10-26T08:52:09Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nex damaged Torva + Bandos components restored with 90 Smithing."
+    ],
+    "item_id": 26382,
+    "name": "Torva full helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_full_helm",
+    "revision": 15190626,
+    "updated": "2026-04-22T04:38:54Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Restored",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nex damaged Torva + Bandos components restored with 90 Smithing."
+    ],
+    "item_id": 26384,
+    "name": "Torva platebody",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_platebody",
+    "revision": 15354839,
+    "updated": "2026-09-24T01:08:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Restored",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Nex damaged Torva + Bandos components restored with 90 Smithing."
+    ],
+    "item_id": 26386,
+    "name": "Torva platelegs",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Torva_platelegs",
+    "revision": 15190628,
+    "updated": "2026-04-22T04:38:55Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Restored",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80,
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "ToA Masori + Armadylean plates; 90 Crafting fortification."
+    ],
+    "item_id": 27235,
+    "name": "Masori mask (f)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Masori_mask_%28f%29",
+    "revision": 15190975,
+    "updated": "2026-04-22T04:41:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80,
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "ToA Masori + Armadylean plates; 90 Crafting fortification."
+    ],
+    "item_id": 27238,
+    "name": "Masori body (f)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Masori_body_%28f%29",
+    "revision": 15190976,
+    "updated": "2026-04-22T04:41:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 80,
+      "defence": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "ToA Masori + Armadylean plates; 90 Crafting fortification."
+    ],
+    "item_id": 27241,
+    "name": "Masori chaps (f)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Masori_chaps_%28f%29",
+    "revision": 15190977,
+    "updated": "2026-04-22T04:41:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 85
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "ToA mega-rare, charged; 2 soul + 5 chaos per cast."
+    ],
+    "item_id": 27275,
+    "name": "Tumeken's shadow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Tumeken%27s_shadow",
+    "revision": 15373159,
+    "updated": "2026-10-15T17:28:46Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Four rune types, at most 16,000 each; rune pouch + thread of Elidinis and 75 Crafting upgrade.",
+    "item_id": 27281,
+    "name": "Divine rune pouch",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Divine_rune_pouch",
+    "revision": 15359154,
+    "updated": "2026-09-30T21:58:14Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "Saturated heart boost is +13 Magic at 99 for five minutes; owned Imbued heart + Muspah ancient essence. Do not assume this for Entry.",
+    "item_id": 27641,
+    "name": "Saturated heart",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Saturated_heart",
+    "revision": 15371902,
+    "updated": "2026-10-13T14:33:40Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "At least one Vardorvis kill"
+    ],
+    "acquisition_notes": [
+      "90 Magic/80 Crafting to create; GE does not remove boss-kill wear gate."
+    ],
+    "item_id": 28307,
+    "name": "Ultor ring",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ultor_ring",
+    "revision": 15191287,
+    "updated": "2026-04-22T04:43:22Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "At least one Leviathan kill"
+    ],
+    "acquisition_notes": [
+      "90 Magic/80 Crafting creation."
+    ],
+    "item_id": 28310,
+    "name": "Venator ring",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Venator_ring",
+    "revision": 15355516,
+    "updated": "2026-09-25T03:21:45Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "At least one Duke Sucellus kill"
+    ],
+    "acquisition_notes": [
+      "90 Magic/80 Crafting creation; not Whisperer."
+    ],
+    "item_id": 28313,
+    "name": "Magus ring",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Magus_ring",
+    "revision": 15191288,
+    "updated": "2026-04-22T04:43:23Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "Desert Treasure II completion to obtain ring"
+    ],
+    "acquisition_notes": [],
+    "item_id": 28327,
+    "name": "Ring of shadows",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Ring_of_shadows",
+    "revision": 15278103,
+    "updated": "2026-07-28T16:42:14Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Own Scurrius spine + rune mace; 35 Smithing or Aldo fee; Entry does not assume spine."
+    ],
+    "item_id": 28792,
+    "name": "Bone mace",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Bone_mace",
+    "revision": 15192239,
+    "updated": "2026-04-22T04:49:13Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 65
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Armoured zombie broken axe + 70 Smithing repair; access during Defender of Varrock."
+    ],
+    "item_id": 28810,
+    "name": "Zombie axe",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Zombie_axe",
+    "revision": 15360518,
+    "updated": "2026-10-02T17:48:52Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 75
+    },
+    "unlocks": [
+      "Defeat Sol Heredit / Fortis Colosseum"
+    ],
+    "acquisition_notes": [
+      "Charged with sunfire splinters; passive extra stats only for arrows/bolts."
+    ],
+    "item_id": 28951,
+    "name": "Dizana's quiver",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dizana%27s_quiver",
+    "revision": 15376019,
+    "updated": "2026-10-19T15:59:51Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 28991,
+    "name": "Atlatl dart",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Atlatl_dart",
+    "revision": 15343589,
+    "updated": "2026-09-14T18:42:42Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 70,
+      "strength": 75
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Lunar chest / Perilous Moons."
+    ],
+    "item_id": 28997,
+    "name": "Dual macuahuitl",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Dual_macuahuitl",
+    "revision": 15357461,
+    "updated": "2026-09-28T09:23:31Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "ranged": 75,
+      "attack": 50,
+      "strength": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Lunar chest / Perilous Moons; requires atlatl darts, not arrows."
+    ],
+    "item_id": 29000,
+    "name": "Eclipse atlatl",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Eclipse_atlatl",
+    "revision": 15356407,
+    "updated": "2026-09-26T09:13:11Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 75,
+      "defence": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Lunar chest / Perilous Moons; all three armour pieces plus dual for full set effect."
+    ],
+    "item_id": 29022,
+    "name": "Blood Moon chestplate",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blood_Moon_chestplate",
+    "revision": 15354906,
+    "updated": "2026-09-24T01:22:46Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "New",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 75,
+      "defence": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Lunar chest / Perilous Moons; all three armour pieces plus dual for full set effect."
+    ],
+    "item_id": 29025,
+    "name": "Blood Moon tassets",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blood_Moon_tassets",
+    "revision": 15354909,
+    "updated": "2026-09-24T01:24:26Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "New",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "strength": 75,
+      "defence": 50
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Lunar chest / Perilous Moons; all three armour pieces plus dual for full set effect."
+    ],
+    "item_id": 29028,
+    "name": "Blood Moon helm",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Blood_Moon_helm",
+    "revision": 15354918,
+    "updated": "2026-09-24T01:27:23Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "New",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Tormented demons / While Guthix Sleeps acquisition."
+    ],
+    "item_id": 29577,
+    "name": "Burning claws",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Burning_claws",
+    "revision": 15272854,
+    "updated": "2026-07-22T22:49:07Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "hitpoints": 90
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Amulet of torture + Araxxor untradeable attachment; 86 Crafting creation; Ironman 92 Slayer Araxxor route."
+    ],
+    "item_id": 29801,
+    "name": "Amulet of rancour",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Amulet_of_rancour",
+    "revision": 15343231,
+    "updated": "2026-09-14T08:38:15Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [
+      "Araxyte drop / owned boot for web immunity; not an Entry prerequisite."
+    ],
+    "item_id": 29806,
+    "name": "Aranea boots",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Aranea_boots",
+    "revision": 15192520,
+    "updated": "2026-04-22T04:51:12Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "use_notes": "4 doses; 94 Herblore + araxyte venom sac conversion; venom immunity approx 6.3 minutes per dose.",
+    "item_id": 29824,
+    "name": "Extended anti-venom+(4)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Extended_anti-venom%2B%284%29",
+    "revision": 15379222,
+    "updated": "2026-10-22T10:16:38Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": false,
+    "definition_version": null,
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 55
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Frost nagua or Amoxliatl drop; obtainable outside Huey."
+    ],
+    "item_id": 29889,
+    "name": "Glacial temotli",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Glacial_temotli",
+    "revision": 15359046,
+    "updated": "2026-09-30T19:02:24Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 60
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Royal Titans two crowns + battlestaff; no Zulrah drop needed."
+    ],
+    "item_id": 30634,
+    "name": "Twinflame staff",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Twinflame_staff",
+    "revision": 15317784,
+    "updated": "2026-08-24T05:27:34Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "defence": 80,
+      "strength": 80,
+      "ranged": 80,
+      "magic": 80
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Avernic treads + primordial/eternal/pegasian boots + 12,000 demon tears."
+    ],
+    "item_id": 31097,
+    "name": "Avernic treads (max)",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Avernic_treads_%28max%29",
+    "revision": 15320239,
+    "updated": "2026-08-25T22:56:23Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "hitpoints": 90
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Untradeable Mokhaiotl cloth + tormented bracelet + 10,000 demon tears; 83 Crafting/70 Smithing; bank required. Passive disabled with 2H Shadow."
+    ],
+    "item_id": 31106,
+    "name": "Confliction gauntlets",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Confliction_gauntlets",
+    "revision": 15383951,
+    "updated": "2026-10-27T16:35:28Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "magic": 83
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Doom of Mokhaiotl delve 3+ drop; one demon tear OR 2 death + 1 chaos per cast."
+    ],
+    "item_id": 31113,
+    "name": "Eye of Ayak",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Eye_of_Ayak",
+    "revision": 15379664,
+    "updated": "2026-10-22T22:36:19Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [
+      "Post-quest Brutus drop; rune kiteshield until owned."
+    ],
+    "item_id": 33101,
+    "name": "Mooleta",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Mooleta",
+    "revision": 15279216,
+    "updated": "2026-07-29T05:35:14Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [
+      "The Ides of Milk"
+    ],
+    "acquisition_notes": [
+      "Air rune supplies one teleport charge; charged variant alone does not specify remaining charges."
+    ],
+    "item_id": 33104,
+    "name": "Cowbell amulet",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Cowbell_amulet",
+    "revision": 15358637,
+    "updated": "2026-09-30T01:45:21Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {},
+    "unlocks": [],
+    "acquisition_notes": [],
+    "item_id": 33595,
+    "name": "Seeking dragon arrow",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Seeking_dragon_arrow",
+    "revision": 15314450,
+    "updated": "2026-08-20T21:22:49Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "hitpoints": 90
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Necklace of anguish + etched elder venator fang; Maggot King untradeable component."
+    ],
+    "item_id": 33639,
+    "name": "Necklace of rupture",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Necklace_of_rupture",
+    "revision": 15379787,
+    "updated": "2026-10-23T01:45:43Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  },
+  {
+    "wear_levels": {
+      "attack": 85
+    },
+    "unlocks": [],
+    "acquisition_notes": [
+      "Fractured Archive rare; charged Thrust and size/defence reroll rules. Upstream TODOs require conditional margin."
+    ],
+    "item_id": 34715,
+    "name": "Obligator",
+    "wiki_url": "https://oldschool.runescape.wiki/w/Obligator",
+    "revision": 15386030,
+    "updated": "2026-10-30T04:49:37Z",
+    "accessed": "2026-10-30",
+    "id_verified": true,
+    "equipment_definition": true,
+    "definition_version": "Charged",
+    "review_status": "REVIEWED_NUMERIC_AND_NAMED_UNLOCK_RULES"
+  }
+]

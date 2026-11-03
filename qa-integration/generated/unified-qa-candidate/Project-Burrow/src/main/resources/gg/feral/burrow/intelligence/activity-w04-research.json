@@ -1,0 +1,1725 @@
+{
+  "schema_version": 4,
+  "pack_id": "TPT-INTELLIGENCE-W04-ACTIVITIES-STAGING-2026-11-02",
+  "entries": [
+    {
+      "id": "W04-PATCH-TREE-LUMBRIDGE",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Lumbridge",
+      "context": "Misthalin | Lumbridge Teleport; route depends on spellbook",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-VARROCK-CASTLE",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Varrock Castle",
+      "context": "Misthalin | Varrock Teleport; castle courtyard",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-FALADOR-PARK",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Falador Park",
+      "context": "Asgarnia | Ring of wealth to Falador Park",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-TAVERLEY",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Taverley",
+      "context": "Asgarnia | House teleport (Taverley) or games necklace to Burthorpe",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-GNOME-STRONGHOLD",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Gnome Stronghold",
+      "context": "Kandarin | Spirit tree / royal seed pod; regular tree patch",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-FARMING-GUILD",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Farming Guild",
+      "context": "Kebos Lowlands | Skills necklace; tier 65 Farming",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [
+        {
+          "id": "SKILL_EFFECTIVE-Farming",
+          "type": "SKILL_EFFECTIVE",
+          "key": "Farming",
+          "minimum": 65,
+          "boostable": true,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-TREE-NEMUS-RETREAT",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Nemus Retreat",
+      "context": "Varlamore | Pendant of Ates / Quetzal network; verify unlock",
+      "patch_type": "REGULAR_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-GNOME-STRONGHOLD",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Gnome Stronghold",
+      "context": "Kandarin | Spirit tree / royal seed pod; separate fruit tree patch",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-EAST-OF-CATHERBY",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "East of Catherby",
+      "context": "Kandarin | Catherby Teleport; fruit tree east of village",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-TREE-GNOME-VILLAGE",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Tree Gnome Village",
+      "context": "Kandarin | Spirit tree then Elkoy outside maze",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-BRIMHAVEN",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Brimhaven",
+      "context": "Karamja | Brimhaven house redirect or charter ship",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-LLETYA",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Lletya",
+      "context": "Tirannwn | Teleport crystal; quest access",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-FARMING-GUILD",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Farming Guild",
+      "context": "Kebos Lowlands | Skills necklace; upper tier 85 Farming",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [
+        {
+          "id": "SKILL_EFFECTIVE-Farming",
+          "type": "SKILL_EFFECTIVE",
+          "key": "Farming",
+          "minimum": 85,
+          "boostable": true,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-PATCH-FRUIT-KASTORI",
+      "kind": "PATCH",
+      "domain": "FARMING",
+      "name": "Kastori",
+      "context": "Varlamore | Pendant of Ates / quetzal system; verify unlock",
+      "patch_type": "FRUIT_TREE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Fruit_tree_patch",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Patch locations and requirements; verify teleport option independently"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Plant sapling or remove stump"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-TP-ARDY-MONASTERY",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Ardougne cloak 1+ monastery",
+      "context": "Ardougne diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Achievement_Diary/Rewards",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Ardougne Easy",
+          "type": "DIARY",
+          "key": "Ardougne Easy",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-ARDY-MONASTERY-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Ardougne Monastery",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited at Easy, higher cloaks retain this teleport"
+      }
+    },
+    {
+      "id": "W04-TP-ARDY-FARM-MED",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Ardougne cloak 2 farming",
+      "context": "Ardougne diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Achievement_Diary/Rewards",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Ardougne Medium",
+          "type": "DIARY",
+          "key": "Ardougne Medium",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-ARDY-FARM-MED-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Ardougne farming patch",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": 3,
+        "daily_group": "ARDY-FARM-REWARD-CHARGES",
+        "notes": "3 per day; not unlimited"
+      }
+    },
+    {
+      "id": "W04-TP-ARDY-FARM-HARD",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Ardougne cloak 3 farming",
+      "context": "Ardougne diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Achievement_Diary/Rewards",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Ardougne Hard",
+          "type": "DIARY",
+          "key": "Ardougne Hard",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-ARDY-FARM-HARD-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Ardougne farming patch",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": 5,
+        "daily_group": "ARDY-FARM-REWARD-CHARGES",
+        "notes": "5 per day"
+      }
+    },
+    {
+      "id": "W04-TP-ARDY-FARM-ELITE",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Ardougne cloak 4 farming",
+      "context": "Ardougne diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Ardougne_cloak_4",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Ardougne Elite",
+          "type": "DIARY",
+          "key": "Ardougne Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRIED-EXACT-ITEM",
+          "type": "ITEM",
+          "key": "13124",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Ardougne farming patch",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited from Elite"
+      }
+    },
+    {
+      "id": "W04-TP-RADA3-WOOD",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Rada blessing 3 woodland",
+      "context": "Kourend diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Rada%27s_blessing_3",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Kourend & Kebos Hard",
+          "type": "DIARY",
+          "key": "Kourend & Kebos Hard",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRIED-EXACT-ITEM",
+          "type": "ITEM",
+          "key": "22945",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Kourend Woodland",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited woodland; blessing in inventory or equipped"
+      }
+    },
+    {
+      "id": "W04-TP-RADA3-KARUULM",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Rada blessing 3 Karuulm",
+      "context": "Kourend diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Rada%27s_blessing_3",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Kourend & Kebos Hard",
+          "type": "DIARY",
+          "key": "Kourend & Kebos Hard",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRIED-EXACT-ITEM",
+          "type": "ITEM",
+          "key": "22945",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Mount Karuulm",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": 3,
+        "daily_group": "RADA-KARUULM-CHARGES",
+        "notes": "3 per day"
+      }
+    },
+    {
+      "id": "W04-TP-RADA4-KARUULM",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Rada blessing 4 Karuulm",
+      "context": "Kourend diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Rada%27s_blessing",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Kourend & Kebos Elite",
+          "type": "DIARY",
+          "key": "Kourend & Kebos Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-RADA4-KARUULM-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Mount Karuulm",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited at elite; exact ID awaiting item review"
+      }
+    },
+    {
+      "id": "W04-TP-DESERT4-NARDAH",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Desert amulet 4 Nardah",
+      "context": "Desert diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Desert_amulet_4",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Desert Elite",
+          "type": "DIARY",
+          "key": "Desert Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRIED-EXACT-ITEM",
+          "type": "ITEM",
+          "key": "13136",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Nardah shrine",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited; heat immunity only when worn"
+      }
+    },
+    {
+      "id": "W04-TP-DESERT4-KALPHITE",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Desert amulet 4 cave",
+      "context": "Desert diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Desert_amulet_4",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Desert Elite",
+          "type": "DIARY",
+          "key": "Desert Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRIED-EXACT-ITEM",
+          "type": "ITEM",
+          "key": "13136",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Kalphite Cave",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited"
+      }
+    },
+    {
+      "id": "W04-TP-KARAMJA3-GEM",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Karamja gloves 3 Shilo gem mine",
+      "context": "Karamja diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Transportation",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Karamja Hard",
+          "type": "DIARY",
+          "key": "Karamja Hard",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-KARAMJA3-GEM-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Shilo Village gem mine",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited"
+      }
+    },
+    {
+      "id": "W04-TP-KARAMJA4-DURADEL",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Karamja gloves 4 Duradel",
+      "context": "Karamja diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Transportation",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Karamja Elite",
+          "type": "DIARY",
+          "key": "Karamja Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-KARAMJA4-DURADEL-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Shilo Village Slayer Master",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited; no double Tokkul assertion"
+      }
+    },
+    {
+      "id": "W04-TP-EXPLORER4-CABBAGE",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Explorer ring 4 cabbage",
+      "context": "Lumbridge diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Achievement_Diary/Rewards",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Lumbridge Elite",
+          "type": "DIARY",
+          "key": "Lumbridge Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-EXPLORER4-CABBAGE-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Falador cabbage patch",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited; avoid calling this Falador Park"
+      }
+    },
+    {
+      "id": "W04-TP-KANDARIN4-SHERLOCK",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Kandarin headgear 4 Sherlock",
+      "context": "Kandarin diary reward; carried item required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Achievement_Diary/Rewards",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Diary reward teleport section"
+      },
+      "requirements": [
+        {
+          "id": "DIARY-Kandarin Elite",
+          "type": "DIARY",
+          "key": "Kandarin Elite",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "CARRY-REWARD-ITEM",
+          "type": "UNLOCK",
+          "key": "W04-TP-KANDARIN4-SHERLOCK-ITEM-PRESENT",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Sherlock",
+        "cooldown_group": "",
+        "cooldown_seconds": 0,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Unlimited; hard has limited daily"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-GOTR",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Guardians of the Rift minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [
+        {
+          "id": "QUEST-Temple_of_the_Eye",
+          "type": "QUEST",
+          "key": "Temple_of_the_Eye",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "SKILL_REAL-Runecraft",
+          "type": "SKILL_REAL",
+          "key": "Runecraft",
+          "minimum": 27,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [],
+      "travel": {
+        "destination": "Wizards Tower basement",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-NMZ",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Nightmare Zone minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Grouping",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [],
+      "supplies": [],
+      "travel": {
+        "destination": "Yanille",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-CASTLE",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Castle Wars minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Grouping",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [],
+      "supplies": [],
+      "travel": {
+        "destination": "Castle Wars arena",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-TRAWLER",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Fishing Trawler minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Grouping",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [],
+      "supplies": [],
+      "travel": {
+        "destination": "Port Khazard",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-BARB",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Barbarian Assault minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Grouping",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [],
+      "supplies": [],
+      "travel": {
+        "destination": "Barbarian Outpost",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-TP-MINIGAME-PEST",
+      "kind": "TELEPORT",
+      "domain": "TRANSPORT",
+      "name": "Pest Control minigame teleport",
+      "context": "20-minute shared cooldown; unavailable in Wilderness/PvP/POH; do not infer arrival at nearby bank",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Pest_Control",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Grouping / Minigame Teleport transportation; activity unlocks may differ"
+      },
+      "requirements": [],
+      "supplies": [],
+      "travel": {
+        "destination": "Void Knights Outpost",
+        "cooldown_group": "MINIGAME_TELEPORT",
+        "cooldown_seconds": 1200,
+        "daily_limit": -1,
+        "daily_group": "",
+        "notes": "Cooldown shared across spell and Grouping; casting delay can be interrupted"
+      }
+    },
+    {
+      "id": "W04-ACT-SEPULCHRE-F4",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Hallowed Sepulchre floor 4",
+      "context": "Accessible after floor 3; 77 boostable; must finish Sins of the Father",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Requirements floor changes 2026-08-12"
+      },
+      "requirements": [
+        {
+          "id": "QUEST-Sins_of_the_Father",
+          "type": "QUEST",
+          "key": "Sins_of_the_Father",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "SKILL_EFFECTIVE-Agility",
+          "type": "SKILL_EFFECTIVE",
+          "key": "Agility",
+          "minimum": 77,
+          "boostable": true,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Hallowed ring",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Avoid obstacle damage"
+        },
+        {
+          "name": "Summer pie",
+          "item_id": 0,
+          "role": "OPTIONAL_UPGRADE",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Observed boost when needed"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-SEPULCHRE-F5",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Hallowed Sepulchre floor 5",
+      "context": "Requires 87 boostable Agility and quest access",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Requirements floor changes 2026-08-12"
+      },
+      "requirements": [
+        {
+          "id": "QUEST-Sins_of_the_Father",
+          "type": "QUEST",
+          "key": "Sins_of_the_Father",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "SKILL_EFFECTIVE-Agility",
+          "type": "SKILL_EFFECTIVE",
+          "key": "Agility",
+          "minimum": 87,
+          "boostable": true,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Hallowed ring",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Avoid obstacle damage"
+        },
+        {
+          "name": "Summer pie",
+          "item_id": 0,
+          "role": "OPTIONAL_UPGRADE",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Optional Agility boost"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-MAHOGANY-BEGINNER",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Mahogany Homes beginner",
+      "context": "Uses normal planks for tier 1; no nails; occasionally steel bars",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Mahogany_homes",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Construction contract tiers and equipment"
+      },
+      "requirements": [
+        {
+          "id": "SKILL_REAL-Construction",
+          "type": "SKILL_REAL",
+          "key": "Construction",
+          "minimum": 1,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "UNLOCK-Player_Owned_House",
+          "type": "UNLOCK",
+          "key": "Player_Owned_House",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Hammer",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Build furniture"
+        },
+        {
+          "name": "Saw",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Build furniture"
+        },
+        {
+          "name": "Plank",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 26,
+          "slot": "INVENTORY",
+          "purpose": "Contract material varies"
+        },
+        {
+          "name": "Steel bar",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 3,
+          "slot": "INVENTORY",
+          "purpose": "Occasional contract requirement"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-VOLCANIC-MINE",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Volcanic Mine",
+      "context": "Entry: 30 numulite each or permanent 3,000 unlock; no minigame grouping teleport",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Volcanic_Mine",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Mining 50 and Petrified Pete fee"
+      },
+      "requirements": [
+        {
+          "id": "SKILL_REAL-Mining",
+          "type": "SKILL_REAL",
+          "key": "Mining",
+          "minimum": 50,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "UNLOCK-Fossil_Island_Access",
+          "type": "UNLOCK",
+          "key": "Fossil_Island_Access",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "UNLOCK-Volcanic_Mine_Permanent_Access",
+          "type": "UNLOCK",
+          "key": "Volcanic_Mine_Permanent_Access",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": "VOLCANIC-MINE-ENTRY"
+        },
+        {
+          "id": "UNLOCK-Volcanic_Mine_30_Numulite_Entry_Payment",
+          "type": "UNLOCK",
+          "key": "Volcanic_Mine_30_Numulite_Entry_Payment",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": "VOLCANIC-MINE-ENTRY"
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Numulite",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 30,
+          "max_quantity": 30,
+          "slot": "INVENTORY",
+          "purpose": "30 per game unless permanent 3000 numulite pass; alternative access gate"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-GOTR",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Guardians of the Rift",
+      "context": "Wizards Tower basement; Temple of the Eye and Runecraft 27 required",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Requirements"
+      },
+      "requirements": [
+        {
+          "id": "QUEST-Temple_of_the_Eye",
+          "type": "QUEST",
+          "key": "Temple_of_the_Eye",
+          "minimum": 0,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        },
+        {
+          "id": "SKILL_REAL-Runecraft",
+          "type": "SKILL_REAL",
+          "key": "Runecraft",
+          "minimum": 27,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Pickaxe",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Mine guardian fragments"
+        },
+        {
+          "name": "Chisel",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Only needed for crafting guardians"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-PEST-NOVICE",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Pest Control novice",
+      "context": "Combat level 40 to join novice boat; teleport cooldown independent from combat entry",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Pest_Control",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Novice lander requirement"
+      },
+      "requirements": [
+        {
+          "id": "COMBAT_LEVEL-combat_level",
+          "type": "COMBAT_LEVEL",
+          "key": "combat_level",
+          "minimum": 40,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Combat equipment",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Adapt to actual combat style"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-ACT-TEMPOROSS",
+      "kind": "ACTIVITY",
+      "domain": "SKILLING",
+      "name": "Tempoross",
+      "context": "Fishing 35; Spirit angler prevents rope need if wearing required pieces",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Tempoross",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Requirements and equipment"
+      },
+      "requirements": [
+        {
+          "id": "SKILL_REAL-Fishing",
+          "type": "SKILL_REAL",
+          "key": "Fishing",
+          "minimum": 35,
+          "boostable": false,
+          "role": "REQUIRED",
+          "any_of_group": ""
+        }
+      ],
+      "supplies": [
+        {
+          "name": "Rope",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Alternative to outfit tether"
+        },
+        {
+          "name": "Bucket",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 4,
+          "slot": "INVENTORY",
+          "purpose": "Put out fires"
+        },
+        {
+          "name": "Hammer",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Repair mast"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-CLUE-GENERAL",
+      "kind": "CLUE_PROFILE",
+      "domain": "CLUE",
+      "name": "General clue travel",
+      "context": "Step-specific requirements override generic lightweight kit; separate gear, inventory and travel; no automatic game actions",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Treasure_Trails",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Step requirements differ by clue type; generic kit is advisory only"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Spade",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Needed for dig steps"
+        },
+        {
+          "name": "Master scroll book",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Teleport scroll storage"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-CLUE-EMOTE",
+      "kind": "CLUE_PROFILE",
+      "domain": "CLUE",
+      "name": "Emote clue",
+      "context": "Step-specific requirements override generic lightweight kit; separate gear, inventory and travel; no automatic game actions",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Treasure_Trails",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Step requirements differ by clue type; generic kit is advisory only"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Clue-specific worn items",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Only when verified for exact step"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-CLUE-COMBAT",
+      "kind": "CLUE_PROFILE",
+      "domain": "CLUE",
+      "name": "Combat clue",
+      "context": "Step-specific requirements override generic lightweight kit; separate gear, inventory and travel; no automatic game actions",
+      "patch_type": "NONE",
+      "wilderness": false,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Treasure_Trails",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Step requirements differ by clue type; generic kit is advisory only"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Encounter protection and weapon",
+          "item_id": 0,
+          "role": "REQUIRED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "Only when combat target is known"
+        }
+      ],
+      "travel": null
+    },
+    {
+      "id": "W04-CLUE-WILDERNESS",
+      "kind": "CLUE_PROFILE",
+      "domain": "CLUE",
+      "name": "Wilderness clue",
+      "context": "Step-specific requirements override generic lightweight kit; separate gear, inventory and travel; no automatic game actions",
+      "patch_type": "NONE",
+      "wilderness": true,
+      "review": "CHECK",
+      "source": {
+        "url": "https://oldschool.runescape.wiki/w/Treasure_Trails",
+        "revision": "UNKNOWN",
+        "retrieved_utc": "2026-11-03T03:45:00Z",
+        "evidence_pointer": "Step requirements differ by clue type; generic kit is advisory only"
+      },
+      "requirements": [],
+      "supplies": [
+        {
+          "name": "Risk-aware minimal setup",
+          "item_id": 0,
+          "role": "RECOMMENDED",
+          "min_quantity": 1,
+          "max_quantity": 1,
+          "slot": "INVENTORY",
+          "purpose": "No automated bank or BIB; assess death risk"
+        }
+      ],
+      "travel": null
+    }
+  ]
+}

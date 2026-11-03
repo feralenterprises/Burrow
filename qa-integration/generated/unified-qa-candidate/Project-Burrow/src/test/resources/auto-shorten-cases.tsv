@@ -1,0 +1,187 @@
+id	category	action	target	expected	evidence
+HLT-001	NPC	Attack	Undead one (level-73)	Attack Undead one	screenshots
+HLT-002	GAME_OBJECT	Cross	Stepping stone	Cross Stepping stone	screenshots
+HLT-003	GAME_OBJECT	Build	Inconspicuous crate (hard)	Build Inconspicuous crate (hard)	screenshots
+HLT-004	GAME_OBJECT	Chop down	Oak tree	Chop Oak	screenshots
+HLT-005	GAME_OBJECT	Chop down	Willow tree	Chop Willow	screenshots
+HLT-006	GAME_OBJECT	Pick-from	Whiteberry bush	Pick Whiteberry bush	screenshots
+HLT-007	GAME_OBJECT	Pick-spine	Cactus	Pick Cactus	screenshots
+HLT-008	GAME_OBJECT	Pick	Limpwurt plant	Pick Limpwurt	screenshots
+HLT-009	GAME_OBJECT	Open	Seed vault	Open Vault	screenshots
+HLT-010	GAME_OBJECT	Pray-at	Altar	Pray Altar	screenshots
+HLT-011	GAME_OBJECT	Enter	Weiss Portal	Enter Weiss Portal	screenshots
+HLT-012	GAME_OBJECT	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	screenshots
+HLT-013	GAME_OBJECT	Chop down	Magic tree	Chop Magic	legacy_fixture
+HLT-014	GAME_OBJECT	Chop down	Tree	Chop Tree	legacy_fixture
+HLT-015	GAME_OBJECT	Climb-up	Ladder	Climb-up Ladder	legacy_fixture
+HLT-016	GAME_OBJECT	Climb-down	Ladder	Climb-down Ladder	legacy_fixture
+HLT-017	GAME_OBJECT	Climb-over	Wall	Climb-over Wall	legacy_fixture
+HLT-018	GAME_OBJECT	Jump-from	Stepping stone	Jump-from Stepping stone	legacy_fixture
+HLT-019	GAME_OBJECT	Open	Gate	Open Gate	legacy_fixture
+HLT-020	GAME_OBJECT	Close	Gate	Close Gate	legacy_fixture
+HLT-021	GAME_OBJECT	Build	Inconspicuous crate (easy)	Build Inconspicuous crate (easy)	legacy_fixture
+HLT-022	GAME_OBJECT	Build	Inconspicuous crate (master)	Build Inconspicuous crate (master)	legacy_fixture
+HLT-023	GAME_OBJECT	Check-health	Fruit tree	Check-health Fruit tree	legacy_fixture
+HLT-024	GAME_OBJECT	Pick	Poison ivy bush	Pick Poison ivy bush	legacy_fixture
+HLT-025	NPC	Attack	Imp (level-2)	Attack Imp	screenshots
+HLT-026	NPC	Attack	Lizardman brute (level-75)	Attack Lizardman brute	screenshots
+HLT-027	NPC	Attack	Undead one (level-61)	Attack Undead one	legacy_fixture
+HLT-028	NPC	Attack	Undead one (level-68)	Attack Undead one	legacy_fixture
+HLT-029	NPC	Attack	Goblin (level-2)	Attack Goblin	legacy_fixture
+HLT-030	NPC	Talk-to	Banker	Talk Banker	legacy_fixture
+HLT-031	NPC	Trade-with	Banker	Trade-with Banker	legacy_fixture
+HLT-032	NPC	Collect	Banker	Collect Banker	legacy_fixture
+HLT-033	NPC	Exchange	Tool Leprechaun	Exchange Leprechaun	screenshots
+HLT-034	NPC	Talk-to	Tool Leprechaun	Talk Tool Leprechaun	legacy_fixture
+HLT-035	NPC	Milk	Dairy cow	Milk Dairy cow	screenshots
+HLT-036	NPC	Feed	Duke Sucellus (level-758)	Feed Duke Sucellus	legacy_fixture
+HLT-037	NPC	Attack	Ram<col=00ff00> (level-2)	Attack Ram<col=00ff00> (level-2)	legacy_fixture
+HLT-038	NPC	Attack	<col=ffff00>Undead one<col=00ff00> (level-73)	Attack <col=ffff00>Undead one	legacy_fixture
+HLT-039	NPC	Attack	<col=ffff00>Undead one</col><col=00ff00> (level-73)</col>	Attack <col=ffff00>Undead one</col>	legacy_fixture
+HLT-040	NPC	Attack	<col=ffff00>Undead one</col> (level-73)	Attack <col=ffff00>Undead one</col>	legacy_fixture
+HLT-041	NPC	Attack	Undead one (level-73) (level-68)	Attack Undead one (level-73) (level-68)	legacy_fixture
+HLT-042	NPC	Attack	<img=1>Undead one (level-73)	Attack <img=1>Undead one (level-73)	legacy_fixture
+HLT-043	NPC	Bank	Banker	Bank Banker	legacy_fixture
+HLT-044	NPC	Assignment	Konar	Assignment Konar	legacy_fixture
+HLT-045	NPC	Pay (north-east)	Marisi	Pay (north-east) Marisi	legacy_fixture
+HLT-046	NPC	Pay (south-west)	Marisi	Pay (south-west) Marisi	legacy_fixture
+HLT-047	INVENTORY_ITEM	Withdraw-1	Shark	Withdraw-1 Shark	legacy_fixture
+HLT-048	INVENTORY_ITEM	Withdraw-All	Shark	Withdraw-All Shark	legacy_fixture
+HLT-049	INVENTORY_ITEM	Withdraw-All-but-one	Shark	Withdraw-All-but-one Shark	legacy_fixture
+HLT-050	INVENTORY_ITEM	Eat	Shark	Eat Shark	legacy_fixture
+HLT-051	INVENTORY_ITEM	Drink	Super restore(4)	Drink Super restore(4)	legacy_fixture
+HLT-052	INVENTORY_ITEM	Teleport	Ring of dueling(8)	Teleport Ring of dueling(8)	legacy_fixture
+HLT-053	INVENTORY_ITEM	Use	Shark	Use Shark	legacy_fixture
+HLT-054	INVENTORY_ITEM	Drop	Tool	Drop Tool	legacy_fixture
+HLT-055	INVENTORY_ITEM	Empty	Potion	Empty Potion	legacy_fixture
+HLT-056	INVENTORY_ITEM	Destroy	Quest item	Destroy Quest item	legacy_fixture
+HLT-057	INVENTORY_ITEM	Use	Tinderbox -> Logs	Use Tinderbox -> Logs	legacy_fixture
+HLT-058	INTERFACE	Cast	High Level Alchemy -> Shark	Cast High Level Alchemy -> Shark	legacy_fixture
+HLT-059	INTERFACE	Select	Portal destination (last)	Select Portal destination (last)	legacy_fixture
+HLT-060	INTERFACE	Toggle	Prayer: Protect from Melee	Toggle Prayer: Protect from Melee	legacy_fixture
+HLT-061	GROUND_ITEM	Take	Coins (1000)	Take Coins (1000)	legacy_fixture
+HLT-062	GROUND_ITEM	Take	Raw shark	Take Raw shark	legacy_fixture
+HLT-063	PLAYER	Attack	Player123 (level-126)	Attack Player123 (level-126)	legacy_fixture
+HLT-064	PLAYER	Trade-with	Player123	Trade-with Player123	legacy_fixture
+HLT-065	OTHER	Walk here		Walk here	legacy_fixture
+HLT-066	OTHER	Cancel		Cancel	legacy_fixture
+HLT-067	OTHER	Climb-down	Ladder	Climb-down Ladder	legacy_fixture
+HLT-068	OTHER	Withdraw-X	Gold ore	Withdraw-X Gold ore	legacy_fixture
+INT006-069	GAME_OBJECT	Climb-up	Ladder	Climb-up Ladder	protected_semantics
+INT006-070	GAME_OBJECT	Climb-down	Ladder	Climb-down Ladder	protected_semantics
+INT006-071	GAME_OBJECT	Climb-over	Stepping stone	Climb-over Stepping stone	protected_semantics
+INT006-072	GAME_OBJECT	Jump-from	Stepping stone	Jump-from Stepping stone	protected_semantics
+INT006-073	GAME_OBJECT	Cross	Stepping stone	Cross Stepping stone	protected_semantics
+INT006-074	GAME_OBJECT	Enter	Stepping stone	Enter Stepping stone	protected_semantics
+INT006-075	GAME_OBJECT	Exit	Stepping stone	Exit Stepping stone	protected_semantics
+INT006-076	GAME_OBJECT	Open	Stepping stone	Open Stepping stone	protected_semantics
+INT006-077	GAME_OBJECT	Close	Stepping stone	Close Stepping stone	protected_semantics
+INT006-078	GAME_OBJECT	Check-health	Fruit tree	Check-health Fruit tree	protected_semantics
+INT006-079	GAME_OBJECT	Pay (north-east)	Marisi	Pay (north-east) Marisi	protected_semantics
+INT006-080	GAME_OBJECT	Pay (south-west)	Marisi	Pay (south-west) Marisi	protected_semantics
+INT006-081	GAME_OBJECT	Last-destination	Portal	Last-destination Portal	protected_semantics
+INT006-082	GAME_OBJECT	Quick-travel	Stepping stone	Quick-travel Stepping stone	protected_semantics
+INT006-083	INVENTORY_ITEM	Withdraw-1	Stepping stone	Withdraw-1 Stepping stone	protected_semantics
+INT006-084	INVENTORY_ITEM	Withdraw-5	Stepping stone	Withdraw-5 Stepping stone	protected_semantics
+INT006-085	INVENTORY_ITEM	Withdraw-All	Stepping stone	Withdraw-All Stepping stone	protected_semantics
+INT006-086	INVENTORY_ITEM	Withdraw-X	Stepping stone	Withdraw-X Stepping stone	protected_semantics
+INT006-087	INVENTORY_ITEM	Withdraw-All-but-one	Shark	Withdraw-All-but-one Shark	protected_semantics
+INT006-088	INVENTORY_ITEM	Deposit-All	Stepping stone	Deposit-All Stepping stone	protected_semantics
+INT006-089	INVENTORY_ITEM	Store-10	Stepping stone	Store-10 Stepping stone	protected_semantics
+INT006-090	INVENTORY_ITEM	Take-1	Stepping stone	Take-1 Stepping stone	protected_semantics
+INT006-091	GAME_OBJECT	Build	Inconspicuous crate (hard)	Build Inconspicuous crate (hard)	protected_semantics
+INT006-092	GAME_OBJECT	Charge	Stepping stone	Charge Stepping stone	protected_semantics
+INT006-093	GAME_OBJECT	Uncharge	Stepping stone	Uncharge Stepping stone	protected_semantics
+INT006-094	GAME_OBJECT	Activate	Stepping stone	Activate Stepping stone	protected_semantics
+INT006-095	GAME_OBJECT	Deactivate	Stepping stone	Deactivate Stepping stone	protected_semantics
+INT006-096	INVENTORY_ITEM	Destroy	Stepping stone	Destroy Stepping stone	protected_semantics
+INT006-097	INVENTORY_ITEM	Empty	Stepping stone	Empty Stepping stone	protected_semantics
+INT006-098	GAME_OBJECT	Inspect	Stepping stone	Inspect Stepping stone	protected_semantics
+INT006-099	GAME_OBJECT	Search	Stepping stone	Search Stepping stone	protected_semantics
+INT006-100	GAME_OBJECT	Check	Stepping stone	Check Stepping stone	protected_semantics
+INT006-101	GAME_OBJECT	Chop down	Fruit tree	Chop down Fruit tree	near_miss
+INT006-102	GAME_OBJECT	Chop-down	Oak tree	Chop-down Oak tree	near_miss
+INT006-103	GAME_OBJECT	Chop down	Mahogany logs	Chop down Mahogany logs	near_miss
+INT006-104	GAME_OBJECT	Chop down	Willow root	Chop down Willow root	near_miss
+INT006-105	GAME_OBJECT	Pray-at	Chaos altar	Pray-at Chaos altar	near_miss
+INT006-106	GAME_OBJECT	Pray-at	Ancient altar	Pray-at Ancient altar	near_miss
+INT006-107	GAME_OBJECT	Pick-from	Herb patch	Pick-from Herb patch	near_miss
+INT006-108	GAME_OBJECT	Pick-from	Berry tree	Pick-from Berry tree	near_miss
+INT006-109	GAME_OBJECT	Pick-spine	Potato cactus	Pick-spine Potato cactus	near_miss
+INT006-110	GAME_OBJECT	Open	Bank vault	Open Bank vault	near_miss
+INT006-111	GAME_OBJECT	Open	Vault door	Open Vault door	near_miss
+INT006-112	GAME_OBJECT	Open	Seed vault (locked)	Open Seed vault (locked)	near_miss
+INT006-113	GAME_OBJECT	Pick	Limpwurt flower	Pick Limpwurt flower	near_miss
+INT006-114	GAME_OBJECT	Pick	Krandorian plant	Pick Krandorian plant	near_miss
+INT006-115	GAME_OBJECT	Build	Inconspicuous crate (master)	Build Inconspicuous crate (master)	near_miss
+INT006-116	GAME_OBJECT	Build	Inconspicuous crate (hard)	Build Inconspicuous crate (hard)	near_miss
+INT006-117	GAME_OBJECT	Cross	Stepping stone	Cross Stepping stone	near_miss
+INT006-118	GAME_OBJECT	Climb-over	Wall	Climb-over Wall	near_miss
+INT006-119	GAME_OBJECT	Enter	Weiss Portal	Enter Weiss Portal	near_miss
+INT006-120	GAME_OBJECT	Pull	Lever (Wilderness)	Pull Lever (Wilderness)	near_miss
+INT006-121	GAME_OBJECT	Drink	Ornate pool (upgraded)	Drink Ornate pool (upgraded)	near_miss
+INT006-122	NPC	Trade-with	Banker	Trade-with Banker	npc_safety
+INT006-123	NPC	Talk-to	Banker (level-99)	Talk Banker	npc_safety
+INT006-124	NPC	Examine	Undead one (level-73)	Examine Undead one	npc_safety
+INT006-125	NPC	Feed	Duke Sucellus (level-758)	Feed Duke Sucellus	npc_safety
+INT006-126	NPC	Attack	Undead one (level-73) (level-90)	Attack Undead one (level-73) (level-90)	npc_safety
+INT006-127	NPC	Attack	<img=1><col=ffff00>Undead one (level-73)</col>	Attack <img=1><col=ffff00>Undead one (level-73)</col>	npc_safety
+INT006-128	NPC	Attack	<col=zzzzzz>Undead one (level-73)</col>	Attack <col=zzzzzz>Undead one (level-73)</col>	npc_safety
+INT006-130	NPC	Attack	(level-73)	Attack (level-73)	npc_safety
+INT006-131	NPC	Attack	<col=ffff00>Undead one<col=00ff00> (level-73)	Attack <col=ffff00>Undead one	markup_safety
+INT006-132	NPC	Attack	<col=ffff00>Undead one (level-73)	Attack <col=ffff00>Undead one	markup_safety
+INT006-133	NPC	Attack	<col=ffff00>Undead one</col> (level-73)	Attack <col=ffff00>Undead one</col>	markup_safety
+INT006-134	NPC	Attack	<col=ffff00>Undead one</col><col=00ff00> (level-73)</col>	Attack <col=ffff00>Undead one</col>	markup_safety
+INT006-135	NPC	Attack	<col=ffff00>Undead one<col=00ff00> (level-73)</col>	Attack <col=ffff00>Undead one	markup_safety
+INT006-136	GAME_OBJECT	Chop down	<col=00ffff>Oak tree	Chop <col=00ffff>Oak	markup_safety
+INT006-137	GAME_OBJECT	Pick-from	<col=00ffff>Whiteberry bush	Pick <col=00ffff>Whiteberry bush	markup_safety
+INT006-138	GAME_OBJECT	Open	<col=00ffff>Seed vault	Open <col=00ffff>Vault	markup_safety
+INT006-139	GAME_OBJECT	Build	<col=00ffff>Inconspicuous crate (hard)	Build <col=00ffff>Inconspicuous crate (hard)	markup_safety
+INT006-140	GAME_OBJECT	Chop down	<img=1>Oak tree	Chop down <img=1>Oak tree	markup_safety
+INT006-141	INVENTORY_ITEM	Attack	Undead one (level-73)	Attack Undead one (level-73)	category_guard
+INT006-142	INVENTORY_ITEM	Chop down	Oak tree	Chop down Oak tree	category_guard
+INT006-143	INVENTORY_ITEM	Pick-from	Whiteberry bush	Pick-from Whiteberry bush	category_guard
+INT006-144	INVENTORY_ITEM	Open	Seed vault	Open Seed vault	category_guard
+INT006-145	INVENTORY_ITEM	Talk-to	Banker	Talk-to Banker	category_guard
+INT006-146	INVENTORY_ITEM	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	category_guard
+INT006-147	GROUND_ITEM	Attack	Undead one (level-73)	Attack Undead one (level-73)	category_guard
+INT006-148	GROUND_ITEM	Chop down	Oak tree	Chop down Oak tree	category_guard
+INT006-149	GROUND_ITEM	Pick-from	Whiteberry bush	Pick-from Whiteberry bush	category_guard
+INT006-150	GROUND_ITEM	Open	Seed vault	Open Seed vault	category_guard
+INT006-151	GROUND_ITEM	Talk-to	Banker	Talk-to Banker	category_guard
+INT006-152	GROUND_ITEM	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	category_guard
+INT006-153	PLAYER	Attack	Undead one (level-73)	Attack Undead one (level-73)	category_guard
+INT006-154	PLAYER	Chop down	Oak tree	Chop down Oak tree	category_guard
+INT006-155	PLAYER	Pick-from	Whiteberry bush	Pick-from Whiteberry bush	category_guard
+INT006-156	PLAYER	Open	Seed vault	Open Seed vault	category_guard
+INT006-157	PLAYER	Talk-to	Banker	Talk-to Banker	category_guard
+INT006-158	PLAYER	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	category_guard
+INT006-159	INTERFACE	Attack	Undead one (level-73)	Attack Undead one (level-73)	category_guard
+INT006-160	INTERFACE	Chop down	Oak tree	Chop down Oak tree	category_guard
+INT006-161	INTERFACE	Pick-from	Whiteberry bush	Pick-from Whiteberry bush	category_guard
+INT006-162	INTERFACE	Open	Seed vault	Open Seed vault	category_guard
+INT006-163	INTERFACE	Talk-to	Banker	Talk-to Banker	category_guard
+INT006-164	INTERFACE	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	category_guard
+INT006-165	OTHER	Attack	Undead one (level-73)	Attack Undead one (level-73)	category_guard
+INT006-166	OTHER	Chop down	Oak tree	Chop down Oak tree	category_guard
+INT006-167	OTHER	Pick-from	Whiteberry bush	Pick-from Whiteberry bush	category_guard
+INT006-168	OTHER	Open	Seed vault	Open Seed vault	category_guard
+INT006-169	OTHER	Talk-to	Banker	Talk-to Banker	category_guard
+INT006-170	OTHER	Drink	Fiery Ornate Pool of Rejuvenation	Drink Fiery Ornate Pool of Rejuvenation	category_guard
+INT006-171	NPC	Attack	Undead one (level-61)	Attack Undead one	npc_level_expansion
+INT006-172	NPC	Attack	Undead one (level-68)	Attack Undead one	npc_level_expansion
+INT006-173	NPC	Attack	Undead one (level-73)	Attack Undead one	npc_level_expansion
+INT006-174	NPC	Attack	Imp (level-2)	Attack Imp	npc_level_expansion
+INT006-175	NPC	Attack	Lizardman brute (level-75)	Attack Lizardman brute	npc_level_expansion
+INT006-176	NPC	Attack	Duke Sucellus (level-758)	Attack Duke Sucellus	npc_level_expansion
+INT006-177	NPC	Attack	Goblin (level-2)	Attack Goblin	npc_level_expansion
+INT006-178	NPC	Attack	Ram (level-2)	Attack Ram	npc_level_expansion
+INT006-179	NPC	Attack	Tormented demon (level-450)	Attack Tormented demon	npc_level_expansion
+INT006-180	GAME_OBJECT	Exchange	Tool Leprechaun	Exchange Tool Leprechaun	owner_screenshot
+INT006-181	NPC	Exchange	Tool Leprechaun	Exchange Leprechaun	owner_screenshot
+INT006-182	NPC	Milk	Dairy cow	Milk Dairy cow	owner_screenshot
+INT006-183	GAME_OBJECT	Pick	Limpwurt plant	Pick Limpwurt	owner_screenshot
+INT006-184	GAME_OBJECT	Pick-spine	Cactus	Pick Cactus	owner_screenshot
+INT006-185	GAME_OBJECT	Open	Seed vault	Open Vault	owner_screenshot
+INT006-186	GAME_OBJECT	Chop down	Oak tree	Chop Oak	owner_screenshot
+INT006-187	GAME_OBJECT	Chop down	Willow tree	Chop Willow	owner_screenshot

@@ -1,0 +1,9 @@
+change,relative_path,reason
+MODIFIED,Project-Burrow/src/main/java/gg/feral/burrow/core/ResearchCombatLoadouts.java,Added 3 provisional loadouts; removed recurring Obor/Bryophyta chest keys; corrected lit lantern ID
+MODIFIED,Project-Burrow/src/main/java/gg/feral/burrow/core/ResearchCombatMethods.java,Updated strategy and key/charge unlock notes
+MODIFIED,Project-Burrow/src/test/java/gg/feral/burrow/core/Wave7BossStyleSelectionTest.java,W07.5 expectations for Scurrius and Giant Mole research gear
+MODIFIED,Project-Burrow/src/test/java/gg/feral/burrow/ui/OutfitterStyleInteractionTest.java,Real style-click expected to show provisional gear and gear tier fallback
+MODIFIED,00-START-BOTH-NO-REPEAT-QA.cmd,Updated label only; runBoth command untouched
+MODIFIED,W07-BOSS-COMBAT-STYLE-COVERAGE.csv,Refreshed source coverage: 3 promoted from strategy-only to proposed gear
+ADDED,Project-Burrow/src/test/java/gg/feral/burrow/core/Wave075ResearchGearTest.java,"Development checks exact IDs, runes, key rules, 11/28 shape and no Bank O preload"
+ADDED,Project-Burrow/src/test/java/gg/feral/burrow/core/Wave075ResearchGearJUnitTest.java,Junit wrapper for Wave 7.5 development checks

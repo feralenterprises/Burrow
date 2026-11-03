@@ -1,0 +1,752 @@
+{
+  "version": "R01",
+  "baseline": "Build 19",
+  "scope": "Outfitter eligible regular repeatable bosses, three owner-designated demi-bosses and Perilous Moons",
+  "bosses": [
+    {
+      "name": "Scurrius",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Scurrius",
+      "alias_of": null
+    },
+    {
+      "name": "Brutus",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Brutus",
+      "alias_of": null
+    },
+    {
+      "name": "Giant Mole",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Giant_Mole",
+      "alias_of": null
+    },
+    {
+      "name": "Sarachnis",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Sarachnis",
+      "alias_of": null
+    },
+    {
+      "name": "Amoxliatl",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Amoxliatl",
+      "alias_of": null
+    },
+    {
+      "name": "The Hueycoatl",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+      "alias_of": null
+    },
+    {
+      "name": "Grotesque Guardians",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Grotesque_Guardians",
+      "alias_of": null
+    },
+    {
+      "name": "Barrows",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Barrows",
+      "alias_of": null
+    },
+    {
+      "name": "Dagannoth Kings",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_Kings",
+      "alias_of": null
+    },
+    {
+      "name": "Zulrah",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Zulrah",
+      "alias_of": null
+    },
+    {
+      "name": "Obor",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Obor",
+      "alias_of": null
+    },
+    {
+      "name": "Bryophyta",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Bryophyta",
+      "alias_of": null
+    },
+    {
+      "name": "Vorkath",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Vorkath",
+      "alias_of": null
+    },
+    {
+      "name": "Phantom Muspah",
+      "group": "Regular bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
+      "alias_of": null
+    },
+    {
+      "name": "King Black Dragon",
+      "group": "Wilderness-access bosses",
+      "existing": "EXISTING",
+      "risk": "WILDERNESS_ACCESS",
+      "best_in_bank_enabled": false,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "Lair outside Wilderness; travel through Wilderness has PK risk. No Best in Bank.",
+      "source_url": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+      "alias_of": null
+    },
+    {
+      "name": "Deranged archaeologist",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Deranged_archaeologist",
+      "alias_of": null
+    },
+    {
+      "name": "Kalphite Queen",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Kalphite_Queen",
+      "alias_of": null
+    },
+    {
+      "name": "Corporeal Beast",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
+      "alias_of": null
+    },
+    {
+      "name": "Gemstone Crab",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Combat-training/world boss, AFK-focused. Verify whether to include as regular training boss; do not present invented loot.",
+      "source_url": "https://oldschool.runescape.wiki/w/Gemstone_Crab",
+      "alias_of": null
+    },
+    {
+      "name": "General Graardor",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/General_Graardor",
+      "alias_of": null
+    },
+    {
+      "name": "Kree'arra",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Kree'arra",
+      "alias_of": null
+    },
+    {
+      "name": "Commander Zilyana",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+      "alias_of": null
+    },
+    {
+      "name": "K'ril Tsutsaroth",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/K'ril_Tsutsaroth",
+      "alias_of": null
+    },
+    {
+      "name": "Nex",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Group-size variability. Separate group-size/method; no universal trip readiness.",
+      "source_url": "https://oldschool.runescape.wiki/w/Nex",
+      "alias_of": null
+    },
+    {
+      "name": "Royal Titans",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Treat Branda + Eldric as linked encounter, not duplicate unrelated bosses.",
+      "source_url": "https://oldschool.runescape.wiki/w/Royal_Titans",
+      "alias_of": null
+    },
+    {
+      "name": "The Nightmare",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Separate from Phosani; distinguish solo/group guidance.",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Nightmare",
+      "alias_of": null
+    },
+    {
+      "name": "Phosani's Nightmare",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Phosani's_Nightmare",
+      "alias_of": null
+    },
+    {
+      "name": "Yama",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Yama",
+      "alias_of": null
+    },
+    {
+      "name": "Doom of Mokhaiotl",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Verify distinct depth/phase difficulties before recommending.",
+      "source_url": "https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl",
+      "alias_of": null
+    },
+    {
+      "name": "Maggot King",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Newer 2026 repeatable solo boss; check post-quest access and hybrid method.",
+      "source_url": "https://oldschool.runescape.wiki/w/Maggot_King",
+      "alias_of": null
+    },
+    {
+      "name": "Mad Angel",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Newer 2026 post-quest repeatable boss; do NOT use quest-only weak version.",
+      "source_url": "https://oldschool.runescape.wiki/w/Mad_Angel",
+      "alias_of": null
+    },
+    {
+      "name": "The Mimic",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Clue-gated sporadic encounter; show access conditions explicitly.",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Mimic",
+      "alias_of": null
+    },
+    {
+      "name": "Hespori",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Repeatable combat fight unlocked through Farming seed/plant; NOT the raid variant.",
+      "source_url": "https://oldschool.runescape.wiki/w/Hespori",
+      "alias_of": null
+    },
+    {
+      "name": "Skotizo",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Skotizo",
+      "alias_of": null
+    },
+    {
+      "name": "The Leviathan",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Leviathan",
+      "alias_of": null
+    },
+    {
+      "name": "The Whisperer",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Whisperer",
+      "alias_of": null
+    },
+    {
+      "name": "Vardorvis",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Vardorvis",
+      "alias_of": null
+    },
+    {
+      "name": "Duke Sucellus",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Duke_Sucellus",
+      "alias_of": null
+    },
+    {
+      "name": "Abyssal Sire",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Abyssal_Sire",
+      "alias_of": null
+    },
+    {
+      "name": "Kraken",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Kraken",
+      "alias_of": null
+    },
+    {
+      "name": "Cerberus",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Cerberus",
+      "alias_of": null
+    },
+    {
+      "name": "Araxxor",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Araxxor",
+      "alias_of": null
+    },
+    {
+      "name": "Thermonuclear smoke devil",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil",
+      "alias_of": null
+    },
+    {
+      "name": "Alchemical Hydra",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Alchemical_Hydra",
+      "alias_of": null
+    },
+    {
+      "name": "Shellbane gryphon",
+      "group": "Regular bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "",
+      "source_url": "https://oldschool.runescape.wiki/w/Shellbane_gryphon",
+      "alias_of": null
+    },
+    {
+      "name": "Eclipse Moon",
+      "group": "Moons of Peril",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "OWNER EXCEPTION: include standalone repeatable Moon fight; melee stab weakness; completion of Perilous Moons quest required; in-dungeon supply crafting distinct from normal bank inventory.",
+      "source_url": "https://oldschool.runescape.wiki/w/Eclipse_Moon",
+      "alias_of": null
+    },
+    {
+      "name": "Blood Moon",
+      "group": "Moons of Peril",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "OWNER EXCEPTION: include standalone repeatable Moon fight; melee slash weakness; completion of Perilous Moons quest required; in-dungeon supply crafting distinct from normal bank inventory.",
+      "source_url": "https://oldschool.runescape.wiki/w/Blood_Moon",
+      "alias_of": null
+    },
+    {
+      "name": "Blue Moon",
+      "group": "Moons of Peril",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "OWNER EXCEPTION: include standalone repeatable Moon fight; melee crush weakness; completion of Perilous Moons quest required; in-dungeon supply crafting distinct from normal bank inventory.",
+      "source_url": "https://oldschool.runescape.wiki/w/Blue_Moon",
+      "alias_of": null
+    },
+    {
+      "name": "Chaos Fanatic",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Chaos_Fanatic",
+      "alias_of": null
+    },
+    {
+      "name": "Crazy archaeologist",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Crazy_archaeologist",
+      "alias_of": null
+    },
+    {
+      "name": "Scorpia",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Scorpia",
+      "alias_of": null
+    },
+    {
+      "name": "Chaos Elemental",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Chaos_Elemental",
+      "alias_of": null
+    },
+    {
+      "name": "Vet'ion",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Vet'ion",
+      "alias_of": null
+    },
+    {
+      "name": "Calvar'ion",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Calvar'ion",
+      "alias_of": null
+    },
+    {
+      "name": "Venenatis",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Venenatis",
+      "alias_of": null
+    },
+    {
+      "name": "Spindel",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Spindel",
+      "alias_of": null
+    },
+    {
+      "name": "Callisto",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Callisto",
+      "alias_of": null
+    },
+    {
+      "name": "Artio",
+      "group": "Wilderness bosses",
+      "existing": "NEW",
+      "risk": "WILDERNESS",
+      "best_in_bank_enabled": false,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "Show persistent PvP/PK risk warning; force Wiki/guide-only; entirely disable Best in Bank and auto-owned optimization. Do not suggest carrying expensive bank-owned items.",
+      "source_url": "https://oldschool.runescape.wiki/w/Artio",
+      "alias_of": null
+    },
+    {
+      "name": "Tormented Demons",
+      "group": "Demi-bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "Preserve existing hybrid switch methods, 28-slot inventory and anti-duplicate loot attribution. Not a regular boss.",
+      "source_url": "https://oldschool.runescape.wiki/w/Tormented_Demons",
+      "alias_of": null
+    },
+    {
+      "name": "Demonic Gorillas",
+      "group": "Demi-bosses",
+      "existing": "EXISTING",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "PRESERVE-AND-REVIEW",
+      "note": "Preserve existing hybrid switch methods, 28-slot inventory and anti-duplicate loot attribution. Not a regular boss.",
+      "source_url": "https://oldschool.runescape.wiki/w/Demonic_Gorillas",
+      "alias_of": null
+    },
+    {
+      "name": "Lizardman Shamans",
+      "group": "Demi-bosses",
+      "existing": "NEW",
+      "risk": "NORMAL",
+      "best_in_bank_enabled": true,
+      "review_status": "NEEDS-WIKI-VALIDATION",
+      "note": "New. Ranged primary, melee optional when verified. Shayzien armour acid protection; Slayer helmet diary exception; area/task-specific versions; Dragon warhammer acquisition; no invented drop rate or completion.",
+      "source_url": "https://oldschool.runescape.wiki/w/Lizardman_Shamans",
+      "alias_of": null
+    }
+  ],
+  "excluded": {
+    "Minigame (owner photo)": [
+      "Crystalline Hunllef",
+      "Corrupted Hunllef",
+      "TzTok-Jad",
+      "TzKal-Zuk",
+      "Sol Heredit"
+    ],
+    "Skilling (owner photo)": [
+      "Tempoross",
+      "Wintertodt",
+      "Zalcano"
+    ],
+    "Raid 1 — Chambers of Xeric": [
+      "Chambers of Xeric",
+      "Tekton",
+      "Vanguard",
+      "Vespula",
+      "Vasa Nistirio",
+      "Muttadile",
+      "Great Olm"
+    ],
+    "Raid 2 — Theatre of Blood": [
+      "Theatre of Blood",
+      "The Maiden of Sugadinti",
+      "Pestilent Bloat",
+      "Nylocas Vasilias",
+      "Sotetseg",
+      "Xarpus",
+      "Verzik Vitur"
+    ],
+    "Raid 3 — Tombs of Amascut": [
+      "Tombs of Amascut",
+      "Akkha",
+      "Ba-Ba",
+      "Kephri",
+      "Zebak",
+      "Tumeken's Warden",
+      "Elidinis' Warden"
+    ],
+    "Raid 4 — The Fractured Archive": [
+      "The Fractured Archive",
+      "Archive Guardian",
+      "Ezekiel",
+      "Bork",
+      "The Smorks",
+      "Moia",
+      "Dreadnoth the Jellied",
+      "Xarth",
+      "Dagon'hai Elder",
+      "Dagon'hai Monk",
+      "Ocellus",
+      "The Blade"
+    ],
+    "Wilderness user exclusion": [
+      "Revenant maledictus"
+    ],
+    "One-off/nonrepeatable quest bosses": [
+      "Galvek",
+      "Elvarg",
+      "Glough",
+      "Lowerniel Drakan (quest-only)"
+    ],
+    "Unreleased concepts": [
+      "Wrathmaw"
+    ]
+  },
+  "notes": [
+    "No Best in Bank for ANY Wilderness boss, including KBD travel access. Preserve as hard backend rule, not only hiding a button.",
+    "Existing quest/raid mentions may remain in Pathfinder for prerequisites; no dedicated Outfitter raid/minigame boss guides.",
+    "This is a research/target allowlist, not validated completed loadouts.",
+    "Boss name aliases and encounter variants must be normalized to avoid duplicates.",
+    "Boss/regular count is not official combat-eligible proof for all entries; every new boss needs own Wiki page validation."
+  ]
+}

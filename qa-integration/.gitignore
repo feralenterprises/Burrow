@@ -1,4 +1,8 @@
-generated/
+generated/*
+!generated/unified-qa-candidate/
+!generated/unified-qa-candidate/**
+generated/unified-qa-candidate/**/build/
+generated/unified-qa-candidate/**/.gradle/
 *.class
 *.log
 .gradle/

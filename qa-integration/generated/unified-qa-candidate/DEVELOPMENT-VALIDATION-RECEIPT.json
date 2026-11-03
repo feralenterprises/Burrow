@@ -1,0 +1,50 @@
+{
+  "wave": "W07_OUTFITTER_REPAIR_AND_MULTI_STYLE",
+  "release": "HOLD_OWNER_WINDOWS_QA",
+  "parent_file": "TPT-INTELLIGENCE-W06-FINAL-CLEAN-DUAL-DEV-OWNER-QA-HOLD.zip",
+  "parent_sha256": "2d65bf89eaa1b4058a3c903c212b1867158ee4d37fc7a828af1b576e63f01c7e",
+  "parent_entry_count": 423,
+  "prior_files_unchanged": 411,
+  "changed_existing_files": [
+    "00-START-BOTH-NO-REPEAT-QA.cmd",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/BestBankPlanner.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/BestBankPreloader.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/ItemVariantPolicy.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/WikiStrategyLoadouts.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/ui/BurrowPanel.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/core/ItemVariantPolicyTest.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/ui/OutfitterStyleInteractionTest.java"
+  ],
+  "added_source_and_test_files": [
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/BankLayoutEligibility.java",
+    "Project-Burrow/src/main/java/gg/feral/burrow/core/StyleMethodPicker.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/core/BankLayoutEligibilityTest.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/core/Wave7BossStyleSelectionTest.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/core/Wave7OutfitterRegressionTest.java",
+    "Project-Burrow/src/test/java/gg/feral/burrow/ui/Wave7ResearchBankGateTest.java"
+  ],
+  "protected_hoverlite_unchanged": true,
+  "runBoth_launcher_preserved": true,
+  "source_coverage": {
+    "boss_style_paths": 91,
+    "catalog_paths": 75,
+    "provisional_paths": 9,
+    "strategy_only_paths": 7
+  },
+  "checks": {
+    "parent_crc": "PASS",
+    "byte_parity_of_unchanged_source": "PASS",
+    "new_style_picker_and_w07_planner_java": "PASS OpenJDK21 javac --release 17",
+    "swing_panel_java": "PASS OpenJDK21 javac --release 17",
+    "Wave7BossStyleSelectionTest": "PASS",
+    "Wave7OutfitterRegressionTest": "PASS",
+    "Wave7ResearchBankGateTest": "PASS",
+    "OutfitterStyleInteractionTest": "PASS 235 assertions",
+    "R07CombatStylesTest": "PASS 197 assertions",
+    "BestBankBatchScan": "PASS 364 synthetic scenarios, 0 errors, 0 geometry defects, 0 simulated absent switches",
+    "full_JDK17_gradle_suite": "NOT_RUN",
+    "windows_runelite_dual_plugin_launch": "NOT_RUN",
+    "owner_gameplay_qa": "NOT_RUN"
+  }
+}

@@ -1,0 +1,92 @@
+boss,style,method,coverage,gear_tier,weapon_item_id,weapon_name,source_url,wilderness_bank_block
+Scurrius,Melee,Standard melee,CATALOG_GEAR,RECOMMENDED,28792,Bone mace,https://oldschool.runescape.wiki/w/Scurrius/Strategies?action=raw&oldid=15385528,false
+Scurrius,Ranged,Ranged ? rat-bone option,RESEARCH_GEAR,RECOMMENDED,28794,Bone shortbow,https://oldschool.runescape.wiki/w/Bone_shortbow,false
+Scurrius,Magic,Magic ? rat-bone option,RESEARCH_GEAR,RECOMMENDED,28796,Bone staff,https://oldschool.runescape.wiki/w/Bone_staff,false
+Brutus,Melee,Standard free-to-play,CATALOG_GEAR,RECOMMENDED,1333,Rune scimitar,https://oldschool.runescape.wiki/w/Brutus/Strategies?action=raw&oldid=15354867,false
+Brutus,Ranged,Ranged (free-to-play),RESEARCH_GEAR,RECOMMENDED,853,Maple shortbow,https://oldschool.runescape.wiki/w/Brutus/Strategies,false
+Brutus,Magic,Magic (free-to-play),RESEARCH_GEAR,RECOMMENDED,1385,Staff of earth,https://oldschool.runescape.wiki/w/Brutus/Strategies,false
+Giant Mole,Melee,Melee and prayer budget,CATALOG_GEAR,RECOMMENDED,28810,Zombie axe,https://oldschool.runescape.wiki/w/Giant_Mole/Strategies?action=raw&oldid=15361945,false
+Giant Mole,Ranged,Ranged ? Bowfa / crossbow,RESEARCH_GEAR,RECOMMENDED,25867,Bow of Faerdhinen (c),https://oldschool.runescape.wiki/w/Giant_Mole/Strategies,false
+Giant Mole,Magic,Earth magic,RESEARCH_GEAR,RECOMMENDED,1385,Staff of earth,https://oldschool.runescape.wiki/w/Giant_Mole/Strategies,false
+Sarachnis,Melee,"Low-level melee, crush with Zamorakian hasta",CATALOG_GEAR,RECOMMENDED,23528,Sarachnis cudgel,https://oldschool.runescape.wiki/w/Sarachnis/Strategies?action=raw&oldid=15384353,false
+Sarachnis,Magic,Magic ? Tumeken shadow,STRATEGY_ONLY,,,,https://oldschool.runescape.wiki/w/Sarachnis/Strategies,false
+Amoxliatl,Melee,"Melee, full Inquisitor with mace",CATALOG_GEAR,RECOMMENDED,28997,Dual macuahuitl,https://oldschool.runescape.wiki/w/Amoxliatl/Strategies?action=raw&oldid=15384597,false
+Hueycoatl,Melee,Body melee plus tail switches,CATALOG_GEAR,RECOMMENDED,28997,Dual macuahuitl,https://oldschool.runescape.wiki/w/The_Hueycoatl/Strategies?action=raw&oldid=15383983,false
+Hueycoatl,Ranged,Body melee plus tail switches,CATALOG_GEAR,RECOMMENDED,28997,Dual macuahuitl,https://oldschool.runescape.wiki/w/The_Hueycoatl/Strategies?action=raw&oldid=15383983,false
+Grotesque Guardians,Melee,Mid-game melee with Eclipse atlatl ranged switch,CATALOG_GEAR,RECOMMENDED,21742,Granite hammer,https://oldschool.runescape.wiki/w/Grotesque_Guardians/Strategies?action=raw&oldid=15383964,false
+Grotesque Guardians,Ranged,Mid-game melee with Eclipse atlatl ranged switch,CATALOG_GEAR,RECOMMENDED,21742,Granite hammer,https://oldschool.runescape.wiki/w/Grotesque_Guardians/Strategies?action=raw&oldid=15383964,false
+Barrows,Melee,"Standard lower-level hybrid, Magic primary",CATALOG_GEAR,RECOMMENDED,1397,Air battlestaff,https://oldschool.runescape.wiki/w/Barrows/Strategies?action=raw&oldid=15384294,false
+Barrows,Magic,"Standard lower-level hybrid, Magic primary",CATALOG_GEAR,RECOMMENDED,1397,Air battlestaff,https://oldschool.runescape.wiki/w/Barrows/Strategies?action=raw&oldid=15384294,false
+Dagannoth Kings,Melee,"Supreme, melee",CATALOG_GEAR,RECOMMENDED,4151,Abyssal whip,https://oldschool.runescape.wiki/w/Dagannoth_Kings/Strategies,false
+Dagannoth Kings,Ranged,"Prime, ranged",CATALOG_GEAR,RECOMMENDED,25867,Bow of Faerdhinen (c),https://oldschool.runescape.wiki/w/Dagannoth_Kings/Strategies,false
+Dagannoth Kings,Magic,Rex safespot with Guthan healing switch,CATALOG_GEAR,RECOMMENDED,12899,Trident of the Swamp,https://oldschool.runescape.wiki/w/Dagannoth_Kings/Strategies?action=raw&oldid=15383969,false
+Zulrah,Ranged,Ranged-only,STRATEGY_ONLY,,,,https://oldschool.runescape.wiki/w/Zulrah/Strategies,false
+Zulrah,Magic,Magic-only Zulrah loadout,CATALOG_GEAR,RECOMMENDED,30634,Twinflame staff,https://oldschool.runescape.wiki/w/Zulrah/Strategies?action=raw&oldid=15384094,false
+Obor,Melee,"Melee, standard",CATALOG_GEAR,RECOMMENDED,4587,Dragon scimitar,https://oldschool.runescape.wiki/w/Obor,false
+Obor,Ranged,Ranged ? free-to-play,RESEARCH_GEAR,RECOMMENDED,853,Maple shortbow,https://oldschool.runescape.wiki/w/Obor,false
+Obor,Magic,Magic ? earth / snare,RESEARCH_GEAR,RECOMMENDED,1385,Staff of earth,https://oldschool.runescape.wiki/w/Obor,false
+Bryophyta,Melee,"Melee, standard",CATALOG_GEAR,RECOMMENDED,4587,Dragon scimitar,https://oldschool.runescape.wiki/w/Bryophyta,false
+Bryophyta,Ranged,Ranged ? free-to-play,RESEARCH_GEAR,RECOMMENDED,853,Maple shortbow,https://oldschool.runescape.wiki/w/Bryophyta,false
+Bryophyta,Magic,Fire magic,RESEARCH_GEAR,RECOMMENDED,1387,Staff of fire,https://oldschool.runescape.wiki/w/Bryophyta,false
+Vorkath,Melee,Melee ? lance / fang,RESEARCH_GEAR,RECOMMENDED,26219,Osmumten's fang,https://oldschool.runescape.wiki/w/Vorkath/Strategies,false
+Vorkath,Ranged,Ranged crossbow,CATALOG_GEAR,RECOMMENDED,21902,Dragon crossbow,https://oldschool.runescape.wiki/w/Vorkath/Strategies?action=raw&oldid=15383963,false
+Phantom Muspah,Melee,Melee ? alternative,STRATEGY_ONLY,,,,https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies,false
+Phantom Muspah,Ranged,"Ranged-only, Twisted bow with Zaryte crossbow shield-phase switch",CATALOG_GEAR,RECOMMENDED,25867,Bow of Faerdhinen (c),https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies?action=raw&oldid=15381056,false
+Phantom Muspah,Magic,Hybrid ? ranged + magic,STRATEGY_ONLY,,,,https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies,false
+Deranged archaeologist,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,22323,Sanguinesti staff,https://oldschool.runescape.wiki/w/Deranged_archaeologist/Strategies (read 2026-11-01),false
+Kalphite Queen,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,24417,Inquisitor's mace,https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies (read 2026-11-01),false
+Kalphite Queen,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,20997,Twisted bow,https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies (read 2026-11-01),false
+Corporeal Beast,Melee,"Wiki ? Melee (solo/duo, stat draining)",CATALOG_GEAR,RECOMMENDED,26219,Osmumten's fang,https://oldschool.runescape.wiki/w/Corporeal_Beast/Strategies (read 2026-11-01),false
+General Graardor,Melee,Wiki ? Melee (solo),CATALOG_GEAR,RECOMMENDED,12006,Abyssal tentacle,https://oldschool.runescape.wiki/w/General_Graardor/Strategies (read 2026-11-01),false
+Kree'arra,Melee,Wiki ? Melee (soulflame horn),CATALOG_GEAR,RECOMMENDED,29796,Noxious halberd,https://oldschool.runescape.wiki/w/Kree%27arra/Strategies (read 2026-11-01),false
+Kree'arra,Ranged,Wiki ? Ranged (chinchompas),CATALOG_GEAR,RECOMMENDED,10034,Red chinchompa,https://oldschool.runescape.wiki/w/Kree%27arra/Strategies (read 2026-11-01),false
+Kree'arra,Magic,Wiki ? Magic (Tumeken's shadow),CATALOG_GEAR,RECOMMENDED,27275,Tumeken's shadow,https://oldschool.runescape.wiki/w/Kree%27arra/Strategies (read 2026-11-01),false
+Commander Zilyana,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,26374,Zaryte crossbow,https://oldschool.runescape.wiki/w/Commander_Zilyana/Strategies (read 2026-11-01),false
+Commander Zilyana,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,27275,Tumeken's shadow,https://oldschool.runescape.wiki/w/Commander_Zilyana/Strategies (read 2026-11-01),false
+K'ril Tsutsaroth,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,25865,Bow of Faerdhinen,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth/Strategies (read 2026-11-01),false
+Nex,Ranged,Wiki ? Ranged (group),CATALOG_GEAR,RECOMMENDED,20997,Twisted bow,https://oldschool.runescape.wiki/w/Nex/Strategies (read 2026-11-01),false
+Royal Titans,Melee,Wiki ? Melee + ranged switch (low level / sustain),CATALOG_GEAR,RECOMMENDED,12006,Abyssal tentacle,https://oldschool.runescape.wiki/w/Royal_Titans/Strategies (read 2026-11-01),false
+Royal Titans,Ranged,Wiki ? Melee + ranged switch (low level / sustain),CATALOG_GEAR,RECOMMENDED,12006,Abyssal tentacle,https://oldschool.runescape.wiki/w/Royal_Titans/Strategies (read 2026-11-01),false
+The Nightmare,Melee,"Wiki ? Melee (crush, group)",CATALOG_GEAR,RECOMMENDED,25484,Soulreaper axe,https://oldschool.runescape.wiki/w/The_Nightmare/Strategies (read 2026-11-01),false
+The Nightmare,Magic,"Wiki ? Melee (crush, group)",CATALOG_GEAR,RECOMMENDED,25484,Soulreaper axe,https://oldschool.runescape.wiki/w/The_Nightmare/Strategies (read 2026-11-01),false
+Phosani's Nightmare,Melee,Wiki ? Melee (crush),CATALOG_GEAR,RECOMMENDED,24417,Inquisitor's mace,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare/Strategies (read 2026-11-01),false
+Yama,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,19675,Arclight,https://oldschool.runescape.wiki/w/Yama/Strategies (read 2026-11-01),false
+Doom of Mokhaiotl,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,29591,Scorching bow,https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl/Strategies (read 2026-11-01),false
+Mad Angel,Melee,Wiki ? Melee (golembane),CATALOG_GEAR,RECOMMENDED,26219,Osmumten's fang,https://oldschool.runescape.wiki/w/Mad_Angel/Strategies (read 2026-11-01),false
+The Mimic,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,22323,Sanguinesti staff,https://oldschool.runescape.wiki/w/The_Mimic/Strategies (read 2026-11-01),false
+Hespori,Melee,Wiki ? Melee (entry level),CATALOG_GEAR,RECOMMENDED,4587,Dragon scimitar,https://oldschool.runescape.wiki/w/Hespori/Strategies (read 2026-11-01),false
+Skotizo,Melee,Wiki ? Melee (demonbane),CATALOG_GEAR,RECOMMENDED,19675,Arclight,https://oldschool.runescape.wiki/w/Skotizo/Strategies (read 2026-11-01),false
+The Leviathan,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,20997,Twisted bow,https://oldschool.runescape.wiki/w/The_Leviathan/Strategies (read 2026-11-01),false
+The Whisperer,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,34725,Zorya's tome,https://oldschool.runescape.wiki/w/The_Whisperer/Strategies (read 2026-11-01),false
+Vardorvis,Melee,Wiki ? Melee (slash),CATALOG_GEAR,RECOMMENDED,23995,Blade of Saeldor,https://oldschool.runescape.wiki/w/Vardorvis/Strategies (read 2026-11-01),false
+Duke Sucellus,Melee,Wiki ? Melee (slash),CATALOG_GEAR,RECOMMENDED,29796,Noxious halberd,https://oldschool.runescape.wiki/w/Duke_Sucellus/Strategies (read 2026-11-01),false
+Abyssal Sire,Melee,"Wiki ? Melee (phase 1, demonbane bow for vents)",CATALOG_GEAR,RECOMMENDED,29591,Scorching bow,https://oldschool.runescape.wiki/w/Abyssal_Sire/Strategies (read 2026-11-01),false
+Kraken,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,12899,Trident of the swamp,https://oldschool.runescape.wiki/w/Kraken/Strategies (read 2026-11-01),false
+Cerberus,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,25484,Soulreaper axe,https://oldschool.runescape.wiki/w/Cerberus/Strategies (read 2026-11-01),false
+Araxxor,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,24417,Inquisitor's mace,https://oldschool.runescape.wiki/w/Araxxor/Strategies (read 2026-11-01),false
+Araxxor,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,20997,Twisted bow,https://oldschool.runescape.wiki/w/Araxxor/Strategies (read 2026-11-01),false
+Thermonuclear smoke devil,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,22323,Sanguinesti staff,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil/Strategies (read 2026-11-01),false
+Alchemical Hydra,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,12926,Toxic blowpipe,https://oldschool.runescape.wiki/w/Alchemical_Hydra/Strategies (read 2026-11-01),false
+Shellbane gryphon,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,4151,Abyssal whip,https://oldschool.runescape.wiki/w/Shellbane_gryphon/Strategies (read 2026-11-01),false
+King Black Dragon,Melee,Melee ? low-risk alternative,RESEARCH_GEAR,RECOMMENDED,26219,Osmumten's fang,https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies,true
+King Black Dragon,Ranged,"Crossbow, standard route",CATALOG_GEAR,RECOMMENDED,9185,Rune crossbow,https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies?action=raw&oldid=15372306,true
+Chaos Fanatic,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,25865,Bow of Faerdhinen,https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies (read 2026-11-01),true
+Crazy archaeologist,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,12899,Trident of the swamp,https://oldschool.runescape.wiki/w/Crazy_archaeologist/Strategies (read 2026-11-01),true
+Scorpia,Magic,Wiki ? Magic,CATALOG_GEAR,RECOMMENDED,22323,Sanguinesti staff,https://oldschool.runescape.wiki/w/Scorpia/Strategies (read 2026-11-01),true
+Chaos Elemental,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,25865,Bow of Faerdhinen,https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies (read 2026-11-01),true
+Vet'ion,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,13263,Abyssal bludgeon,https://oldschool.runescape.wiki/w/Vet%27ion/Strategies (read 2026-11-01),true
+Calvar'ion,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,24417,Inquisitor's mace,https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies (read 2026-11-01),true
+Venenatis,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,25484,Soulreaper axe,https://oldschool.runescape.wiki/w/Venenatis/Strategies (read 2026-11-01),true
+Spindel,Melee,Wiki ? Melee,CATALOG_GEAR,RECOMMENDED,25484,Soulreaper axe,https://oldschool.runescape.wiki/w/Spindel/Strategies (read 2026-11-01),true
+Callisto,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,26374,Zaryte crossbow,https://oldschool.runescape.wiki/w/Callisto/Strategies (read 2026-11-01),true
+Artio,Ranged,Wiki ? Ranged,CATALOG_GEAR,RECOMMENDED,29000,Eclipse atlatl,https://oldschool.runescape.wiki/w/Artio/Strategies (read 2026-11-01),true
+Eclipse Moon,Melee,Wiki ? Melee (stab),CATALOG_GEAR,RECOMMENDED,23995,Blade of Saeldor,https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies (read 2026-11-01),false
+Blood Moon,Melee,Wiki ? Melee (slash),CATALOG_GEAR,RECOMMENDED,23995,Blade of Saeldor,https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies (read 2026-11-01),false
+Blue Moon,Melee,Wiki ? Melee (crush),CATALOG_GEAR,RECOMMENDED,24417,Inquisitor's mace,https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies (read 2026-11-01),false
+Tormented Demons,Melee,Melee + Ranged (Emberlight / Scorching bow),CATALOG_GEAR,RECOMMENDED,29589,Emberlight,https://oldschool.runescape.wiki/w/Tormented_Demon/Strategies,false
+Tormented Demons,Ranged,Ranged + Melee (Scorching bow / Emberlight),CATALOG_GEAR,RECOMMENDED,29591,Scorching bow,https://oldschool.runescape.wiki/w/Tormented_Demon/Strategies,false
+Tormented Demons,Magic,Magic + Melee (Purging staff / Emberlight),CATALOG_GEAR,RECOMMENDED,29594,Purging staff,https://oldschool.runescape.wiki/w/Tormented_Demon/Strategies,false
+Demonic Gorillas,Melee,Melee + Ranged (Emberlight / Scorching bow),CATALOG_GEAR,RECOMMENDED,29589,Emberlight,https://oldschool.runescape.wiki/w/Demonic_gorilla/Strategies,false
+Demonic Gorillas,Ranged,Ranged + Melee (Scorching bow / Emberlight),CATALOG_GEAR,RECOMMENDED,29591,Scorching bow,https://oldschool.runescape.wiki/w/Demonic_gorilla/Strategies,false
+Lizardman Shamans,Melee,Melee ? Shayzien (5) + hasta,CATALOG_GEAR,ENTRY,11889,Zamorakian hasta,https://oldschool.runescape.wiki/w/Lizardman_shaman/Strategies,false
+Lizardman Shamans,Ranged,"Wiki ? Ranged (cannon, Lizardman Canyon)",CATALOG_GEAR,RECOMMENDED,20997,Twisted bow,https://oldschool.runescape.wiki/w/Lizardman_shaman/Strategies (read 2026-11-01),false

@@ -1,0 +1,9 @@
+unified-qa-candidate
+base: pathfinder-w09 (W09-ISOLATED-CANDIDATE-SOURCE-RECONSTRUCTED-NOT-PRODUCTION.zip)
+base-sha256: 3e696901cc14d04a04c58473410f8548fcb47485f63baf596ba41d54e3c3ec13
+host-ancestor: W0751 SHA 79e7d54a78a0bb76b6b3eca0e6804067b02b40a35e88339ee83a20408aa7ef3f
+bank-o-freeze-gate-sha256: dd54167d46032823c45bc4287dfa702a9de0d3bdee84031e5c5813557c8a8cef (byte-identical to B38)
+ui-shell-reference: ui-shell/r10c (approved armored raccoon + 225px four-tab contracts)
+research: R31 immutable in gear-research; R32 staging SHA 36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a
+missing-newer-hosts: TRASHPANDA-R08 / FERAL-DUAL-DEV-R01 / SLAY-R08 not present on GitHub branch
+disposition: QA CANDIDATE ONLY — not Plugin Hub / not main

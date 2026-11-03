@@ -1,0 +1,5 @@
+approved-armored-raccoon.png copied from ui-shell/r10c/assets/approved-armored-raccoon.png
+for QA candidate visual alignment. Rejected chunky raccoon must never be added.
+Sidebar width contract remains BurrowPanel.WIDTH = 225.
+Four root tabs: HOME / PATHFINDER / OUTFITTER / SESSIONS (BurrowModel.View).
+Bank Memory and Guided Capture are subordinate SidebarHost views, not a fifth root tab.

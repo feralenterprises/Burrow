@@ -1,0 +1,585 @@
+# Item name (as transcribed from the OSRS Wiki tables) -> RuneLite 1.13.4 net.runelite.api.ItemID constant value.
+# ANY = the Wiki names a family (e.g. 'Blessed body' = any god d'hide body, 'God blessing' = any god blessing); the Saradomin/Holy item is shown.
+Abyssal bludgeon	13263	ABYSSAL_BLUDGEON	
+Abyssal dagger	13265	ABYSSAL_DAGGER	
+Abyssal tentacle	12006	ABYSSAL_TENTACLE	
+Abyssal whip	4151	ABYSSAL_WHIP	
+Accursed sceptre	27665	ACCURSED_SCEPTRE	
+Adamant bolts	9143	ADAMANT_BOLTS	
+Adamant boots	4129	ADAMANT_BOOTS	
+Adamant full helm	1161	ADAMANT_FULL_HELM	
+Adamant gloves	7459	ADAMANT_GLOVES	
+Adamant kiteshield	1199	ADAMANT_KITESHIELD	
+Adamant platebody	1123	ADAMANT_PLATEBODY	
+Adamant platelegs	1073	ADAMANT_PLATELEGS	
+Ahrim's hood	4708	AHRIMS_HOOD	
+Ahrim's robeskirt	4714	AHRIMS_ROBESKIRT	
+Ahrim's robetop	4712	AHRIMS_ROBETOP	
+Amethyst arrow	21326	AMETHYST_ARROW	
+Amulet of blood fury	24780	AMULET_OF_BLOOD_FURY	
+Amulet of fury	6585	AMULET_OF_FURY	
+Amulet of glory	1704	AMULET_OF_GLORY	
+Amulet of magic	1727	AMULET_OF_MAGIC	
+Amulet of power	1731	AMULET_OF_POWER	
+Amulet of rancour	29801	AMULET_OF_RANCOUR	
+Amulet of strength	1725	AMULET_OF_STRENGTH	
+Amulet of torture	19553	AMULET_OF_TORTURE	
+Ancestral hat	21018	ANCESTRAL_HAT	
+Ancestral robe bottom	21024	ANCESTRAL_ROBE_BOTTOM	
+Ancestral robe top	21021	ANCESTRAL_ROBE_TOP	
+Ancient bracers	12490	ANCIENT_BRACERS	
+Ancient chaps	12494	ANCIENT_CHAPS	
+Ancient d'hide body	12492	ANCIENT_DHIDE_BODY	
+Ancient d'hide boots	19921	ANCIENT_DHIDE_BOOTS	
+Ancient godsword	26233	ANCIENT_GODSWORD	
+Ancient wyvern shield	21633	ANCIENT_WYVERN_SHIELD	
+Anglerfish	13441	ANGLERFISH	
+Anti-venom+(4)	12913	ANTIVENOM4_12913	
+Antidote++(4)	5952	ANTIDOTE4_5952	
+Antipoison(4)	2446	ANTIPOISON4	
+Antler guard	31081	ANTLER_GUARD	
+Aquanite hopper	32879	AQUANITE_HOPPER	
+Aranea boots	29806	ARANEA_BOOTS	
+Araxyte venom sac	29784	ARAXYTE_VENOM_SAC	
+Arcane spirit shield	12825	ARCANE_SPIRIT_SHIELD	
+Archer helm	3749	ARCHER_HELM	
+Archers ring (i)	11771	ARCHERS_RING_I	
+Arclight	19675	ARCLIGHT	
+Ardougne cloak 1	13121	ARDOUGNE_CLOAK_1	
+Ardougne cloak 2	13122	ARDOUGNE_CLOAK_2	
+Ardougne cloak 3	13123	ARDOUGNE_CLOAK_3	
+Ardougne cloak 4	13124	ARDOUGNE_CLOAK_4	
+Arkan blade	30955	ARKAN_BLADE	
+Armadyl brew(4)	31650	ARMADYL_BREW4	
+Armadyl chainskirt	11830	ARMADYL_CHAINSKIRT	
+Armadyl chestplate	11828	ARMADYL_CHESTPLATE	
+Armadyl crossbow	11785	ARMADYL_CROSSBOW	
+Armadyl helmet	11826	ARMADYL_HELMET	
+Atlatl dart	28991	ATLATL_DART	
+Ava's accumulator	10499	AVAS_ACCUMULATOR	
+Ava's assembler	22109	AVAS_ASSEMBLER	
+Ava's attractor	10498	AVAS_ATTRACTOR	
+Avernic defender	22322	AVERNIC_DEFENDER	
+Avernic treads (max)	31097	AVERNIC_TREADS_MAX	
+Bandos chestplate	11832	BANDOS_CHESTPLATE	
+Bandos godsword	11804	BANDOS_GODSWORD	
+Bandos tassets	11834	BANDOS_TASSETS	
+Barrows gloves	7462	BARROWS_GLOVES	
+Beacon ring	11014	BEACON_RING	
+Bearhead	4502	BEARHEAD	
+Bellator ring	25488	BELLATOR_RING	
+Belle's folly	31248	BELLES_FOLLY	
+Berserker helm	3751	BERSERKER_HELM	
+Berserker ring	6737	BERSERKER_RING	
+Berserker ring (i)	11773	BERSERKER_RING_I	
+Black d'hide body	2503	BLACK_DHIDE_BODY	
+Black d'hide chaps	2497	BLACK_DHIDE_CHAPS	
+Black d'hide shield	22284	BLACK_DHIDE_SHIELD	
+Black d'hide vambraces	2491	BLACK_DHIDE_VAMBRACES	
+Black mask	8921	BLACK_MASK	
+Black mask (i)	11784	BLACK_MASK_I	
+Black spiky vambraces	10085	BLACK_SPIKY_VAMBRACES	
+Blackstone fragment	28356	BLACKSTONE_FRAGMENT	
+Blade of Saeldor	23995	BLADE_OF_SAELDOR	
+Blessed body	10386	SARADOMIN_DHIDE_BODY	ANY
+Blessed boots	19933	SARADOMIN_DHIDE_BOOTS	ANY
+Blessed bracers	10384	SARADOMIN_BRACERS	ANY
+Blessed chaps	10388	SARADOMIN_CHAPS	ANY
+Blessed coif	10390	SARADOMIN_COIF	ANY
+Blessed dizana's quiver	28955	BLESSED_DIZANAS_QUIVER	
+Blighted ancient ice sack	24607	BLIGHTED_ANCIENT_ICE_SACK	
+Blighted anglerfish	24592	BLIGHTED_ANGLERFISH	
+Blighted karambwan	24595	BLIGHTED_KARAMBWAN	
+Blighted manta ray	24589	BLIGHTED_MANTA_RAY	
+Blighted super restore(4)	24598	BLIGHTED_SUPER_RESTORE4	
+Blisterwood stake	33716	BLISTERWOOD_STAKE	
+Blood Moon chestplate	29022	BLOOD_MOON_CHESTPLATE	
+Blood Moon helm	29028	BLOOD_MOON_HELM	
+Blood Moon tassets	29025	BLOOD_MOON_TASSETS	
+Blood ancient sceptre	25489	BLOOD_ANCIENT_SCEPTRE	
+Blood moon chestplate	29022	BLOOD_MOON_CHESTPLATE	
+Blood moon helm	29028	BLOOD_MOON_HELM	
+Blood moon tassets	29025	BLOOD_MOON_TASSETS	
+Bloodbark body	25404	BLOODBARK_BODY	
+Bloodbark boots	25410	BLOODBARK_BOOTS	
+Bloodbark helm	25413	BLOODBARK_HELM	
+Bloodbark legs	25416	BLOODBARK_LEGS	
+Blue moon chestplate	29013	BLUE_MOON_CHESTPLATE	
+Blue moon helm	29019	BLUE_MOON_HELM	
+Blue moon tassets	29016	BLUE_MOON_TASSETS	
+Bone dagger	8872	BONE_DAGGER	
+Bonecrusher necklace	22986	BONECRUSHER_NECKLACE	
+Bones to peaches (tablet)	8015	BONES_TO_PEACHES_8015	
+Book of balance	3844	BOOK_OF_BALANCE	
+Book of darkness	12612	BOOK_OF_DARKNESS	
+Book of law	12610	BOOK_OF_LAW	
+Book of the dead	25818	BOOK_OF_THE_DEAD	
+Book of war	12608	BOOK_OF_WAR	
+Boots of brimstone	22951	BOOTS_OF_BRIMSTONE	
+Bow of Faerdhinen	25865	BOW_OF_FAERDHINEN	
+Bracelet of slaughter	21183	BRACELET_OF_SLAUGHTER	
+Brimstone ring	22975	BRIMSTONE_RING	
+Broad bolts	11875	BROAD_BOLTS	
+Broodoo shield	6235	BROODOO_SHIELD	
+Burning claws	29577	BURNING_CLAWS	
+Cape of legends	1052	CAPE_OF_LEGENDS	
+Climbing boots	3105	CLIMBING_BOOTS	
+Colossal blade	27021	COLOSSAL_BLADE	
+Combat bracelet	11126	COMBAT_BRACELET	
+Confliction gauntlets	31106	CONFLICTION_GAUNTLETS	
+Cooked karambwan	3144	COOKED_KARAMBWAN	
+Cooked moonlight antelope	29143	COOKED_MOONLIGHT_ANTELOPE	
+Craw's bow	22550	CRAWS_BOW	
+Crimson kisten	33631	CRIMSON_KISTEN	
+Crystal body	23975	CRYSTAL_BODY	
+Crystal bow	23983	CRYSTAL_BOW	
+Crystal halberd	23987	CRYSTAL_HALBERD	
+Crystal helm	23971	CRYSTAL_HELM	
+Crystal legs	23979	CRYSTAL_LEGS	
+Crystal pickaxe	23680	CRYSTAL_PICKAXE	
+Crystal shield	23991	CRYSTAL_SHIELD	
+Dagon'hai robe bottom	24294	DAGONHAI_ROBE_BOTTOM	
+Dagon'hai robe top	24291	DAGONHAI_ROBE_TOP	
+Dark totem	19685	DARK_TOTEM	
+Defence cape	9753	DEFENCE_CAPE	
+Devout boots	22954	DEVOUT_BOOTS	
+Diamond ascension bolts (e)	34696	DIAMOND_ASCENSION_BOLTS_E	
+Diamond bolts (e)	9243	DIAMOND_BOLTS_E	
+Diamond dragon bolts (e)	21946	DIAMOND_DRAGON_BOLTS_E	
+Digsite pendant (5)	11194	DIGSITE_PENDANT_5	
+Dinh's bulwark	21015	DINHS_BULWARK	
+Divine bastion potion(4)	24635	DIVINE_BASTION_POTION4	
+Divine ranging potion(4)	23733	DIVINE_RANGING_POTION4	
+Divine rune pouch	27281	DIVINE_RUNE_POUCH	
+Divine super combat potion(4)	23685	DIVINE_SUPER_COMBAT_POTION4	
+Dizana's quiver	28951	DIZANAS_QUIVER	
+Dragon 2h sword	7158	DRAGON_2H_SWORD	
+Dragon arrow	11212	DRAGON_ARROW	
+Dragon boots	11840	DRAGON_BOOTS	
+Dragon claws	13652	DRAGON_CLAWS	
+Dragon crossbow	21902	DRAGON_CROSSBOW	
+Dragon dagger	1215	DRAGON_DAGGER	
+Dragon dagger(p++)	5698	DRAGON_DAGGERP_5698	
+Dragon defender	12954	DRAGON_DEFENDER	
+Dragon gloves	7461	DRAGON_GLOVES	
+Dragon hunter crossbow	21012	DRAGON_HUNTER_CROSSBOW	
+Dragon knife	22804	DRAGON_KNIFE	
+Dragon mace	1434	DRAGON_MACE	
+Dragon scimitar	4587	DRAGON_SCIMITAR	
+Dragon sword	21009	DRAGON_SWORD	
+Dragon thrownaxe	20849	DRAGON_THROWNAXE	
+Dragon warhammer	13576	DRAGON_WARHAMMER	
+Dragonbone necklace	22111	DRAGONBONE_NECKLACE	
+Dragonfire shield	11283	DRAGONFIRE_SHIELD	
+Dragonfire ward	22002	DRAGONFIRE_WARD	
+Dual macuahuitl	28997	DUAL_MACUAHUITL	
+Dwarven helmet	11200	DWARVEN_HELMET	
+Echo boots	28945	ECHO_BOOTS	
+Eclipse atlatl	29000	ECLIPSE_ATLATL	
+Eclipse moon chestplate	29004	ECLIPSE_MOON_CHESTPLATE	
+Eclipse moon helm	29010	ECLIPSE_MOON_HELM	
+Eclipse moon tassets	29007	ECLIPSE_MOON_TASSETS	
+Ecumenical key	11942	ECUMENICAL_KEY	
+Elder maul	21003	ELDER_MAUL	
+Eldritch nightmare staff	24425	ELDRITCH_NIGHTMARE_STAFF	
+Elemental amulet	34428	ELEMENTAL_AMULET	
+Elemental amulet (a)	34428	ELEMENTAL_AMULET	
+Elidinis' ward	25985	ELIDINIS_WARD	
+Elidinis' ward (f)	27251	ELIDINIS_WARD_F	
+Elite black platebody	29562	ELITE_BLACK_PLATEBODY	
+Elite black platelegs	29564	ELITE_BLACK_PLATELEGS	
+Elite void robe	13073	ELITE_VOID_ROBE	
+Elite void top	13072	ELITE_VOID_TOP	
+Elven gloves	24006	ELVEN_GLOVES	
+Elysian spirit shield	12817	ELYSIAN_SPIRIT_SHIELD	
+Emberlight	29589	EMBERLIGHT	
+Eternal boots	13235	ETERNAL_BOOTS	
+Explorer's ring 3	13127	EXPLORERS_RING_3	
+Explorer's ring 4	13128	EXPLORERS_RING_4	
+Extended anti-venom+(4)	29824	EXTENDED_ANTIVENOM4	
+Extended stamina potion(4)	31638	EXTENDED_STAMINA_POTION4	
+Eye of Ayak	31113	EYE_OF_AYAK	
+Eye of ayak	31113	EYE_OF_AYAK	
+Facemask	4164	FACEMASK	
+Falador shield 4	13120	FALADOR_SHIELD_4	
+Farseer helm	3755	FARSEER_HELM	
+Ferocious gloves	22981	FEROCIOUS_GLOVES	
+Fighter torso	10551	FIGHTER_TORSO	
+Fire cape	6570	FIRE_CAPE	
+Fishing explosive	6660	FISHING_EXPLOSIVE	
+Fremennik hat	3797	FREMENNIK_HAT	
+Fremennik sea boots 4	13132	FREMENNIK_SEA_BOOTS_4	
+Games necklace(8)	3853	GAMES_NECKLACE8	
+Ghommal's hilt 1	25926	GHOMMALS_HILT_1	
+Ghorrock teleport	12778	GHORROCK_TELEPORT	
+Ghostly boots	6106	GHOSTLY_BOOTS	
+Ghrazi rapier	22324	GHRAZI_RAPIER	
+Giant krill	32312	GIANT_KRILL	
+Glacial temotli	29889	GLACIAL_TEMOTLI	
+God blessing	20220	HOLY_BLESSING	ANY
+Gold helmet	4567	GOLD_HELMET	
+Granite body	10564	GRANITE_BODY	
+Granite boots	21643	GRANITE_BOOTS	
+Granite gloves	21736	GRANITE_GLOVES	
+Granite hammer	21742	GRANITE_HAMMER	
+Granite helm	10589	GRANITE_HELM	
+Granite legs	6809	GRANITE_LEGS	
+Granite maul	4153	GRANITE_MAUL	
+Granite ring (i)	21752	GRANITE_RING_I	
+Granite shield	3122	GRANITE_SHIELD	
+Green d'hide shield	22275	GREEN_DHIDE_SHIELD	
+Guardian boots	21733	GUARDIAN_BOOTS	
+Guthan's helm	4724	GUTHANS_HELM	
+Hallowfell	34027	HALLOWFELL	
+Harmonised nightmare staff	24423	HARMONISED_NIGHTMARE_STAFF	
+Helm of Neitiznot	10828	HELM_OF_NEITIZNOT	
+Helm of neitiznot	10828	HELM_OF_NEITIZNOT	
+Hespori seed	22875	HESPORI_SEED	
+Hitpoints cape	9768	HITPOINTS_CAPE	
+Hitpoints cape(t)	9769	HITPOINTS_CAPET	
+Holy sandals	12598	HOLY_SANDALS	
+Holy symbol	1718	HOLY_SYMBOL	
+Holy wraps	19997	HOLY_WRAPS	
+Holy wrench	6714	HOLY_WRENCH	
+Honourable blessing	20229	HONOURABLE_BLESSING	
+Hueycoatl hide body	30076	HUEYCOATL_HIDE_BODY	
+Hueycoatl hide chaps	30079	HUEYCOATL_HIDE_CHAPS	
+Hueycoatl hide coif	30073	HUEYCOATL_HIDE_COIF	
+Hueycoatl hide vambraces	30082	HUEYCOATL_HIDE_VAMBRACES	
+Hunters' sunlight crossbow	28869	HUNTERS_SUNLIGHT_CROSSBOW	
+Iban's staff	1409	IBANS_STAFF	
+Iban's staff (u)	12658	IBANS_STAFF_U	
+Ice ancient sceptre	25490	ICE_ANCIENT_SCEPTRE	
+Imbued heart	20724	IMBUED_HEART	
+Imbued saradomin cape	21791	IMBUED_SARADOMIN_CAPE	
+Imbued zamorak cape	21795	IMBUED_ZAMORAK_CAPE	
+Infernal cape	21295	INFERNAL_CAPE	
+Infinity boots	6920	INFINITY_BOOTS	
+Infinity bottoms	6924	INFINITY_BOTTOMS	
+Infinity gloves	6922	INFINITY_GLOVES	
+Infinity hat	6918	INFINITY_HAT	
+Infinity top	6916	INFINITY_TOP	
+Inquisitor's great helm	24419	INQUISITORS_GREAT_HELM	
+Inquisitor's hauberk	24420	INQUISITORS_HAUBERK	
+Inquisitor's mace	24417	INQUISITORS_MACE	
+Inquisitor's plateskirt	24421	INQUISITORS_PLATESKIRT	
+Justiciar chestguard	22327	JUSTICIAR_CHESTGUARD	
+Justiciar faceguard	22326	JUSTICIAR_FACEGUARD	
+Justiciar legguards	22328	JUSTICIAR_LEGGUARDS	
+Karil's coif	4732	KARILS_COIF	
+Karil's leatherskirt	4738	KARILS_LEATHERSKIRT	
+Karil's leathertop	4736	KARILS_LEATHERTOP	
+Keris partisan	25979	KERIS_PARTISAN	
+Keris partisan of breaching	25981	KERIS_PARTISAN_OF_BREACHING	
+Knife	946	KNIFE	
+Kodai wand	21006	KODAI_WAND	
+Leaf-bladed battleaxe	20727	LEAFBLADED_BATTLEAXE	
+Lightbearer	25975	LIGHTBEARER	
+Lobster	379	LOBSTER	
+Lockpick	1523	LOCKPICK	
+Looting bag	11941	LOOTING_BAG	
+Lunar ring	9104	LUNAR_RING	
+Mage's book	6889	MAGES_BOOK	
+Magic shortbow (i)	12788	MAGIC_SHORTBOW_I	
+Magus ring	25486	MAGUS_RING	
+Malediction ward	11924	MALEDICTION_WARD	
+Manta ray	391	MANTA_RAY	
+Marlin	32352	MARLIN	
+Masori body	27229	MASORI_BODY	
+Masori body (f)	27238	MASORI_BODY_F	
+Masori chaps	27232	MASORI_CHAPS	
+Masori chaps (f)	27241	MASORI_CHAPS_F	
+Masori mask	27226	MASORI_MASK	
+Masori mask (f)	27235	MASORI_MASK_F	
+Max cape	13280	MAX_CAPE	
+Menaphite remedy(4)	27202	MENAPHITE_REMEDY4	
+Mitre	10452	SARADOMIN_MITRE	ANY
+Mixed hide boots	29286	MIXED_HIDE_BOOTS	
+Mixed hide cape	29289	MIXED_HIDE_CAPE	
+Mixed hide top	29280	MIXED_HIDE_TOP	
+Monk's robe	542	MONKS_ROBE	
+Monk's robe top	544	MONKS_ROBE_TOP	
+Moonclan boots	9073	MOONCLAN_BOOTS	
+Moonlight antler bolts	28878	MOONLIGHT_ANTLER_BOLTS	
+Mystic boots	4097	MYSTIC_BOOTS	
+Mystic hat	4089	MYSTIC_HAT	
+Mystic robe bottom	4093	MYSTIC_ROBE_BOTTOM	
+Mystic robe top	4091	MYSTIC_ROBE_TOP	
+Mystic smoke staff	12000	MYSTIC_SMOKE_STAFF	
+Mythical cape	21913	MYTHICAL_CAPE	
+Necklace of anguish	19547	NECKLACE_OF_ANGUISH	
+Necklace of fangs	34401	NECKLACE_OF_FANGS	
+Necklace of rupture	33639	NECKLACE_OF_RUPTURE	
+Neitiznot faceguard	24271	NEITIZNOT_FACEGUARD	
+Nightmare staff	24422	NIGHTMARE_STAFF	
+Noxious halberd	29796	NOXIOUS_HALBERD	
+Oathplate chest	30753	OATHPLATE_CHEST	
+Oathplate helm	30750	OATHPLATE_HELM	
+Oathplate legs	30756	OATHPLATE_LEGS	
+Obligator	34715	OBLIGATOR	
+Obsidian cape	6568	OBSIDIAN_CAPE	
+Obsidian helmet	21298	OBSIDIAN_HELMET	
+Obsidian platebody	21301	OBSIDIAN_PLATEBODY	
+Obsidian platelegs	21304	OBSIDIAN_PLATELEGS	
+Occult necklace	12002	OCCULT_NECKLACE	
+Odium ward	11926	ODIUM_WARD	
+Osmumten's fang	26219	OSMUMTENS_FANG	
+Pegasian boots	13237	PEGASIAN_BOOTS	
+Phoenix necklace	11090	PHOENIX_NECKLACE	
+Prayer potion(4)	2434	PRAYER_POTION4	
+Prayer regeneration potion(4)	30125	PRAYER_REGENERATION_POTION4	
+Primordial boots	13239	PRIMORDIAL_BOOTS	
+Proselyte cuisse	9676	PROSELYTE_CUISSE	
+Proselyte hauberk	9674	PROSELYTE_HAUBERK	
+Proselyte sallet	9672	PROSELYTE_SALLET	
+Proselyte tasset	9678	PROSELYTE_TASSET	
+Rada's blessing 3	22945	RADAS_BLESSING_3	
+Rada's blessing 4	22947	RADAS_BLESSING_4	
+Rake	5341	RAKE	
+Ranger boots	2577	RANGER_BOOTS	
+Ranging cape	9756	RANGING_CAPE	
+Ranging cape(t)	9757	RANGING_CAPET	
+Ranging potion(4)	2444	RANGING_POTION4	
+Red d'hide body	2501	RED_DHIDE_BODY	
+Red d'hide chaps	2495	RED_DHIDE_CHAPS	
+Red d'hide vambraces	2489	RED_DHIDE_VAMBRACES	
+Regen bracelet	11133	REGEN_BRACELET	
+Ring of dueling(8)	2552	RING_OF_DUELING8	
+Ring of life	2570	RING_OF_LIFE	
+Ring of recoil	2550	RING_OF_RECOIL	
+Ring of shadows	28327	RING_OF_SHADOWS	
+Ring of suffering (i)	19710	RING_OF_SUFFERING_I	
+Ring of suffering (ri)	20657	RING_OF_SUFFERING_RI	
+Ring of the gods (i)	13202	RING_OF_THE_GODS_I	
+Ring of wealth (i)	12785	RING_OF_WEALTH_I	
+Rock-shell gloves	6151	ROCKSHELL_GLOVES	
+Rondache	34719	RONDACHE	
+Rosewood blowpipe	31583	ROSEWOOD_BLOWPIPE	
+Royal seed pod	19564	ROYAL_SEED_POD	
+Ruby bolts (e)	9242	RUBY_BOLTS_E	
+Ruby dragon bolts (e)	21944	RUBY_DRAGON_BOLTS_E	
+Rune arrow	892	RUNE_ARROW	
+Rune axe	1359	RUNE_AXE	
+Rune boots	4131	RUNE_BOOTS	
+Rune crossbow	9185	RUNE_CROSSBOW	
+Rune defender	8850	RUNE_DEFENDER	
+Rune gloves	7460	RUNE_GLOVES	
+Rune pouch	12791	RUNE_POUCH	
+Salve amulet	4081	SALVE_AMULET	
+Salve amulet(e)	10588	SALVE_AMULET_E	
+Sanfew serum(4)	10925	SANFEW_SERUM4	
+Sanguinesti staff	22323	SANGUINESTI_STAFF	
+Sarachnis cudgel	23528	SARACHNIS_CUDGEL	
+Saradomin brew(4)	6685	SARADOMIN_BREW4	
+Saradomin cape	2412	SARADOMIN_CAPE	
+Saradomin godsword	11806	SARADOMIN_GODSWORD	
+Saradomin's blessed sword	12809	SARADOMINS_BLESSED_SWORD	
+Saturated heart	27641	SATURATED_HEART	
+Scorching bow	29591	SCORCHING_BOW	
+Scythe of Vitur	22325	SCYTHE_OF_VITUR	
+Seed dibber	5343	SEED_DIBBER	
+Seeking amethyst arrow	33589	SEEKING_AMETHYST_ARROW	
+Seeking dragon arrow	33595	SEEKING_DRAGON_ARROW	
+Seercull	6724	SEERCULL	
+Seers ring (i)	11770	SEERS_RING_I	
+Serpentine helm	12931	SERPENTINE_HELM	
+Shark	385	SHARK	
+Shayzien boots (5)	13378	SHAYZIEN_BOOTS_5	
+Slayer helmet (i)	11865	SLAYER_HELMET_I	
+Slayer's staff	4170	SLAYERS_STAFF	
+Snakeskin bandana	6326	SNAKESKIN_BANDANA	
+Snakeskin boots	6328	SNAKESKIN_BOOTS	
+Soul cape	25344	SOUL_CAPE	
+Soulreaper axe	25484	SOULREAPER_AXE	
+Spade	952	SPADE	
+Spectral spirit shield	12821	SPECTRAL_SPIRIT_SHIELD	
+Spider cave teleport	29782	SPIDER_CAVE_TELEPORT	
+Spiked manacles	23389	SPIKED_MANACLES	
+Spiky vambraces	10077	SPIKY_VAMBRACES	
+Splitbark boots	3393	SPLITBARK_BOOTS	
+Staff of the dead	11791	STAFF_OF_THE_DEAD	
+Stamina potion(4)	12625	STAMINA_POTION4	
+Steel ring	30895	STEEL_RING	
+Summer pie	7218	SUMMER_PIE	
+Sunfire fanatic cuirass	28936	SUNFIRE_FANATIC_CUIRASS	
+Super attack(4)	2436	SUPER_ATTACK4	
+Super combat potion(4)	12695	SUPER_COMBAT_POTION4	
+Super restore(4)	3024	SUPER_RESTORE4	
+Super strength(4)	2440	SUPER_STRENGTH4	
+Surge potion(4)	30875	SURGE_POTION4	
+Teleport to house (tablet)	8013	TELEPORT_TO_HOUSE	
+Thammaron's sceptre	22555	THAMMARONS_SCEPTRE	
+Toktz-ket-xil	6524	TOKTZKETXIL	
+Tome of earth	30064	TOME_OF_EARTH	
+Tome of fire	20714	TOME_OF_FIRE	
+Tonalztics of ralos	28922	TONALZTICS_OF_RALOS	
+Tormented bracelet	19544	TORMENTED_BRACELET	
+Tortugan shield	31398	TORTUGAN_SHIELD	
+Torva full helm	26382	TORVA_FULL_HELM	
+Torva platebody	26384	TORVA_PLATEBODY	
+Torva platelegs	26386	TORVA_PLATELEGS	
+Toxic blowpipe	12926	TOXIC_BLOWPIPE	
+Trident of the seas	11907	TRIDENT_OF_THE_SEAS	
+Trident of the swamp	12899	TRIDENT_OF_THE_SWAMP	
+Trollheim teleport	11747	TROLLHEIM_TELEPORT	
+Tumeken's shadow	27275	TUMEKENS_SHADOW	
+Twinflame staff	30634	TWINFLAME_STAFF	
+Twisted bow	20997	TWISTED_BOW	
+Twisted buckler	21000	TWISTED_BUCKLER	
+Tyrannical ring (i)	12691	TYRANNICAL_RING_I	
+Ultor ring	25485	ULTOR_RING	
+Unholy blessing	20223	UNHOLY_BLESSING	
+Unholy book	3842	UNHOLY_BOOK	
+Unholy symbol	1724	UNHOLY_SYMBOL	
+Ursine chainmace	27660	URSINE_CHAINMACE	
+Ursine chainmace (u)	27657	URSINE_CHAINMACE_U	
+Venator bow	27610	VENATOR_BOW	
+Venator ring	25487	VENATOR_RING	
+Verac's helm	4753	VERACS_HELM	
+Vestment cloak	4041	SARADOMIN_CLOAK	ANY
+Vestment robe legs	10464	SARADOMIN_ROBE_LEGS	ANY
+Vestment robe top	10458	SARADOMIN_ROBE_TOP	ANY
+Viggora's chainmace	22545	VIGGORAS_CHAINMACE	
+Virtus mask	26241	VIRTUS_MASK	
+Virtus robe bottom	26245	VIRTUS_ROBE_BOTTOM	
+Virtus robe top	26243	VIRTUS_ROBE_TOP	
+Void knight gloves	8842	VOID_KNIGHT_GLOVES	
+Void knight robe	8840	VOID_KNIGHT_ROBE	
+Void knight top	8839	VOID_KNIGHT_TOP	
+Void mage helm	11663	VOID_MAGE_HELM	
+Void melee helm	11665	VOID_MELEE_HELM	
+Void ranger helm	11664	VOID_RANGER_HELM	
+Voidwaker	27690	VOIDWAKER	
+Volatile nightmare staff	24424	VOLATILE_NIGHTMARE_STAFF	
+War blessing	20232	WAR_BLESSING	
+Warped sceptre	28585	WARPED_SCEPTRE	
+Warrior ring (i)	11772	WARRIOR_RING_I	
+Watson teleport	23387	WATSON_TELEPORT	
+Webweaver bow	27655	WEBWEAVER_BOW	
+Wilderness sword 4	13111	WILDERNESS_SWORD_4	
+Wizard boots	2579	WIZARD_BOOTS	
+Xerician hat	13385	XERICIAN_HAT	
+Xerician robe	13389	XERICIAN_ROBE	
+Xerician top	13387	XERICIAN_TOP	
+Zamorak bracers	10368	ZAMORAK_BRACERS	
+Zamorak monk bottom	1033	ZAMORAK_MONK_BOTTOM	
+Zamorak monk top	1035	ZAMORAK_MONK_TOP	
+Zamorakian hasta	11889	ZAMORAKIAN_HASTA	
+Zamorakian spear	11824	ZAMORAKIAN_SPEAR	
+Zaryte crossbow	26374	ZARYTE_CROSSBOW	
+Zaryte vambraces	26235	ZARYTE_VAMBRACES	
+Zealot's robe bottom	25436	ZEALOTS_ROBE_BOTTOM	
+Zealot's robe top	25434	ZEALOTS_ROBE_TOP	
+Zombie axe	28810	ZOMBIE_AXE	
+Zombie helmet	30321	ZOMBIE_HELMET	
+Zorya's tome	34725	ZORYAS_TOME	
+Ascension crossbows	34681	ASCENSION_CROSSBOWS	
+Saradomin d'hide body	10386	SARADOMIN_DHIDE_BODY	
+Saradomin chaps	10388	SARADOMIN_CHAPS	
+Saradomin bracers	10384	SARADOMIN_BRACERS	
+Saradomin coif	10390	SARADOMIN_COIF	
+Saradomin d'hide boots	19933	SARADOMIN_DHIDE_BOOTS	
+Sunlight antler bolts	28872	SUNLIGHT_ANTLER_BOLTS	
+Zamorak d'hide body	10370	ZAMORAK_DHIDE_BODY	
+Zamorak chaps	10372	ZAMORAK_CHAPS	
+Zamorak d'hide boots	19936	ZAMORAK_DHIDE_BOOTS	
+Ring of endurance	24736	RING_OF_ENDURANCE	
+Karil's crossbow	4734	KARILS_CROSSBOW	
+Bolt rack	4740	BOLT_RACK	
+Shayzien helm (5)	13379	SHAYZIEN_HELM_5	
+Shayzien body (5)	13381	SHAYZIEN_BODY_5	
+Shayzien greaves (5)	13380	SHAYZIEN_GREAVES_5	
+Shayzien gloves (5)	13377	SHAYZIEN_GLOVES_5	
+Shayzien boots (5)	13378	SHAYZIEN_BOOTS_5	
+Xeric's talisman	13393	XERICS_TALISMAN	
+Herb sack	13226	HERB_SACK	
+Steel cannonball	2	STEEL_CANNONBALL	
+Cannon base	6	CANNON_BASE	
+Cannon stand	8	CANNON_STAND	
+Cannon furnace	12	CANNON_FURNACE	
+Cannon barrels	10	CANNON_BARRELS	
+Rune full helm	1163	RUNE_FULL_HELM	
+Mithril full helm	1159	MITHRIL_FULL_HELM	
+Steel full helm	1157	STEEL_FULL_HELM	
+Amulet of accuracy	1478	AMULET_OF_ACCURACY	
+Red cape	1007	RED_CAPE	
+Rune chainbody	1113	RUNE_CHAINBODY	
+Adamant chainbody	1111	ADAMANT_CHAINBODY	
+Mithril chainbody	1109	MITHRIL_CHAINBODY	
+Steel chainbody	1105	STEEL_CHAINBODY	
+Rune plateskirt	1093	RUNE_PLATESKIRT	
+Adamant plateskirt	1091	ADAMANT_PLATESKIRT	
+Mithril plateskirt	1085	MITHRIL_PLATESKIRT	
+Steel plateskirt	1083	STEEL_PLATESKIRT	
+Rune scimitar	1333	RUNE_SCIMITAR	
+Barronite mace	25641	BARRONITE_MACE	
+Adamant scimitar	1331	ADAMANT_SCIMITAR	
+Mithril scimitar	1329	MITHRIL_SCIMITAR	
+Steel scimitar	1325	STEEL_SCIMITAR	
+Mooleta	33101	MOOLETA	
+Rune kiteshield	1201	RUNE_KITESHIELD	
+Mithril kiteshield	1197	MITHRIL_KITESHIELD	
+Steel kiteshield	1193	STEEL_KITESHIELD	
+Gilded d'hide vambraces	23261	GILDED_DHIDE_VAMBRACES	
+Leather gloves	1059	LEATHER_GLOVES	
+Leather vambraces	1063	LEATHER_VAMBRACES	
+Fancy boots	9005	FANCY_BOOTS	
+Fighting boots	9006	FIGHTING_BOOTS	
+Fancier boots	28672	FANCIER_BOOTS	
+Leather cowl	1167	LEATHER_COWL	
+Green d'hide body	1135	GREEN_DHIDE_BODY	
+Studded body	1133	STUDDED_BODY	
+Hardleather body	1131	HARDLEATHER_BODY	
+Green d'hide chaps	1099	GREEN_DHIDE_CHAPS	
+Studded chaps	1097	STUDDED_CHAPS	
+Leather chaps	1095	LEATHER_CHAPS	
+Maple shortbow	853	MAPLE_SHORTBOW	
+Willow shortbow	849	WILLOW_SHORTBOW	
+Oak shortbow	843	OAK_SHORTBOW	
+Adamant arrow	890	ADAMANT_ARROW	
+Mithril arrow	888	MITHRIL_ARROW	
+Steel arrow	886	STEEL_ARROW	
+Green d'hide vambraces	1065	GREEN_DHIDE_VAMBRACES	
+Leather boots	1061	LEATHER_BOOTS	
+Blue wizard hat	579	BLUE_WIZARD_HAT	
+Blue wizard robe	577	BLUE_WIZARD_ROBE	
+Black robe	581	BLACK_ROBE	
+Staff of earth	1385	STAFF_OF_EARTH	
+Staff of air	1381	STAFF_OF_AIR	
+Cowbell amulet	33103	COWBELL_AMULET	
+Tinderbox	590	TINDERBOX	
+Trout	333	TROUT	
+Strength potion(4)	113	STRENGTH_POTION4	
+Air rune	556	AIR_RUNE	
+Chaos rune	562	CHAOS_RUNE	
+Mind rune	558	MIND_RUNE	
+Earth rune	557	EARTH_RUNE	
+Coif	1169	COIF	
+Leather body	1129	LEATHER_BODY	
+Avernic treads (pr)	31091	AVERNIC_TREADS_PR	
+Barrelchest anchor	10887	BARRELCHEST_ANCHOR	
+Blessed spirit shield	12831	BLESSED_SPIRIT_SHIELD	
+Dharok's greataxe	4718	DHAROKS_GREATAXE	
+Dharok's platebody	4720	DHAROKS_PLATEBODY	
+Dragon chainbody	2513	DRAGON_CHAINBODY	
+Dragon hasta	22731	DRAGON_HASTA	
+Dragon platelegs	4087	DRAGON_PLATELEGS	
+Dragon sq shield	1187	DRAGON_SQ_SHIELD	
+Guthan's platebody	4728	GUTHANS_PLATEBODY	
+Rada's blessing 2	22943	RADAS_BLESSING_2	
+Sulphur blades	29084	SULPHUR_BLADES	
+Torag's hammers	4747	TORAGS_HAMMERS	
+Torag's platebody	4749	TORAGS_PLATEBODY	
+Verac's brassard	4757	VERACS_BRASSARD	
+Armadyl bracers	12506	ARMADYL_BRACERS	
+Armadyl chaps	12510	ARMADYL_CHAPS	
+Armadyl d'hide body	12508	ARMADYL_DHIDE_BODY	
+Armadyl d'hide boots	19930	ARMADYL_DHIDE_BOOTS	
+Bastion potion(4)	22461	BASTION_POTION4	
+Black chinchompa	11959	BLACK_CHINCHOMPA	
+Mith grapple	9419	MITH_GRAPPLE_9419	
+Red chinchompa	10034	RED_CHINCHOMPA_10034	
+Soulflame horn	30759	SOULFLAME_HORN	
+Verac's plateskirt	4759	VERACS_PLATESKIRT	
+Dragon javelin	19484	DRAGON_JAVELIN	
+Heavy ballista	19481	HEAVY_BALLISTA	

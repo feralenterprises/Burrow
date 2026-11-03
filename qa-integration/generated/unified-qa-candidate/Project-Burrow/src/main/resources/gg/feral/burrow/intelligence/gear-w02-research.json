@@ -1,0 +1,3039 @@
+{
+  "schema_version": 2,
+  "pack_id": "TPT-W02-GEAR-RESEARCH-QUARANTINE",
+  "policy": "RESEARCH_ONLY: no rows approved for player recommendations or source-writes",
+  "items": [
+    {
+      "item_id": 1215,
+      "name": "Dragon dagger",
+      "family": "dagger_poison",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Dragon_dagger%28p%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 1231,
+      "name": "Dragon dagger(p)",
+      "family": "dagger_poison",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 1540,
+      "name": "Anti-dragon shield",
+      "family": "uncategorized",
+      "slot": "SHIELD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-03",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 1704,
+      "name": "Amulet of glory",
+      "family": "amulet-glory",
+      "slot": "NECK",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Amulet_of_glory"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 1712,
+      "name": "Amulet of glory(4)",
+      "family": "glory",
+      "slot": "NECK",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 2572,
+      "name": "Ring of wealth",
+      "family": "wealth",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Ring_of_wealth"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4164,
+      "name": "Facemask",
+      "family": "uncategorized",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4712,
+      "name": "Ahrim's robetop",
+      "family": "ahrim",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Ahrim%27s_robetop"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4716,
+      "name": "Dharok's helm",
+      "family": "barrows",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4720,
+      "name": "Dharok's platebody",
+      "family": "dharok",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Dharok%27s_platebody"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4884,
+      "name": "Dharok's helm 0",
+      "family": "barrows",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 4896,
+      "name": "Dharok's platebody 0",
+      "family": "dharok",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Exchange%3ADharok%27s_platebody_0"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 5680,
+      "name": "Dragon dagger(p+)",
+      "family": "dagger_poison",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 5698,
+      "name": "Dragon dagger(p++)",
+      "family": "dagger_poison",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 6737,
+      "name": "Berserker ring",
+      "family": "berserker-ring",
+      "slot": "RING",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Berserker_ring"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 8839,
+      "name": "Void knight top",
+      "family": "void-knight",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Void_Knight_top"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 8901,
+      "name": "Black mask (10)",
+      "family": "slayer_mask",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 8921,
+      "name": "Black mask",
+      "family": "slayer_mask",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 9185,
+      "name": "Rune crossbow",
+      "family": "uncategorized",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 9243,
+      "name": "Diamond bolts (e)",
+      "family": "uncategorized",
+      "slot": "AMMO",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 9674,
+      "name": "Proselyte hauberk",
+      "family": "proselyte",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Proselyte_hauberk"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 10156,
+      "name": "Hunters' crossbow",
+      "family": "sunlight_crossbow",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Hunters%27_crossbow"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 10354,
+      "name": "Amulet of glory(t4)",
+      "family": "glory",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 10362,
+      "name": "Amulet of glory (t)",
+      "family": "glory",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Amulet_of_glory_%28t%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 10378,
+      "name": "Guthix d'hide body",
+      "family": "blessed-dragonhide",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Guthix_d%27hide_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11773,
+      "name": "Berserker ring (i)",
+      "family": "berserker-ring",
+      "slot": "RING",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Berserker_ring_%28i%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11784,
+      "name": "Black mask (i)",
+      "family": "slayer_mask",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Black_mask_%28i%29"
+      ],
+      "identity_conflict": true
+    },
+    {
+      "item_id": 11864,
+      "name": "Slayer helmet",
+      "family": "slayer-helmet",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Slayer_helmet"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11865,
+      "name": "Slayer helmet (i)",
+      "family": "slayer-helmet",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Slayer_helm_%28i%29",
+        "https://oldschool.runescape.wiki/w/Slayer_helmet_%28i%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11908,
+      "name": "Uncharged trident of the Seas",
+      "family": "uncategorized",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11964,
+      "name": "Amulet of glory(t6)",
+      "family": "glory",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11978,
+      "name": "Amulet of glory(6)",
+      "family": "amulet-glory",
+      "slot": "NECK",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Exchange%3AAmulet_of_glory%286%29",
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 11980,
+      "name": "Ring of wealth (5)",
+      "family": "wealth",
+      "slot": "NECK",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12436,
+      "name": "Amulet of fury (or)",
+      "family": "uncategorized",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-03"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12498,
+      "name": "Bandos bracers",
+      "family": "huey_comparison",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "BANDOS",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Bandos_bracers"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12500,
+      "name": "Bandos d'hide body",
+      "family": "blessed_dhide",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "BANDOS",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Bandos_d%27hide_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12508,
+      "name": "Armadyl d'hide body",
+      "family": "blessed-dragonhide",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "ARMADYL",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12785,
+      "name": "Ring of wealth (i)",
+      "family": "wealth",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Ring_of_wealth_%28i%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12924,
+      "name": "Toxic blowpipe (empty)",
+      "family": "toxic-blowpipe",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Toxic_blowpipe_%28empty%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 12954,
+      "name": "Dragon defender",
+      "family": "dragon-defender",
+      "slot": "SHIELD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Dragon_defender"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 19550,
+      "name": "Ring of suffering",
+      "family": "suffering-ring",
+      "slot": "RING",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Ring_of_suffering"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 19710,
+      "name": "Ring of suffering (i)",
+      "family": "suffering-ring",
+      "slot": "RING",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Ring_of_suffering_%28ri%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 19722,
+      "name": "Dragon defender (t)",
+      "family": "dragon-defender",
+      "slot": "SHIELD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Dragon_defender_%28t%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 20220,
+      "name": "Holy blessing",
+      "family": "god_blessings",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "SARADOMIN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Holy_blessing"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 20223,
+      "name": "Unholy blessing",
+      "family": "god_blessings",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "ZAMORAK",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Unholy_blessing"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 23971,
+      "name": "Crystal helm",
+      "family": "crystal_armour",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Crystal_helm"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 23975,
+      "name": "Crystal body",
+      "family": "crystal-armour",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Crystal_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 23983,
+      "name": "Crystal bow",
+      "family": "crystal-bow",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Crystal_bow"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 24420,
+      "name": "Inquisitor's hauberk",
+      "family": "inquisitor",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Inquisitor%27s_hauberk"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 25389,
+      "name": "Swampbark body",
+      "family": "swampbark",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Swampbark_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 25404,
+      "name": "Bloodbark body",
+      "family": "bloodbark",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Bloodbark_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 25862,
+      "name": "Bow of Faerdhinen (inactive)",
+      "family": "bowfa",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 25867,
+      "name": "Bow of Faerdhinen (c)",
+      "family": "bowfa",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen_%28c%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26243,
+      "name": "Virtus robe top",
+      "family": "virtus",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Virtus_robe_top"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26378,
+      "name": "Torva platebody (damaged)",
+      "family": "torva",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Torva_platebody"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26384,
+      "name": "Torva platebody",
+      "family": "torva",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Exchange%3ATorva_platebody"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26463,
+      "name": "Void knight top (or)",
+      "family": "void-knight",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Void_knight_top_%28or%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26469,
+      "name": "Elite void top (or)",
+      "family": "elite-void",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Elite_void_top_%28or%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 26486,
+      "name": "Rune crossbow (or)",
+      "family": "uncategorized",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 27229,
+      "name": "Masori body",
+      "family": "masori",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Masori_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 27238,
+      "name": "Masori body (f)",
+      "family": "masori",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Masori_body_%28f%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28687,
+      "name": "Blazing blowpipe (empty)",
+      "family": "toxic-blowpipe",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Blazing_blowpipe"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28869,
+      "name": "Hunters' sunlight crossbow",
+      "family": "sunlight-crossbow",
+      "slot": "WEAPON",
+      "hands": "UNKNOWN",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {
+        "Ranged": 66,
+        "Hunter": 50
+      },
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28872,
+      "name": "Sunlight antler bolts",
+      "family": "antler-bolts",
+      "slot": "AMMO",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Sunlight_antler_bolts"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28878,
+      "name": "Moonlight antler bolts",
+      "family": "antler-bolts",
+      "slot": "AMMO",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02",
+        "GEAR-CORE-03",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Moonlight_antler_bolts"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28933,
+      "name": "Sunfire fanatic helm",
+      "family": "sunfire-fanatic",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Sunfire_fanatic_helm"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 28936,
+      "name": "Sunfire fanatic cuirass",
+      "family": "sunfire-fanatic",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://osrsgrandexchange.com/items/sunfire-fanatic-cuirass"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29004,
+      "name": "Eclipse Moon chestplate",
+      "family": "eclipse-moon",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Eclipse_Moon_chestplate"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29013,
+      "name": "Blue Moon chestplate",
+      "family": "blue-moon",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Blue_Moon_chestplate"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29022,
+      "name": "Blood Moon chestplate",
+      "family": "blood-moon",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Blood_Moon_chestplate"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29067,
+      "name": "Blood Moon chestplate (broken)",
+      "family": "moons",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Exchange%3ABlood_Moon_chestplate_%28broken%29"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29280,
+      "name": "Mixed hide top",
+      "family": "mixed-hide",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Mixed_hide_top"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 29292,
+      "name": "Mixed hide base",
+      "family": "mixed-hide",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Mixed_hide_base"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30073,
+      "name": "Hueycoatl hide coif",
+      "family": "uncategorized",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {
+        "Ranged": 70,
+        "Defence": 40
+      },
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30076,
+      "name": "Hueycoatl hide body",
+      "family": "hueycoatl-hide",
+      "slot": "BODY",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {
+        "Ranged": 70,
+        "Defence": 40
+      },
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Hueycoatl_hide_body"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30079,
+      "name": "Hueycoatl hide chaps",
+      "family": "uncategorized",
+      "slot": "LEGS",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {
+        "Ranged": 70
+      },
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30082,
+      "name": "Hueycoatl hide vambraces",
+      "family": "huey",
+      "slot": "HANDS",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "NONE",
+      "minimum_skills": {
+        "Ranged": 70
+      },
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02",
+        "GEAR-CORE-04"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Hueycoatl_hide_vambraces"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30085,
+      "name": "Hueycoatl hide",
+      "family": "hueycoatl-hide",
+      "slot": "NONE",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Hueycoatl_hide"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 30750,
+      "name": "Oathplate helm",
+      "family": "oathplate",
+      "slot": "HEAD",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ],
+      "research_urls": [
+        "https://oldschool.runescape.wiki/w/Oathplate_helm"
+      ],
+      "identity_conflict": false
+    },
+    {
+      "item_id": 31169,
+      "name": "Hueycoatl hide armour set (box)",
+      "family": "uncategorized",
+      "slot": "UNKNOWN",
+      "hands": "NOT_WEAPON",
+      "god_alignment": "UNKNOWN",
+      "minimum_skills": {},
+      "required_state_flags": [],
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-03"
+      ],
+      "research_urls": [],
+      "identity_conflict": false
+    }
+  ],
+  "relations": [
+    {
+      "id": "W02-EVIDENCE-001",
+      "from_id": 28869,
+      "to_id": 28872,
+      "kind": "AMMO_COMPATIBLE",
+      "required_context": "",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-04"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-002",
+      "from_id": 28869,
+      "to_id": 28878,
+      "kind": "AMMO_COMPATIBLE",
+      "required_context": "",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01",
+        "GEAR-CORE-04"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-003",
+      "from_id": 28869,
+      "to_id": 9243,
+      "kind": "AMMO_INCOMPATIBLE",
+      "required_context": "",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-004",
+      "from_id": 9185,
+      "to_id": 28878,
+      "kind": "AMMO_INCOMPATIBLE",
+      "required_context": "",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-005",
+      "from_id": 9185,
+      "to_id": 9243,
+      "kind": "AMMO_COMPATIBLE",
+      "required_context": "",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-04"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-006",
+      "from_id": 12508,
+      "to_id": 12500,
+      "kind": "MECHANIC_DIFFERENCE",
+      "required_context": "GOD_WARS_PROTECTION",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-007",
+      "from_id": 1704,
+      "to_id": 11978,
+      "kind": "DIRECTED_UPGRADE",
+      "required_context": "RECHARGE_REQUIRED",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-02"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-008",
+      "from_id": 11864,
+      "to_id": 11865,
+      "kind": "DIRECTED_UPGRADE",
+      "required_context": "SLAYER_TASK",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ]
+    },
+    {
+      "id": "W02-EVIDENCE-009",
+      "from_id": 6737,
+      "to_id": 11773,
+      "kind": "DIRECTED_UPGRADE",
+      "required_context": "IMBUE_REQUIRED",
+      "review": "CHECK",
+      "source": null,
+      "research_lanes": [
+        "GEAR-CORE-01"
+      ]
+    }
+  ],
+  "proposed_relations_raw": [
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "10378",
+        "to_exact_item_id": "12508",
+        "relation_type": "ALIGNMENT_MECHANIC_DIFF",
+        "evidence_source_ids": "SRC-WIKI-000;SRC-WIKI-001",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_body;https://oldschool.runescape.wiki/w/Armadyl_d%27hide_body",
+        "assertion": "Wiki explicitly says Guthix body not GWD god item; Armadyl body gives Armadyl protection",
+        "acceptance": "RESEARCHED",
+        "status": "MECHANIC_DIFF",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "28869",
+        "to_exact_item_id": "28872",
+        "relation_type": "AMMO_COMPATIBLE",
+        "evidence_source_ids": "SRC-WIKI-008;SRC-WIKI-009",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow;https://oldschool.runescape.wiki/w/Sunlight_antler_bolts",
+        "assertion": "Hunters sunlight crossbow can use sunlight antler bolts",
+        "acceptance": "RESEARCHED",
+        "status": "CONTEXTUAL_COMPATIBILITY",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "28869",
+        "to_exact_item_id": "28878",
+        "relation_type": "AMMO_COMPATIBLE",
+        "evidence_source_ids": "SRC-WIKI-008;SRC-WIKI-010",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow;https://oldschool.runescape.wiki/w/Moonlight_antler_bolts",
+        "assertion": "Hunters sunlight crossbow can use moonlight antler bolts",
+        "acceptance": "RESEARCHED",
+        "status": "CONTEXTUAL_COMPATIBILITY",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "11864",
+        "to_exact_item_id": "11865",
+        "relation_type": "IMBUED_UPGRADE",
+        "evidence_source_ids": "SRC-WIKI-018;SRC-WIKI-019",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Slayer_helmet;https://oldschool.runescape.wiki/w/Slayer_helmet_%28i%29",
+        "assertion": "Imbued slayer helm adds task specific ranged/magic boosts",
+        "acceptance": "RESEARCHED",
+        "status": "CONTEXTUAL_UPGRADE",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "6737",
+        "to_exact_item_id": "11773",
+        "relation_type": "IMBUED_UPGRADE",
+        "evidence_source_ids": "SRC-WIKI-025;SRC-WIKI-026",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Berserker_ring;https://oldschool.runescape.wiki/w/Berserker_ring_%28i%29",
+        "assertion": "Berserker ring imbue doubles item combat bonuses",
+        "acceptance": "RESEARCHED",
+        "status": "STAT_UPGRADE",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "12954",
+        "to_exact_item_id": "19722",
+        "relation_type": "COSMETIC_APPLIED",
+        "evidence_source_ids": "SRC-WIKI-027;SRC-WIKI-028",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Dragon_defender;https://oldschool.runescape.wiki/w/Dragon_defender_%28t%29",
+        "assertion": "Dragon defender trimmed provides no additional stat bonuses",
+        "acceptance": "RESEARCHED",
+        "status": "COSMETIC_STATS_ONLY",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "27229",
+        "to_exact_item_id": "27238",
+        "relation_type": "PERMANENT_UPGRADE",
+        "evidence_source_ids": "SRC-WIKI-022;SRC-WIKI-023",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Masori_body;https://oldschool.runescape.wiki/w/Masori_body_%28f%29",
+        "assertion": "Fortified Masori gains defence and prayer, not reversible",
+        "acceptance": "RESEARCHED",
+        "status": "UPGRADE_DIFFERENT_STATS",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "8839",
+        "to_exact_item_id": "26463",
+        "relation_type": "COSMETIC_APPLIED",
+        "evidence_source_ids": "SRC-WIKI-039;SRC-WIKI-040",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Void_Knight_top;https://oldschool.runescape.wiki/w/Void_knight_top_%28or%29",
+        "assertion": "Void top ornament has no stat bonus",
+        "acceptance": "RESEARCHED",
+        "status": "COSMETIC_STATS_ONLY",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "19550",
+        "to_exact_item_id": "19710",
+        "relation_type": "IMBUED_UPGRADE",
+        "evidence_source_ids": "SRC-WIKI-042;SRC-WIKI-043",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Ring_of_suffering;https://oldschool.runescape.wiki/w/Ring_of_suffering_%28ri%29",
+        "assertion": "Imbued suffering differs from unimbued ring",
+        "acceptance": "RESEARCHED",
+        "status": "STAT_UPGRADE",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "12924",
+        "to_exact_item_id": "28687",
+        "relation_type": "COSMETIC_APPLIED",
+        "evidence_source_ids": "SRC-WIKI-044;SRC-WIKI-045",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Toxic_blowpipe_%28empty%29;https://oldschool.runescape.wiki/w/Blazing_blowpipe",
+        "assertion": "Blazing blowpipe empty has cosmetic change and no extra bonus",
+        "acceptance": "RESEARCHED",
+        "status": "COSMETIC_STATS_ONLY",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "25862",
+        "to_exact_item_id": "25867",
+        "relation_type": "CORRUPTED_STATE",
+        "evidence_source_ids": "SRC-WIKI-017;SRC-WIKI-016",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen;https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen_%28c%29",
+        "assertion": "Corrupted Bowfa is nondegrading; inactive item usability remains CHECK",
+        "acceptance": "CHECK",
+        "status": "CHECK_NOT_EQUIVALENT",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "23975",
+        "to_exact_item_id": "23975",
+        "relation_type": "CHARGE_DEPENDENT",
+        "evidence_source_ids": "SRC-WIKI-014",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Crystal_body",
+        "assertion": "Crystal body loses stats/effect when depleted, exact inactive ID unresolved",
+        "acceptance": "CHECK",
+        "status": "SAME_ID_NOT_ASSERTED",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "29022",
+        "to_exact_item_id": "29022",
+        "relation_type": "DEGRADE_DEPENDENT",
+        "evidence_source_ids": "SRC-WIKI-012",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Blood_Moon_chestplate",
+        "assertion": "Moon armour depleted/broken status affects suitability; exact broken ID unresolved",
+        "acceptance": "CHECK",
+        "status": "SAME_ID_NOT_ASSERTED",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "4720",
+        "to_exact_item_id": "4896",
+        "relation_type": "BROKEN_STATE_CHECK",
+        "evidence_source_ids": "SRC-WIKI-033;SRC-WIKI-034",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Dharok%27s_platebody;https://oldschool.runescape.wiki/w/Exchange%3ADharok%27s_platebody_0",
+        "assertion": "0-charge Dharok identity seen in GE but cannot assume equipable",
+        "acceptance": "CHECK",
+        "status": "CHECK_NOT_EQUIVALENT",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-01",
+      "record": {
+        "ticket": "GEAR-CORE-01",
+        "from_exact_item_id": "1704",
+        "to_exact_item_id": "11978",
+        "relation_type": "CHARGE_STATE_CHECK",
+        "evidence_source_ids": "SRC-WIKI-037;SRC-WIKI-038",
+        "evidence_urls": "https://oldschool.runescape.wiki/w/Amulet_of_glory;https://oldschool.runescape.wiki/w/Exchange%3AAmulet_of_glory%286%29",
+        "assertion": "Amulet of glory charged state ID seen on GE; equipability verification pending",
+        "acceptance": "CHECK",
+        "status": "CHECK_NOT_EQUIVALENT",
+        "gameplay_action": "NONE"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-001",
+        "family": "blessed_dhide",
+        "FROM_ID": "12508",
+        "TO_ID": "12500",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "GOD_SKIN_PEER",
+        "state_change": "armadyl_god -> bandos_god",
+        "equivalence_scope": "SAME_STAT_GRID_ONLY",
+        "evidence_source_ids": "S01;S02;S03",
+        "proof_url": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_body",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Both can be worn; GOD_WARS_CONTEXT must be checked",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "allow only where faction-specific protection, clue step, weight and exact-item need are irrelevant",
+        "unresolved_conditions": "Other god affiliations require separate rows",
+        "contradiction_note": "No numeric contradiction: faction mechanic differs",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-002",
+        "family": "god_blessings",
+        "FROM_ID": "20220",
+        "TO_ID": "20223",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "GOD_AFFILIATION_PEER",
+        "state_change": "saradomin -> zamorak",
+        "equivalence_scope": "PRAYER_ONLY",
+        "evidence_source_ids": "S04;S05;S03",
+        "proof_url": "https://oldschool.runescape.wiki/w/Holy_blessing",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "GWD protection conditions differ",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only generic +1 prayer need, no named god/treasure-trail need",
+        "unresolved_conditions": "",
+        "contradiction_note": "Prayer/stat equality never implies god-faction equality",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-003",
+        "family": "glory",
+        "FROM_ID": "1704",
+        "TO_ID": "1712",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "RECHARGE",
+        "state_change": "0->4",
+        "equivalence_scope": "COMBAT_STATS_EQUAL_TELEPORT_NO",
+        "evidence_source_ids": "S06;S08",
+        "proof_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Fountain of Heroes, Heroes Quest eligibility; charged four",
+        "reversible": "YES_WITH_CONSUMPTION",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "generic neck stats yes; teleport route requires >=charges",
+        "unresolved_conditions": "",
+        "contradiction_note": "0 charges lacks teleports",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-004",
+        "family": "glory",
+        "FROM_ID": "1704",
+        "TO_ID": "11978",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "RECHARGE",
+        "state_change": "0->6",
+        "equivalence_scope": "COMBAT_STATS_EQUAL_TELEPORT_NO",
+        "evidence_source_ids": "S06;S08",
+        "proof_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Fountain of Rune, charged six",
+        "reversible": "YES_WITH_CONSUMPTION",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "generic neck stats yes; teleports need charges",
+        "unresolved_conditions": "",
+        "contradiction_note": "0 charges lacks teleports",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-005",
+        "family": "glory",
+        "FROM_ID": "1704",
+        "TO_ID": "10362",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "COSMETIC_PEER",
+        "state_change": "trim=no->yes; charge=0",
+        "equivalence_scope": "COMBAT_FUNCTION_SAME",
+        "evidence_source_ids": "S06;S07",
+        "proof_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Trim comes from clue scroll, not owner-upgrade recipe",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "YES_CONDITIONAL",
+        "Best_in_Bank_guard": "permit ordinary generic glory use; strict clue exact item must match ID",
+        "unresolved_conditions": "",
+        "contradiction_note": "not same exact treasure-trail item",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-006",
+        "family": "glory",
+        "FROM_ID": "1712",
+        "TO_ID": "10354",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "COSMETIC_AND_CHARGE_PEER",
+        "state_change": "trim=no->yes; charge=4",
+        "equivalence_scope": "COMBAT_FUNCTION_SAME",
+        "evidence_source_ids": "S07;S08",
+        "proof_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory_%28t%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Both exactly 4 charges",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "YES_CONDITIONAL",
+        "Best_in_Bank_guard": "only if exact-item constraint absent",
+        "unresolved_conditions": "Charge consumption creates distinct resulting item IDs",
+        "contradiction_note": "Exact clue or appearance objectives differ",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-007",
+        "family": "glory",
+        "FROM_ID": "11978",
+        "TO_ID": "11964",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "COSMETIC_AND_CHARGE_PEER",
+        "state_change": "trim=no->yes;charge=6",
+        "equivalence_scope": "COMBAT_FUNCTION_SAME",
+        "evidence_source_ids": "S07;S08",
+        "proof_url": "https://oldschool.runescape.wiki/w/Amulet_of_glory_%28t%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Both exactly 6 charges",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "YES_CONDITIONAL",
+        "Best_in_Bank_guard": "only if no clue exact-item need",
+        "unresolved_conditions": "Charge loss maps to other item IDs not captured",
+        "contradiction_note": "Not identical clue items",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-008",
+        "family": "wealth",
+        "FROM_ID": "2572",
+        "TO_ID": "11980",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "RECHARGE",
+        "state_change": "charge=0->5",
+        "equivalence_scope": "PASSIVE_DROP_EQUAL_TELEPORT_NO",
+        "evidence_source_ids": "S08;S09",
+        "proof_url": "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Fountain of Rune only",
+        "reversible": "YES_WITH_CONSUMPTION",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "generic coin/rare drop okay; teleport requires live charge",
+        "unresolved_conditions": "",
+        "contradiction_note": "Uncharged retains passive but cannot teleport",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-009",
+        "family": "wealth",
+        "FROM_ID": "2572",
+        "TO_ID": "12785",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "IMBUE",
+        "state_change": "imbue=no->yes; charge=0",
+        "equivalence_scope": "PASSIVE_BASE_SAME_WILDERNESS_CLUES_DIFFER",
+        "evidence_source_ids": "S09;S10",
+        "proof_url": "https://oldschool.runescape.wiki/w/Ring_of_wealth",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Ring wealth scroll and 50000 coins",
+        "reversible": "YES_WITH_REFUND_CONDITIONS",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "cannot use unimbued when plan mandates Wilderness clue buff",
+        "unresolved_conditions": "",
+        "contradiction_note": "Wilderness clue buff not present on original",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-010",
+        "family": "berserker",
+        "FROM_ID": "6737",
+        "TO_ID": "11773",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "IMBUE",
+        "state_change": "imbue=no->yes",
+        "equivalence_scope": "NUMERIC_STATS_DIFFER",
+        "evidence_source_ids": "S11;S12",
+        "proof_url": "https://oldschool.runescape.wiki/w/Berserker_ring",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "NPC points, Zeal, or scroll",
+        "reversible": "YES_WITH_PVP_CAVEAT",
+        "Best_in_Bank_candidate_selection": "NO_AS_EQUAL",
+        "Best_in_Bank_guard": "allow as explicitly lower-tier instead, never equal bonus",
+        "unresolved_conditions": "Process might be feasible later but not automatic",
+        "contradiction_note": "Imbued stats double base",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-011",
+        "family": "slayer_mask",
+        "FROM_ID": "8921",
+        "TO_ID": "11784",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "IMBUE",
+        "state_change": "imbue=no->yes; mask_charge=0",
+        "equivalence_scope": "MELEE_SHARED_RANGED_MAGIC_DIFFER",
+        "evidence_source_ids": "S41;S13",
+        "proof_url": "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Imbuing points or Scroll of imbuing; equipped Slayer-task checks",
+        "reversible": "YES_WITH_REFUND_CONDITIONS",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "unimbued fails magic/ranged Slayer plans requiring imbue",
+        "unresolved_conditions": "",
+        "contradiction_note": "Melee on-task function retained but ranged/magic added",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-012",
+        "family": "slayer_mask",
+        "FROM_ID": "8901",
+        "TO_ID": "8921",
+        "direction": "DIRECTED_TRANSFORM_CHECK",
+        "transformation_type": "MASK_CHARGE_DEPLETION",
+        "state_change": "mask_special_charges=10->0",
+        "equivalence_scope": "MELEE_TASK_BONUS_CHECK",
+        "evidence_source_ids": "S41;S13",
+        "proof_url": "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "PARTIAL_CHECK",
+        "requirements": "Mask 10 charges and normal gameplay depletion",
+        "reversible": "UNKNOWN",
+        "Best_in_Bank_candidate_selection": "CHECK",
+        "Best_in_Bank_guard": "do not collapse active special mask charges until proven",
+        "unresolved_conditions": "Exact charge loss mechanic and numeric combat equivalence not checked",
+        "contradiction_note": "Cannot infer all charge-state effects from name",
+        "evidence_status": "CHECK"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-013",
+        "family": "slayer_helmet",
+        "FROM_ID": "11864",
+        "TO_ID": "11865",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "IMBUE",
+        "state_change": "imbue=no->yes",
+        "equivalence_scope": "MELEE_SHARED_RANGED_MAGIC_DIFFER",
+        "evidence_source_ids": "S14;S15",
+        "proof_url": "https://oldschool.runescape.wiki/w/Slayer_helmet",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Nightmare Zone or Soul Wars or scroll",
+        "reversible": "YES_REFUND_DEPENDS_METHOD",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only melee task where magical and ranged buff not required",
+        "unresolved_conditions": "",
+        "contradiction_note": "15% ranged and magic task buff absent on nonimbued",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-014",
+        "family": "slayer_helmet",
+        "FROM_ID": "8921",
+        "TO_ID": "11864",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "ASSEMBLY",
+        "state_change": "black_mask->slayer_helmet",
+        "equivalence_scope": "NOT_EQUAL_MATERIAL_UPGRADE",
+        "evidence_source_ids": "S41;S14",
+        "proof_url": "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Malevolent Masquerade unlock, component bundle and 55 Crafting; additional reinforced goggles after quest",
+        "reversible": "YES_DISASSEMBLY",
+        "Best_in_Bank_candidate_selection": "NO_AS_DIRECT_SUBSTITUTE",
+        "Best_in_Bank_guard": "must already own complete helmet to match in BIB",
+        "unresolved_conditions": "",
+        "contradiction_note": "Black mask alone lacks helm component protection",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-015",
+        "family": "slayer_helmet",
+        "FROM_ID": "11784",
+        "TO_ID": "11865",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "ASSEMBLY",
+        "state_change": "mask_imbued->helm_imbued",
+        "equivalence_scope": "NOT_EQUAL_MATERIAL_UPGRADE",
+        "evidence_source_ids": "S13;S14;S15",
+        "proof_url": "https://oldschool.runescape.wiki/w/Black_mask_%28i%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Malevolent Masquerade unlock, components, crafting 55; reinforced goggles conditional quest",
+        "reversible": "YES_DISASSEMBLY",
+        "Best_in_Bank_candidate_selection": "NO_AS_DIRECT_SUBSTITUTE",
+        "Best_in_Bank_guard": "do not treat owned mask as owned helmet",
+        "unresolved_conditions": "",
+        "contradiction_note": "Mask lacks protective component package until crafted",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-016",
+        "family": "slayer_helmet",
+        "FROM_ID": "11865",
+        "TO_ID": "UNKNOWN",
+        "direction": "DIRECTED_TRANSFORM_CHECK",
+        "transformation_type": "COSMETIC_RECOLOUR",
+        "state_change": "same imbue; colour changed",
+        "equivalence_scope": "STATS_SAME_COSMETIC_DIFFER",
+        "evidence_source_ids": "S15",
+        "proof_url": "https://oldschool.runescape.wiki/w/Slayer_helm_%28i%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "PARTIAL_CHECK",
+        "requirements": "recolour head/points or combat achievement gating",
+        "reversible": "YES_DISASSEMBLY",
+        "Best_in_Bank_candidate_selection": "CHECK",
+        "Best_in_Bank_guard": "never auto-promote unresolved recolour ID",
+        "unresolved_conditions": "Colour-specific ID and item mappings not verified",
+        "contradiction_note": "Stats same per source but IDs unresolved",
+        "evidence_status": "CHECK"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-017",
+        "family": "bowfa",
+        "FROM_ID": "25862",
+        "TO_ID": "UNKNOWN",
+        "direction": "DIRECTED_TRANSFORM_CHECK",
+        "transformation_type": "RECHARGE",
+        "state_change": "0->positive charges",
+        "equivalence_scope": "INACTIVE_TO_USABLE",
+        "evidence_source_ids": "S16",
+        "proof_url": "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "PARTIAL_CHECK",
+        "requirements": "Crystal shards 100 charges each",
+        "reversible": "YES_WITH_CONSUMPTION",
+        "Best_in_Bank_candidate_selection": "CHECK",
+        "Best_in_Bank_guard": "cannot count inactive as ready bowfa",
+        "unresolved_conditions": "Charged ID unverified in OSRS Wiki item-ID extract",
+        "contradiction_note": "Inactive has no attack stats",
+        "evidence_status": "CHECK"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-018",
+        "family": "bowfa",
+        "FROM_ID": "25862",
+        "TO_ID": "25867",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "CORRUPT",
+        "state_change": "charge=0->infinite; corruption=yes",
+        "equivalence_scope": "OPERABLE_UPGRADE_WITH_RESOURCES",
+        "evidence_source_ids": "S16;S17",
+        "proof_url": "https://oldschool.runescape.wiki/w/Bow_of_Faerdhinen",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Singing bowl, 82 Smithing+Crafting or NPC extra cost; shard total adjusted by charges/progress",
+        "reversible": "YES_BUT_SHARDS_LOST",
+        "Best_in_Bank_candidate_selection": "NO_AS_DIRECT_SUBSTITUTE",
+        "Best_in_Bank_guard": "only already-owned corrupted ID qualifies without crafting",
+        "unresolved_conditions": "Needs accounting of stored charges/progress and user permission to transform",
+        "contradiction_note": "Corrupted non-degrading; inactive unusable",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-019",
+        "family": "crystal_armour",
+        "FROM_ID": "23975",
+        "TO_ID": "25867",
+        "direction": "DIRECTED_COMPATIBILITY",
+        "transformation_type": "PIECE_EFFECT",
+        "state_change": "body equipped + corrupted Bowfa",
+        "equivalence_scope": "WEAPON_DAMAGE_ACCURACY_BOOST_NOT_ITEM_EQUALITY",
+        "evidence_source_ids": "S38;S18;S17",
+        "proof_url": "https://oldschool.runescape.wiki/w/Crystal_body",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Crystal body active, player 70 Defence/50 Agility, Bowfa usable",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "NO_AS_EQUAL",
+        "Best_in_Bank_guard": "do not count equipped armour as ownership of bow or vice versa",
+        "unresolved_conditions": "",
+        "contradiction_note": "Bonus exists per piece, not strictly full-set",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-020",
+        "family": "crystal_armour",
+        "FROM_ID": "23971",
+        "TO_ID": "25867",
+        "direction": "DIRECTED_COMPATIBILITY",
+        "transformation_type": "PIECE_EFFECT",
+        "state_change": "helm equipped + corrupted Bowfa",
+        "equivalence_scope": "WEAPON_DAMAGE_ACCURACY_BOOST_NOT_ITEM_EQUALITY",
+        "evidence_source_ids": "S39;S18;S17",
+        "proof_url": "https://oldschool.runescape.wiki/w/Crystal_helm",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Crystal helm active, player 70 Defence/50 Agility, Bowfa usable",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "NO_AS_EQUAL",
+        "Best_in_Bank_guard": "do not replace full set with a false boolean",
+        "unresolved_conditions": "",
+        "contradiction_note": "Bonus exists per piece, not strictly full-set",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-021",
+        "family": "barrows",
+        "FROM_ID": "4716",
+        "TO_ID": "4884",
+        "direction": "DIRECTED_DEGRADATION",
+        "transformation_type": "DEGRADE_TO_ZERO",
+        "state_change": "durability=full->zero",
+        "equivalence_scope": "NON_EQUIVALENT_ZERO_STATS",
+        "evidence_source_ids": "S08;S19",
+        "proof_url": "https://oldschool.runescape.wiki/w/Module%3AGEIDs/data.json",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "15h combat damage progression",
+        "reversible": "YES_WITH_REPAIR",
+        "Best_in_Bank_candidate_selection": "NO",
+        "Best_in_Bank_guard": "zero cannot satisfy functional equipment",
+        "unresolved_conditions": "Intermediate 100/75/50/25 IDs not pinned",
+        "contradiction_note": "25% still functional; 0 loses bonuses",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-022",
+        "family": "barrows",
+        "FROM_ID": "UNKNOWN",
+        "TO_ID": "4716",
+        "direction": "DIRECTED_REPAIR_CHECK",
+        "transformation_type": "REPAIR",
+        "state_change": "durability>0->full",
+        "equivalence_scope": "STATS_PRESERVED_POSITIVE_ONLY",
+        "evidence_source_ids": "S19",
+        "proof_url": "https://oldschool.runescape.wiki/w/Barrows_armour",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "PARTIAL_CHECK",
+        "requirements": "Coin repair at NPC/POH",
+        "reversible": "YES",
+        "Best_in_Bank_candidate_selection": "CHECK",
+        "Best_in_Bank_guard": "need original item IDs pinned",
+        "unresolved_conditions": "Intermediate variant IDs missing",
+        "contradiction_note": "Comparisons must not collapse to broken",
+        "evidence_status": "CHECK"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-023",
+        "family": "moons",
+        "FROM_ID": "29022",
+        "TO_ID": "29067",
+        "direction": "DIRECTED_DEGRADATION",
+        "transformation_type": "BREAK",
+        "state_change": "charges positive->0",
+        "equivalence_scope": "NON_EQUIVALENT_BROKEN",
+        "evidence_source_ids": "S20;S21;S35",
+        "proof_url": "https://oldschool.runescape.wiki/w/Blood_Moon_chestplate",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Equipment degrades in combat up to 45 hours",
+        "reversible": "YES_WITH_REPAIR",
+        "Best_in_Bank_candidate_selection": "NO",
+        "Best_in_Bank_guard": "broken item is not usable outfit component",
+        "unresolved_conditions": "",
+        "contradiction_note": "Blood Moon full set effect only when correct functioning set is present",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-024",
+        "family": "huey",
+        "FROM_ID": "30082",
+        "TO_ID": "12498",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "COMBAT_STAT_PEER",
+        "state_change": "god=none->bandos;weight changes",
+        "equivalence_scope": "COMBAT_STATS_EQUAL_NONCOMBAT_DIFF",
+        "evidence_source_ids": "S22;S23;S36",
+        "proof_url": "https://oldschool.runescape.wiki/w/Hueycoatl_hide_vambraces",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Ranged 70 and same hand slot",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "generic ranged stats okay; GWD/weight/clue exact requirement must be checked",
+        "unresolved_conditions": "",
+        "contradiction_note": "Weight and Bandos protection differ",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-025",
+        "family": "bark",
+        "FROM_ID": "25404",
+        "TO_ID": "25389",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "ARMOUR_PEER",
+        "state_change": "blood_heal+magic_dmg->bind_duration",
+        "equivalence_scope": "NOT_FUNCTIONALLY_EQUIVALENT",
+        "evidence_source_ids": "S24;S25;S26;S27",
+        "proof_url": "https://oldschool.runescape.wiki/w/Bloodbark_body",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Separate splitbark recipes, cannot directly convert one to other",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "NO_AS_EQUAL",
+        "Best_in_Bank_guard": "only when guide explicitly accepts either for generic stats, not passive mechanic",
+        "unresolved_conditions": "",
+        "contradiction_note": "Different skills/effect thresholds; no full-set conflation",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-026",
+        "family": "sunlight_crossbow",
+        "FROM_ID": "10156",
+        "TO_ID": "28869",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "UPGRADE_WEAPON",
+        "state_change": "kebbit_crossbow -> sunlight_antler_crossbow",
+        "equivalence_scope": "DIFFERENT_AMMO_FAMILY_AND_REQUIREMENTS",
+        "evidence_source_ids": "S40;S28",
+        "proof_url": "https://oldschool.runescape.wiki/w/Hunters%27_crossbow",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "74 Fletching, sunlight antelope antler, chisel",
+        "reversible": "NO",
+        "Best_in_Bank_candidate_selection": "NO_AS_DIRECT_SUBSTITUTE",
+        "Best_in_Bank_guard": "weapon must already be upgraded to qualify",
+        "unresolved_conditions": "",
+        "contradiction_note": "Base weapon does not accept sunlight or moonlight antler ammo",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-027",
+        "family": "sunlight_crossbow",
+        "FROM_ID": "28869",
+        "TO_ID": "28872",
+        "direction": "DIRECTED_COMPATIBILITY",
+        "transformation_type": "REQUIRES_AMMO",
+        "state_change": "weapon->sunlight ammo",
+        "equivalence_scope": "AMMO_COMPATIBLE",
+        "evidence_source_ids": "S28;S29",
+        "proof_url": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "66 Ranged and ammo owned",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "both exact owned weapon and ammunition need evidence",
+        "unresolved_conditions": "",
+        "contradiction_note": "Weapon is not ammunition itself",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-028",
+        "family": "sunlight_crossbow",
+        "FROM_ID": "28869",
+        "TO_ID": "28878",
+        "direction": "DIRECTED_COMPATIBILITY",
+        "transformation_type": "REQUIRES_AMMO",
+        "state_change": "weapon->moonlight ammo",
+        "equivalence_scope": "AMMO_COMPATIBLE",
+        "evidence_source_ids": "S28;S30",
+        "proof_url": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "66 Ranged and ammo owned",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "both exact owned weapon and ammunition need evidence",
+        "unresolved_conditions": "",
+        "contradiction_note": "Ammo types may have different ranged strength and supply costs",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-029",
+        "family": "sunlight_crossbow",
+        "FROM_ID": "28872",
+        "TO_ID": "28878",
+        "direction": "BIDIRECTIONAL_COMPARISON_NOT_TRANSFORM",
+        "transformation_type": "AMMO_ALTERNATIVE",
+        "state_change": "sunlight->moonlight",
+        "equivalence_scope": "WEAPON_COMPATIBLE_NOT_EQUAL_DAMAGE",
+        "evidence_source_ids": "S28;S29;S30",
+        "proof_url": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Using hunters sunlight crossbow; verify lower ammo tier if output wants DPS",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only when setup allows either, enforce owned count",
+        "unresolved_conditions": "Precise ranged strength numeric not captured here",
+        "contradiction_note": "Different ammo items; not automatically same DPS",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-030",
+        "family": "masori",
+        "FROM_ID": "27229",
+        "TO_ID": "27238",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "FORTIFY",
+        "state_change": "plate_0->four_plates;defence_requirement=30->80",
+        "equivalence_scope": "RANGED_ATTACK_EQUAL_DEFENCE_DIFFER",
+        "evidence_source_ids": "S31;S32",
+        "proof_url": "https://oldschool.runescape.wiki/w/Masori_body",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "4 Armadylean plates and 90 Crafting; equipped requires 80 Def",
+        "reversible": "NO",
+        "Best_in_Bank_candidate_selection": "NO_AS_EQUAL",
+        "Best_in_Bank_guard": "fortified can fill normal body slot only if player meets 80 Defence and method accepts",
+        "unresolved_conditions": "",
+        "contradiction_note": "Higher defence and +1 prayer; nonreversible",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-031",
+        "family": "dagger_poison",
+        "FROM_ID": "1215",
+        "TO_ID": "1231",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "ADD_WEAPON_POISON",
+        "state_change": "none->normal poison",
+        "equivalence_scope": "SAME_BASE_WEAPON_POISON_DIFF",
+        "evidence_source_ids": "S33;S34",
+        "proof_url": "https://oldschool.runescape.wiki/w/Dragon_dagger%28p%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Weapon poison application",
+        "reversible": "CHECK_REMOVAL",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only if poison not mandatory or unwanted; context check",
+        "unresolved_conditions": "Specific same-stat grid not independently compared",
+        "contradiction_note": "Poison mechanic changes",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-032",
+        "family": "dagger_poison",
+        "FROM_ID": "1215",
+        "TO_ID": "5680",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "ADD_WEAPON_POISON_PLUS",
+        "state_change": "none->poison+",
+        "equivalence_scope": "SAME_BASE_WEAPON_POISON_DIFF",
+        "evidence_source_ids": "S33;S34",
+        "proof_url": "https://oldschool.runescape.wiki/w/Dragon_dagger%28p%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Weapon poison(+) application",
+        "reversible": "CHECK_REMOVAL",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only if poison not mandatory",
+        "unresolved_conditions": "Specific same-stat grid not independently compared",
+        "contradiction_note": "Poison severity changes",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-033",
+        "family": "dagger_poison",
+        "FROM_ID": "1215",
+        "TO_ID": "5698",
+        "direction": "DIRECTED_TRANSFORM",
+        "transformation_type": "ADD_WEAPON_POISON_PLUSPLUS",
+        "state_change": "none->poison++",
+        "equivalence_scope": "SAME_BASE_WEAPON_POISON_DIFF",
+        "evidence_source_ids": "S33;S34",
+        "proof_url": "https://oldschool.runescape.wiki/w/Dragon_dagger%28p%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "OSRS_WIKI_SEARCH_EXTRACT",
+        "requirements": "Weapon poison(++) application",
+        "reversible": "CHECK_REMOVAL",
+        "Best_in_Bank_candidate_selection": "CONDITIONAL",
+        "Best_in_Bank_guard": "only if poison not mandatory",
+        "unresolved_conditions": "Specific same-stat grid not independently compared",
+        "contradiction_note": "Poison severity changes",
+        "evidence_status": "RESEARCHED"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-02",
+      "record": {
+        "relation_id": "GC02-034",
+        "family": "representation",
+        "FROM_ID": "UNKNOWN",
+        "TO_ID": "UNKNOWN",
+        "direction": "NOT_A_GAME_ITEM_TRANSFORM",
+        "transformation_type": "PLACEHOLDER_NOTED_EQUIPPED",
+        "state_change": "placeholder/noted/real equipped",
+        "equivalence_scope": "PHYSICAL_ITEM_OR_UNKNOWN",
+        "evidence_source_ids": "S35",
+        "proof_url": "https://oldschool.runescape.wiki/w/%28broken%29",
+        "proof_revision": "UNKNOWN_NOT_CAPTURED",
+        "retrieved_utc": "2026-11-03T02:24:03Z",
+        "evidence_level": "PARTIAL_CHECK",
+        "requirements": "Acquire real inventory/bank observation; do not infer from placeholder pixels or notes",
+        "reversible": "N/A",
+        "Best_in_Bank_candidate_selection": "NO",
+        "Best_in_Bank_guard": "BIB cannot turn display placeholder into ownership",
+        "unresolved_conditions": "Exact item-note ID mapping varies and is not researched",
+        "contradiction_note": "Bank display is not an owned physical item",
+        "evidence_status": "CHECK"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R01",
+        "relation_type": "AMMO_COMPATIBLE",
+        "subject_id_or_family": "28869",
+        "target_id_or_state": "28878",
+        "relation_status": "PASS",
+        "claim": "Sunlight crossbow uses moonlight bolts",
+        "source_ids": "W01;W02;W04",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R02",
+        "relation_type": "AMMO_COMPATIBLE",
+        "subject_id_or_family": "28869",
+        "target_id_or_state": "28872",
+        "relation_status": "PASS",
+        "claim": "Sunlight crossbow uses sunlight bolts",
+        "source_ids": "W01;W03;W04",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R03",
+        "relation_type": "AMMO_COMPATIBLE",
+        "subject_id_or_family": "28869",
+        "target_id_or_state": "9243",
+        "relation_status": "FAIL",
+        "claim": "Diamond enchanted bolts are not antler bolts",
+        "source_ids": "W01;W04;W15;W27",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R04",
+        "relation_type": "AMMO_COMPATIBLE",
+        "subject_id_or_family": "9185",
+        "target_id_or_state": "28878",
+        "relation_status": "FAIL",
+        "claim": "Rune crossbow cannot fire moonlight antler bolts",
+        "source_ids": "W04;W13;W27",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R05",
+        "relation_type": "AMMO_COMPATIBLE",
+        "subject_id_or_family": "9185",
+        "target_id_or_state": "9243",
+        "relation_status": "PASS",
+        "claim": "Rune crossbow can fire adamant enchanted bolts",
+        "source_ids": "W04;W13;W15",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R06",
+        "relation_type": "COSMETIC_EQUIVALENT",
+        "subject_id_or_family": "9185",
+        "target_id_or_state": "26486",
+        "relation_status": "PASS",
+        "claim": "Ornament does not change bonuses; assess IDs explicitly",
+        "source_ids": "W13;W14",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R07",
+        "relation_type": "TASK_BONUS_HEAD",
+        "subject_id_or_family": "11784",
+        "target_id_or_state": "TASK_MATCH_REQUIRED",
+        "relation_status": "RULE",
+        "claim": "Black mask imbued boosts Ranged on task, not universally",
+        "source_ids": "W05",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R08",
+        "relation_type": "TASK_BONUS_HEAD",
+        "subject_id_or_family": "11865",
+        "target_id_or_state": "TASK_MATCH_REQUIRED",
+        "relation_status": "RULE",
+        "claim": "Slayer helm imbued boosts Ranged on task",
+        "source_ids": "W06",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R09",
+        "relation_type": "WEAR_REQUIREMENT",
+        "subject_id_or_family": "28869",
+        "target_id_or_state": "66 Ranged + 50 Hunter",
+        "relation_status": "RULE",
+        "claim": "Quest not inferred",
+        "source_ids": "W01",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R10",
+        "relation_type": "WEAR_REQUIREMENT",
+        "subject_id_or_family": "30076",
+        "target_id_or_state": "70 Ranged + 40 Defence",
+        "relation_status": "RULE",
+        "claim": "No ownership inference",
+        "source_ids": "W09",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R11",
+        "relation_type": "WEAR_REQUIREMENT",
+        "subject_id_or_family": "30079",
+        "target_id_or_state": "70 Ranged",
+        "relation_status": "RULE",
+        "claim": "No ownership inference",
+        "source_ids": "W10",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R12",
+        "relation_type": "WEAR_REQUIREMENT",
+        "subject_id_or_family": "12500",
+        "target_id_or_state": "70 Ranged + 40 Defence",
+        "relation_status": "RULE",
+        "claim": "No ownership inference",
+        "source_ids": "W12",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R13",
+        "relation_type": "GOD_PROTECTION",
+        "subject_id_or_family": "12500",
+        "target_id_or_state": "BANDOS_GWD",
+        "relation_status": "RULE",
+        "claim": "PASS under area-specific rules; no universal boss protection",
+        "source_ids": "W12;W25;W26",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R14",
+        "relation_type": "DRAGONFIRE_PROTECTION",
+        "subject_id_or_family": "1540",
+        "target_id_or_state": "CONTEXT_DEPENDENT",
+        "relation_status": "RULE",
+        "claim": "Partial shield protection; potion combinations matter",
+        "source_ids": "W16;W17",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R15",
+        "relation_type": "MASK_PROTECTION",
+        "subject_id_or_family": "4164",
+        "target_id_or_state": "DUST_OR_SMOKE",
+        "relation_status": "RULE",
+        "claim": "Must be equipped; not a generic slayer bonus",
+        "source_ids": "W18;W19",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R16",
+        "relation_type": "FULL_SET_REQUIRED",
+        "subject_id_or_family": "VOID_KNIGHT",
+        "target_id_or_state": "4 specified worn items",
+        "relation_status": "RULE",
+        "claim": "Partial mixed set does not grant set effect",
+        "source_ids": "W20",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R17",
+        "relation_type": "DEGRADED_STATE",
+        "subject_id_or_family": "BARROWS_0",
+        "target_id_or_state": "UNUSABLE_ON_REEQUIP",
+        "relation_status": "RULE",
+        "claim": "Do not conflate 25 with 0",
+        "source_ids": "W21",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R18",
+        "relation_type": "CHARGE_STATE",
+        "subject_id_or_family": "TOXIC_BLOWPIPE_EMPTY",
+        "target_id_or_state": "NO_POWERED_USE",
+        "relation_status": "RULE",
+        "claim": "Need scales and darts; exceptional equipped-zero handling",
+        "source_ids": "W22",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R19",
+        "relation_type": "CHARGE_STATE",
+        "subject_id_or_family": "11908",
+        "target_id_or_state": "UNCHARGED",
+        "relation_status": "NO_BUILTIN_ATTACK",
+        "claim": "Unknown charge status is not proven usable",
+        "source_ids": "W23",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R20",
+        "relation_type": "CHARGE_STATE",
+        "subject_id_or_family": "23983",
+        "target_id_or_state": "INACTIVE",
+        "relation_status": "NO_ATTACK",
+        "claim": "Requires valid charged state",
+        "source_ids": "W24",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    },
+    {
+      "producer": "GEAR-CORE-04",
+      "record": {
+        "relation_id": "R21",
+        "relation_type": "NO_IMPLIED_SET_BONUS",
+        "subject_id_or_family": "HUEY_BLESSED_MIX",
+        "target_id_or_state": "NO_BONUS_ASSERTED",
+        "relation_status": "RULE",
+        "claim": "Huey armour comparison is per piece; don't invent bonus",
+        "source_ids": "W07;W28",
+        "evidence_level": "RESEARCHED",
+        "contradiction": "None known; version check before promotion"
+      }
+    }
+  ]
+}

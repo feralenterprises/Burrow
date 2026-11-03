@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrashPanda Tracker Combat Achievement Intelligence Wave 05",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pack_id",
+    "reference_total",
+    "reference_total_status",
+    "legacy_task_count",
+    "notes",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 5
+    },
+    "pack_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "reference_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reference_total_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "legacy_task_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "notes": {
+      "type": "string"
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/task"
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "revision",
+        "retrieved_utc",
+        "evidence_pointer"
+      ],
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "retrieved_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_pointer": {
+          "type": "string"
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "key",
+        "minimum",
+        "boostable"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "SKILL",
+            "QUEST",
+            "DIARY",
+            "ITEM",
+            "INSTANCE",
+            "TEAM_SIZE",
+            "UNLOCK",
+            "SPELL",
+            "LOCATION"
+          ]
+        },
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimum": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "boostable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "boss",
+        "name",
+        "tier",
+        "type",
+        "canonical_condition",
+        "legacy_description",
+        "strategy_tip",
+        "review",
+        "source",
+        "gates"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9-]{8,80}$"
+        },
+        "boss": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tier": {
+          "enum": [
+            "EASY",
+            "MEDIUM",
+            "HARD",
+            "ELITE",
+            "MASTER",
+            "GRANDMASTER"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_condition": {
+          "type": "string"
+        },
+        "legacy_description": {
+          "type": "string"
+        },
+        "strategy_tip": {
+          "type": "string"
+        },
+        "review": {
+          "enum": [
+            "CHECK",
+            "VERIFIED_SOURCE",
+            "REJECTED"
+          ]
+        },
+        "source": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/source"
+            }
+          ]
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gate"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "review": {
+                "const": "VERIFIED_SOURCE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "$ref": "#/$defs/source"
+              },
+              "canonical_condition": {
+                "minLength": 1,
+                "not": {
+                  "pattern": "(Combat Task #|Canonical game-checked condition for|TODO|TBD|placeholder)"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

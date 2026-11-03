@@ -1,0 +1,283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TPT Activity Intelligence Pack W04",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 4
+    },
+    "pack_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9-]{5,72}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "ACTIVITY",
+              "PATCH",
+              "TELEPORT",
+              "CLUE_PROFILE"
+            ]
+          },
+          "domain": {
+            "type": "string",
+            "enum": [
+              "GEAR",
+              "BOSS",
+              "CLUE",
+              "FARMING",
+              "SKILLING",
+              "TRANSPORT",
+              "COMBAT_ACHIEVEMENT"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context": {
+            "type": "string",
+            "minLength": 0
+          },
+          "patch_type": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "REGULAR_TREE",
+              "FRUIT_TREE"
+            ]
+          },
+          "wilderness": {
+            "type": "boolean"
+          },
+          "review": {
+            "type": "string",
+            "enum": [
+              "STAGING",
+              "CHECK",
+              "VERIFIED_SOURCE",
+              "REJECTED"
+            ]
+          },
+          "source": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "pattern": "^https://"
+                  },
+                  "revision": {
+                    "type": "string",
+                    "minLength": 0
+                  },
+                  "retrieved_utc": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_pointer": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "url",
+                  "revision",
+                  "retrieved_utc",
+                  "evidence_pointer"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "SKILL_REAL",
+                    "SKILL_EFFECTIVE",
+                    "COMBAT_LEVEL",
+                    "QUEST",
+                    "DIARY",
+                    "UNLOCK",
+                    "ITEM"
+                  ]
+                },
+                "key": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minimum": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "boostable": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "REQUIRED",
+                    "RECOMMENDED",
+                    "OPTIONAL_UPGRADE"
+                  ]
+                },
+                "any_of_group": {
+                  "type": "string",
+                  "minLength": 0
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "key",
+                "minimum",
+                "boostable",
+                "role",
+                "any_of_group"
+              ]
+            }
+          },
+          "supplies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "item_id": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "REQUIRED",
+                    "RECOMMENDED",
+                    "OPTIONAL_UPGRADE"
+                  ]
+                },
+                "min_quantity": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max_quantity": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "slot": {
+                  "type": "string",
+                  "minLength": 0
+                },
+                "purpose": {
+                  "type": "string",
+                  "minLength": 0
+                }
+              },
+              "required": [
+                "name",
+                "item_id",
+                "role",
+                "min_quantity",
+                "max_quantity",
+                "slot",
+                "purpose"
+              ]
+            }
+          },
+          "travel": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "destination": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "cooldown_group": {
+                    "type": "string",
+                    "minLength": 0
+                  },
+                  "cooldown_seconds": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "daily_limit": {
+                    "type": "integer",
+                    "minimum": -1
+                  },
+                  "daily_group": {
+                    "type": "string",
+                    "minLength": 0
+                  },
+                  "notes": {
+                    "type": "string",
+                    "minLength": 0
+                  }
+                },
+                "required": [
+                  "destination",
+                  "cooldown_group",
+                  "cooldown_seconds",
+                  "daily_limit",
+                  "daily_group",
+                  "notes"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "domain",
+          "name",
+          "context",
+          "patch_type",
+          "wilderness",
+          "review",
+          "source",
+          "requirements",
+          "supplies",
+          "travel"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "pack_id",
+    "entries"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "wave": "W07.5.1",
+  "status": "OWNER_WINDOWS_RETEST_REQUIRED",
+  "parent_archive": "TPT-INTELLIGENCE-W075-MULTISTYLE-GEAR-CLEAN-DUAL-DEV-OWNER-HOLD.zip",
+  "parent_sha256": "eea049b7ad56d12de7f3354333579783325c6785f2b4d2932496cd237bfb696c",
+  "original_packaged_files": 435,
+  "legacy_source_files_changed": 12,
+  "changed_test_files": 10,
+  "changed_launch_banner_scripts": 2,
+  "production_source_changed": false,
+  "hoverlite_source_changed": false,
+  "user_W075_windows_results": {
+    "tests_completed": 676,
+    "tests_failed": 11
+  },
+  "checks": {
+    "original_W075_archive_crc": "PASS",
+    "original_source_byte_preservation": "PASS",
+    "java21_javac_release17_dependency_free_source": "PASS",
+    "previous_failed_cases_replayed_with_local_JUnit_assertion_shim": "11 of 11 passed",
+    "additional_offline_standalone_regressions": "6 of 6 passed",
+    "Windows_JDK17_full_Gradle": "NOT_RUN",
+    "Windows_RuneLite_dual_launch": "NOT_RUN",
+    "owner_gameplay_QA": "NOT_RUN"
+  },
+  "notes": "Only test source and two text banners were changed; genuine Gradle/JUnit verification is pending."
+}

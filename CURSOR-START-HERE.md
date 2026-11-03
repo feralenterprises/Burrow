@@ -3,6 +3,10 @@
 **Branch:** `ui/tpt-shell-r10c-cursor-20261103`  
 **Disposition:** RELEASE HOLD. **Do not merge into main or publish to RuneLite without owner approval and native QA.**
 
+## Complete original master archives on GitHub
+
+The missing intelligence and Pathfinder master ZIPs have been preserved on this branch as **36 verified Base64 parts**. To reconstruct the ZIPs on Windows, run `project-handoffs/archive-recovery/00-RESTORE-ORIGINAL-ARCHIVES.cmd`. See [archive recovery instructions](project-handoffs/archive-recovery/README.md) and [exact archive status](project-handoffs/ARCHIVE-STATUS.md). Archival recovery is **not** an engine merge or live RuneLite QA pass.
+
 ## Open directly in Cursor
 
 ```powershell
@@ -48,10 +52,6 @@ Open the **entire Burrow repository** in Cursor so the historical master handoff
 - Do not fabricate personal KC, drops, readiness, or bank item ownership.
 - Pathfinder W09 source is an **isolated reconstructed QA candidate**, not proven production or accepted merged host.
 
-## Two original archives not yet published
+## Archive fidelity
 
-The two complete binary ZIPs could not be uploaded through the connected GitHub action. Their **readable top-level contents are present** under `extracted/`, but nested binaries and original archive bytes are **not** in this branch.
-
-See `project-handoffs/ARCHIVE-STATUS.md` for exact names and SHA-256 digests. If full archival fidelity is required, upload those two original ZIPs on this **same branch** using GitHub's file-upload interface or a normal git push from the machine where you downloaded them.
-
-Never equate this GitHub tree with a successful native RuneLite integration, complete project-history migration, or source promotion.
+Both original master ZIPs are byte-for-byte reconstructable from the GitHub archive-recovery parts. Their original ZIP blobs are not directly committed; use the restoration script above. Do not equate archival presence with a completed historical migration, source promotion, or native RuneLite integration.

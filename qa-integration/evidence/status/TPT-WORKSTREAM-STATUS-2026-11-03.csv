@@ -1,0 +1,20 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: TPT-WORKSTREAM-STATUS-2026-11-03.csv>index,Workstream,Latest checkpoint,State,Evidence location,Next gate
+0,Main engine,Wave 7.5.1 + RuneLite 1.13.5,DEVELOPMENT HOLD,Main cumulative ZIP,"Full Windows 676-test retest, game client launch, owner gameplay"
+1,Outfitter & combat styles,Wave 7.5,PROVISIONAL IN SOURCE,Main cumulative ZIP,Independent research gear approval; Best in Bank restricts provisional
+2,Bank R05/Bank O,Owner 4-item withdrawal pass earlier,REGRESSION PENDING,Main cumulative ZIP,New package Windows bank source/withdrawal identity
+3,Activity Intelligence,Wave 4 44 staged records,RESEARCH-ONLY,Research compendium,Source-approve and wire to real account
+4,Combat Achievements,Wave 5 / BQA-906,REJECTED FULL LEDGER,BQA-906 intake,Replace 652 placeholders; independent review
+5,Pathfinder QA,Independent PQA-W07,ISOLATED PATCH HOLD,PQA-W07 ZIP,Long-run journey success; native integration
+6,First-run capture,PQA-W07 partial Collection Log,INCOMPLETE,PQA-W07 report,"Boss, Slayer, diary, CA capture and native coverage"
+7,Internal Bank Memory,PQA-W07 historical candidate,NOT CONNECTED,PQA-W07 report,Native safe persistent snapshot; no extra TPT tab
+8,Unmerged UI,R02-W08E,VISUAL HOLD,W08E standalone ZIP,"3/3 approved boss portraits, model adapters, owner signoff"
+9,Interactive UI audit,R09,PROTOTYPE PASS / NATIVE UNKNOWN,R09 audit ZIP,Native RuneLite and real account testing
+10,Boss research R31,R31 archive,ARCHIVED / NOT IMPORT APPROVED,R31 archive,No historical edits; per-row approval
+11,R32 research,Four scoped corrections,STAGING,R32 transcript in research pack,Tongs/Spoons intake; source verification
+12,Gear W01,Spoons R02 consolidated,"STAGING, 0 APPROVED",Gear archive in research compendium,Complete exact-ID and mechanical evidence
+13,Sessions/KC,BQA-902 R33/R34,RESEARCH HOLD,Sessions reports,Live event/source provenance and last-10 sessions
+14,HoverLite dual dev,v0.2.8,BUNDLED DEVELOPMENT,Main cumulative ZIP,Owner live validation of exact bundle
+15,GitHub,Build 38 historical,OLDER THAN MAIN PACKAGE,Previous status report,Do not overwrite 7.5.1; exact current commit verification
+16,Plugin Hub,TPT standalone submission,NOT VERIFIED / HOLD,Previous status report,"Actual public source, PR, approval"
+17,Discord,Separate Feral server ops,OUTSIDE SOURCE INTEGRATION,Conversation status,Independent channel/migration verification

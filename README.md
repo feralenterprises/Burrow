@@ -30,6 +30,10 @@ A compact **four-tab** experience designed to be useful during play:
 
 These are **development updates**, not claims that the older source snapshot in this repository implements each feature. Read the [development log](docs/DEVELOPMENT-LOG.md) for the current public summary and [product direction](docs/PRODUCT-DIRECTION.md) for the design principles.
 
+## Tested development snapshot
+
+The complete [Build #38 Bank R05 development ZIP](development-snapshots/B38/README.md) is archived with its original source and checksum. It is distinct from the older public prototype and includes an independent experimental HoverLite v0.2.8 copy for dual-plugin QA. This is **not yet a Plugin Hub release**.
+
 ## Source and build information
 
 The browsable `Project-Burrow/` folder and `ci/` archives document an **earlier Java 17 prototype and regression work**. The existing manual GitHub Actions workflow references sealed **BUR-0008 R07** source and checks a genuine JDK 17 / Gradle environment; it is **not** a release or a live RuneLite gameplay test.

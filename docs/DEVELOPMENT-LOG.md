@@ -4,6 +4,10 @@ Public development notes for **TrashPanda Tracker (TPT)**, also known internally
 
 **Current status:** Active development. Not published on the RuneLite Plugin Hub. Entries describe the work and evidence available at the time; they do not certify the code currently checked into this repository.
 
+## November 2, 2026 · Build #38 source archived
+
+The [exact owner-tested Build #38 ZIP](../development-snapshots/B38/README.md) is now preserved on GitHub. Owner-confirmed four manual Best in Bank withdrawals with the temporary O tab remaining available. This does not certify unrelated features. The independent HoverLite v0.2.8 development copy is included for the historical dual-client test. **Plugin Hub release remains on hold.**
+
 ## November 2, 2026 · Building account-aware intelligence
 
 ### Owner-tested development progress

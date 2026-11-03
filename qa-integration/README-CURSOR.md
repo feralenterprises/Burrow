@@ -48,3 +48,7 @@ The goal is a **single JDK17 RuneLite plugin test candidate**, integrating the c
 The GitHub branch now houses recovered complete master archive bytes, readable handoffs, R31 in the nested research compendium, B38 historical QA ZIP, W075/W0751 full hosts, W09 isolated candidate, Gear W01 research, R10C UI shell, Pathfinder QA reports and R32-specific QA notes. It **does not yet prove** every historical Library file or later working build is present.
 
 The source matrix, missing-artifact register and QA gates are authoritative status summaries here. When later source becomes available, add new pinned inputs on this QA branch, never silently replace an existing pin.
+
+## QA CI
+
+`.github/workflows/tpt-qa-staging.yml` runs on pushes to the QA branch affecting the source/recovery paths, or manually from GitHub Actions. It restores SHA-verified sources on a Windows runner with Temurin 17 and runs the **isolated W09** Gradle unit tests. It is not the merged product build and cannot certify a live RuneLite gameplay session. Examine exact logs and test artifacts before promoting any code.

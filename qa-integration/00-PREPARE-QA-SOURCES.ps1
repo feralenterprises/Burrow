@@ -47,4 +47,5 @@ foreach ($Input in $Inputs) {
         throw
     }
 }
-Write-Host 'QA source staging finished. No integration/merge performed. R32 and newest owner runtime remain external blockers.' -ForegroundColor Yellow
+& (Join-Path $PSScriptRoot 'research-r32\RESTORE-R32.ps1')
+Write-Host 'QA source staging finished. No integration/merge performed. R32 archive verified; newer owner runtime still pending merge intake.' -ForegroundColor Yellow

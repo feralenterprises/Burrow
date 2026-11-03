@@ -26,7 +26,7 @@ The script verifies the two historical master archives, extracts all 92 outer en
 - `qa-integration/generated/cursor-wave4/`: independent, divergent Pathfinder engine
 - `qa-integration/generated/gear-research/`: R31 + Gear W01 immutable research and staging
 - `ui-shell/r10c/`: approved 225 px UI shell, tracked independently; **not** integrated plugin code
-- `project-handoffs/research-r32-staging/`: R32 read-only QA notes; the original R32 archive is **missing**
+- `project-handoffs/research-r32-staging/`: R32 read-only QA notes; the original R32 archive is now recoverable under `qa-integration/research-r32/`
 
 Read `MERGE-SOURCE-INVENTORY.md` and `MERGE-GATES.md` before writing any plugin source.
 
@@ -38,10 +38,10 @@ The goal is a **single JDK17 RuneLite plugin test candidate**, integrating the c
 
 ## Safety and release gates
 
-- Do not touch `main`, alter immutable R31, rewrite the missing R32, claim unobserved KC/ownership, or publish to Plugin Hub.
+- Do not touch `main`, alter immutable R31, rewrite immutable R32, claim unobserved KC/ownership, or publish to Plugin Hub.
 - Run `qa-integration/01-RUN-OFFLINE-QA-WINDOWS.cmd` only after reviewing the candidate source. It targets the **isolated W09 candidate** for offline smoke/regression tests and does **not** prove live RuneLite gameplay.
 - Only an independently reviewed, traceable, merged source tree plus real Windows RuneLite owner QA can become an approved QA build.
-- Missing latest owner-tested SLAY-R08 / other post-B38 host source and missing original R32 ZIP are **open intake blockers** until their exact artifacts are recovered and SHA-verified.
+- The original R32 archive has been found and SHA-verified. SLAY-R08 and R08 dual-plugin packages have been located in Library but must be committed and independently reconciled before native QA promotion.
 
 ## Quick audit result
 
@@ -52,3 +52,7 @@ The source matrix, missing-artifact register and QA gates are authoritative stat
 ## QA CI
 
 `.github/workflows/tpt-qa-staging.yml` runs on pushes to the QA branch affecting the source/recovery paths, or manually from GitHub Actions. It restores SHA-verified sources on a Windows runner with Temurin 17 and runs the **isolated W09** Gradle unit tests. It is not the merged product build and cannot certify a live RuneLite gameplay session. Examine exact logs and test artifacts before promoting any code.
+
+## Verified R32 recovery
+
+The original R32 research staging ZIP is now stored as four SHA-reconstructable parts under `qa-integration/research-r32/parts/` and verified using `RESTORE-R32.ps1`. This is **archival recovery**, not approval of research claims or engine integration.

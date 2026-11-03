@@ -23,15 +23,17 @@ All paths beginning with `restored-full/` are relative to `project-handoffs/arch
 - **First run / account truth**: full baseline capture, seven-day reminders, guided click-through and per-account persistence remain native acceptance blockers despite isolated candidate test passes.
 - **R10C** shell is a standalone artifact. Preserve four tabs (Home, Pathfinder, Outfitter, Sessions), Chronicle selection independence, authentic approved armored raccoon. Do not use rejected chunky raccoon.
 - **Sessions** boss/slayer logs and KC must use actual game evidence with provenance, not loot or manual assumptions.
-- **R31 research** immutable. R32 staging notes are not a complete R32 archive or canonical promotion.
+- **R31 research** immutable. Original R32 archive is now SHA-verified and GitHub-reconstructable; R32 remains staging-only, not a canonical promotion.
 - **Latest owner-tested source** is NOT established by git branch names or timestamps. B38 is scoped owner QA; W0751 and W09 are newer source snapshots/isolated candidates. Need separate source/hash and Windows QA for reported SLAY-R08 and subsequent changes before picking the true integrated host.
 
 ## Exact next merge order
 
-1. Recover/pin latest owner-tested RuneLite source and missing R32 original (if retrievable); retain B38 for regressions.
+1. Pin latest owner-tested RuneLite source (SLAY-R08 / dual R08 intake found in Library, GitHub staging pending); retain B38 for regressions. Original R32 is now recovered under `qa-integration/research-r32/`.
 2. Define one canonical account-progression snapshot model and first-run provenance/freshness contracts.
 3. Reconcile Pathfinder W0751/W09 with Cursor engine behavior, do not replace wholesale.
 4. Integrate persistent Bank Memory as a subordinate view, maintain BIB O lifecycle and equipment variants.
 5. Integrate approved R10C visuals in actual RuneLite 225px panel, keeping four root tabs.
 6. Sessions provenance and KC capture, owner-visible evidence gates.
 7. JDK17 build/test and independent Tongs QA, owner Windows RuneLite playback, final approval.
+
+| Original research dispatch R32 | `qa-integration/research-r32/parts/` four parts; restore script | `36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a` | 351,885 B, 84 ZIP entries, 83/83 manifest items verified; **research staging, unapproved** |

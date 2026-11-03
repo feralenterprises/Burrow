@@ -14,7 +14,7 @@
 | Four-tab UI | Home / Pathfinder / Outfitter / Sessions; 225px; authentic icons; approved lean armored raccoon; 4 × 7 inventory | R10C standalone shell only |
 | Chronicle independence | Prev/next and boss picker never change Outfitter selected boss/method/tier/loadout | Requires native regression |
 | Sessions | KC and logs from ring-of-wealth/enchanted gem game widgets; no invented KC | Requires native regression |
-| Research R31/R32 | Immutable R31; R32 exact original SHA/manifest before promotion | R31 available, R32 original missing |
+| Research R31/R32 | Immutable R31; R32 exact original SHA/manifest before promotion | R31 immutable; R32 original recovered and manifest 83/83 verified; research still staging with 7 QA evidence blockers |
 | Gradle Java17 | CI/Windows exact Java17 build and focused tests; no broken dependencies | NOT YET RUN ON QA INTEGRATION |
 | Owner native QA | Real RuneLite single-client dual-plugin launch, account hop/logout, BIB O, snapshot persistence, UX inspection | NOT YET RUN |
 

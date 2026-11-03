@@ -1,0 +1,5 @@
+generated/
+*.class
+*.log
+.gradle/
+build/

@@ -1,0 +1,29 @@
+{
+  "artifact": "W09 ISOLATED QA CANDIDATE; not production",
+  "original_name": "TPT-W0751-RUNELITE-135-ONE-CLICK-DUAL-DEV-FIX.zip",
+  "original_sha256": "79e7d54a78a0bb76b6b3eca0e6804067b02b40a35e88339ee83a20408aa7ef3f",
+  "valid_reconstruction_steps": [
+    {
+      "patch": "W08-CUMULATIVE-AGAINST-W0751.patch",
+      "sha256": "da3cf5258f3d4818eabd6cfc9ab963a8f8d1dac22a3cb116b80e8351664df66a",
+      "check": "PASS",
+      "apply": "PASS"
+    },
+    {
+      "patch": "W09-INCREMENTAL-AFTER-W08.patch",
+      "sha256": "3c3b103f59ff29bb153b0ab95b0267c9bb0bfc5c409386dc096dfed0bbc00096",
+      "check": "PASS",
+      "apply": "PASS"
+    }
+  ],
+  "invalid_direct_w09_cumulative_patch": "W09-CUMULATIVE-AGAINST-W0751.patch",
+  "invalid_patch_sha256": "03df17575aeaec672a128df6a181a72dbb6cbd30b64f7a88bbbc2033b403b357",
+  "direct_git_apply_check_on_pristine_W0751": "FAIL",
+  "direct_git_apply_check_error_excerpt": "error: Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java: No such file or directory\nerror: patch failed: Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java:118\nerror: Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java: patch does not apply\nerror: Project-Burrow/src/main/java/gg/feral/burrow/ui/BankMemoryPanel.java: No such file or directory\n",
+  "source_files_in_zip": 452,
+  "patched_source_zip": "W09-ISOLATED-CANDIDATE-SOURCE-RECONSTRUCTED-NOT-PRODUCTION.zip",
+  "patched_source_zip_sha256": "3e696901cc14d04a04c58473410f8548fcb47485f63baf596ba41d54e3c3ec13",
+  "native_runelite_verified": false,
+  "production_modified": false,
+  "github_modified": false
+}

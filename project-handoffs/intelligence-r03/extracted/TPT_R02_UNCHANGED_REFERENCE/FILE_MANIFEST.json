@@ -1,0 +1,154 @@
+{
+  "title": "TPT Cursor Master Context Pack",
+  "revision": "R02 owner memory correction",
+  "as_of": "2026-11-03",
+  "release": "HOLD",
+  "source_status": "bundled W075 reference; W0751 documented only",
+  "files": {
+    ".cursor/rules/tpt-project.mdc": {
+      "bytes": 3247,
+      "sha256": "2a862b57e511974dfeb8b2c98b35241172eb02681e7f14a6b59a813e49d8d144"
+    },
+    "AGENTS.md": {
+      "bytes": 3678,
+      "sha256": "384fc195308f67bea2f31bc9720844e09a08150ab00ece6653028a59b1ab4afa"
+    },
+    "README_START_HERE.md": {
+      "bytes": 3730,
+      "sha256": "e84253e7f82f93847495b94fd5adf72f6efa0ae6f678dbd638bbaa586e427354"
+    },
+    "SOURCE_TREE_INDEX.md": {
+      "bytes": 33396,
+      "sha256": "44cb03f7566c215b77a02a7630c3b8ca7ba75428180434686285fb036bfca228"
+    },
+    "SOURCE_ZIP_RECEIPT.json": {
+      "bytes": 433,
+      "sha256": "07230dca75f32e4fec218c3e79a75d815ddf49070ba82cf033ec40c29d9b4305"
+    },
+    "TPT_CURSOR_MASTER_CONTEXT.md": {
+      "bytes": 67590,
+      "sha256": "1dd302fa1544e6aa2f7b4ee38e92bcc9123e15a24be71e8770b902bc8aca56bf"
+    },
+    "audits/REQUIREMENTS-GAP-REGISTER.md": {
+      "bytes": 3734,
+      "sha256": "acb86d2bb09292129a978df13eab5df3de18c22b7ce02baedb49ec2d42a856fe"
+    },
+    "audits/WAVE-01-ACCOUNT-MEMORY-READ-ONLY.md": {
+      "bytes": 5619,
+      "sha256": "650e5e39d42ea74c69e0bdf0d3eb4bbf323fbc39187f0c9c4e95390b1ed6a57c"
+    },
+    "audits/WAVE-02-BANK-MEMORY-READ-ONLY.md": {
+      "bytes": 2957,
+      "sha256": "0488a3c6b0c8f2a2f354982c42a99e1393c2b6f0a07eb937e1f74b982286eeb8"
+    },
+    "references/01-MASTER-EXECUTION-PLAN.md": {
+      "bytes": 19528,
+      "sha256": "8662cd0d3ba89b7104c5da5f81caba99c69c29e0761f885ef089042f533c0a6a"
+    },
+    "references/01_COPY_PASTE_INTO_NEW_CHAT.md": {
+      "bytes": 5864,
+      "sha256": "d9130697b1a16b1b4f72e9c0bbff892202e8798ecfc979a55141d8f2dacf1ee2"
+    },
+    "references/TPT-SPOONS-MASTER-RESEARCH-2026-11-02.md": {
+      "bytes": 34137,
+      "sha256": "403f41ccb5b44fd7a833463820387b4c303fb66e3ca7fbb0166ba19e23552fea"
+    },
+    "references/TPT-SPOONS-RESEARCH-COMPENDIUM-2026-11-02.zip": {
+      "bytes": 937484,
+      "sha256": "d99f06386783b8784108f56fbeb1d8d90c6bafd01c6b4d50fd40e35cd99f38b5"
+    },
+    "references/TPT-W06-OUTFITTER-SANITY-AUDIT.md": {
+      "bytes": 7049,
+      "sha256": "4d7f30e8dac9349229df0251ef0c84598647efb65792739706c6afb040874b23"
+    },
+    "references/TPT-W06-OWNER-READ-FIRST.md": {
+      "bytes": 2701,
+      "sha256": "752185a754d39b9902aa300e7b7b647b57c63ef34a6c32b07117812723b1deea"
+    },
+    "references/TPT-W07-OWNER-READ-FIRST.md": {
+      "bytes": 4052,
+      "sha256": "193ea9b0cca1a0342af845298f86880e4c68ce91a526e2aea6a082ded1853a40"
+    },
+    "references/TPT-W075-READ-FIRST.md": {
+      "bytes": 3369,
+      "sha256": "22ae81f5c9b06a05ce7ddb04c845a5bf5ec96572b14f255bb9b93630765aa605"
+    },
+    "references/TPT-W0751-READ-FIRST.md": {
+      "bytes": 4018,
+      "sha256": "3e53d78c470ae44be8a556c7fa327471b1e91628be6435743be6fc97453aa5e9"
+    },
+    "source/TPT-INTELLIGENCE-W075-MULTISTYLE-GEAR-CLEAN-DUAL-DEV-OWNER-HOLD.zip": {
+      "bytes": 1632237,
+      "sha256": "eea049b7ad56d12de7f3354333579783325c6785f2b4d2932496cd237bfb696c"
+    },
+    "ui-reference/README-FIRST.md": {
+      "bytes": 3546,
+      "sha256": "2c3700e484ee66b1661518a6dff5c30868b8f3dfdaed4e2e0b8ba3f80aa3580b"
+    },
+    "ui-reference/TPT-UI-SHELL-R02-W02-STANDALONE-HOLD.zip": {
+      "bytes": 1815740,
+      "sha256": "1f70aa7d3e45e084fb102fc319f7452dbd198e276dc4f8c23c83da71ccf1c0d8"
+    },
+    "ui-reference/W02-ASSET-PROVENANCE.md": {
+      "bytes": 2270,
+      "sha256": "3909cf77e4caaf849ae89cd31ddc40cf1d5fee8d5c5bbcae8922d0803f114a43"
+    },
+    "ui-reference/WAVE-01-CHANGES.md": {
+      "bytes": 753,
+      "sha256": "3d75d2bd495774a812e76bed44bd177d542f83cf13a85c0b634279e307e9c3d2"
+    },
+    "ui-reference/WAVE-02-CHANGES.md": {
+      "bytes": 847,
+      "sha256": "4a7182cda6667d2f74fd80b2b1138b83e6402aaa36c5edc8f9455bdfdcae37d4"
+    },
+    "ui-reference/previews/browse-225px.png": {
+      "bytes": 56573,
+      "sha256": "25107a12d68f73041d2a2f2d8eba901b6abfacefa85fd56c57025383a40dddb1"
+    },
+    "ui-reference/previews/browse-3x-phone.png": {
+      "bytes": 179070,
+      "sha256": "9b4c50a52d854052798c6c455ef4ae0926fcd819597c466a417a4ff41cdb683d"
+    },
+    "ui-reference/previews/detail-225px.png": {
+      "bytes": 66818,
+      "sha256": "2dfbaa1a2cfb54c35ccb2a7259345aafa8a9fa899e45c3f66a4e3b092e583400"
+    },
+    "ui-reference/previews/detail-3x-phone.png": {
+      "bytes": 256545,
+      "sha256": "7ace0da55bac2bfb02e53b516a9c7441c56afa77d64c401ae6097fd54f28087d"
+    },
+    "ui-reference/previews/home-225px.png": {
+      "bytes": 83061,
+      "sha256": "4df4001b44a672d3f6c1339dfaa1ddb9e6abf9878a6c2607c19c38bb2cf02723"
+    },
+    "ui-reference/previews/home-3x-phone.png": {
+      "bytes": 261281,
+      "sha256": "19380ced71d929398112a65e2e3836ea4030d60e69876afc0dc84e66c878d846"
+    },
+    "ui-reference/previews/outfitter-225px.png": {
+      "bytes": 43629,
+      "sha256": "3d58515c2e772414504eee91e288b3a13e4dc33654f4b63ae19aa5e11c86ac39"
+    },
+    "ui-reference/previews/outfitter-3x-phone.png": {
+      "bytes": 164171,
+      "sha256": "6b3e3f774c08f846773070190051f2c73e0c8f3e6c6414fbe839285d4989fe60"
+    },
+    "ui-reference/previews/pathfinder-225px.png": {
+      "bytes": 33502,
+      "sha256": "4ef0ffc843874aca64c2b8dac1baae24103ebdbc367c8210e1f00688a1013389"
+    },
+    "ui-reference/previews/pathfinder-3x-phone.png": {
+      "bytes": 118674,
+      "sha256": "c2d6c1b84544da65aa1c0e2528715d3851e0defe6ae959d06c856b7229b92b77"
+    },
+    "ui-reference/previews/sessions-225px.png": {
+      "bytes": 34374,
+      "sha256": "78246233269a18d8ea41c8248662b3f688e7100fc93fbc600f92c5840ba6aac8"
+    },
+    "ui-reference/previews/sessions-3x-phone.png": {
+      "bytes": 131953,
+      "sha256": "4b9bf5c622ed50acd26853c8ed709340a10a7b7421c4c1cceafadd715fb14e68"
+    }
+  },
+  "count_excluding_manifest": 36
+}

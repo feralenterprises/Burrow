@@ -1,0 +1,21 @@
+id,priority,finding,status_as_of_wave6,evidence_location,acceptance_condition
+W6-L2-01,P0,Cross-account Outfitter READY leak,OPEN_W6,Wave6SpoonsIndependent.java,Typed Outfitter-issued account/session/plan/bank-generation; separate trusted host expectations
+W6-L2-02,P0/P1,Old bank timestamp labeled current,OPEN_W6,Wave6SpoonsIndependent.java,Cross-check bank capture epoch vs actual login and generation
+W6-L2-03,P0,Plank Make incomplete rune quantities/GP,OPEN_W6,Wave6SpoonsIndependent.java,"Per cast recipe with 2 astral, 1 nature, 15 earth (or verified substitutes), log-type cost"
+W6-L2-04,P0,String Jewellery insufficient runes,OPEN_W6,Wave6SpoonsIndependent.java,"Per cast recipe 2 astral, 10 earth, 5 water (or verified substitutes)"
+W6-L2-05,P1,60m splash from one cast,OPEN_W6,Wave6SpoonsIndependent.java,Separate STARTABLE_ONCE and SUSTAINABLE_FOR_WINDOW with verified cost rate
+W6-L2-06,P1,30m cooking from one food,OPEN_W6,Wave6SpoonsIndependent.java,No sustainable window absent resource budget
+W6-L2-07,P1,Raw clay vs unfired pottery,OPEN_W6,Wave6SpoonsIndependent.java,Correct pottery production prerequisites and item states
+W6-L2-08,P0,Level 1 fly fishing READY without supplies,OPEN_W6,Wave6SpoonsIndependent.java,"Fishing 20, fly rod, feathers, access"
+W6-L2-09,P0/P1,Smithing without bar hammer or access,OPEN_W6,Wave6SpoonsIndependent.java,Verify hammer bar and anvil and actual level
+W6-L2-10,P1,Gilded altar without bones/access,OPEN_W6,Wave6SpoonsIndependent.java,Verify bones and altar access
+W6-L2-11,P1,49 fresh-L1 READY catalog pathways need exhaustive audit,OPEN_W6,Wave6CoverageAudit.java,"Every NOT_CHECKABLE and all categories sourced, tested; differentiate training goal from method readiness"
+W6-L2-12,P1,11/12 simulation goal journeys dead-end,OPEN_W6,ProgressionSimulator,Expose exact unsupported transitions; improve source-backed coverage without invented success
+W6-L2-13,P1,Archive stale checksum receipts,OPEN_W6,SHA256SUMS.txt and SHA256SUMS_SRC.txt,Regenerate digests after final source and ZIP packaging
+HOST-PF-001,BLOCKER,Pathfinder not merged/retested against exact latest complete host,NOT_VERIFIED,Git hash and full RuneLite JDK17 Gradle,"Identify current repo, preserve other engines, full Java17 Gradle and native QA"
+HOST-MEM-001,BLOCKER,Persistent Account Memory full domain captures and guided resync,NOT_VERIFIED,TPT R02 master requirements,"Account-scope store, first-run guided capture, manual sync, 7-day reminders"
+HOST-MEM-002,BLOCKER,Persistent full Bank Memory and visible view/tab,NOT_VERIFIED,TPT R02 master requirements,"Full original bank snapshot, freshness and account scope, user tab/view"
+HOST-NAV-001,OWNER_DECISION,Bank Memory location vs historical four main tabs,OPEN_OWNER,TPT R02 owner correction,Ask fifth primary tab or nested tab at UI integration
+HISTORY-W02-01,P0,Quest hard requirements SoTE and quest points and Biohazard,PASS_SCOPED_W03_TO_W06,L2RegressionSuite,"Preserve regression guards, expand catalog-wide quest verification"
+HISTORY-W04-01,P0,Incomplete AND/OR and stale quantity cases,PASS_SCOPED_W05_TO_W06,Wave4IndependentSafetyGate,Preserve tests; expand recipe catalog
+HISTORY-W05-01,P0,Missing chisel and other spell recipe fixtures,PASS_SCOPED_W06,IndependentWave5Adversarial,Preserve tests; now test exact costs

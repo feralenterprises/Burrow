@@ -1,0 +1,274 @@
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java
+new file mode 100644
+index 0000000..2c19ceb
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java
+@@ -0,0 +1,20 @@
++package gg.feral.burrow.core;
++
++/** PQA-W09: source-event identity fence for a deferred read-only log widget read. */
++public final class KillLogCaptureFence {
++    private KillLogCaptureFence() {}
++    public record Pending(long accountHash, long loginEpoch, long openingTick) {
++        public Pending {
++            if (accountHash == -1L || loginEpoch <= 0 || openingTick < 0)
++                throw new IllegalArgumentException("No authenticated widget-opening event");
++        }
++    }
++    /** Only the same authenticated login, one to eight game ticks after the event. */
++    public static boolean mayRead(Pending p, long sessionAccount, long authenticatedAccount,
++                                  long loginEpoch, boolean loggedIn, boolean paused, long tick) {
++        if (p == null || !loggedIn || paused || loginEpoch <= 0 || tick < p.openingTick()) return false;
++        long delta = tick - p.openingTick();
++        return delta >= 1 && delta <= 8 && sessionAccount == p.accountHash() &&
++            authenticatedAccount == p.accountHash() && loginEpoch == p.loginEpoch();
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java
+new file mode 100644
+index 0000000..69e2071
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java
+@@ -0,0 +1,90 @@
++package gg.feral.burrow.core;
++
++import java.nio.charset.StandardCharsets;
++import java.security.MessageDigest;
++import java.security.NoSuchAlgorithmException;
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.HexFormat;
++import java.util.LinkedHashMap;
++import java.util.List;
++import java.util.Locale;
++import java.util.Map;
++import java.util.Objects;
++import java.util.Optional;
++import java.util.Set;
++import java.util.HashSet;
++
++/**
++ * PQA-W09: Strict, read-only parser for ONE currently visible OSRS Kill Log page.
++ * A successful read is a partial page witness, never proof of the full account log.
++ * No implied zeros, invented entity mapping, or automatic completion is permitted.
++ *
++ * RuneLite uses the KillLog interface for boss names/counts. Slayer title handling
++ * is a guarded candidate until the actual target game revision is owner-observed.
++ */
++public final class KillLogPageParser {
++    private KillLogPageParser() {}
++    public enum Kind { BOSS, SLAYER }
++    public record Observation(Kind kind, String pageId, Map<String, Long> exactCounts,
++                              List<String> cappedUnknownRows, int visibleRowCount) {
++        public Observation {
++            Objects.requireNonNull(kind);
++            if (pageId == null || pageId.isBlank()) throw new IllegalArgumentException("pageId");
++            exactCounts = Map.copyOf(exactCounts);
++            cappedUnknownRows = List.copyOf(cappedUnknownRows);
++            if (visibleRowCount < 1 || visibleRowCount > 500) throw new IllegalArgumentException("rowCount");
++        }
++    }
++    /** Null means no coherent, witnessed log page, NOT zero kills. */
++    public static Optional<Observation> parse(String rawTitle, List<String> rawNames,
++                                              List<String> rawCounts) {
++        if (rawTitle == null || rawNames == null || rawCounts == null || rawNames.isEmpty() ||
++            rawNames.size() > 500 || rawNames.size() != rawCounts.size()) return Optional.empty();
++        String title = clean(rawTitle);
++        Kind kind;
++        if ("Boss Kill Log".equals(title)) kind = Kind.BOSS;
++        else if ("Slayer Kill Log".equals(title)) kind = Kind.SLAYER;
++        else return Optional.empty(); // do not infer from a generic or unrelated widget
++
++        Map<String, Long> exact = new LinkedHashMap<>();
++        List<String> capped = new ArrayList<>();
++        Set<String> namesSeen = new HashSet<>();
++        List<String> pageNames = new ArrayList<>();
++        for (int i = 0; i < rawNames.size(); i++) {
++            String name = clean(rawNames.get(i));
++            String value = clean(rawCounts.get(i));
++            if (name.endsWith(":")) name = name.substring(0, name.length()-1).trim();
++            if (name.isBlank() || name.length() > 120 || value.isBlank() ||
++                !namesSeen.add(name.toLowerCase(Locale.ROOT))) return Optional.empty();
++            pageNames.add(name.toLowerCase(Locale.ROOT));
++            // OSRS Slayer Log can cap visible counts as Lots!. This is unknown,
++            // never an exact integer and never an inferred 65,535+ count.
++            if (value.startsWith("Lots!")) {
++                capped.add(name);
++                continue;
++            }
++            if (!value.matches("(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)") || value.length() > 18)
++                return Optional.empty();
++            try {
++                long parsed = Long.parseLong(value.replace(",", ""));
++                if (parsed < 0) return Optional.empty();
++                exact.put(name, parsed);
++            } catch (NumberFormatException invalid) { return Optional.empty(); }
++        }
++        // Set-derived page identity must not change when kill counts increase.
++        Collections.sort(pageNames);
++        String pageId = "killlog:" + kind.name().toLowerCase(Locale.ROOT) + ":" + digest(String.join("\n",pageNames));
++        return Optional.of(new Observation(kind,pageId,exact,capped,rawNames.size()));
++    }
++    private static String clean(String input) {
++        if (input == null) return "";
++        return input.replaceAll("<[^>]*>", "").replace('\u00a0', ' ').trim().replaceAll("\\s+", " ");
++    }
++    private static String digest(String input) {
++        try {
++            byte[] bytes = MessageDigest.getInstance("SHA-256").digest(input.getBytes(StandardCharsets.UTF_8));
++            return HexFormat.of().formatHex(bytes,0,12);
++        } catch (NoSuchAlgorithmException unavailable) { throw new AssertionError(unavailable); }
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+index d3df6a1..18908e0 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+@@ -160,8 +160,21 @@ public final class PathfinderGuidedCapture {
+             c.loginEpoch(),visibleKillCounts,positivelyObtainedIds)); }
+         catch(RuntimeException invalid){return false;}
+     }
++    /** PQA-W09: caller must first parse an exact Kill Log widget page through
++     * KillLogWidgetReader. A capped Lots! row is deliberately omitted, never zero.
++     * As with Collection Log, this is one partial page, not full log coverage. */
++    public boolean observeKillLogPage(Context context, gg.feral.burrow.core.KillLogPageParser.Observation page,
++                                      long observedAtMillis) {
++        if (page == null || context == null) return false;
++        Section section = page.kind() == gg.feral.burrow.core.KillLogPageParser.Kind.BOSS
++            ? Section.BOSS_KILL_LOG : Section.SLAYER_KILL_LOG;
++        try {
++            return observe(context, section, new Page(page.pageId(), Origin.NATIVE_WIDGET,
++                observedAtMillis, context.loginEpoch(), page.exactCounts(), Set.of()));
++        } catch (RuntimeException invalid) { return false; }
++    }
+     private static boolean allowedNativeSource(Section s) {
+-        return s==Section.COLLECTION_LOG; // other widget readers are NOT yet validated in this wave
++        return s==Section.COLLECTION_LOG || s==Section.BOSS_KILL_LOG || s==Section.SLAYER_KILL_LOG;
+     }
+     public List<ChecklistStep> checklist(long hash) {
+         List<ChecklistStep> items=new ArrayList<>();
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
+index b9e0f97..7b2ae0a 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
+@@ -334,6 +334,50 @@ public final class BurrowPlugin extends Plugin {
+             // Historical QA recording must never disrupt gameplay or KC tracking.
+         }
+     }
++    // PQA-W09: one screen-opening witness, fenced to account AND login epoch.
++    // No automatic game actions, bank reads, KC completion inference, or telemetry.
++    private gg.feral.burrow.core.KillLogCaptureFence.Pending pendingKillLog;
++
++    @Subscribe public void onWidgetLoaded(net.runelite.api.events.WidgetLoaded event) {
++        if (!running.get() || event == null ||
++            event.getGroupId() != net.runelite.api.gameval.InterfaceID.KILL_LOG) return;
++        SessionScope scope = sessionScope;
++        long hash = authenticatedAccountHash();
++        if (scope == null || scope.loginEpoch() <= 0 || !mayCaptureFor(hash)) return;
++        pendingKillLog = new gg.feral.burrow.core.KillLogCaptureFence.Pending(
++            hash, scope.loginEpoch(), client.getTickCount());
++    }
++    /** Defer until after widget children populate, then capture only exact visible rows. */
++    private void pollPendingKillLog() {
++        var pending = pendingKillLog;
++        if (pending == null) return;
++        SessionScope scope = sessionScope;
++        long tick = client.getTickCount();
++        if (tick == pending.openingTick()) return; // may still be rendering
++        if (scope == null || !gg.feral.burrow.core.KillLogCaptureFence.mayRead(
++                pending, sessionAccountHash, authenticatedAccountHash(), scope.loginEpoch(),
++                running.get() && !sessionPaused && client.getGameState()==GameState.LOGGED_IN,
++                sessionPaused, tick)) {
++            pendingKillLog = null; return;
++        }
++        var parsed = KillLogWidgetReader.read(client);
++        if (parsed.isEmpty()) return; // leave pending briefly until the widgets settle
++        pendingKillLog = null; // at most one accepted page per load event
++        try {
++            var journal = pathfinderGuidedCapture();
++            if (journal == null) return;
++            long now = System.currentTimeMillis();
++            boolean stored = journal.observeKillLogPage(
++                new gg.feral.burrow.core.PathfinderGuidedCapture.Context(
++                    pending.accountHash(), sessionAccountHash, authenticatedAccountHash(),
++                    scope.loginEpoch(), running.get(), sessionPaused, now),
++                parsed.get(), now);
++            if (stored) publishAccountMemory();
++        } catch (RuntimeException unavailable) {
++            // A journal failure must not interrupt the client or its bank/Slayer state.
++        }
++    }
++
+     /** Explicit owner click only. Unranked/unavailable results stay UNKNOWN, never zero. */
+     private void lookupHiscoreKc(long hash, String encounter) {
+         if (!rareDropAccountOk(hash) || hiscoreClient == null) { rareDropFeedback("HiScores unavailable"); return; }
+@@ -1185,6 +1229,7 @@ public final class BurrowPlugin extends Plugin {
+             SwingUtilities::invokeLater, this::registerButton, this::unregisterButton);
+ 
+     @Override protected void startUp() {
++        pendingKillLog = null; // never reuse a screen from the prior host lifecycle
+         xpTrackingDefaultOn = true; // Build 20 owner decision: XP tracking defaults ON
+         if(bankPreloader==null || bankPreloader.isClosed())
+             bankPreloader=new BestBankPreloader(BestBankPreloader.knownProfiles());
+@@ -1385,6 +1430,7 @@ public final class BurrowPlugin extends Plugin {
+         autoArmXpFromIntent();
+         trySynchronizeXp();
+         publishXpTrackingState();
++        pollPendingKillLog(); // W09: only read one witnessed Kill Log page, never bank/O
+         pollQuestSurvey(weaponGate.epoch());
+         if (--questTickCountdown <= 0) {
+             questTickCountdown = 5;
+@@ -1408,6 +1454,7 @@ public final class BurrowPlugin extends Plugin {
+     @Subscribe public void onGameStateChanged(GameStateChanged event) {
+         if (!running.get()) return;
+         GameState observedState = event.getGameState();
++        if (observedState != GameState.LOGGED_IN) pendingKillLog = null;
+         if (observedState == GameState.LOGGED_IN) {
+             if (kcAdapter == null) kcAdapter = newKcAdapter();
+             kcAdapter.onGameStateChanged(event);
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java
+new file mode 100644
+index 0000000..881ff1d
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java
+@@ -0,0 +1,40 @@
++package gg.feral.burrow.runelite;
++
++import gg.feral.burrow.core.KillLogPageParser;
++import net.runelite.api.Client;
++import net.runelite.api.gameval.InterfaceID;
++import net.runelite.api.widgets.Widget;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Optional;
++
++/**
++ * PQA-W09 read-only candidate. The only widget IDs used here match RuneLite's
++ * own ChatCommandsPlugin boss-log reader (KillLog.INTERFACE_TITLE, NAME, KILL).
++ * It never clicks a game menu, retrieves a bank, or interprets an unseen row.
++ * Slayer requires an exact title match and remains pending native UI validation.
++ */
++public final class KillLogWidgetReader {
++    private KillLogWidgetReader() {}
++    public static Optional<KillLogPageParser.Observation> read(Client client) {
++        if (client == null) return Optional.empty();
++        try {
++            Widget title = client.getWidget(InterfaceID.KillLog.INTERFACE_TITLE);
++            Widget names = client.getWidget(InterfaceID.KillLog.NAME);
++            Widget kills = client.getWidget(InterfaceID.KillLog.KILL);
++            if (title == null || names == null || kills == null ||
++                title.isHidden() || names.isHidden() || kills.isHidden()) return Optional.empty();
++            Widget[] nameChildren = names.getChildren();
++            Widget[] killChildren = kills.getChildren();
++            if (nameChildren == null || killChildren == null || nameChildren.length < 1 ||
++                nameChildren.length != killChildren.length) return Optional.empty();
++            List<String> rawNames = new ArrayList<>(), rawKills = new ArrayList<>();
++            for (int i = 0; i < nameChildren.length; i++) {
++                if (nameChildren[i] == null || killChildren[i] == null) return Optional.empty();
++                rawNames.add(nameChildren[i].getText());
++                rawKills.add(killChildren[i].getText());
++            }
++            return KillLogPageParser.parse(title.getText(), rawNames, rawKills);
++        } catch (RuntimeException incompleteOrChangedWidget) { return Optional.empty(); }
++    }
++}

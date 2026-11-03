@@ -1,0 +1,1000 @@
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderAccountArchive.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderAccountArchive.java
+new file mode 100644
+index 0000000..740f1b1
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderAccountArchive.java
+@@ -0,0 +1,263 @@
++package gg.feral.burrow.core;
++
++import gg.feral.burrow.pathfinder.SuggestionEngine;
++import java.nio.charset.StandardCharsets;
++import java.security.MessageDigest;
++import java.security.NoSuchAlgorithmException;
++import java.util.*;
++import java.util.function.BiConsumer;
++import java.util.function.Function;
++
++/**
++ * PQA-W06 ISOLATED CANDIDATE. Durable, account-scoped historical observations for
++ * Pathfinder. Every entry is an as-observed record, NEVER an authorization to
++ * treat a closed-bank item as currently owned or a quest as completed.
++ *
++ * Read/write storage is injected: the RuneLite host can supply ConfigManager.
++ * Missing or malformed data remains unavailable. No game actions are possible.
++ */
++public final class PathfinderAccountArchive {
++    private static final String BASELINE_PREFIX = "pathfinder_initial_";
++    private static final String LATEST_PREFIX = "pathfinder_latest_";
++    private static final String BANK_PREFIX = "pathfinder_bank_memory_";
++    private static final String VERSION = "PQA6";
++    // Bounds prevent accidental unbounded config writes; archives are never silently truncated.
++    private static final int MAX_STORED_CHARS = 120_000;
++    public static final long REMINDER_AFTER_MS = 7L * 24 * 60 * 60 * 1000;
++
++    private final Function<String,String> reader;
++    private final BiConsumer<String,String> writer;
++
++    public PathfinderAccountArchive(Function<String,String> reader, BiConsumer<String,String> writer) {
++        this.reader = Objects.requireNonNull(reader);
++        this.writer = Objects.requireNonNull(writer);
++    }
++    private static String accountSuffix(long hash) {
++        if (hash == -1L) throw new IllegalArgumentException("Unauthenticated account");
++        return Long.toUnsignedString(hash, 16);
++    }
++    public static String baselineKey(long hash) { return BASELINE_PREFIX + accountSuffix(hash); }
++    public static String latestKey(long hash) { return LATEST_PREFIX + accountSuffix(hash); }
++    public static String bankKey(long hash) { return BANK_PREFIX + accountSuffix(hash); }
++
++    public record Baseline(long observedAtMillis, Map<String,Integer> levels,
++                           Map<String,SuggestionEngine.Quest> quests, boolean surveyComplete) {
++        public Baseline {
++            levels=Map.copyOf(levels); quests=Map.copyOf(quests);
++        }
++    }
++    /** Bank-only contents, deliberately excluding carried/gear items to avoid double count. */
++    public record BankMemory(long observedAtMillis, Map<Integer,Integer> bankItems, boolean fullTabWitness) {
++        public BankMemory { bankItems=Map.copyOf(bankItems); }
++        public boolean reminderDue(long now) {
++            return now < observedAtMillis || now - observedAtMillis >= REMINDER_AFTER_MS;
++        }
++        /** Historical entries do not prove current ownership or stock. */
++        public boolean provesCurrentStock() { return false; }
++    }
++
++    /** Capture exactly once after a complete, same-login quest survey and full skill vector. */
++    public boolean saveInitialOnce(long hash, long observedAt, SuggestionEngine.Snapshot snapshot,
++                                   boolean allSkillsObserved, boolean questSurveyComplete) {
++        if (hash == -1L || observedAt <= 0 || snapshot == null || !snapshot.verifiedIdentity() ||
++            !allSkillsObserved || !questSurveyComplete || snapshot.skills().isEmpty() ||
++            snapshot.quests().isEmpty() || snapshot.quests().containsValue(SuggestionEngine.Quest.UNKNOWN)) return false;
++        String key=baselineKey(hash);
++        // Existing valid records never overwrite; unreadable records require explicit recovery.
++        String old=reader.apply(key);
++        if (old!=null && !old.isBlank()) return false;
++        String body=observedAt+"|"+encodeSkills(snapshot.skills())+"|"+encodeQuests(snapshot.quests());
++        writer.accept(key, seal("B",body));
++        return true;
++    }
++    public Optional<Baseline> readInitial(long hash) {
++        return hash == -1L ? Optional.empty() : readProgress(baselineKey(hash));
++    }
++    /** Save the most recently VERIFIED full skill/quest survey, without repetitive tick writes.
++     *  A newly observed state is not proof that Pathfinder caused the change. */
++    public boolean rememberLatest(long hash, long observedAt, SuggestionEngine.Snapshot snapshot,
++                                  boolean allSkillsObserved, boolean questSurveyComplete) {
++        if (hash == -1L || observedAt <= 0 || snapshot == null || !snapshot.verifiedIdentity() ||
++            !allSkillsObserved || !questSurveyComplete || snapshot.skills().isEmpty() ||
++            snapshot.quests().isEmpty() || snapshot.quests().containsValue(SuggestionEngine.Quest.UNKNOWN))return false;
++        String key=latestKey(hash),old=reader.apply(key);
++        var prior=readProgress(key);
++        if(old!=null && !old.isBlank() && prior.isEmpty())return false; // corruption -> explicit recovery
++        if(prior.isPresent()) {
++            Baseline p=prior.get();
++            if(p.observedAtMillis()>=observedAt)return false;
++            // Same content is re-witnessed at most once every seven days. This
++            // refreshes the as-observed timestamp without writing every game tick.
++            if(p.levels().equals(snapshot.skills()) && p.quests().equals(snapshot.quests()) &&
++                observedAt-p.observedAtMillis()<REMINDER_AFTER_MS)return false;
++        }
++        String body=observedAt+"|"+encodeSkills(snapshot.skills())+"|"+encodeQuests(snapshot.quests());
++        writer.accept(key,seal("B",body));
++        return true;
++    }
++    public Optional<Baseline> readLatest(long hash) {
++        return hash == -1L ? Optional.empty() : readProgress(latestKey(hash));
++    }
++    /** Exact observed deltas only. No XP, loot, travel, quest rewards or causal attribution. */
++    public record ProgressComparison(Map<String,Integer> skillLevelIncreases,
++                                     Set<String> newlyFinishedQuests,
++                                     Set<String> conflicts) {
++        public ProgressComparison {
++            skillLevelIncreases=Map.copyOf(skillLevelIncreases);
++            newlyFinishedQuests=Set.copyOf(newlyFinishedQuests);
++            conflicts=Set.copyOf(conflicts);
++        }
++        public boolean consistent() { return conflicts.isEmpty(); }
++    }
++    public Optional<ProgressComparison> compareInitialToLatest(long hash) {
++        var first=readInitial(hash);var last=readLatest(hash);
++        if(first.isEmpty()||last.isEmpty()||last.get().observedAtMillis()<first.get().observedAtMillis())
++            return Optional.empty();
++        Map<String,Integer> levels=new TreeMap<>();Set<String> quests=new TreeSet<>(),conflicts=new TreeSet<>();
++        for(var e:first.get().levels().entrySet()) {
++            Integer newLevel=last.get().levels().get(e.getKey());
++            if(newLevel==null){conflicts.add("SKILL_MISSING:"+e.getKey());continue;}
++            if(newLevel<e.getValue())conflicts.add("SKILL_DECREASE:"+e.getKey());
++            else if(newLevel>e.getValue())levels.put(e.getKey(),newLevel-e.getValue());
++        }
++        for(var e:first.get().quests().entrySet()) {
++            SuggestionEngine.Quest next=last.get().quests().get(e.getKey());
++            if(next==null){conflicts.add("QUEST_MISSING:"+e.getKey());continue;}
++            if(e.getValue()==SuggestionEngine.Quest.FINISHED && next!=SuggestionEngine.Quest.FINISHED)
++                conflicts.add("QUEST_REGRESSED:"+e.getKey());
++            else if(e.getValue()!=SuggestionEngine.Quest.FINISHED && next==SuggestionEngine.Quest.FINISHED)
++                quests.add(e.getKey());
++        }
++        return Optional.of(new ProgressComparison(levels,quests,conflicts));
++    }
++    private Optional<Baseline> readProgress(String key) {
++        try {
++            String body=unseal("B",reader.apply(key));
++            if(body==null)return Optional.empty();
++            String[] v=body.split("\\|",-1);
++            if(v.length!=3) return Optional.empty();
++            long time=Long.parseLong(v[0]);
++            var skills=decodeSkills(v[1]);var quests=decodeQuests(v[2]);
++            if(time<=0||skills.isEmpty()||quests.isEmpty())return Optional.empty();
++            return Optional.of(new Baseline(time,skills,quests,true));
++        }catch(RuntimeException ignored){return Optional.empty();}
++    }
++
++    /**
++     * Persist only a complete and accepted stable bank observation from a current open epoch.
++     * The caller must have proved live account/session identity with the W04 bridge, and
++     * {@code acceptedCurrentOpenEpoch} must be true. No bank reopen or widget read occurs.
++     */
++    public boolean rememberBank(long hash, long now, BankEvidence evidence, boolean acceptedCurrentOpenEpoch) {
++        if(hash==-1L || !acceptedCurrentOpenEpoch || evidence==null || now<=0 ||
++           !evidence.bankStillOpen() || evidence.stale() ||
++           evidence.population()!=BankEvidence.Population.STABLE_TAB_COUNTS_CONSISTENT ||
++           evidence.observedAtMillis()<=0 || evidence.observedAtMillis()>now ||
++           now-evidence.observedAtMillis()>120_000L) return false;
++        for(int qty:evidence.bank().values()) if(qty<=0) return false;
++        var previous=readBank(hash);
++        if(previous.isPresent() && previous.get().observedAtMillis()>=evidence.observedAtMillis())return false;
++        String body=evidence.observedAtMillis()+"|"+encodeBank(evidence.bank());
++        writer.accept(bankKey(hash),seal("M",body));
++        return true;
++    }
++    public Optional<BankMemory> readBank(long hash) {
++        if(hash==-1L)return Optional.empty();
++        try {
++            String body=unseal("M",reader.apply(bankKey(hash)));
++            if(body==null)return Optional.empty();
++            String[] v=body.split("\\|",-1);
++            if(v.length!=2)return Optional.empty();
++            long time=Long.parseLong(v[0]);
++            var items=decodeBank(v[1]);
++            if(time<=0)return Optional.empty();
++            return Optional.of(new BankMemory(time,items,true));
++        }catch(RuntimeException ignored){return Optional.empty();}
++    }
++
++    private static String encodeSkills(Map<String,Integer> levels) {
++        var b=new StringJoiner(",");
++        levels.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e->{
++            if(e.getKey()==null||e.getKey().isBlank()||e.getValue()==null||e.getValue()<1||e.getValue()>99)
++                throw new IllegalArgumentException("Invalid skill observation");
++            b.add(token(e.getKey())+"="+e.getValue());
++        });
++        return b.toString();
++    }
++    private static Map<String,Integer> decodeSkills(String input) {
++        if(input.isBlank())return Map.of();
++        Map<String,Integer> result=new TreeMap<>();
++        for(String s:input.split(",",-1)) {
++            String[] v=s.split("=",-1); if(v.length!=2)throw new IllegalArgumentException("Malformed skill");
++            String name=fromToken(v[0]);int level=Integer.parseInt(v[1]);
++            if(name.isBlank()||level<1||level>99||result.putIfAbsent(name,level)!=null)
++                throw new IllegalArgumentException("Duplicate/invalid skill");
++        }
++        return result;
++    }
++    private static String encodeQuests(Map<String,SuggestionEngine.Quest> quests) {
++        var b=new StringJoiner(",");
++        quests.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e->{
++            if(e.getKey()==null||e.getKey().isBlank()||e.getValue()==null||e.getValue()==SuggestionEngine.Quest.UNKNOWN)
++                throw new IllegalArgumentException("Incomplete quest survey");
++            b.add(token(e.getKey())+"="+e.getValue().name());
++        });
++        return b.toString();
++    }
++    private static Map<String,SuggestionEngine.Quest> decodeQuests(String input) {
++        if(input.isBlank())return Map.of();
++        Map<String,SuggestionEngine.Quest> result=new TreeMap<>();
++        for(String s:input.split(",",-1)) {
++            String[] v=s.split("=",-1);if(v.length!=2)throw new IllegalArgumentException("Malformed quest");
++            String name=fromToken(v[0]);var status=SuggestionEngine.Quest.valueOf(v[1]);
++            if(name.isBlank()||status==SuggestionEngine.Quest.UNKNOWN||result.putIfAbsent(name,status)!=null)
++                throw new IllegalArgumentException("Duplicate/invalid quest");
++        }
++        return result;
++    }
++    private static String encodeBank(Map<Integer,Integer> items) {
++        var b=new StringJoiner(",");
++        items.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e->{
++            if(e.getKey()==null||e.getKey()<=0||e.getValue()==null||e.getValue()<=0)
++                throw new IllegalArgumentException("Invalid bank stack");
++            b.add(e.getKey()+"="+e.getValue());
++        });
++        return b.toString();
++    }
++    private static Map<Integer,Integer> decodeBank(String input) {
++        if(input.isBlank())return Map.of(); // a witnessed empty bank is a valid memory
++        Map<Integer,Integer> result=new TreeMap<>();
++        for(String s:input.split(",",-1)) {
++            String[] v=s.split("=",-1);if(v.length!=2)throw new IllegalArgumentException("Malformed bank entry");
++            int id=Integer.parseInt(v[0]),qty=Integer.parseInt(v[1]);
++            if(id<=0||qty<=0||result.putIfAbsent(id,qty)!=null)
++                throw new IllegalArgumentException("Duplicate/invalid bank entry");
++        }
++        return result;
++    }
++    private static String token(String s) {
++        return Base64.getUrlEncoder().withoutPadding().encodeToString(s.getBytes(StandardCharsets.UTF_8));
++    }
++    private static String fromToken(String s) {
++        return new String(Base64.getUrlDecoder().decode(s),StandardCharsets.UTF_8);
++    }
++    private static String seal(String type,String body) {
++        String envelope=VERSION+"|"+type+"|"+body;
++        if(envelope.length()>MAX_STORED_CHARS)throw new IllegalArgumentException("Archive too large");
++        return envelope+"|"+sha(envelope);
++    }
++    private static String unseal(String type,String raw) {
++        if(raw==null||raw.isBlank()||raw.length()>MAX_STORED_CHARS+65)return null;
++        int sep=raw.lastIndexOf('|');if(sep<0)return null;
++        String envelope=raw.substring(0,sep),hash=raw.substring(sep+1);
++        if(!sha(envelope).equals(hash))return null;
++        String prefix=VERSION+"|"+type+"|";
++        return envelope.startsWith(prefix)?envelope.substring(prefix.length()):null;
++    }
++    private static String sha(String s) {
++        try {
++            byte[] bytes=MessageDigest.getInstance("SHA-256").digest(s.getBytes(StandardCharsets.UTF_8));
++            return HexFormat.of().formatHex(bytes);
++        }catch(NoSuchAlgorithmException e){throw new AssertionError(e);}
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+new file mode 100644
+index 0000000..d3df6a1
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+@@ -0,0 +1,196 @@
++package gg.feral.burrow.core;
++
++import java.nio.charset.StandardCharsets;
++import java.security.MessageDigest;
++import java.security.NoSuchAlgorithmException;
++import java.util.*;
++import java.util.function.BiConsumer;
++import java.util.function.Function;
++
++/**
++ * PQA-W07 ISOLATED CANDIDATE: an account-fenced first-run evidence journal and
++ * guided capture checklist. It NEVER opens widgets, injects game scripts, performs
++ * game actions or converts an unobserved row into zero/completed/owned.
++ *
++ * A received widget PAGE is not a verified COMPLETE LOG. No supported RuneLite
++ * signal in this candidate establishes exhaustive page coverage. Thus this
++ * class deliberately cannot mark an entire section COMPLETE.
++ */
++public final class PathfinderGuidedCapture {
++    public enum Section {
++        BOSS_KILL_LOG("Open the boss kill log via your ring of wealth, then inspect each page"),
++        SLAYER_KILL_LOG("Open the Slayer kill log via an enchanted gem or Slayer ring"),
++        COLLECTION_LOG("Open Collection Log and inspect its categories or search results"),
++        ACHIEVEMENT_DIARIES("Open the Achievement Diary interface and inspect regional tiers"),
++        COMBAT_ACHIEVEMENTS("Open Combat Achievements and inspect completed tasks");
++        private final String guidance;
++        Section(String guidance) { this.guidance = guidance; }
++        public String guidance() { return guidance; }
++    }
++    public enum Status { UNOBSERVED, REVIEWED_BY_PLAYER, PARTIALLY_WITNESSED }
++    public enum Origin { NATIVE_WIDGET, PLAYER_REVIEW }
++
++    /** Every live observation must be bound to ONE currently authenticated login. */
++    public record Context(long targetHash, long sessionHash, long authenticatedHash,
++                          long loginEpoch, boolean loggedIn, boolean sessionPaused, long nowMillis) {
++        public boolean trusted() {
++            return targetHash != -1L && sessionHash == targetHash &&
++                authenticatedHash == targetHash && loginEpoch > 0 && loggedIn &&
++                !sessionPaused && nowMillis > 0;
++        }
++    }
++    /** Only exact displayed/count rows may contain 0. An absent row remains UNKNOWN. */
++    public record Page(String id, Origin origin, long observedAtMillis, long loginEpoch,
++                       Map<String,Long> witnessedCounts, Set<Integer> obtainedItemIds) {
++        public Page {
++            if(id==null || id.isBlank() || id.length()>96 || origin==null || observedAtMillis<=0 || loginEpoch<=0)
++                throw new IllegalArgumentException("Invalid page provenance");
++            witnessedCounts=Map.copyOf(Objects.requireNonNull(witnessedCounts));
++            obtainedItemIds=Set.copyOf(Objects.requireNonNull(obtainedItemIds));
++            if(witnessedCounts.size()>500 || obtainedItemIds.size()>500)
++                throw new IllegalArgumentException("Page evidence too large");
++            for(var e:witnessedCounts.entrySet())
++                if(e.getKey()==null || e.getKey().isBlank() || e.getKey().length()>120 || e.getValue()==null || e.getValue()<0)
++                    throw new IllegalArgumentException("Invalid witnessed row");
++            for(int itemId:obtainedItemIds) if(itemId<=0) throw new IllegalArgumentException("Invalid item ID");
++            if(origin==Origin.PLAYER_REVIEW && (!witnessedCounts.isEmpty() || !obtainedItemIds.isEmpty()))
++                throw new IllegalArgumentException("Player review cannot assert machine-witnessed counts");
++        }
++    }
++    public record SectionSnapshot(long firstSeenAtMillis, Map<String,Page> pages) {
++        public SectionSnapshot { pages=Map.copyOf(pages); }
++        public long lastSeenAtMillis() { return pages.values().stream().mapToLong(Page::observedAtMillis).max().orElse(0L); }
++        public int nativePages() { return (int) pages.values().stream().filter(p -> p.origin()==Origin.NATIVE_WIDGET).count(); }
++        public int playerReviewPages() { return (int) pages.values().stream().filter(p -> p.origin()==Origin.PLAYER_REVIEW).count(); }
++        public int witnessedRows() { return pages.values().stream().filter(p -> p.origin()==Origin.NATIVE_WIDGET).mapToInt(p -> p.witnessedCounts().size()+p.obtainedItemIds().size()).sum(); }
++        public Status status() {
++            if(nativePages()>0) return Status.PARTIALLY_WITNESSED;
++            return playerReviewPages()>0?Status.REVIEWED_BY_PLAYER:Status.UNOBSERVED;
++        }
++        /** Full menu coverage is unproved. No positive-only widget page proves completion. */
++        public boolean provesCompleteLog() { return false; }
++    }
++    public record ChecklistStep(Section section, Status status, int witnessedPages,
++                                int playerReviewedPages, String instruction) {}
++    private static final String VERSION="PQA7";
++    private static final String PREFIX="pathfinder_capture_";
++    private static final int MAX_PAGES=60;
++    private static final int MAX_STORED_CHARS=65_000;
++    private static final long MAX_OBSERVATION_AGE=120_000;
++    private final Function<String,String> reader;
++    private final BiConsumer<String,String> writer;
++
++    public PathfinderGuidedCapture(Function<String,String> reader, BiConsumer<String,String> writer) {
++        this.reader=Objects.requireNonNull(reader);
++        this.writer=Objects.requireNonNull(writer);
++    }
++    public static String key(long hash, Section section) {
++        if(hash==-1L || section==null) throw new IllegalArgumentException("Account and section required");
++        return PREFIX+Long.toUnsignedString(hash,16)+"_"+section.name().toLowerCase(Locale.ROOT);
++    }
++    /** Invalid, mismatched, truncated, or corrupted records return ABSENT, never empty/zero. */
++    public Optional<SectionSnapshot> read(long hash, Section section) {
++        if(hash==-1L || section==null) return Optional.empty();
++        try {
++            String raw=reader.apply(key(hash,section));
++            if(raw==null || raw.isBlank() || raw.length()>MAX_STORED_CHARS+80)return Optional.empty();
++            int finalSep=raw.lastIndexOf('|');
++            if(finalSep<0 || !checksum(raw.substring(0,finalSep)).equals(raw.substring(finalSep+1)))return Optional.empty();
++            String[] head=raw.substring(0,finalSep).split("\\|",5);
++            if(head.length!=5 || !VERSION.equals(head[0]) || !head[1].equals(Long.toUnsignedString(hash,16)) ||
++               !head[2].equals(section.name()))return Optional.empty();
++            long first=Long.parseLong(head[3]);
++            if(first<=0)return Optional.empty();
++            Map<String,Page> pages=new LinkedHashMap<>();
++            if(!head[4].isEmpty())for(String packed:head[4].split(";",-1)) {
++                String[] v=packed.split("~",6);
++                if(v.length!=6)return Optional.empty();
++                String pageId=decode(v[0]);
++                Origin origin=Origin.valueOf(v[1]);
++                long at=Long.parseLong(v[2]),epoch=Long.parseLong(v[3]);
++                Map<String,Long> counts=new TreeMap<>();
++                if(!v[4].isEmpty())for(String c:v[4].split(",",-1)) {
++                    String[] parts=c.split("=",2);if(parts.length!=2)return Optional.empty();
++                    if(counts.putIfAbsent(decode(parts[0]),Long.parseLong(parts[1]))!=null)return Optional.empty();
++                }
++                Set<Integer> items=new TreeSet<>();
++                if(!v[5].isEmpty())for(String item:v[5].split(",",-1))
++                    if(!items.add(Integer.parseInt(item)))return Optional.empty();
++                Page page=new Page(pageId,origin,at,epoch,counts,items);
++                if(page.observedAtMillis()<first || pages.putIfAbsent(pageId,page)!=null)return Optional.empty();
++            }
++            if(pages.isEmpty() || pages.size()>MAX_PAGES)return Optional.empty();
++            return Optional.of(new SectionSnapshot(first,pages));
++        } catch(RuntimeException ignored) { return Optional.empty(); }
++    }
++    /** Only authentic, same-epoch, recent evidence is persisted. One page NEVER seals a section. */
++    public boolean observe(Context context, Section section, Page page) {
++        if(context==null || !context.trusted() || section==null || page==null ||
++           page.loginEpoch()!=context.loginEpoch() || page.observedAtMillis()>context.nowMillis() ||
++           context.nowMillis()-page.observedAtMillis()>MAX_OBSERVATION_AGE)return false;
++        if(page.origin()==Origin.NATIVE_WIDGET && !allowedNativeSource(section))return false;
++        // Native source integration is currently reviewed only for Collection Log pages.
++        Map<String,Page> pages=new TreeMap<>();
++        var saved=read(context.targetHash(),section);
++        String existing=reader.apply(key(context.targetHash(),section));
++        if(existing!=null && !existing.isBlank() && saved.isEmpty())return false;
++        saved.ifPresent(s -> pages.putAll(s.pages()));
++        Page previous=pages.get(page.id());
++        if(previous!=null && previous.observedAtMillis()>=page.observedAtMillis())return false;
++        // A later *manual* review never erases previously machine-witnessed rows.
++        if(previous!=null && previous.origin()==Origin.NATIVE_WIDGET && page.origin()==Origin.PLAYER_REVIEW)
++            return false;
++        pages.put(page.id(),page);
++        if(pages.size()>MAX_PAGES)return false;
++        long first=saved.map(v -> Math.min(v.firstSeenAtMillis(),page.observedAtMillis())).orElse(page.observedAtMillis());
++        String packed=encodeRecord(context.targetHash(),section,first,pages);
++        if(packed.length()>MAX_STORED_CHARS)return false; // no silent truncation
++        try { writer.accept(key(context.targetHash(),section),packed); return true; }
++        catch(RuntimeException unavailable){return false;}
++    }
++    /** Human confirmation is audit trail only, never item/KC/diary proof. */
++    public boolean markPlayerReviewed(Context c, Section s, String page, long observedAt) {
++        try {return observe(c,s,new Page(page,Origin.PLAYER_REVIEW,observedAt,c.loginEpoch(),Map.of(),Set.of()));}
++        catch(RuntimeException invalid){return false;}
++    }
++    /** Source-traced: collection-log page is already read by CollectionLogObserver. */
++    public boolean observeCollectionPage(Context c, String page, Map<String,Long> visibleKillCounts,
++                                         Set<Integer> positivelyObtainedIds, long observedAt) {
++        try { return observe(c,Section.COLLECTION_LOG,new Page(page,Origin.NATIVE_WIDGET,observedAt,
++            c.loginEpoch(),visibleKillCounts,positivelyObtainedIds)); }
++        catch(RuntimeException invalid){return false;}
++    }
++    private static boolean allowedNativeSource(Section s) {
++        return s==Section.COLLECTION_LOG; // other widget readers are NOT yet validated in this wave
++    }
++    public List<ChecklistStep> checklist(long hash) {
++        List<ChecklistStep> items=new ArrayList<>();
++        for(Section s:Section.values()) {
++            var v=read(hash,s);
++            Status status=v.map(SectionSnapshot::status).orElse(Status.UNOBSERVED);
++            items.add(new ChecklistStep(s,status,v.map(SectionSnapshot::nativePages).orElse(0),
++                v.map(SectionSnapshot::playerReviewPages).orElse(0),s.guidance()));
++        }
++        return List.copyOf(items);
++    }
++    public Optional<ChecklistStep> nextUnobserved(long hash) {
++        return checklist(hash).stream().filter(s -> s.status()==Status.UNOBSERVED).findFirst();
++    }
++    private static String encodeRecord(long hash,Section section,long first,Map<String,Page> pages) {
++        StringJoiner rows=new StringJoiner(";");
++        for(Page p:pages.values()) {
++            StringJoiner counts=new StringJoiner(","),items=new StringJoiner(",");
++            p.witnessedCounts().entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(e->counts.add(token(e.getKey())+"="+e.getValue()));
++            p.obtainedItemIds().stream().sorted().forEach(id->items.add(Integer.toString(id)));
++            rows.add(token(p.id())+"~"+p.origin()+"~"+p.observedAtMillis()+"~"+p.loginEpoch()+"~"+counts+"~"+items);
++        }
++        String data=VERSION+"|"+Long.toUnsignedString(hash,16)+"|"+section+"|"+first+"|"+rows;
++        return data+"|"+checksum(data);
++    }
++    private static String token(String s) {return Base64.getUrlEncoder().withoutPadding().encodeToString(s.getBytes(StandardCharsets.UTF_8));}
++    private static String decode(String s) {return new String(Base64.getUrlDecoder().decode(s),StandardCharsets.UTF_8);}
++    private static String checksum(String data) {
++        try{return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(data.getBytes(StandardCharsets.UTF_8)));}
++        catch(NoSuchAlgorithmException e){throw new AssertionError(e);}
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java b/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
+index 351b2fc..c13c202 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
+@@ -1,46 +1,108 @@
+ package gg.feral.burrow.host;
+ 
++import gg.feral.burrow.core.PathfinderGuidedCapture;
++import gg.feral.burrow.ui.BankMemoryPanel;
++import gg.feral.burrow.ui.BankMemoryViewModel;
+ import gg.feral.burrow.ui.BurrowPanel;
++import gg.feral.burrow.ui.GuidedCapturePanel;
+ import gg.feral.burrow.ui.SidebarWheelRouter;
+ import java.awt.BorderLayout;
+-import javax.swing.BorderFactory;
+-import javax.swing.JScrollPane;
+-import javax.swing.ScrollPaneConstants;
++import java.awt.CardLayout;
++import java.awt.GridLayout;
++import java.util.List;
++import java.util.Objects;
++import java.util.function.BiConsumer;
++import java.util.function.LongConsumer;
++import javax.swing.*;
+ import net.runelite.client.ui.PluginPanel;
+ 
+ /**
+- * Build 19 single-scroll-owner host for the RuneLite sidebar.
+- *
+- * <p>RuneLite 1.13.4 {@code ClientUI} mounts {@code navigation.getPanel().getWrappedPanel()} in its
+- * sidebar tab pane. With {@code PluginPanel(false)} the wrapped panel is the plugin panel itself,
+- * so there is NO RuneLite outer scroll pane. The only JScrollPane in the sidebar is the one created
+- * here; its viewport is bounded by the real sidebar height, so mouse-wheel, scrollbar drag and
+- * keyboard all move the same viewport.
++ * One main RuneLite sidebar, four unchanged TPT tabs. Bank Memory and the
++ * first-run checklist are subordinate panels, not a fifth root navigation tab.
++ * The original main JScrollPane is preserved, including its scroll position.
+  */
+ public final class SidebarHost extends PluginPanel {
+     private final JScrollPane scroll;
+     private final BurrowPanel content;
++    private final JPanel deck=new JPanel(new CardLayout());
++    private final BankMemoryPanel bank=new BankMemoryPanel();
++    private final GuidedCapturePanel capture=new GuidedCapturePanel();
++    private final JButton bankButton=new JButton("Bank");
++    private final JButton captureButton=new JButton("Capture");
++    private final JButton backButton=new JButton("Back");
++    private final JLabel reminder=new JLabel(" ");
++    private long displayedAccount=-1L;
++    private Runnable requestPublication=()->{};
++    private LongConsumer requestBankRefresh=account->{};
++    private String active="main";
+ 
+     private SidebarHost(BurrowPanel content) {
+         super(false);
+-        this.content = content;
++        this.content=Objects.requireNonNull(content);
+         setLayout(new BorderLayout());
+-        scroll = new JScrollPane(content,
+-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
++        scroll=new JScrollPane(content,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+         scroll.setBorder(BorderFactory.createEmptyBorder());
+         scroll.getVerticalScrollBar().setUnitIncrement(24);
+         scroll.getVerticalScrollBar().setBlockIncrement(240);
+-        SidebarWheelRouter.install(scroll, content);
+-        add(scroll, BorderLayout.CENTER);
++        SidebarWheelRouter.install(scroll,content);
++        deck.add(scroll,"main");deck.add(bank,"bank");deck.add(capture,"capture");
++        JPanel top=new JPanel(new BorderLayout());
++        JPanel actions=new JPanel(new GridLayout(1,3,2,1));
++        bankButton.setName("OutfitterBankMemory");
++        captureButton.setName("FirstRunCapture");
++        backButton.setName("BackToFourTabs");
++        actions.add(bankButton);actions.add(captureButton);actions.add(backButton);
++        top.add(actions,BorderLayout.NORTH);top.add(reminder,BorderLayout.SOUTH);
++        add(top,BorderLayout.NORTH);add(deck,BorderLayout.CENTER);
++        bankButton.addActionListener(e->open("bank"));
++        captureButton.addActionListener(e->open("capture"));
++        backButton.addActionListener(e->open("main"));
++        bank.setRequestManualScan(()->{ if(displayedAccount!=-1L)requestBankRefresh.accept(displayedAccount); });
++        updateButtons();
+     }
++    public static SidebarHost mount(BurrowPanel content) {return new SidebarHost(content);}
++    public void setRequestPublication(Runnable action){requestPublication=Objects.requireNonNull(action);}
++    public void setRequestBankRefresh(LongConsumer action){requestBankRefresh=Objects.requireNonNull(action);}
++    public void setManualReviewAction(BiConsumer<Long,PathfinderGuidedCapture.Section> action){capture.setReviewAction(action);}
++    public void setQuestSurveyAction(LongConsumer action){capture.setQuestSurveyAction(action);}
+ 
+-    public static SidebarHost mount(BurrowPanel content) {
+-        if (content == null) throw new IllegalArgumentException("content");
+-        return new SidebarHost(content);
++    private void open(String selected){
++        if(!"main".equals(selected) && displayedAccount==-1L)return;
++        active=selected;((CardLayout)deck.getLayout()).show(deck,selected);updateButtons();
++        if(!"main".equals(selected))requestPublication.run();
+     }
+-
+-    /** The single effective scroll owner. */
+-    public JScrollPane scrollOwner() { return scroll; }
+-    public BurrowPanel content() { return content; }
++    public void showMain(){open("main");}
++    private void updateButtons(){
++        bankButton.setEnabled(displayedAccount!=-1L && !"bank".equals(active));
++        captureButton.setEnabled(displayedAccount!=-1L && !"capture".equals(active));
++        backButton.setEnabled(!"main".equals(active));
++    }
++    /** Called on Swing EDT with immutable account-fenced copies from the client thread. */
++    public void publish(long hash,BankMemoryViewModel.Display history,
++                        List<PathfinderGuidedCapture.ChecklistStep> steps,
++                        boolean initial,boolean latest) {
++        if(!SwingUtilities.isEventDispatchThread())throw new IllegalStateException("Sidebar publication requires EDT");
++        if(hash!=displayedAccount){
++            active="main";((CardLayout)deck.getLayout()).show(deck,"main");
++        }
++        displayedAccount=hash;
++        bank.setSnapshot(Objects.requireNonNull(history));
++        capture.setState(hash,steps,initial,latest);
++        reminder.setText(hash==-1L?"Sign in for account memory":
++            history.freshness()==BankMemoryViewModel.Freshness.SEVEN_DAYS_OR_OLDER?
++            "<html><center>Bank scan 7+ days old. Open bank to refresh.</center></html>":
++            history.freshness()==BankMemoryViewModel.Freshness.NOT_SCANNED?
++            "<html><center>Bank not yet witnessed. Open bank to capture.</center></html>":" ");
++        updateButtons();
++    }
++    public void showBankRefreshInstruction(long account) {
++        if(!SwingUtilities.isEventDispatchThread() || account!=displayedAccount)return;
++        bank.setRefreshNotice("Open the OSRS bank normally. TPT saves the next stable full scan. Nothing is auto-clicked.");
++    }
++    public JScrollPane scrollOwner(){return scroll;}
++    public BurrowPanel content(){return content;}
++    public BankMemoryPanel bankPanelForTest(){return bank;}
++    public GuidedCapturePanel capturePanelForTest(){return capture;}
++    public String activeViewForTest(){return active;}
++    public long displayedAccountForTest(){return displayedAccount;}
+ }
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/GuideData.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/GuideData.java
+index 3925d21..7b6267f 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/GuideData.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/GuideData.java
+@@ -16,6 +16,9 @@ public final class GuideData {
+     private GuideData() {}
+     private static final Map<String,String> LEGACY_QUEST_IDS = Map.of(
+         "Cook's Assistant","quest_cooks_assistant", "Song of the Elves","quest_sote");
++    // Verified OSRS Wiki no-level novice quests; ironman.guide waypoints are NOT hard quest gates.
++    private static final Set<String> NO_HARD_SKILL_GATE = Set.of(
++        "Cook's Assistant", "Sheep Shearer", "The Restless Ghost", "X Marks the Spot", "Witch's Potion");
+     private static List<GuideRule> RULES;
+     private static final Map<String,List<String>> QUEST_PREREQS = questPrerequisites();
+     public static synchronized List<GuideRule> rules() { if(RULES==null)RULES=build(); return RULES; }
+@@ -132,7 +135,14 @@ public final class GuideData {
+                 .quests(prereq.getOrDefault(e.name(),List.of()))
+                 .why("Step "+e.order()+" in the ironman.guide quest order"+(e.miniquest()?" (miniquest)":"")+".")
+                 .source(GuideSources.IRONMAN_GUIDE_QUESTS+" ; "+GuideSources.WIKI+e.name().replace(' ','_'));
+-            e.skills().forEach(b::skill);
++            if (NO_HARD_SKILL_GATE.contains(e.name())) {
++                if (!e.skills().isEmpty()) b.why("Step "+e.order()+" in the ironman.guide route. "
++                    +"Its annotated "+e.skills()+" is a route waypoint, NOT a quest requirement (OSRS Wiki verified).");
++            } else if(e.name().equals("Fairytale II - Cure a Queen")) {
++                // Unlocking fairy rings requires a quest stage, not 40 Thieving/49 Farming/57 Herblore.
++                // Full completion requires those levels; this START action must not be gated by them.
++                b.unverified("Full Fairytale II completion (NOT start/ring permission): 40 Thieving, 49 Farming, 57 Herblore");
++            } else e.skills().forEach(b::skill);
+             if(!e.note().isBlank()) b.unverified(e.note());
+             if(e.name().equals("Song of the Elves")) b.source(GuideSources.WIKI_SOTE);
+             if(e.name().equals("Dragon Slayer II")) b.source(GuideSources.WIKI_DS2);
+@@ -358,6 +368,8 @@ cats_death_runes|Selling cats in West Ardougne||Gertrude's Cat|100 death runes p
+             }
+             if(!f[3].isBlank()) b.quest(f[3]);
+             if(!f[4].isBlank()) b.unverified(f[4]);
++            // These have supplies utility as well as coin utility. Focus filtering in SuggestionEngine
++            // keeps them available in both GP and SUPPLIES rather than moving them out of GP.
+             if(f[0].equals("miscellania")) b.completes(null).quest("Throne of Miscellania");
+             if(f[0].equals("deaths_coffer") || f[0].equals("miscellania") || f[0].equals("herb_runs")) b.mode(ModeScope.IRONMAN);
+             out.add(b.build());
+@@ -432,9 +444,11 @@ cats_death_runes|Selling cats in West Ardougne||Gertrude's Cat|100 death runes p
+             .source(GuideSources.IRONMAN_GUIDE).build());
+         out.add(GuideRule.of("unlock_fairy_rings","Unlock fairy rings",Category.SKILL)
+             .section("1.3 Fairy rings, 43 prayer, kingdom, 99 thieving").focus(Focus.QUESTS).minutes(30)
+-            .quest("Lost City").quest("Fairytale I - Growing Pains").completes("Fairytale II - Cure a Queen").doneWhenStarted()
+-            .why("Fairy rings open after starting Fairytale II (full completion not needed; ironman.guide).")
+-            .next("Start Fairytale II - Cure a Queen.").source(GuideSources.IRONMAN_GUIDE_QUESTS).build());
++            .quest("Lost City").quest("Fairytale I - Growing Pains").completes("Fairytale II - Cure a Queen")
++            .unverified("Fairy Godfather permission is an intermediate quest stage; IN_PROGRESS does not prove it")
++            .why("Fairy rings become usable after the Fairy Godfather grants permission during Fairytale II, not merely on quest start.")
++            .next("Begin Fairytale II, speak to Fairy Godfather and Co-ordinator; verify permission before calling rings unlocked.")
++            .source(GuideSources.WIKI+"Fairy_ring").build());
+         out.add(GuideRule.of("unlock_kingdom","Set up the Kingdom of Miscellania",Category.SKILL)
+             .section("1.3 Fairy rings, 43 prayer, kingdom, 99 thieving").focus(Focus.SUPPLIES).low().minutes(10)
+             .completes("Royal Trouble").quest("Throne of Miscellania").mode(ModeScope.IRONMAN)
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderAccountTruth.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderAccountTruth.java
+new file mode 100644
+index 0000000..0d1e9fe
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderAccountTruth.java
+@@ -0,0 +1,60 @@
++package gg.feral.burrow.pathfinder;
++
++import gg.feral.burrow.core.BankEvidence;
++import java.util.Map;
++
++/**
++ * PQA-W04 read-only bridge from the existing accepted RuneLite bank witness into Pathfinder.
++ * Uses exact account and session fences; never reads the client, writes to game state, or persists data.
++ * COMPLETE is limited to a currently open, stable, recent whole-bank observation.
++ * Closed or uncertain evidence cannot prove either current presence or confirmed absence.
++ */
++public final class PathfinderAccountTruth {
++    private PathfinderAccountTruth() {}
++    /** Local engineering safety limit, NOT a Wiki fact or OSRS mechanic. */
++    public static final long MAX_OBSERVATION_AGE_MS = 120_000L;
++
++    public record Context(long liveAccount, long sourceAccount, Object liveSession, Object sourceSession,
++                          boolean sessionActive, boolean bankOpen, boolean recapturePending,
++                          boolean revalidationPending, boolean carriedDirty, boolean sameOpenEpoch,
++                          long nowMillis) {}
++
++    public enum Verdict { ACCEPTED, NO_EVIDENCE, NOT_AUTHENTICATED, WRONG_ACCOUNT,
++        WRONG_SESSION, BANK_CLOSED, CHANGING_OR_UNVERIFIED, OLD_OR_FUTURE_READ }
++
++    public record Result(Verdict verdict, SuggestionEngine.ResourceEvidence resources) {
++        public boolean accepted() { return verdict == Verdict.ACCEPTED && resources != null; }
++    }
++
++    public static Result capture(BankEvidence bank, Context c) {
++        if(bank==null || c==null) return new Result(Verdict.NO_EVIDENCE,null);
++        if(!c.sessionActive() || c.liveAccount()==-1L || c.sourceAccount()==-1L ||
++            c.liveSession()==null || c.sourceSession()==null)
++            return new Result(Verdict.NOT_AUTHENTICATED,null);
++        if(c.liveAccount()!=c.sourceAccount()) return new Result(Verdict.WRONG_ACCOUNT,null);
++        if(c.liveSession()!=c.sourceSession()) return new Result(Verdict.WRONG_SESSION,null);
++        if(!c.bankOpen() || !bank.bankStillOpen()) return new Result(Verdict.BANK_CLOSED,null);
++        if(c.recapturePending() || c.revalidationPending() || c.carriedDirty() || !c.sameOpenEpoch() ||
++           bank.stale() || bank.population()==BankEvidence.Population.SINGLE_READ || !bank.planningInput())
++            return new Result(Verdict.CHANGING_OR_UNVERIFIED,null);
++        if(bank.observedAtMillis()<=0 || c.nowMillis()<bank.observedAtMillis() ||
++           c.nowMillis()-bank.observedAtMillis()>MAX_OBSERVATION_AGE_MS)
++            return new Result(Verdict.OLD_OR_FUTURE_READ,null);
++        Map<Integer,Integer> combined;
++        try { combined=bank.combined(); }
++        catch(ArithmeticException overflow) { // stacked counts must never wrap around to a misleading number
++            return new Result(Verdict.CHANGING_OR_UNVERIFIED,null);
++        }
++        // STABLE_READ lacks an independent tab-count completeness witness. Its positive
++        // entries are evidence of presence, but ABSENCE must remain UNKNOWN.
++        boolean complete=bank.population()==BankEvidence.Population.STABLE_TAB_COUNTS_CONSISTENT;
++        // No price conversion. Coin denomination ID 995 only. 'Food' means only three
++        // independently identified cooked-food IDs, not a combat trip budget.
++        Integer gp=complete?combined.getOrDefault(995,0):combined.get(995);
++        long food=(long)combined.getOrDefault(3144,0)+combined.getOrDefault(7946,0)+combined.getOrDefault(385,0);
++        Integer foodCount=(complete||food>0)&&food<=Integer.MAX_VALUE?(int)food:null;
++        // An undifferentiated "runes" total is misleading: spell requirements are per-rune-ID.
++        return new Result(Verdict.ACCEPTED,
++            new SuggestionEngine.ResourceEvidence(true,true,complete,combined,gp,foodCount,null));
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActionBudget.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActionBudget.java
+new file mode 100644
+index 0000000..f7ba145
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActionBudget.java
+@@ -0,0 +1,57 @@
++package gg.feral.burrow.pathfinder;
++
++import java.util.*;
++
++/** Conservative per-action budget for a small, Wiki-verified subset of methods.
++ *  No action rate, success rate, spellbook, equipment rune-substitution or game action is inferred.
++ */
++public final class PathfinderActionBudget {
++    private PathfinderActionBudget() {}
++    public enum Verdict { ENOUGH_FOR_ACTION, VERIFIED_SHORT, UNKNOWN, NOT_MODELLED }
++    public record Result(String id, Verdict verdict, Integer maximumCasts, String variant,
++                         List<String> notes, boolean guaranteesStartOrCompletion) {
++        public Result {notes=List.copyOf(notes);}
++    }
++    private record Recipe(String name, int logId, int coinCost) {}
++    // Exact wiki item IDs and 70%-of-sawmill coin fees, verified 2026-11-03.
++    // The budget excludes unlisted future variants rather than guessing their IDs or costs.
++    private static final List<Recipe> PLANKS=List.of(
++        new Recipe("normal",1511,70),new Recipe("oak",1521,175),
++        new Recipe("teak",6333,350),new Recipe("mahogany",6332,1050),
++        new Recipe("camphor",32904,1750),new Recipe("ironwood",32907,3500),
++        new Recipe("rosewood",32910,5250));
++    public static Result evaluate(String id,SuggestionEngine.ResourceEvidence r) {
++        if(!id.equals("afk_plank_make"))
++            return new Result(id,Verdict.NOT_MODELLED,null,"",List.of("No verified finite-action recipe"),false);
++        if(r==null||!r.reliable())
++            return new Result(id,Verdict.UNKNOWN,null,"",List.of("Same-account fresh quantities unavailable"),false);
++        Integer gp=r.quantity(995), astral=r.quantity(9075), nature=r.quantity(561), earth=r.quantity(557);
++        // All 4 input groups are needed per cast. No rune substitutions or charged items are assumed.
++        List<Result> candidates=new ArrayList<>();
++        for(Recipe recipe:PLANKS) {
++            Integer logs=r.quantity(recipe.logId());
++            boolean fixedShort=(logs!=null&&logs==0)||(gp!=null&&gp<recipe.coinCost());
++            // Rune-short is not a certified 'impossible' claim: staves/other rune providers
++            // are outside this budget. Exact runes are used only for positive sufficiency.
++            if(fixedShort) {
++                candidates.add(new Result(id,Verdict.VERIFIED_SHORT,0,recipe.name(),List.of("No physical "+recipe.name()+" log or insufficient coins for one cast"),false));
++            } else if(logs==null||gp==null||astral==null||nature==null||earth==null ||
++                astral<2 || nature<1 || earth<15) {
++                candidates.add(new Result(id,Verdict.UNKNOWN,null,recipe.name(),
++                    List.of("Incomplete exact rune/coin/log proof; staff substitutions and Lunar spellbook not observed"),false));
++            } else {
++                int casts=Math.min(logs,Math.min(gp/recipe.coinCost(),Math.min(astral/2,Math.min(nature,earth/15))));
++                if(casts>=1) candidates.add(new Result(id,Verdict.ENOUGH_FOR_ACTION,casts,recipe.name(),
++                    List.of("Verified exact items for up to "+casts+" "+recipe.name()+" casts", "Current Lunar spellbook, future stock and actual casts are unverified"),false));
++                else candidates.add(new Result(id,Verdict.UNKNOWN,null,recipe.name(),
++                    List.of("Rune supply may require a worn staff or other substitution not certified"),false));
++            }
++        }
++        Optional<Result> best=candidates.stream().filter(x->x.verdict()==Verdict.ENOUGH_FOR_ACTION)
++            .max(Comparator.comparingInt(x->x.maximumCasts()));
++        if(best.isPresent())return best.get();
++        if(candidates.stream().anyMatch(x->x.verdict()==Verdict.UNKNOWN))
++            return new Result(id,Verdict.UNKNOWN,null,"",List.of("No fully verified log recipe; unknown inputs may still work"),false);
++        return new Result(id,Verdict.VERIFIED_SHORT,0,"",List.of("No eligible log/coin combination among seven Wiki-listed log variants for one cast; future variants are not covered"),false);
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActivityTags.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActivityTags.java
+index 7ba9308..52125fb 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActivityTags.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderActivityTags.java
+@@ -42,7 +42,7 @@ public final class PathfinderActivityTags {
+             return dual(Skill.SLAYER,Skill.MELEE,Relation.COMBAT_METHOD,"Melee Slayer method");
+         if(slayer)return single(Skill.SLAYER);
+         if(title.contains("bird house")||title.contains("birdhouse"))return single(Skill.HUNTER);
+-        if(title.contains("farming run")||title.contains("herb run")||title.contains("tree run"))return single(Skill.FARMING);
++        if(title.contains("farming run")||title.contains("herb run")||title.contains("tree run")||title.contains("farming contract"))return single(Skill.FARMING);
+         if(title.contains("clue scroll")||title.contains("treasure trail"))return single(Skill.CLUE);
+         // Specific-skill text in supported skilling rules. Do not infer secondary XP from ingredients.
+         for(var entry : new Object[][] {
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderSupplyKit.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderSupplyKit.java
+new file mode 100644
+index 0000000..f755164
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderSupplyKit.java
+@@ -0,0 +1,41 @@
++package gg.feral.burrow.pathfinder;
++
++import java.util.*;
++/** Source-scoped finite input kits. KIT_PRESENT is NOT quest-completion, combat viability or time proof. */
++public final class PathfinderSupplyKit {
++    private PathfinderSupplyKit() {}
++    public enum Verdict { KIT_PRESENT, VERIFIED_SHORT, UNKNOWN, NOT_MODELLED }
++    public record ItemNeed(String label, int required, Set<Integer> alternatives) {
++        public ItemNeed { if(required<=0 || alternatives.isEmpty())throw new IllegalArgumentException(); alternatives=Set.copyOf(alternatives); }
++    }
++    public record Result(String activity, Verdict verdict, List<String> details, boolean guaranteesCompletion) {
++        public Result { details=List.copyOf(details); }
++    }
++    private static final Map<String,List<ItemNeed>> KITS=Map.of(
++        "quest_cooks_assistant",List.of(new ItemNeed("egg",1,Set.of(1944)),
++            new ItemNeed("bucket of milk",1,Set.of(1927)),new ItemNeed("pot of flour",1,Set.of(1933))),
++        "quest_priest_in_peril",List.of(new ItemNeed("unnoted rune/pure essence",50,Set.of(1436,7936)),
++            new ItemNeed("bucket",1,Set.of(1925))),
++        "afk_karambwan",List.of(new ItemNeed("raw karambwanji",1,Set.of(3150)),
++            new ItemNeed("karambwan vessel",1,Set.of(3157,3159))));
++
++    public static Result evaluate(String activity, SuggestionEngine.ResourceEvidence resources) {
++        List<ItemNeed> needs=KITS.get(activity);
++        if(needs==null)return new Result(activity,Verdict.NOT_MODELLED,List.of("No source-approved finite kit"),false);
++        List<String> report=new ArrayList<>();boolean unknown=false,shortage=false;
++        for(ItemNeed need:needs) {
++            int[] ids=need.alternatives().stream().sorted().mapToInt(Integer::intValue).toArray();
++            var evidence=resources==null?SuggestionEngine.State.UNKNOWN:resources.alternativeRequirement(need.required(),ids);
++            // A nonzero known subtotal cannot prove a shortfall if another alternative is unobserved.
++            Integer count=resources==null?null:resources.anyQuantity(ids);
++            if(evidence==SuggestionEngine.State.UNKNOWN) {unknown=true;report.add("UNKNOWN "+need.label()+" need "+need.required()+" (partial quantities are not a shortage proof)");}
++            else if(evidence==SuggestionEngine.State.UNMET) {shortage=true;report.add("SHORT "+need.label()+" "+count+"/"+need.required());}
++            else report.add("PRESENT "+need.label()+" at least "+need.required());
++        }
++        // A positively verified shortage is still true even if another independent input is unknown.
++        Verdict v=shortage?Verdict.VERIFIED_SHORT:unknown?Verdict.UNKNOWN:Verdict.KIT_PRESENT;
++        if(activity.equals("afk_karambwan"))report.add("Fishing yields, bait loss, route time and trip duration NOT GUARANTEED");
++        else report.add("Kit does NOT verify combat, travel, quest steps, or successful completion");
++        return new Result(activity,v,report,false);
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderTiming.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderTiming.java
+index 6a32070..5a89a58 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderTiming.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/PathfinderTiming.java
+@@ -30,7 +30,7 @@ public final class PathfinderTiming {
+ 
+     private static final Set<Integer> CUT_GEMS = Set.of(1607, 1605, 1603, 1601, 1615, 6573, 1609, 1611, 1613);
+     private static final Set<Integer> ORBS = Set.of(571, 575, 569, 573);
+-    private static final Set<Integer> PLANK_LOGS = Set.of(6332, 6333, 1521);
++    private static final Set<Integer> PLANK_LOGS = Set.of(1511,1521,6333,6332,32904,32907,32910);
+     private static final Map<String, Inputs> BANKSTANDING = Map.ofEntries(
+         Map.entry("afk_glassblowing", new Inputs(List.of(Set.of(1775)), "molten glass")),
+         Map.entry("afk_battlestaves", new Inputs(List.of(Set.of(1391), ORBS), "battlestaves and elemental orbs")),
+@@ -60,10 +60,28 @@ public final class PathfinderTiming {
+     public static InputCheck inputs(GuideRule r, SuggestionEngine.Snapshot s) {
+         Inputs in = r == null ? null : BANKSTANDING.get(r.id());
+         if (in == null) return new InputCheck(InputState.NOT_CHECKABLE, "");
++        // W05 safety audit: one reagent is not a complete jewellery spell recipe.
++        // String Jewellery also needs an unstrung item, 2 astral, 5 water and 10 earth;
++        // enchantments vary by spell and target. Until enumerated, never assert ready.
++        if(r.id().equals("afk_string_jewellery") || r.id().equals("afk_enchant_jewellery"))
++            return new InputCheck(InputState.NOT_CHECKABLE,
++                "Unverified full jewellery item/spell/rune recipe (not just astral/cosmic runes)");
+         if (in.groups().isEmpty()) return new InputCheck(InputState.NOT_CHECKABLE, in.label());
+         if (s.bankStatus() != SuggestionEngine.BankStatus.VERIFIED_SAME_ACCOUNT) return new InputCheck(InputState.BANK_UNKNOWN, in.label());
+-        for (Set<Integer> group : in.groups())
+-            if (group.stream().noneMatch(s.observedItemIds()::contains)) return new InputCheck(InputState.NOT_OBSERVED, in.label());
++        SuggestionEngine.ResourceEvidence res=s.resources();
++        if (res==null || !res.reliable())return new InputCheck(InputState.BANK_UNKNOWN, in.label());
++        for (Set<Integer> group : in.groups()) {
++            boolean positive=false, unknown=false;
++            for(int id:group) {
++                Integer count=res.quantity(id);
++                if(count==null)unknown=true;
++                else if(count>0)positive=true;
++            }
++            if(!positive) {
++                if(unknown)return new InputCheck(InputState.BANK_UNKNOWN, in.label());
++                return new InputCheck(InputState.NOT_OBSERVED, in.label());
++            }
++        }
+         return new InputCheck(InputState.OBSERVED, in.label());
+     }
+ }
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/SuggestionEngine.java b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/SuggestionEngine.java
+index 1223261..911ea28 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/SuggestionEngine.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/pathfinder/SuggestionEngine.java
+@@ -28,26 +28,85 @@ public final class SuggestionEngine {
+     /** Explicit owner action recorded per account; never inferred. */
+     public enum GoalMark { SAVED, SKIPPED, DONE }
+ 
++    /** Optional, never implicitly populated from item IDs. The host MUST authenticate account and freshness.
++     *  A partial scan cannot establish absence; absent counts are UNKNOWN, never zero. */
++    public record ResourceEvidence(boolean sameAccount, boolean fresh, boolean completeCoverage,
++                                   Map<Integer,Integer> itemQuantities, Integer gp, Integer food, Integer runes) {
++        public ResourceEvidence {
++            itemQuantities=Map.copyOf(itemQuantities);
++            if(itemQuantities.values().stream().anyMatch(v->v==null||v<0) ||
++                (gp!=null&&gp<0)||(food!=null&&food<0)||(runes!=null&&runes<0))
++                throw new IllegalArgumentException("invalid negative supplies");
++        }
++        public boolean reliable(){return sameAccount&&fresh;}
++        /** Null means UNKNOWN: no trusted scan or omitted item in a partial scan. */
++        public Integer quantity(int id) {
++            if(!reliable())return null;
++            if(itemQuantities.containsKey(id))return itemQuantities.get(id);
++            return completeCoverage?0:null;
++        }
++        /** Any known positive alternative suffices, zero requires all alternatives observed. */
++        public Integer anyQuantity(int... ids) {
++            boolean unknown=false;
++            long sum=0;
++            for(int id:ids) {Integer q=quantity(id);if(q==null)unknown=true;else sum+=q;}
++            if(sum>0)return (int)Math.min(sum,Integer.MAX_VALUE);
++            if(unknown)return null;
++            return 0;
++        }
++        /** Three-way check for alternative item IDs. A partial bank read must never prove shortage
++         *  from an incomplete sum (e.g. 12 rune essence, pure essence UNKNOWN, need 50).
++         *  Saturates before overflow. This doesn't authorize consuming or moving items. */
++        public State alternativeRequirement(int required,int... ids) {
++            if(required<=0)throw new IllegalArgumentException("required");
++            long observed=0; boolean unknown=false;
++            for(int id:ids) {
++                Integer q=quantity(id);
++                if(q==null)unknown=true;
++                else observed+=q;
++                if(observed>=required)return State.MET;
++            }
++            return unknown?State.UNKNOWN:State.UNMET;
++        }
++    }
++
+     public record Snapshot(boolean verifiedIdentity, Map<String,Integer> skills,
+                            Map<String,Quest> quests, BankStatus bankStatus,
+                            Set<Integer> observedItemIds, Mode mode,
+-                           Map<String,String> bossReadiness, Map<String,GoalMark> goals) {
++                           Map<String,String> bossReadiness, Map<String,GoalMark> goals,
++                           ResourceEvidence resources, Set<String> witnessedUnlocks) {
+         public Snapshot {
+             skills=Map.copyOf(skills); quests=Map.copyOf(quests);
+             Objects.requireNonNull(bankStatus); observedItemIds=Set.copyOf(observedItemIds);
+             mode=mode==null?Mode.IRONMAN:mode;
+             bossReadiness=Map.copyOf(bossReadiness); goals=Map.copyOf(goals);
++            witnessedUnlocks=Set.copyOf(witnessedUnlocks);
+             if (skills.values().stream().anyMatch(x -> x == null || x < 1 || x > 99))
+                 throw new IllegalArgumentException("invalid level");
+         }
+         /** Build 17/18 constructor: Ironman default, no boss readiness or saved goals. */
+         public Snapshot(boolean verifiedIdentity, Map<String,Integer> skills, Map<String,Quest> quests,
+                         BankStatus bankStatus, Set<Integer> observedItemIds) {
+-            this(verifiedIdentity,skills,quests,bankStatus,observedItemIds,Mode.IRONMAN,Map.of(),Map.of());
++            this(verifiedIdentity,skills,quests,bankStatus,observedItemIds,Mode.IRONMAN,Map.of(),Map.of(),null,Set.of());
+         }
+-        public Snapshot withMode(Mode m){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,m,bossReadiness,goals);}
+-        public Snapshot withGoals(Map<String,GoalMark> g){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,g);}
+-        public Snapshot withBossReadiness(Map<String,String> b){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,b,goals);}
++        /** Backward-compatible Wave 7.5.1 eight-field constructor. */
++        public Snapshot(boolean verifiedIdentity, Map<String,Integer> skills, Map<String,Quest> quests,
++                        BankStatus bankStatus, Set<Integer> observedItemIds, Mode mode,
++                        Map<String,String> bossReadiness, Map<String,GoalMark> goals) {
++            this(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,goals,null,Set.of());
++        }
++        /** W04-compatible nine-field constructor; unlocking stages are NOT inferred from IN_PROGRESS. */
++        public Snapshot(boolean verifiedIdentity, Map<String,Integer> skills, Map<String,Quest> quests,
++                        BankStatus bankStatus, Set<Integer> observedItemIds, Mode mode,
++                        Map<String,String> bossReadiness, Map<String,GoalMark> goals, ResourceEvidence resources) {
++            this(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,goals,resources,Set.of());
++        }
++        public Snapshot withMode(Mode m){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,m,bossReadiness,goals,resources,witnessedUnlocks);}
++        public Snapshot withGoals(Map<String,GoalMark> g){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,g,resources,witnessedUnlocks);}
++        public Snapshot withBossReadiness(Map<String,String> b){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,b,goals,resources,witnessedUnlocks);}
++        public Snapshot withResources(ResourceEvidence v){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,goals,v,witnessedUnlocks);}
++        /** For independent, authenticated, witnessed unlock events ONLY. Host must verify provenance. */
++        public Snapshot withWitnessedUnlocks(Set<String> w){return new Snapshot(verifiedIdentity,skills,quests,bankStatus,observedItemIds,mode,bossReadiness,goals,resources,w);}
+         Quest quest(String name) {return quests.getOrDefault(name, Quest.UNKNOWN);}
+         State completed(String name) {return switch(quest(name)) {
+             case FINISHED -> State.MET; case NOT_STARTED, IN_PROGRESS -> State.UNMET; case UNKNOWN -> State.UNKNOWN;
+@@ -56,8 +115,15 @@ public final class SuggestionEngine {
+             Integer value=skills.get(skill); return value==null ? State.UNKNOWN : value>=minimum ? State.MET : State.UNMET;
+         }
+         State item(int id) {
++            if(resources!=null) {
++                Integer q=resources.quantity(id);
++                if(q!=null)return q>0?State.MET:State.UNMET;
++                // A stale, partial or different-account quantity read cannot establish ownership.
++                return State.UNKNOWN;
++            }
+             if (bankStatus != BankStatus.VERIFIED_SAME_ACCOUNT) return State.UNKNOWN;

@@ -1,0 +1,20 @@
+---
+description: TrashPanda Tracker project rules, source/provenance gates, UI/Bank/Sessions invariants
+alwaysApply: true
+---
+
+# TPT / Project Burrow workspace rules
+
+Read `TPT_CURSOR_MASTER_CONTEXT.md` and `AGENTS.md` before significant edits. The current checked-out source and exact test receipts determine implementation truth. The bundled W075 archive is a reference, not authority to replace a newer user checkout. Release is HOLD.
+
+- Product: TrashPanda Tracker by Feral Enterprises. Historic four core tabs: Home, Pathfinder, Outfitter, Sessions. New owner-requested Bank Memory tab/view must be accounted for; its primary-versus-nested position is not resolved yet. 225px scrollable RuneLite sidebar; separate Chronicle subview; header Settings; native bank O; compact OSRS-style armored raccoon; actual OSRS sprites; 11 equipment positions and 4 columns × 7 rows backpack.
+- Separate boss/style/method/tier/source mode: Melee/Ranged/Magic buttons; Wiki Recommended vs Best in Bank; Entry/Recommended/Optimal tiers. Source-specific methods only. Outfitter state must not change when Chronicle boss is browsed.
+- Deny Best in Bank for Wilderness through every path. No automatic banking, game clicks or equipment actions. Preserve successful R05 manual O/Bank Tags frozen layout behavior and robust account/epoch/bank-generation invalidation.
+- Item variants/charges/requirements, equipment compatibility, ammo/spells, god protection and real inventory switch slots matter. Gear research labelled CHECK/RESEARCH_GEAR is not live-ready or bank-preload eligible.
+- Unknown is not zero; first lifetime KC reading is baseline, loot-confirmed is estimate not verified KC, supply feed unavailable is not 0 used, quest/CA/goal not completed by intention, account and session provenance always carried.
+- Account Memory must survive true logout/restart separately from ephemeral Sessions. First-run guided data capture for quests/diaries/CAs/boss logs/KC/skills; per-account persisted last verified evidence, refresh button and ~7-day sync prompt; partial/unavailable scans must never erase last confirmed state. Release blocker until tested.
+- Persistent Bank Memory must save the complete last observed original-bank snapshot, account ID, timestamp/quantity/variants/source, accessible while bank is closed, used by Outfitter only with freshness-aware `last known` semantics. A filtered temporary O bank view is never a complete scan; no fabricated ownership or automated withdrawals.
+- Sessions is current login; confirmed logout clears live data and saves a separate last-10 completed per-account archive; teleports and world hops do not reset.
+- Primary source Wiki /Strategies and oldid/date; preserve exact images, item IDs, ranks, potion doses and 28 inventory slots. Immutable R31 and staged R32/GEAR-W01 cannot be silently promoted.
+- Validate real JDK17 Gradle + RuneLite when available; label any Java21 --release 17 shim appropriately. Keep HoverLite separate from TPT, one dev RuneLite client. Do not claim release/publish without explicit owner approval.
+- Before changes report focused plan/affected files; after changes report exact diff/behavior, SHA or commit, targeted tests and blockers. Avoid noisy broad repeat checklists.

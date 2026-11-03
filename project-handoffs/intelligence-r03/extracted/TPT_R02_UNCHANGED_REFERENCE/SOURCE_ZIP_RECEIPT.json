@@ -1,0 +1,12 @@
+{
+  "archive": "TPT-INTELLIGENCE-W075-MULTISTYLE-GEAR-CLEAN-DUAL-DEV-OWNER-HOLD.zip",
+  "sha256": "eea049b7ad56d12de7f3354333579783325c6785f2b4d2932496cd237bfb696c",
+  "size_bytes": 1632237,
+  "zip_members": 435,
+  "crc_testzip": "PASS",
+  "java_sources": 368,
+  "production_java_sources": 171,
+  "test_java_sources": 185,
+  "hoverlite_dev_java_sources": 12,
+  "status": "Wave 7.5 development source, NOT Wave 7.5.1, release HOLD"
+}

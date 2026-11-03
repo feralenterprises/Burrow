@@ -1,0 +1,654 @@
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java
+new file mode 100644
+index 0000000..2c19ceb
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogCaptureFence.java
+@@ -0,0 +1,20 @@
++package gg.feral.burrow.core;
++
++/** PQA-W09: source-event identity fence for a deferred read-only log widget read. */
++public final class KillLogCaptureFence {
++    private KillLogCaptureFence() {}
++    public record Pending(long accountHash, long loginEpoch, long openingTick) {
++        public Pending {
++            if (accountHash == -1L || loginEpoch <= 0 || openingTick < 0)
++                throw new IllegalArgumentException("No authenticated widget-opening event");
++        }
++    }
++    /** Only the same authenticated login, one to eight game ticks after the event. */
++    public static boolean mayRead(Pending p, long sessionAccount, long authenticatedAccount,
++                                  long loginEpoch, boolean loggedIn, boolean paused, long tick) {
++        if (p == null || !loggedIn || paused || loginEpoch <= 0 || tick < p.openingTick()) return false;
++        long delta = tick - p.openingTick();
++        return delta >= 1 && delta <= 8 && sessionAccount == p.accountHash() &&
++            authenticatedAccount == p.accountHash() && loginEpoch == p.loginEpoch();
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java
+new file mode 100644
+index 0000000..69e2071
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/KillLogPageParser.java
+@@ -0,0 +1,90 @@
++package gg.feral.burrow.core;
++
++import java.nio.charset.StandardCharsets;
++import java.security.MessageDigest;
++import java.security.NoSuchAlgorithmException;
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.HexFormat;
++import java.util.LinkedHashMap;
++import java.util.List;
++import java.util.Locale;
++import java.util.Map;
++import java.util.Objects;
++import java.util.Optional;
++import java.util.Set;
++import java.util.HashSet;
++
++/**
++ * PQA-W09: Strict, read-only parser for ONE currently visible OSRS Kill Log page.
++ * A successful read is a partial page witness, never proof of the full account log.
++ * No implied zeros, invented entity mapping, or automatic completion is permitted.
++ *
++ * RuneLite uses the KillLog interface for boss names/counts. Slayer title handling
++ * is a guarded candidate until the actual target game revision is owner-observed.
++ */
++public final class KillLogPageParser {
++    private KillLogPageParser() {}
++    public enum Kind { BOSS, SLAYER }
++    public record Observation(Kind kind, String pageId, Map<String, Long> exactCounts,
++                              List<String> cappedUnknownRows, int visibleRowCount) {
++        public Observation {
++            Objects.requireNonNull(kind);
++            if (pageId == null || pageId.isBlank()) throw new IllegalArgumentException("pageId");
++            exactCounts = Map.copyOf(exactCounts);
++            cappedUnknownRows = List.copyOf(cappedUnknownRows);
++            if (visibleRowCount < 1 || visibleRowCount > 500) throw new IllegalArgumentException("rowCount");
++        }
++    }
++    /** Null means no coherent, witnessed log page, NOT zero kills. */
++    public static Optional<Observation> parse(String rawTitle, List<String> rawNames,
++                                              List<String> rawCounts) {
++        if (rawTitle == null || rawNames == null || rawCounts == null || rawNames.isEmpty() ||
++            rawNames.size() > 500 || rawNames.size() != rawCounts.size()) return Optional.empty();
++        String title = clean(rawTitle);
++        Kind kind;
++        if ("Boss Kill Log".equals(title)) kind = Kind.BOSS;
++        else if ("Slayer Kill Log".equals(title)) kind = Kind.SLAYER;
++        else return Optional.empty(); // do not infer from a generic or unrelated widget
++
++        Map<String, Long> exact = new LinkedHashMap<>();
++        List<String> capped = new ArrayList<>();
++        Set<String> namesSeen = new HashSet<>();
++        List<String> pageNames = new ArrayList<>();
++        for (int i = 0; i < rawNames.size(); i++) {
++            String name = clean(rawNames.get(i));
++            String value = clean(rawCounts.get(i));
++            if (name.endsWith(":")) name = name.substring(0, name.length()-1).trim();
++            if (name.isBlank() || name.length() > 120 || value.isBlank() ||
++                !namesSeen.add(name.toLowerCase(Locale.ROOT))) return Optional.empty();
++            pageNames.add(name.toLowerCase(Locale.ROOT));
++            // OSRS Slayer Log can cap visible counts as Lots!. This is unknown,
++            // never an exact integer and never an inferred 65,535+ count.
++            if (value.startsWith("Lots!")) {
++                capped.add(name);
++                continue;
++            }
++            if (!value.matches("(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)") || value.length() > 18)
++                return Optional.empty();
++            try {
++                long parsed = Long.parseLong(value.replace(",", ""));
++                if (parsed < 0) return Optional.empty();
++                exact.put(name, parsed);
++            } catch (NumberFormatException invalid) { return Optional.empty(); }
++        }
++        // Set-derived page identity must not change when kill counts increase.
++        Collections.sort(pageNames);
++        String pageId = "killlog:" + kind.name().toLowerCase(Locale.ROOT) + ":" + digest(String.join("\n",pageNames));
++        return Optional.of(new Observation(kind,pageId,exact,capped,rawNames.size()));
++    }
++    private static String clean(String input) {
++        if (input == null) return "";
++        return input.replaceAll("<[^>]*>", "").replace('\u00a0', ' ').trim().replaceAll("\\s+", " ");
++    }
++    private static String digest(String input) {
++        try {
++            byte[] bytes = MessageDigest.getInstance("SHA-256").digest(input.getBytes(StandardCharsets.UTF_8));
++            return HexFormat.of().formatHex(bytes,0,12);
++        } catch (NoSuchAlgorithmException unavailable) { throw new AssertionError(unavailable); }
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+index d3df6a1..18908e0 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/core/PathfinderGuidedCapture.java
+@@ -160,8 +160,21 @@ public final class PathfinderGuidedCapture {
+             c.loginEpoch(),visibleKillCounts,positivelyObtainedIds)); }
+         catch(RuntimeException invalid){return false;}
+     }
++    /** PQA-W09: caller must first parse an exact Kill Log widget page through
++     * KillLogWidgetReader. A capped Lots! row is deliberately omitted, never zero.
++     * As with Collection Log, this is one partial page, not full log coverage. */
++    public boolean observeKillLogPage(Context context, gg.feral.burrow.core.KillLogPageParser.Observation page,
++                                      long observedAtMillis) {
++        if (page == null || context == null) return false;
++        Section section = page.kind() == gg.feral.burrow.core.KillLogPageParser.Kind.BOSS
++            ? Section.BOSS_KILL_LOG : Section.SLAYER_KILL_LOG;
++        try {
++            return observe(context, section, new Page(page.pageId(), Origin.NATIVE_WIDGET,
++                observedAtMillis, context.loginEpoch(), page.exactCounts(), Set.of()));
++        } catch (RuntimeException invalid) { return false; }
++    }
+     private static boolean allowedNativeSource(Section s) {
+-        return s==Section.COLLECTION_LOG; // other widget readers are NOT yet validated in this wave
++        return s==Section.COLLECTION_LOG || s==Section.BOSS_KILL_LOG || s==Section.SLAYER_KILL_LOG;
+     }
+     public List<ChecklistStep> checklist(long hash) {
+         List<ChecklistStep> items=new ArrayList<>();
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java b/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
+index 351b2fc..c13c202 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/host/SidebarHost.java
+@@ -1,46 +1,108 @@
+ package gg.feral.burrow.host;
+ 
++import gg.feral.burrow.core.PathfinderGuidedCapture;
++import gg.feral.burrow.ui.BankMemoryPanel;
++import gg.feral.burrow.ui.BankMemoryViewModel;
+ import gg.feral.burrow.ui.BurrowPanel;
++import gg.feral.burrow.ui.GuidedCapturePanel;
+ import gg.feral.burrow.ui.SidebarWheelRouter;
+ import java.awt.BorderLayout;
+-import javax.swing.BorderFactory;
+-import javax.swing.JScrollPane;
+-import javax.swing.ScrollPaneConstants;
++import java.awt.CardLayout;
++import java.awt.GridLayout;
++import java.util.List;
++import java.util.Objects;
++import java.util.function.BiConsumer;
++import java.util.function.LongConsumer;
++import javax.swing.*;
+ import net.runelite.client.ui.PluginPanel;
+ 
+ /**
+- * Build 19 single-scroll-owner host for the RuneLite sidebar.
+- *
+- * <p>RuneLite 1.13.4 {@code ClientUI} mounts {@code navigation.getPanel().getWrappedPanel()} in its
+- * sidebar tab pane. With {@code PluginPanel(false)} the wrapped panel is the plugin panel itself,
+- * so there is NO RuneLite outer scroll pane. The only JScrollPane in the sidebar is the one created
+- * here; its viewport is bounded by the real sidebar height, so mouse-wheel, scrollbar drag and
+- * keyboard all move the same viewport.
++ * One main RuneLite sidebar, four unchanged TPT tabs. Bank Memory and the
++ * first-run checklist are subordinate panels, not a fifth root navigation tab.
++ * The original main JScrollPane is preserved, including its scroll position.
+  */
+ public final class SidebarHost extends PluginPanel {
+     private final JScrollPane scroll;
+     private final BurrowPanel content;
++    private final JPanel deck=new JPanel(new CardLayout());
++    private final BankMemoryPanel bank=new BankMemoryPanel();
++    private final GuidedCapturePanel capture=new GuidedCapturePanel();
++    private final JButton bankButton=new JButton("Bank");
++    private final JButton captureButton=new JButton("Capture");
++    private final JButton backButton=new JButton("Back");
++    private final JLabel reminder=new JLabel(" ");
++    private long displayedAccount=-1L;
++    private Runnable requestPublication=()->{};
++    private LongConsumer requestBankRefresh=account->{};
++    private String active="main";
+ 
+     private SidebarHost(BurrowPanel content) {
+         super(false);
+-        this.content = content;
++        this.content=Objects.requireNonNull(content);
+         setLayout(new BorderLayout());
+-        scroll = new JScrollPane(content,
+-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
++        scroll=new JScrollPane(content,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+         scroll.setBorder(BorderFactory.createEmptyBorder());
+         scroll.getVerticalScrollBar().setUnitIncrement(24);
+         scroll.getVerticalScrollBar().setBlockIncrement(240);
+-        SidebarWheelRouter.install(scroll, content);
+-        add(scroll, BorderLayout.CENTER);
++        SidebarWheelRouter.install(scroll,content);
++        deck.add(scroll,"main");deck.add(bank,"bank");deck.add(capture,"capture");
++        JPanel top=new JPanel(new BorderLayout());
++        JPanel actions=new JPanel(new GridLayout(1,3,2,1));
++        bankButton.setName("OutfitterBankMemory");
++        captureButton.setName("FirstRunCapture");
++        backButton.setName("BackToFourTabs");
++        actions.add(bankButton);actions.add(captureButton);actions.add(backButton);
++        top.add(actions,BorderLayout.NORTH);top.add(reminder,BorderLayout.SOUTH);
++        add(top,BorderLayout.NORTH);add(deck,BorderLayout.CENTER);
++        bankButton.addActionListener(e->open("bank"));
++        captureButton.addActionListener(e->open("capture"));
++        backButton.addActionListener(e->open("main"));
++        bank.setRequestManualScan(()->{ if(displayedAccount!=-1L)requestBankRefresh.accept(displayedAccount); });
++        updateButtons();
+     }
++    public static SidebarHost mount(BurrowPanel content) {return new SidebarHost(content);}
++    public void setRequestPublication(Runnable action){requestPublication=Objects.requireNonNull(action);}
++    public void setRequestBankRefresh(LongConsumer action){requestBankRefresh=Objects.requireNonNull(action);}
++    public void setManualReviewAction(BiConsumer<Long,PathfinderGuidedCapture.Section> action){capture.setReviewAction(action);}
++    public void setQuestSurveyAction(LongConsumer action){capture.setQuestSurveyAction(action);}
+ 
+-    public static SidebarHost mount(BurrowPanel content) {
+-        if (content == null) throw new IllegalArgumentException("content");
+-        return new SidebarHost(content);
++    private void open(String selected){
++        if(!"main".equals(selected) && displayedAccount==-1L)return;
++        active=selected;((CardLayout)deck.getLayout()).show(deck,selected);updateButtons();
++        if(!"main".equals(selected))requestPublication.run();
+     }
+-
+-    /** The single effective scroll owner. */
+-    public JScrollPane scrollOwner() { return scroll; }
+-    public BurrowPanel content() { return content; }
++    public void showMain(){open("main");}
++    private void updateButtons(){
++        bankButton.setEnabled(displayedAccount!=-1L && !"bank".equals(active));
++        captureButton.setEnabled(displayedAccount!=-1L && !"capture".equals(active));
++        backButton.setEnabled(!"main".equals(active));
++    }
++    /** Called on Swing EDT with immutable account-fenced copies from the client thread. */
++    public void publish(long hash,BankMemoryViewModel.Display history,
++                        List<PathfinderGuidedCapture.ChecklistStep> steps,
++                        boolean initial,boolean latest) {
++        if(!SwingUtilities.isEventDispatchThread())throw new IllegalStateException("Sidebar publication requires EDT");
++        if(hash!=displayedAccount){
++            active="main";((CardLayout)deck.getLayout()).show(deck,"main");
++        }
++        displayedAccount=hash;
++        bank.setSnapshot(Objects.requireNonNull(history));
++        capture.setState(hash,steps,initial,latest);
++        reminder.setText(hash==-1L?"Sign in for account memory":
++            history.freshness()==BankMemoryViewModel.Freshness.SEVEN_DAYS_OR_OLDER?
++            "<html><center>Bank scan 7+ days old. Open bank to refresh.</center></html>":
++            history.freshness()==BankMemoryViewModel.Freshness.NOT_SCANNED?
++            "<html><center>Bank not yet witnessed. Open bank to capture.</center></html>":" ");
++        updateButtons();
++    }
++    public void showBankRefreshInstruction(long account) {
++        if(!SwingUtilities.isEventDispatchThread() || account!=displayedAccount)return;
++        bank.setRefreshNotice("Open the OSRS bank normally. TPT saves the next stable full scan. Nothing is auto-clicked.");
++    }
++    public JScrollPane scrollOwner(){return scroll;}
++    public BurrowPanel content(){return content;}
++    public BankMemoryPanel bankPanelForTest(){return bank;}
++    public GuidedCapturePanel capturePanelForTest(){return capture;}
++    public String activeViewForTest(){return active;}
++    public long displayedAccountForTest(){return displayedAccount;}
+ }
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
+index 17feed8..7b2ae0a 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/BurrowPlugin.java
+@@ -118,6 +118,89 @@ public final class BurrowPlugin extends Plugin {
+             key -> manager.getConfiguration(AccountModePreference.GROUP,key),
+             (key,value) -> manager.setConfiguration(AccountModePreference.GROUP,key,value));
+     }
++    // PQA-W08 candidate: publish historical account records only to the current
++    // sidebar account. Never promote historical bank counts into live Pathfinder stock.
++    private volatile long accountMemoryPublicationRevision;
++    private void publishAccountMemory() {
++        var current=hostPanel instanceof gg.feral.burrow.host.SidebarHost
++            ? (gg.feral.burrow.host.SidebarHost)hostPanel : null;
++        if(current==null)return;
++        SessionScope scope=sessionScope;
++        long hash=authenticatedAccountHash();
++        boolean trusted=running.get() && scope!=null && !sessionPaused &&
++            hash!=-1L && hash==sessionAccountHash;
++        if(!trusted)hash=-1L;
++        long stamped=hash;
++        long revision=++accountMemoryPublicationRevision;
++        long now=System.currentTimeMillis();
++        gg.feral.burrow.ui.BankMemoryViewModel.Display memory;
++        java.util.List<gg.feral.burrow.core.PathfinderGuidedCapture.ChecklistStep> steps=java.util.List.of();
++        boolean initial=false,latest=false;
++        try {
++            var archive=pathfinderArchive();
++            if(stamped!=-1L && archive!=null) {
++                memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
++                    stamped,stamped,archive.readBank(stamped),now,id->null);
++                initial=archive.readInitial(stamped).isPresent();
++                latest=archive.readLatest(stamped).isPresent();
++                var journal=pathfinderGuidedCapture();
++                if(journal!=null)steps=journal.checklist(stamped);
++            } else {
++                memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
++                    -1L,-1L,java.util.Optional.empty(),now,id->null);
++            }
++        } catch(RuntimeException unavailable) {
++            memory=gg.feral.burrow.ui.BankMemoryViewModel.renderForAccount(
++                -1L,-1L,java.util.Optional.empty(),now,id->null);
++            steps=java.util.List.of();initial=false;latest=false;
++        }
++        final var result=memory;
++        final var checklist=java.util.List.copyOf(steps);
++        final boolean first=initial,recent=latest;
++        SwingUtilities.invokeLater(()-> {
++            if(hostPanel==current && accountMemoryPublicationRevision==revision &&
++               (stamped==-1L || (sessionScope==scope && sessionAccountHash==stamped &&
++                    !sessionPaused)))current.publish(stamped,result,checklist,first,recent);
++        });
++    }
++    private boolean mayCaptureFor(long expected) {
++        return running.get() && sessionScope!=null && !sessionPaused &&
++            expected!=-1L && authenticatedAccountHash()==expected && sessionAccountHash==expected;
++    }
++    /** Explicit user confirmation is only a review receipt, not KC or diary truth. */
++    private void markCaptureScreenReviewed(long expected,
++        gg.feral.burrow.core.PathfinderGuidedCapture.Section section) {
++        if(!mayCaptureFor(expected) || section==null)return;
++        try {
++            var journal=pathfinderGuidedCapture();
++            long now=System.currentTimeMillis();
++            if(journal!=null && journal.markPlayerReviewed(
++                new gg.feral.burrow.core.PathfinderGuidedCapture.Context(
++                    expected,sessionAccountHash,authenticatedAccountHash(),
++                    sessionScope.loginEpoch(),running.get(),sessionPaused,now),
++                section,"manual-review:"+section.name(),now))publishAccountMemory();
++        } catch(RuntimeException unavailable) { /* recording failure is not completion */ }
++    }
++    /** Request new bounded quest observations; no game UI clicks or guessed unlocks. */
++    private void requestQuestRefresh(long expected) {
++        if(!mayCaptureFor(expected))return;
++        beginQuestSurvey(expected);questTickCountdown=0;
++        publishPathfinderSuggestions();
++    }
++    /** The existing bank widget reader automatically saves the next accepted scan.
++     * This action only explains that process; it never opens the bank or forces
++     * a new scan (especially during an active Best-in-Bank/O withdrawal lease). */
++    private void requestBankMemoryRefresh(long expected) {
++        if(!mayCaptureFor(expected))return;
++        var current=hostPanel instanceof gg.feral.burrow.host.SidebarHost
++            ? (gg.feral.burrow.host.SidebarHost)hostPanel : null;
++        publishAccountMemory();
++        // Queue the instruction AFTER the fresh history publication, so a
++        // redisplay cannot immediately erase the requested next-step guidance.
++        SwingUtilities.invokeLater(()-> {
++            if(hostPanel==current && current!=null)current.showBankRefreshInstruction(expected);
++        });
++    }
+     /** Build 20: per-account Rare Drop Tracker store (same ConfigManager group). */
+     private gg.feral.burrow.core.RareDropStore rareDrops() {
+         ConfigManager manager = configManager;
+@@ -245,11 +328,56 @@ public final class BurrowPlugin extends Plugin {
+                         hash,sessionAccountHash,authenticatedAccountHash(),scope.loginEpoch(),
+                         running.get(),sessionPaused,now),
+                     canonical.page(),canonical.killCounts(),canonical.obtained(),now);
++                publishAccountMemory();
+             }
+         }catch(RuntimeException journalUnavailable) {
+             // Historical QA recording must never disrupt gameplay or KC tracking.
+         }
+     }
++    // PQA-W09: one screen-opening witness, fenced to account AND login epoch.
++    // No automatic game actions, bank reads, KC completion inference, or telemetry.
++    private gg.feral.burrow.core.KillLogCaptureFence.Pending pendingKillLog;
++
++    @Subscribe public void onWidgetLoaded(net.runelite.api.events.WidgetLoaded event) {
++        if (!running.get() || event == null ||
++            event.getGroupId() != net.runelite.api.gameval.InterfaceID.KILL_LOG) return;
++        SessionScope scope = sessionScope;
++        long hash = authenticatedAccountHash();
++        if (scope == null || scope.loginEpoch() <= 0 || !mayCaptureFor(hash)) return;
++        pendingKillLog = new gg.feral.burrow.core.KillLogCaptureFence.Pending(
++            hash, scope.loginEpoch(), client.getTickCount());
++    }
++    /** Defer until after widget children populate, then capture only exact visible rows. */
++    private void pollPendingKillLog() {
++        var pending = pendingKillLog;
++        if (pending == null) return;
++        SessionScope scope = sessionScope;
++        long tick = client.getTickCount();
++        if (tick == pending.openingTick()) return; // may still be rendering
++        if (scope == null || !gg.feral.burrow.core.KillLogCaptureFence.mayRead(
++                pending, sessionAccountHash, authenticatedAccountHash(), scope.loginEpoch(),
++                running.get() && !sessionPaused && client.getGameState()==GameState.LOGGED_IN,
++                sessionPaused, tick)) {
++            pendingKillLog = null; return;
++        }
++        var parsed = KillLogWidgetReader.read(client);
++        if (parsed.isEmpty()) return; // leave pending briefly until the widgets settle
++        pendingKillLog = null; // at most one accepted page per load event
++        try {
++            var journal = pathfinderGuidedCapture();
++            if (journal == null) return;
++            long now = System.currentTimeMillis();
++            boolean stored = journal.observeKillLogPage(
++                new gg.feral.burrow.core.PathfinderGuidedCapture.Context(
++                    pending.accountHash(), sessionAccountHash, authenticatedAccountHash(),
++                    scope.loginEpoch(), running.get(), sessionPaused, now),
++                parsed.get(), now);
++            if (stored) publishAccountMemory();
++        } catch (RuntimeException unavailable) {
++            // A journal failure must not interrupt the client or its bank/Slayer state.
++        }
++    }
++
+     /** Explicit owner click only. Unranked/unavailable results stay UNKNOWN, never zero. */
+     private void lookupHiscoreKc(long hash, String encounter) {
+         if (!rareDropAccountOk(hash) || hiscoreClient == null) { rareDropFeedback("HiScores unavailable"); return; }
+@@ -743,6 +871,7 @@ public final class BurrowPlugin extends Plugin {
+                     target.setExperienceHomeFeed(null);
+                 }
+             });
++            publishAccountMemory();
+             return;
+         }
+         var observedSkills=new java.util.LinkedHashMap<String,Integer>();
+@@ -836,6 +965,7 @@ public final class BurrowPlugin extends Plugin {
+                 target.setExperienceHomeFeed(home.orElse(null));
+             }
+         });
++        publishAccountMemory();
+     }
+ 
+ 
+@@ -1099,6 +1229,7 @@ public final class BurrowPlugin extends Plugin {
+             SwingUtilities::invokeLater, this::registerButton, this::unregisterButton);
+ 
+     @Override protected void startUp() {
++        pendingKillLog = null; // never reuse a screen from the prior host lifecycle
+         xpTrackingDefaultOn = true; // Build 20 owner decision: XP tracking defaults ON
+         if(bankPreloader==null || bankPreloader.isClosed())
+             bankPreloader=new BestBankPreloader(BestBankPreloader.knownProfiles());
+@@ -1299,6 +1430,7 @@ public final class BurrowPlugin extends Plugin {
+         autoArmXpFromIntent();
+         trySynchronizeXp();
+         publishXpTrackingState();
++        pollPendingKillLog(); // W09: only read one witnessed Kill Log page, never bank/O
+         pollQuestSurvey(weaponGate.epoch());
+         if (--questTickCountdown <= 0) {
+             questTickCountdown = 5;
+@@ -1322,6 +1454,7 @@ public final class BurrowPlugin extends Plugin {
+     @Subscribe public void onGameStateChanged(GameStateChanged event) {
+         if (!running.get()) return;
+         GameState observedState = event.getGameState();
++        if (observedState != GameState.LOGGED_IN) pendingKillLog = null;
+         if (observedState == GameState.LOGGED_IN) {
+             if (kcAdapter == null) kcAdapter = newKcAdapter();
+             kcAdapter.onGameStateChanged(event);
+@@ -2289,7 +2422,12 @@ public final class BurrowPlugin extends Plugin {
+         activeModel = nextModel;
+         // Build 19: exactly ONE scroll owner. PluginPanel(false) disables RuneLite's own outer
+         // wrapper scroll pane (which made the inner viewport full-height and swallowed the wheel).
+-        PluginPanel nextHostPanel = gg.feral.burrow.host.SidebarHost.mount(nextPanel);
++        gg.feral.burrow.host.SidebarHost nextHostPanel=gg.feral.burrow.host.SidebarHost.mount(nextPanel);
++        nextHostPanel.setRequestPublication(()->clientThread.invoke(this::publishAccountMemory));
++        nextHostPanel.setRequestBankRefresh(hash->clientThread.invoke(()->requestBankMemoryRefresh(hash)));
++        nextHostPanel.setManualReviewAction((hash,section)->
++            clientThread.invoke(()->markCaptureScreenReviewed(hash,section)));
++        nextHostPanel.setQuestSurveyAction(hash->clientThread.invoke(()->requestQuestRefresh(hash)));
+         BufferedImage logo = TrashPandaToolbarIcon.create();
+         NavigationButton next = NavigationButton.builder()
+                 .tooltip("TrashPanda Tracker • experimental").icon(logo).priority(8).panel(nextHostPanel).build();
+@@ -2302,6 +2440,7 @@ public final class BurrowPlugin extends Plugin {
+         SessionScope uiScope = sessionScope;
+         if (uiScope != null) publishSessionToPanel(uiScope, nextPanel);
+         clientThread.invoke(this::publishKnownAccountMode);
++        clientThread.invoke(this::publishAccountMemory);
+         if (questSurveyStarted) {
+             publishQuestSurvey(weaponGate.epoch());
+             clientThread.invoke(this::publishPathfinderSuggestions);
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java
+new file mode 100644
+index 0000000..881ff1d
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/runelite/KillLogWidgetReader.java
+@@ -0,0 +1,40 @@
++package gg.feral.burrow.runelite;
++
++import gg.feral.burrow.core.KillLogPageParser;
++import net.runelite.api.Client;
++import net.runelite.api.gameval.InterfaceID;
++import net.runelite.api.widgets.Widget;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Optional;
++
++/**
++ * PQA-W09 read-only candidate. The only widget IDs used here match RuneLite's
++ * own ChatCommandsPlugin boss-log reader (KillLog.INTERFACE_TITLE, NAME, KILL).
++ * It never clicks a game menu, retrieves a bank, or interprets an unseen row.
++ * Slayer requires an exact title match and remains pending native UI validation.
++ */
++public final class KillLogWidgetReader {
++    private KillLogWidgetReader() {}
++    public static Optional<KillLogPageParser.Observation> read(Client client) {
++        if (client == null) return Optional.empty();
++        try {
++            Widget title = client.getWidget(InterfaceID.KillLog.INTERFACE_TITLE);
++            Widget names = client.getWidget(InterfaceID.KillLog.NAME);
++            Widget kills = client.getWidget(InterfaceID.KillLog.KILL);
++            if (title == null || names == null || kills == null ||
++                title.isHidden() || names.isHidden() || kills.isHidden()) return Optional.empty();
++            Widget[] nameChildren = names.getChildren();
++            Widget[] killChildren = kills.getChildren();
++            if (nameChildren == null || killChildren == null || nameChildren.length < 1 ||
++                nameChildren.length != killChildren.length) return Optional.empty();
++            List<String> rawNames = new ArrayList<>(), rawKills = new ArrayList<>();
++            for (int i = 0; i < nameChildren.length; i++) {
++                if (nameChildren[i] == null || killChildren[i] == null) return Optional.empty();
++                rawNames.add(nameChildren[i].getText());
++                rawKills.add(killChildren[i].getText());
++            }
++            return KillLogPageParser.parse(title.getText(), rawNames, rawKills);
++        } catch (RuntimeException incompleteOrChangedWidget) { return Optional.empty(); }
++    }
++}
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/ui/BankMemoryPanel.java b/Project-Burrow/src/main/java/gg/feral/burrow/ui/BankMemoryPanel.java
+index d8fc5fc..a5c263b 100644
+--- a/Project-Burrow/src/main/java/gg/feral/burrow/ui/BankMemoryPanel.java
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/ui/BankMemoryPanel.java
+@@ -46,6 +46,7 @@ public final class BankMemoryPanel extends JPanel {
+         refresh.setText(data.suggestManualScan()?"Open bank to refresh":"Refresh from next bank scan");
+     }
+     private static String escape(String s) {return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;");}
++    public void setRefreshNotice(String message) { if(!SwingUtilities.isEventDispatchThread())throw new IllegalStateException("EDT required"); notice.setText("<html>"+escape(message)+"</html>"); }
+     public int displayedRows(){return model.getRowCount();}
+     public void pressRefreshForTest(){refresh.doClick();}
+ }
+diff --git a/Project-Burrow/src/main/java/gg/feral/burrow/ui/GuidedCapturePanel.java b/Project-Burrow/src/main/java/gg/feral/burrow/ui/GuidedCapturePanel.java
+new file mode 100644
+index 0000000..34b1e3c
+--- /dev/null
++++ b/Project-Burrow/src/main/java/gg/feral/burrow/ui/GuidedCapturePanel.java
+@@ -0,0 +1,92 @@
++package gg.feral.burrow.ui;
++
++import gg.feral.burrow.core.PathfinderGuidedCapture;
++import gg.feral.burrow.core.PathfinderGuidedCapture.ChecklistStep;
++import gg.feral.burrow.core.PathfinderGuidedCapture.Section;
++import java.awt.BorderLayout;
++import java.awt.FlowLayout;
++import java.awt.GridLayout;
++import java.util.List;
++import java.util.Objects;
++import java.util.function.BiConsumer;
++import java.util.function.LongConsumer;
++import javax.swing.*;
++
++/**
++ * PQA-W08 guided first-run evidence view, subordinate to the four main TPT tabs.
++ * A manual review is provenance-only; it never certifies an item, diary, or KC.
++ * Screens are opened by the player in OSRS, not by this panel.
++ */
++public final class GuidedCapturePanel extends JPanel {
++    private final JLabel title = new JLabel("ACCOUNT CAPTURE · SIGN IN");
++    private final JLabel baseline = new JLabel("First-run baseline: unobserved");
++    private final JLabel warning = new JLabel("No complete account capture is claimed");
++    private final JComboBox<Section> selector = new JComboBox<>(Section.values());
++    private final JTextArea instruction = new JTextArea(4,19);
++    private final JButton reviewed = new JButton("I viewed this screen");
++    private final JButton quests = new JButton("Refresh quest survey");
++    private final JPanel sectionRows = new JPanel(new GridLayout(0,1,2,3));
++    private BiConsumer<Long,Section> reviewAction=(hash,section)->{};
++    private LongConsumer questSurveyAction=hash->{};
++    private long currentAccount=-1L;
++
++    public GuidedCapturePanel() {
++        super(new BorderLayout(3,6));
++        setName("GuidedCaptureView");
++        JPanel top=new JPanel(new GridLayout(0,1,2,3));
++        top.add(title);top.add(baseline);top.add(warning);
++        add(top,BorderLayout.NORTH);
++        JPanel middle=new JPanel(new BorderLayout(3,6));
++        middle.add(sectionRows,BorderLayout.NORTH);
++        JPanel guidance=new JPanel(new BorderLayout(3,4));
++        guidance.add(selector,BorderLayout.NORTH);
++        instruction.setLineWrap(true);instruction.setWrapStyleWord(true);
++        instruction.setEditable(false);instruction.setFocusable(false);
++        instruction.setOpaque(false);
++        guidance.add(instruction,BorderLayout.CENTER);
++        middle.add(guidance,BorderLayout.CENTER);
++        JScrollPane pages=new JScrollPane(middle);
++        pages.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
++        add(pages,BorderLayout.CENTER);
++        JPanel controls=new JPanel(new GridLayout(0,1,2,4));
++        reviewed.setName("ManualReviewOnly");
++        quests.setName("RefreshQuestSurvey");
++        controls.add(reviewed);controls.add(quests);
++        add(controls,BorderLayout.SOUTH);
++        selector.addActionListener(e->updateGuidance());
++        reviewed.addActionListener(e->{Section section=(Section)selector.getSelectedItem();
++            if(currentAccount!=-1L && section!=null)reviewAction.accept(currentAccount,section);});
++        quests.addActionListener(e->{if(currentAccount!=-1L)questSurveyAction.accept(currentAccount);});
++        setState(-1L,List.of(),false,false);
++    }
++    public void setReviewAction(BiConsumer<Long,Section> action) {reviewAction=Objects.requireNonNull(action);}
++    public void setQuestSurveyAction(LongConsumer action) {questSurveyAction=Objects.requireNonNull(action);}
++    public void setState(long hash,List<ChecklistStep> steps,boolean initial,boolean latest) {
++        if(!SwingUtilities.isEventDispatchThread())throw new IllegalStateException("Capture UI needs EDT");
++        currentAccount=hash;
++        title.setText(hash==-1L?"ACCOUNT CAPTURE · SIGN IN":"ACCOUNT CAPTURE · INCOMPLETE");
++        baseline.setText("Initial skills/quests: "+(initial?"SAVED":"NOT VERIFIED"));
++        warning.setText("Latest observed skills/quests: "+(latest?"SAVED":"NOT VERIFIED"));
++        sectionRows.removeAll();
++        for(Section s:Section.values()) {
++            ChecklistStep step=steps==null?null:steps.stream().filter(x->x.section()==s).findFirst().orElse(null);
++            String status=step==null?"UNOBSERVED":step.status().name();
++            int pages=step==null?0:step.witnessedPages();
++            JLabel row=new JLabel("<html><div style='width:190px'>"+s.name().replace('_',' ')+": "+status+" ("+pages+" witnessed)</div></html>");
++            sectionRows.add(row);
++        }
++        reviewed.setEnabled(hash!=-1L);
++        quests.setEnabled(hash!=-1L);
++        selector.setEnabled(hash!=-1L);
++        updateGuidance();revalidate();repaint();
++    }
++    private void updateGuidance() {
++        Section s=(Section)selector.getSelectedItem();
++        instruction.setText(s==null?"Log in first":s.guidance()+". Reviewing this screen records only that you viewed it; unseen values remain unknown.");
++    }
++    public void selectForTest(Section section) {selector.setSelectedItem(section);}
++    public void pressReviewForTest(){reviewed.doClick();}
++    public void pressQuestRefreshForTest(){quests.doClick();}
++    public long displayedAccountForTest(){return currentAccount;}
++    public String firstRunTextForTest(){return baseline.getText();}
++}

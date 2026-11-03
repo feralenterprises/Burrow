@@ -1,0 +1,9 @@
+build/
+previews/
+previews-reference/
+*.class
+*.jar
+*.zip
+*.log
+*.tmp
+.DS_Store

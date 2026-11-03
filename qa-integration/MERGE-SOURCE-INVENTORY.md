@@ -37,3 +37,13 @@ All paths beginning with `restored-full/` are relative to `project-handoffs/arch
 7. JDK17 build/test and independent Tongs QA, owner Windows RuneLite playback, final approval.
 
 | Original research dispatch R32 | `qa-integration/research-r32/parts/` four parts; restore script | `36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a` | 351,885 B, 84 ZIP entries, 83/83 manifest items verified; **research staging, unapproved** |
+
+## New verified November 3 inputs awaiting isolated GitHub upload
+
+- `BURROW-RESEARCH-DISPATCH-R32.zip` recovered in QA branch Base64, SHA-256 `36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a`.
+- `TRASHPANDA-R08-WINDOWS-TEST-LEAN.zip` local verified original, SHA-256 `2f20de6ee111d3d1a6a10ece68b226afb15f6b8f30ba6497acd357b9d38d0225`. GitHub source upload still in progress unless path verified.
+- `FERAL-DUAL-DEV-R01-TRASHPANDA-R08-HOVERLITE-v0.3.0-LEAN.zip` local verified original, SHA-256 `b380c4128aa3bf753c8e5ed66906fd2024532c6dfd48e7fcd80515914d96f675`. GitHub source upload still in progress unless path verified.
+- `TPT-SPOONS-ALL-CHATS-UI-CONSOLIDATION-2026-11-03.zip` local verified owner/conversation consolidation, SHA-256 `fd79c0a5c985f9ef28b020d3986db9760e187886491d9c15c4831c5401bb3d91`; larger archive is not yet independently pinned on GitHub.
+- `BURROW-SLAY-R08-WIKI-RANKED-SLAYER-GEAR-WINDOWS-CANDIDATE.zip` local verified full development candidate, SHA-256 `b477022ee195e02e942199e76bb9ca692b9eee397a206d000316c6ce146a7a0f`; staged copy is not yet independently pinned on GitHub.
+
+**Integration decision:** Prefer source hashes and narrow owner QA over build numbers. Never declare the merged runnable QA source complete from the presence of documentation or archives alone.

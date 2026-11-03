@@ -1,14 +1,11 @@
-# R32 Research: Original ZIP Recovered
+# R32 research original: recovered and version-pinned
 
-**Repository:** `qa/tpt-integration-20261103` | **Source status:** original R32 ZIP located at ChatGPT Library root and recovered; not promoted.
+**Updated November 3, 2026.** The previously missing **exact original R32 archive** was recovered, SHA-256 verified, and saved to Library `/Project Burrow/Research Dispatch/BURROW-RESEARCH-DISPATCH-R32.zip`.
 
-- Original filename: `BURROW-RESEARCH-DISPATCH-R32.zip`
-- SHA-256: `36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a`
-- Byte length: 351,885
-- ZIP integrity: 84/84 entries readable, no CRC errors.
-- Manifest integrity: 83/83 named files match SHA-256 and sizes.
-- Second archival source: `BURROW-RESEARCH-CLAUDE-CONSOLIDATED-2026-11-01-READONLY.zip`, nested copy SHA-256 identical.
-- GitHub source-of-truth: `qa-integration/research-r32/parts/` and `RESTORE-R32.ps1`; not two standalone binary ZIP commits.
-- **Research-only / release hold.** The original R32 contains historical B041 wording later challenged. The isolated B041 correction and independent Tongs review remain in this directory, with 7 evidence blockers. Never silently modify R32 source, accepted R31 baseline, ticket IDs, or production Outfitter research.
+GitHub QA branch stores its original bytes as Base64 at `project-handoffs/research-r32-staging/archive/BURROW-RESEARCH-DISPATCH-R32.zip.b64`; invoke `RESTORE-R32.ps1` in that same directory to reconstruct an original ZIP file.
 
-This corrects the earlier erroneous MISSING status caused by checking only `/Project Burrow/Research Dispatch` rather than the Library root.
+**Original:** `BURROW-RESEARCH-DISPATCH-R32.zip`, 351,885 bytes, SHA-256 `36176521201338156334898582ee12077baa929fe42bf8c3846ef327440b1d0a`. Archive checked: 84 ZIP entries including manifest and ZIP CRC check passed.
+
+**Research status:** R32 remains staging, not canonical research promotion. It contains 71 ticket rows, 61 encounter rows; KBD B041 correction and evidence blockers discussed in adjacent L2 reports. Historical R31 is immutable and must not be overwritten.
+
+This archive recovery resolves the *missing file* blocker only. It does not authorize importing all R32 rows, trusting unverified inventory icons, or releasing a merged plugin. Revalidate source-date/evidence flags before integration.

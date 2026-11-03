@@ -5,7 +5,7 @@
 
 ## Complete original master archives on GitHub
 
-The missing intelligence and Pathfinder master ZIPs have been preserved on this branch as **36 verified Base64 parts**. To reconstruct the ZIPs on Windows, run `project-handoffs/archive-recovery/00-RESTORE-ORIGINAL-ARCHIVES.cmd`. See [archive recovery instructions](project-handoffs/archive-recovery/README.md) and [exact archive status](project-handoffs/ARCHIVE-STATUS.md). Archival recovery is **not** an engine merge or live RuneLite QA pass.
+The missing intelligence and Pathfinder master ZIPs have been preserved on this branch as **36 verified Base64 parts**. To restore **all 92 original outer ZIP entries** on Windows, run `project-handoffs/archive-recovery/01-RESTORE-AND-EXPAND-WINDOWS.cmd` (the old `00-...` script restores ZIPs only). See [archive recovery instructions](project-handoffs/archive-recovery/README.md) and [exact archive status](project-handoffs/ARCHIVE-STATUS.md). Archival recovery is **not** an engine merge or live RuneLite QA pass.
 
 ## Open directly in Cursor
 
@@ -28,8 +28,8 @@ Open the **entire Burrow repository** in Cursor so the historical master handoff
 ## Where to look
 
 - `ui-shell/r10c/`: editable standalone Java Swing 225px UI shell, Windows run/build scripts, approved/rejected-artwork separation, and source assets. **Not** a wired RuneLite plugin.
-- `project-handoffs/intelligence-r03/`: TPT combined context and source/readiness notes, plus the readable files extracted from the Intelligence Handoff R03 package.
-- `project-handoffs/pathfinder-self-read-r01/`: Pathfinder Waves 1–9 owner reports, issue index, W08/W09 patch evidence, source lineage, and the readable files from the AI Self-Read Master package.
+- `project-handoffs/intelligence-r03/`: TPT combined context and curated readable previews. **Not the complete source tree:** recover the original via `archive-recovery/restored-full/intelligence-r03/` after running the script.
+- `project-handoffs/pathfinder-self-read-r01/`: Pathfinder Waves 1–9 owner reports, issue index, W08/W09 patch evidence, source lineage, and curated readable previews. Recover original binaries via `archive-recovery/restored-full/pathfinder-r01/`.
 - Existing repository code from `main`: inherited historical Build #38 snapshot. **Do not assume it is the current canonical host** without a source-hash comparison against later builds.
 
 ## Read in order
@@ -51,6 +51,10 @@ Open the **entire Burrow repository** in Cursor so the historical master handoff
 - **First-run account baseline capture, durable per-account memory, guided click-through sync, explicit refresh, seven-day stale notice, and per-account Bank Memory remain release-blocking criteria, not implemented just because they are described in handoffs.**
 - Do not fabricate personal KC, drops, readiness, or bank item ownership.
 - Pathfinder W09 source is an **isolated reconstructed QA candidate**, not proven production or accepted merged host.
+
+## R32 research staging status
+
+The full `BURROW-RESEARCH-DISPATCH-R32.zip` is **not recovered or uploaded**. See `project-handoffs/research-r32-staging/R32-STATUS.md` for available original R32 QA reports, pending blockers, and the reported checksum. Never call R32 complete from these documents.
 
 ## Archive fidelity
 

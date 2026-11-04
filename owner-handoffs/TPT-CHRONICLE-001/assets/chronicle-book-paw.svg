@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TrashPanda Tracker Boss Chronicle bestiary book">
+<defs><linearGradient id="leather" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6e3925"/><stop offset="1" stop-color="#321d1a"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f7d57b"/><stop offset="1" stop-color="#ad7327"/></linearGradient></defs>
+<!-- Heavy silhouette designed for small RuneLite icon sizes -->
+<path d="M12 8h38a6 6 0 0 1 6 6v38a5 5 0 0 1-5 5H15a8 8 0 0 1-8-8V14a6 6 0 0 1 5-6z" fill="#16100e" stroke="#0d0b0c" stroke-width="2"/>
+<path d="M14 10h34a5 5 0 0 1 5 5v35H14a6 6 0 0 0-4 2V15a5 5 0 0 1 4-5z" fill="url(#leather)" stroke="#aa743d" stroke-width="2"/>
+<path d="M17 14h31v31H17z" fill="none" stroke="url(#gold)" stroke-width="2"/>
+<path d="M11 49c2-2 3-2 6-2h36v8H16c-3 0-5-2-5-4z" fill="#e9d6a3" stroke="#6b552e" stroke-width="1.5"/>
+<path d="M20 50h28M20 53h28" stroke="#baa779" stroke-width="1"/>
+<!-- Legible gold paw crest -->
+<path d="M27.2 35.6c-1.1-2.7.4-5.4 2.2-6.6 1.3-.9 2.1-2 2.6-2.5 1 1.4 1.8 2.4 3.1 3.2 1.8 1.3 2.7 3.7 1.7 6.2-1 2.5-7 4.3-9.6-.3z" fill="url(#gold)" stroke="#3e2b18" stroke-width="1"/>
+<ellipse cx="22.3" cy="29" rx="2.3" ry="3.1" transform="rotate(-23 22.3 29)" fill="#e5b65b"/>
+<ellipse cx="27.9" cy="23.6" rx="2.3" ry="3.1" transform="rotate(-9 27.9 23.6)" fill="#e5b65b"/>
+<ellipse cx="35.2" cy="23.4" rx="2.3" ry="3.1" transform="rotate(12 35.2 23.4)" fill="#e5b65b"/>
+<ellipse cx="41" cy="29" rx="2.3" ry="3.1" transform="rotate(24 41 29)" fill="#e5b65b"/>
+<path d="M13 10v37" stroke="#d4a14e" stroke-width="3"/>
+<path d="M43 10v8h-6l3-4z" fill="#f4cc77"/>
+</svg>

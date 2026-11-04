@@ -1,0 +1,140 @@
+{
+  "schema": "tpt-integration-001-archive-transport-v1",
+  "source_parent_commit": "473d3d0a87cd9065871cc1af6ecbe1579e592c47",
+  "chunk_bytes": 524288,
+  "archives": {
+    "intel": {
+      "filename": "TPT-INTEL-001-source.zip",
+      "bytes": 1726128,
+      "sha256": "c358be1f9715d8990cec1b468b03daa7e233da9de717b200e8d0208ec70db436",
+      "zip_entries": 510,
+      "parts": [
+        {
+          "file": "parts/intel/part-001.bin",
+          "sha1_git_blob": "10809e9d6f4cdfe375ece6a41d8ae42e260acb2f"
+        },
+        {
+          "file": "parts/intel/part-002.bin",
+          "sha1_git_blob": "5318d82f09a9961646e542a45958042b4b933e4e"
+        },
+        {
+          "file": "parts/intel/part-003.bin",
+          "sha1_git_blob": "b79d40e4c762a18e08ffa6e33585bd7a1655ea75"
+        },
+        {
+          "file": "parts/intel/part-004.bin",
+          "sha1_git_blob": "492208add2b85c6dbceb1635142243811218dbb0"
+        }
+      ]
+    },
+    "ui": {
+      "filename": "TPT-OUTFITTER-UI-SIMPLIFY-AUDIT.zip",
+      "bytes": 6123067,
+      "sha256": "91efc7f0dbb1416dfb330021fb0e564ef25f01b17078f48d53964614bf4f397b",
+      "zip_entries": 811,
+      "parts": [
+        {
+          "file": "parts/ui/part-001.bin",
+          "sha1_git_blob": "19015ed0a337791047cc02a30d614dc1270f6ce1"
+        },
+        {
+          "file": "parts/ui/part-002.bin",
+          "sha1_git_blob": "742be59884aa4f7c5188dadb1f6f354cb3b3a4ea"
+        },
+        {
+          "file": "parts/ui/part-003.bin",
+          "sha1_git_blob": "e86007cbf9cbe2063abfd87d441d9e795fbfac85"
+        },
+        {
+          "file": "parts/ui/part-004.bin",
+          "sha1_git_blob": "1d54495369f780717aa6e5320c3b36c646ff10e2"
+        },
+        {
+          "file": "parts/ui/part-005.bin",
+          "sha1_git_blob": "cb78737fb6da0d8aec6786fc6ffe63dc604ef73b"
+        },
+        {
+          "file": "parts/ui/part-006.bin",
+          "sha1_git_blob": "e436044d7f1741e42563a83b725626b1f0949819"
+        },
+        {
+          "file": "parts/ui/part-007.bin",
+          "sha1_git_blob": "1b8652db18481f3620937dd53f6f70398d6e40fd"
+        },
+        {
+          "file": "parts/ui/part-008.bin",
+          "sha1_git_blob": "9f907106e77f989449c0ce797dfb4a52c605c2c1"
+        },
+        {
+          "file": "parts/ui/part-009.bin",
+          "sha1_git_blob": "6aa197b80ae0f9de81a20dbe8b8d0fe34474a0d0"
+        },
+        {
+          "file": "parts/ui/part-010.bin",
+          "sha1_git_blob": "a764a65c50d24b7738b4b88cbd0b142780ac5a2a"
+        },
+        {
+          "file": "parts/ui/part-011.bin",
+          "sha1_git_blob": "c3a96ebfe966ff27681e02d1253363f49c2fec66"
+        },
+        {
+          "file": "parts/ui/part-012.bin",
+          "sha1_git_blob": "ff684468556d9da1140e1aa3059c654d5ccdff87"
+        }
+      ]
+    },
+    "art": {
+      "filename": "TPT_Boss_Icons_ALL.zip",
+      "bytes": 5670736,
+      "sha256": "4da2d7c68145fe5f12b408c4db9abd339c3f294c7046c99a584950e04a2ba41d",
+      "zip_entries": 192,
+      "original_upload_name": "TPT_Boss_Icons_ALL(1).zip",
+      "parts": [
+        {
+          "file": "parts/art/part-001.bin",
+          "sha1_git_blob": "5b4442dd7de2ca9bfc5a47e74d8ff92482e3c58f"
+        },
+        {
+          "file": "parts/art/part-002.bin",
+          "sha1_git_blob": "0e3b2c9a7cd43661f6e8a20a72b5417c34fce44c"
+        },
+        {
+          "file": "parts/art/part-003.bin",
+          "sha1_git_blob": "bd8e2fbcd151633a3d91d7ed4cee91799ba33892"
+        },
+        {
+          "file": "parts/art/part-004.bin",
+          "sha1_git_blob": "1b6f326ab96aa100aa69cc5fd376dda0c0a154c9"
+        },
+        {
+          "file": "parts/art/part-005.bin",
+          "sha1_git_blob": "b2cd9bcf3df404f1e0638d7d67bd648f2c4112da"
+        },
+        {
+          "file": "parts/art/part-006.bin",
+          "sha1_git_blob": "25098548a84537f2e4f6b9be9140e63d17dfb06b"
+        },
+        {
+          "file": "parts/art/part-007.bin",
+          "sha1_git_blob": "f16bccae152387aaaba04ea5be57227a4c639973"
+        },
+        {
+          "file": "parts/art/part-008.bin",
+          "sha1_git_blob": "413eef66f7b0fcbb6a5e169eb9db302442c1bb34"
+        },
+        {
+          "file": "parts/art/part-009.bin",
+          "sha1_git_blob": "b1f1f33ba4990bbb2998c47b4d433b616d62e7f1"
+        },
+        {
+          "file": "parts/art/part-010.bin",
+          "sha1_git_blob": "c04ab9740f79b4e290d724cbfc4f47965e24ce8f"
+        },
+        {
+          "file": "parts/art/part-011.bin",
+          "sha1_git_blob": "a7d40a488a72b77cdbb0cd7067eb0bedd335db87"
+        }
+      ]
+    }
+  }
+}
